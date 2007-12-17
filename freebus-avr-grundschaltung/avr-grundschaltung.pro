@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : Z:/Eigene_Dateien/eagle/projects/freebus-avr-grundschaltung/avr-grundschaltung.brd
 
-Start at      :   11:41:35  (10.11.2007)
-End at        :   11:41:37  (10.11.2007)
-Elapsed time  :   00:00:01
+Start at      :   21:54:30  (17.12.2007)
+End at        :   21:54:37  (17.12.2007)
+Elapsed time  :   00:00:07
 
-Signals       :    47   RoutingGrid: 10 mil  Layers: 1
-Connections   :    79   predefined:  77 ( 48 Vias )
+Signals       :    48   RoutingGrid: 10 mil  Layers: 2
+Connections   :    80   predefined:  14 ( 4 Vias )
 
-Router memory :   138384
+Router memory :   273792
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:00  00:00:00  00:00:00  00:00:01
+Time per pass     :  00:00:02  00:00:01  00:00:01  00:00:02  00:00:01
 Number of Ripups  :         0         0         0         0         0
-max. Level        :         1         0         0         0         0
+max. Level        :         0         0         0         0         0
 max. Total        :         0         0         0         0         0
 
-Routed            :         0         0         0         0         0
-Vias              :         0         0         0         0         0
-Resolution        :    97.5 %    97.5 %    97.5 %    97.5 %    97.5 %
+Routed            :        66        66        66        66        66
+Vias              :        64        42        33        32        32
+Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
-Final             : 97.5% beendet
+Final             : 100.0% beendet
