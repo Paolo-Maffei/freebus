@@ -1,0 +1,22 @@
+EAGLE Version 4.16 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check für C:/Dokumente und Einstellungen/Elektro Krieger/Eigene Dateien/freebus/trunk/Eagle Layouts/freebus relais 4x16a/kombi_4x16Arelais01.sch am 20.01.2008 14:58:22 
+
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X1-1 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X1-2 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X1-3 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X2-1 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X2-2 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X2-3 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X3-1 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X3-2 KL
+WARNUNG: Seite 1/1: Nicht angeschlossener Pin: X3-3 KL
+WARNUNG: Nur 1 Pin an Netz R1
+WARNUNG: Nur 1 Pin an Netz R6
+WARNUNG: Nur 1 Pin an Netz R7
+WARNUNG: Nur 1 Pin an Netz R8
+
+Board und Schaltplan sind konsistent
+
+    0 Fehler
+   13 Warnungen
