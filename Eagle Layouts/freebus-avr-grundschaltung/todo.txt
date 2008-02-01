@@ -1,6 +1,0 @@
-Den Freebusstecker so anordnen das die Platine auf gesteckt werden kann.
----
-Tobi:
-Meiner Ansicht nach sollte einer der Stecker um 180 Grad gedreht werden, sonst zeigen die Platinen voneinander weg.
-Ich stelle unter Eagle-Layouts noch eine erstellte Steckverbinder-Lib ein, mit einer Version für die BCU und die APPS (einmal Buchse, einmal Stecker) - achtung die seitliche Version muss noch überprüft werden.
----
