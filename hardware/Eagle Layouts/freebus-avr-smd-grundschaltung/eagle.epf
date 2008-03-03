@@ -272,7 +272,7 @@ Layer=1
 
 [Win_2]
 Type="Schematic Editor"
-Loc="64 24 1647 945"
+Loc="1709 25 3292 946"
 State=2
 Number=1
 File="avr-grundschaltung.sch"
@@ -312,7 +312,7 @@ Sheet=1
 
 [Win_3]
 Type="Control Panel"
-Loc="3 378 932 942"
+Loc="389 311 1366 967"
 State=2
 Number=0
 
