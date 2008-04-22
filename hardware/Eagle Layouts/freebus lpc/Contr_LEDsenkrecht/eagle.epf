@@ -1,0 +1,21 @@
+[Eagle]
+Version="04 16 00"
+Platform="Windows"
+Serial="6B337FED35-LS-W-1CS"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="C:/Programme/EAGLE-4.16/lbr/diode.lbr"
+UsedLibrary="C:/Programme/EAGLE-4.16/lbr/micro-philips.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="167 10 766 471"
+State=2
+Number=0
+
+[Desktop]
+Screen="1280 1024"
+Window="Win_1"
