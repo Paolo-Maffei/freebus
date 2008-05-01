@@ -1,0 +1,25 @@
+How to install eclipse and sdcc for windows 
+
+1) download sdcc for win32 from sourceforge.net download page
+http://sourceforge.net/project/showfiles.php?group_id=599
+
+2) install sdcc, when asked to add path do it!
+
+3) open command prompt and type "sdcc ?" some help text should appear, if not the path to sdcc was not propperly added
+
+4) download the Eclipse IDE for C/C++ Developers from http://www.eclipse.org/downloads/
+
+5) extract the zip to program files
+
+6) no installation neccessary, siply draw a shortcut of eclipse.exe on your desktop if needed
+
+7) download eclipse sdcc plugin for win32 from http://eclipse-sdcc.sourceforge.net/
+
+8) copy the content of the features directory to into the eclipse features directory
+
+9) same for the plugin directory
+
+10) start eclipse and choose a wokspace, this is the directory where your projects are going to be located.
+    Then click on help and about and plugin-infos. In that list should appear the sdcc compiler plugin.
+
+ready !
