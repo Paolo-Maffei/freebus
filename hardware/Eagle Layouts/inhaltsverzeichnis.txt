@@ -1,0 +1,34 @@
+FREEBUS Inhaltsverzeichnis : Bitte tragt den Ordnernamen und eine Beschreibung ein.
+Todo: Beschreibungen ergänzen!
+
+Ordner                         Beschreibung
+FB_4in                           Freebus 4-fach Eingang LPC 922 Basis
+fb_4in_4out                      Freebus 4-fach Ein/Ausgang Kombimodul
+FB_4in_SNT                       Freebus 4-fach Eingang mit Schaltregler MCXXX
+FB_4out                          Freebus 4-fach Ausgang
+FB_4out_SNT                      Freebus 4-fach Augang mit Schaltregler MCXXX
+FB_8xin_230V
+fb_in_8_24_3.1a
+FB_Tastsensor_komplett
+FB_UP_2-4fach_tastsensor
+freebus kombi relais 8.1
+freebus lpc
+freebus relais 4.1 by kubi 
+freebus relais 4x16a
+freebus relais 8.1
+freebus-avr-grundschaltung
+freebus-avr-smd-grundschaltung
+freebus-avr-smd-schaltregler
+Freebus-Jalousie-up
+Freebus-Kopplerplatine
+LM_SNT_update_kit
+LPC 2TE
+LPC 4TE
+LPC_4TE_3.21a
+LPC-Programmer
+RS232 Interface
+Starterpaket
+Tastsensor_by_kubi
+Universaldimmer
+UP Leergeh
+wippe
