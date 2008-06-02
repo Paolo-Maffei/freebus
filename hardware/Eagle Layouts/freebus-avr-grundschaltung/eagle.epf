@@ -281,7 +281,7 @@ UsedLibrary="Z:/Eigene_Dateien/eagle/projects/hardware/Eagle Layouts/mc34063.lbr
 [Win_1]
 Type="Board Editor"
 Loc="21 -6 1634 990"
-State=1
+State=0
 Number=1
 File="avr-grundschaltung.brd"
 View="-185106 -38222 802982 601590"
@@ -319,7 +319,7 @@ Layer=16
 
 [Win_2]
 Type="Schematic Editor"
-Loc="1686 12 3295 862"
+Loc="26 28 1635 878"
 State=2
 Number=2
 File="avr-grundschaltung.sch"
@@ -360,7 +360,7 @@ Sheet=1
 
 [Win_3]
 Type="Control Panel"
-Loc="23 23 886 592"
+Loc="42 147 905 716"
 State=2
 Number=0
 
