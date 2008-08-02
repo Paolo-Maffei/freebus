@@ -21,6 +21,7 @@ freebus-avr-smd-grundschaltung   Freebus Grundschaltung mit Schaltregler MC34063
 freebus-avr-smd-schaltregler     Freebus Grundschaltung mit Schaltregler LT3470 SMD Version
 Freebus-Jalousie-up		 Freebus Grundschaltung mit 2 Relaisen im UP Gehäuse
 Freebus-Kopplerplatine
+Freebus-EIB2RS232		 RS232-Adapter mit einem Siemens BIM113. ETS und FT1.2 umschaltbar
 LM_SNT_update_kit		Schaltregler MC34063 Ersatz für den LM317 (Nachrüstsatz)
 LPC 2TE
 LPC 4TE
