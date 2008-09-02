@@ -16,6 +16,7 @@ freebus lpc			 Freebus Controllerschaltung mit 2 senkrechten LED Reihen und auss
 freebus relais 4.1 by kubi 
 freebus relais 4x16a
 freebus relais 8.1
+freebus-grundschaltung2          Freebus Grundschaltung (z.Zt. nur Sendestufe als Vorschlag)
 freebus-avr-grundschaltung       Freebus Grundschaltung mit Schaltregler MC34063
 freebus-avr-smd-grundschaltung   Freebus Grundschaltung mit Schaltregler MC34063 SMD Version
 freebus-avr-smd-schaltregler     Freebus Grundschaltung mit Schaltregler LT3470 SMD Version
