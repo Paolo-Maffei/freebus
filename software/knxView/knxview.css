@@ -1,0 +1,61 @@
+/***************************************************************
+* Copyright notice
+*
+* (c) 2008 Sven Braun <info@sb-computer.eu> 
+* All rights reserved
+****************************************************************
+* knxView
+* @author: Sven Braun
+***************************************************************/
+
+#header {
+    background: #7F99BE url(images/layout-browser-hd-bg.gif) repeat-x center;
+}
+#header h1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+#cron {
+	padding: 10px
+}
+
+#test {
+	padding: 10px
+}
+#navigation {
+	padding: 10px
+}
+
+#grid {
+	padding: 10px
+}
+
+
+/*  ICONS  */
+.icon-send {
+    background-image:url(images/email_go.png) !important;
+}
+.icon-save {
+    background-image:url(images/disk.png) !important;
+}
+.icon-print {
+    background-image:url(images/printer.png) !important;
+}
+.icon-spell {
+    background-image:url(images/spellcheck.png) !important;
+}
+.icon-attach {
+    background-image:url(images/page_attach.png) !important;
+}
+.icon-add {
+    background-image:url(images/add.gif) !important;
+}
+.icon-delete {
+    background-image:url(images/delete.gif) !important;
+}
+.icon-refresh {
+    background-image:url(images/table_refresh.png) !important;
+}

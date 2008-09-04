@@ -1,0 +1,9 @@
+0	7,20	*	*	*	/bin/sh -c "cat /dev/null >/tmp/messages"	##
+1	*	*	*	*	/bin/sync	##
+15	*/2	*	*	*	/usr/sbin/rdate -s clock-1.cs.cmu.edu	##
+00	22	*	*	*	sh /var/www/cgi-bin/fbvisu/roll-down.sh	##
+00	7	*	*	1-5	echo "fbs01/02/3/000=0" > /dev/ttyS0	##
+01	7	*	*	1-5	echo "fbs01/02/3/002=0" > /dev/ttyS0	##
+30	9	*	*	0,6	sh /var/www/cgi-bin/fbvisu/roll-up.sh	##
+55	21	*	*	*	echo "fbs01/02/2/000=1" > /dev/ttyS0	##Büro Rolladen herunterfahren
+0	9	*	*	*	echo "fbs01/02/2/000=0" > /dev/ttyS0	#Büro Rolladen hochfahren
