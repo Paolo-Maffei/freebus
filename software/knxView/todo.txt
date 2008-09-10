@@ -1,0 +1,40 @@
+/***************************************************************
+* Copyright notice
+*
+* (c) 2008 Sven Braun <info@sb-computer.eu> 
+* All rights reserved
+****************************************************************
+* knxView
+* @author: Sven Braun
+*
+* ToDo Liste für das Projekt knxView
+***************************************************************/
+
+Die Todo Liste beinhaltet Features die eventuell realisiert werden, sowie Ideensammlungen..
+
+A. Aktor Editor
+
+B. Zeitschaltuhr
+	* Eintrag bearbeiten
+	* Cron anlegen vereinfachen (Befehlsfeld automatisieren)
+	* Sonnenaufgang -untergang Kalender
+		
+C. manuelle Steuerung
+
+D. Raumdarstellung
+	* Grafische Oberfläche für Raumdarstellung
+		- online Symbole platzieren
+		- JPG von Raumplan als Hintergrund
+  
+E. Logikfunktionen
+
+F. Sonstiges
+	* Rolladensteuerung mit ms Angabe
+	* lokale PA einstellen
+	* senden Form, für das schnelle senden eines Wertes an eine GA
+	* Busmonitor-Log
+	  - mit Timestamp
+	  - Fenster in dem die Telegramme aufgelistet werden, zum nachvollziehen...
+
+G. Server Software 
+	* ins SVN stellen
