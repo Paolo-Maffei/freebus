@@ -1,0 +1,80 @@
+Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008
+
+
+
+EiB Spec (TP64-TP256):
+
+Bus-Spannung max 30V, min 21V
+
+Device Versorgung(power converter): 
+max slope durch Device Stromänderung: 0,5mA/ms, max device strom 12mA
+
+spms efficiency ca 80% (annahme), Uemin 16v (sollte bei/bis 18v im idle mode sein und sw initialisieren), Uemax 30v (max Ucc von MC34063...beachten 40V!) 
+-> max leistung 16Vx12mAX0,8=153mW ->Ucc 3,3V Icc:max 46mA Versorgungsstrom uC
+Schaltfrequenz >> bitfrequenz:  9,6kHZ (104uS), 3;5 harmonische 48kHz) -> Schaltfrequenz >50kHz, max 100kHz
+
+
+Sender:
+Sendestrom max 300mA (abweichend von EIB spec, sollte aber genügen)
+Low Pegel hub max 9V (bei 30V), min 3V (bei 20V) und max Buslast (e.g. 22R, 1000uF in Serie als Last)
+2-3uS Flankensteilheit (spec:1V/us < Slope < 100V/us
+
+Empfänger:
+Empfindlichkeit durch analogKomparator AtMega ca 1,2V (bandgap ref)
+Spike-Filter 140kHz (10x fe)
+
+device dyn. Impedaz:
+während low bit dI max 1,9mA bitanfang, max2.0mA nach35us jeweils unter mittlerem devicestrom bei Udev 25V,Upuls 6V (testspec vol8 seite 18)
+
+
+Design:
+
+Sender- Stromquelle:
+Transistor nicht gesättigt-> Uecsat>= 1,3V, Ubesat <1,9V; Ccb:ca 10pF, B>200-> Ccb* = 2nF, Flanke <2us bei max hub 9v
+
+Ib=Ic/B= 1,5mA; Ueibmin=12v (Eibmin 21V, 9v hub)-> Ubmin=12-1,6V (Ubesat bei 300mA)=10,4V
+
+LED9: ledgrün Uf~1,9V (hängt von strom und mini oder standard, wellenlänge Gallium-Phospid/Arsenid ab- datenblatt oder messen- habe 2mm grün mit 1,9V Uf, ggf weitere Schottky-Diode in serie)
+
+Ube=1,4V (gewählt unterhalb sättigung) -> Ur9=Uled-Ube = 0,5V, R9= 1,6R-> 1,5R: Imax = 330mA
+
+Flankensteilheit: Ccb 2nF, R11xCcb = 2us :R11=1k, R11=5,6K gewählt da Umladung Ccb auch über LED erfolgt.
+
+Ir8= Ib + Ir11= 1,5mA+1,4V/5,6k=1,75mA, R8= Ubmin/1,75mA=5,9k (bei hub min 3V ca 9,3k), gewählt R8=6,2k (ufet =0V Annahme)
+
+R10: (Ueibmin - Ur9- Uec) /Imax = 10,2V/0,33= 30,9R - 33,75R (Ur = 11,13V; 8x 270R parallel, kann ggf zur sättigung führen),
+
+P: 330mA*21V*350us/1352us=~ 1,8W; Pr= 3,6W*0,258= 930mW; Pt= (Ueib-Uhub-Ur9-Ur10)*Imax*0,258 = 800mW
+
+D3, D4: Hub 9V:  Ud3d4= 9V+Ufled-Ubrumm=10,4V-> (9,1+0,6) 9,7V -> Hub: ca 8,3V! (wem das nicht reicht muss ZD 10V einsetzen) 
+  
+Hub 8V ergibt veränderung in verlustleistung: P: 330mA*22V*350us/1352us=~ 1,87W; Pr= 3,6W*0,258= 930mW; 
+Pt= (Ueib-Uhub-Ur9-Ur10)*Imax*0,258 = 880mW!!!
+
+DCpart versorgung:
+Ubrumm: max 0,5V; max strom durch zD:1mA C1: Ladung: 70us*Il, entladung: 35us *(Ie+Izd); Ladung= Entladung, Ie=Il (Wechselstrom durch Spule L2) -> Ie=Izd, d.h. max eingangstrom bei 0-bit = -1mA
+C1: 2mA*35us/0,5V=140nF; gewählt >330nF
+L2: L= U*dt/di 9V*35uS/1mA =315mH
+
+---> bei max stromdelta am bus von 2mA bei 0-bit würden nur delta von 1mA für die stromversorgung bleiben-> daher- B von sendtransistor auf 600, Ib=0,5mA; r8 auf 20k (ir8: 10,4V/20k=0,52mA);
+ Izdmax =0,5mA; L2: 300mH ; R15: 10k (Spannugshub an L ca 4V, max 5V an R15)
+
+
+Powerconverter:
+
+(nach designvoschlag)
+Uinmin 16V, Uinmax 30V, Iout 50mA, Uout 3,3V, f>50kHz;ripple <50mV
+
+Ct= 150pF, L= 420uH, Cout 10uF;Rsc 1,5R (Imax 216mA), R13=9,1k, R12=15k
+
+Eingangsfilter (arbeitet als step down mit eingangsannung Umax:Umax-hub, 30V-21V;)
+
+C9=1uF; dI während 0bit max 1,5mA (2mA-dI DCpart) dU 9V, L= 9v/1,5mA*35us=210mH, R16-Spannungsabfall 2V-> R16=150R 
+
+
+Empfänger:
+
+Über Komparator des ATMega, int. Bandgap ref 1,2V; Empfindlichkeit: Ucc-1,2= 2,1V (3* spec, sollte aber ausreichen)
+ggf über int. noice cancel; Eingangsfilter 140kHz 
+
+Idel-Spannungsüberwachung 18V über analog input mit 1:10 Vorteiler, int ref: bandgap
