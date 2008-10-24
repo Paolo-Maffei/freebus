@@ -1,6 +1,6 @@
-Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008
+Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008; 24.10.08
 
-!!!!!!!!!!!!!ist noch nicht im Schaltplan gs_comp_hora.sch berücksichtigt!!!!!!!!!!!!
+
 
 EiB Spec (TP64-TP256):
 
@@ -65,7 +65,10 @@ Powerconverter:
 (nach designvoschlag)
 Uinmin 16V, Uinmax 30V, Iout 50mA, Uout 3,3V, f>50kHz;ripple <50mV
 
+tonmax 3,5us, toff 16,5us; 
 Ct= 150pF, L= 420uH, Cout 10uF;Rsc 1,5R (Imax 216mA), R13=9,1k, R12=15k
+
+Rsc auf 1,8R erhöht da die freilaufdiode bat41 nur 200mA If kann. Max strom damit auf ca 185mA reduziert!!
 
 Eingangsfilter (arbeitet als step down mit eingangsannung Umax:Umax-hub, 30V-21V;)
 
@@ -77,5 +80,5 @@ Empfänger:
 Über Komparator des ATMega, int. Bandgap ref 1,2V; Empfindlichkeit: Ucc-1,2= 2,1V (3* spec, sollte aber ausreichen)
 ggf über int. noice cancel; Eingangsfilter 140kHz 
 
-Idel-Spannungsüberwachung 18V über analog input mit 1:10 Vorteiler, int ref: bandgap
+Idle-Spannungsüberwachung 18V über analog input mit 1:10 Vorteiler, int ref: bandgap
 
