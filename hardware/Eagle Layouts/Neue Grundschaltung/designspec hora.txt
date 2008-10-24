@@ -1,6 +1,6 @@
 Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008
 
-
+!!!!!!!!!!!!!ist noch nicht im Schaltplan gs_comp_hora.sch berücksichtigt!!!!!!!!!!!!
 
 EiB Spec (TP64-TP256):
 
@@ -78,3 +78,4 @@ Empfänger:
 ggf über int. noice cancel; Eingangsfilter 140kHz 
 
 Idel-Spannungsüberwachung 18V über analog input mit 1:10 Vorteiler, int ref: bandgap
+
