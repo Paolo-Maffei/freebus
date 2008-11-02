@@ -1,6 +1,10 @@
-Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008; 24.10.08
+Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008; 24.10.08; 
+
+Änderungen:
+2.1108- dc part erzeugung L2 ersetzt durch Diode (bat41) , Spitzenwertgleichrichtung unkritisch- (messung Id3 < 300uA, in alter Schaltung mit Darlington aus Bf421, BC640 da ich kein bSP61 habe) R15 10k, C1 680nF...1uF, DC-part bei Überschwinger von ca 10V der busspannung ca 0,5V-1,5V über busspannung- Berücksichtigung im Design- d3 auf <=8,2V reduzieren
 
 
+__________________________________________
 
 EiB Spec (TP64-TP256):
 
