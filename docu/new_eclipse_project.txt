@@ -1,0 +1,50 @@
+This is to describe how to create a new project, import source files, set the appropriate parameters and compile it.
+
+1) open eclipse
+
+2) In the Project Explorer window right click and select new -> C Project
+
+3) A C Project window opens. Enter a project name and make sure that SDCC Tool Chain is selected. Press Next.
+
+4) Select release and debug and click finish. An empty project is now created.
+
+5) Right click in the project explorer on the new project and select import.
+
+6) select file system and press next.
+
+7) select the directory and the .c file(s) for your project (e.g. fb_out8.c), click finish.
+
+8) Now you need to insert links to the include files that are stored in the com directory which must be placed in the same directory as your new project-directory. Therfore copy the com directory directly there with windows explorer.
+
+9) right click on your project an select new->file
+
+10) click the advanced button and click select "link to file in file system"
+
+11) click on browse and select one of the needed files. (for all freebus projects the files are fb_hal.c, fb_hal.h, fb_prot.c and fb_prot.h. For some projects you need additional files like fb_app_out.c and fb_app_out.h for the out8 project. You find them by looking in the main file, the first one you have imported.)
+
+12) repeat 9) to 11) until all files are linked
+
+13) Now right click on your project and select properties.
+
+14) In the properties window select on the left side C/C++ Build -> Settings
+
+15) Select the SDCC Compiler entry in the tree.
+
+16) as command enter sdcc -c --stack-auto
+
+17) select SDCC Linker in the tree and enter as command sdcc --stack-auto --vc
+
+18) click on the Build Artifact tab
+
+19) enter a new artifact name (e.g. out8) and a new artifact extension (hex), so the result after compiling will be a file named out8.hex
+
+20) click ok
+
+21) To compile select the project in the project explorer and click in the main menu Build -D Build project
+
+22) At the bottom you'll see the result ( or errors, if any )
+
+23) Have fun with it! (important!!!)
+
+best regards
+kubi
