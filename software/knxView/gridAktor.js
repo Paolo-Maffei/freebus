@@ -21,10 +21,10 @@
     // Column Model
 	var cm = new Ext.grid.ColumnModel([
 		{header: "ID", dataIndex: 'ID', width: 20, hidden: true},
-		{header: "Name", dataIndex: 'Name', width: 100, sortable: true, 
+		{header: "Name", dataIndex: 'Name', width: 200, sortable: true, 
 		 editor: new Ext.form.TextField({allowBlank: false}) },
 		
-		{header: "GA", dataIndex: 'GA', width: 70, sortable: true,
+		{header: "GA", dataIndex: 'GA', width: 50, sortable: true,
 			editor: new Ext.form.TextField({
 				allowBlank: false,
 				maxLength: 8,
@@ -46,7 +46,7 @@
 		id: 'state_store',
 		totalProperty:'totalCount',
 		root:'data',
-		url:'cgi-bin/fbvisu/jsonstate.php',
+		url:'cgi-bin/jsonstate.php',
 		baseParams:{task: "SHOW"}, 
 		fields:[
 			{name: 'ID', mapping: 'ID', type: 'int'},
@@ -103,7 +103,7 @@
 	function saveStateGrid(oGrid_event){
 		Ext.Ajax.request({   
 			waitMsg: 'Bitte warten...',
-			url:'cgi-bin/fbvisu/jsonstate.php',
+			url:'cgi-bin/jsonstate.php',
 			params: {
 				task: "UPDATE",
 				ID: oGrid_event.record.data.ID,
@@ -140,7 +140,7 @@
 		x: 300,
 		y: 100,
 		closable: true,
-		width: 300,
+		width: 350,
 		height: 400,
 		plain: true,
 		layout: 'fit',

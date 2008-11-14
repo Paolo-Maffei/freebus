@@ -49,7 +49,7 @@
 		id: 'name',
 		totalProperty:'totalCount',
 		root:'data',
-		url:'cgi-bin/fbvisu/cronjob-get.php',
+		url:'cgi-bin/cronjob-get.php',
 		baseParams:{task: "SHOW"}, 
 		fields:[
 			{name: 'ID', mapping: 'ID', type: 'int'},
@@ -251,7 +251,7 @@
 		if(isCrontabFormValid()){
 			Ext.Ajax.request({   
 				waitMsg: 'Bitte warten...',
-				url: 'cgi-bin/fbvisu/cronjob-get.php',
+				url: 'cgi-bin/cronjob-get.php',
 				params: {
 					task: "ADD",
 					Minute:		cMinute.getValue(),
@@ -300,7 +300,7 @@
 			
 			Ext.Ajax.request({  
 				waitMsg: 'Bitte warten...',
-				url: 'cgi-bin/fbvisu/cronjob-get.php',
+				url: 'cgi-bin/cronjob-get.php',
 				params: { 
 					task: "DELETE", 
 					ids: encoded_array
