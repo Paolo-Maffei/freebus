@@ -1,4 +1,19 @@
 FREEBUS Inhaltsverzeichnis : Bitte tragt den Ordnernamen und eine Beschreibung ein.
+Die folgende Regeln werden bei Verzeichnissen verwendet:
+Art_Mittelteil_Endteil
+
+Art:
+****
+controller = Eine Kontrollerplatine
+app = Eine Applikationsplatine
+kombi = Eine Kombination aus Kontroller- und Applikationsplatine
+
+controller:
+***********
+controller_Mikrokontroller_Layout-type
+Mikrokontroller = AVR (für Atmel Typen), LPC (für LPC Typen)
+Layout-type = 2TE (Reg-Gehäuse, 2 Einheiten), 4TE (Reg-Gehäuse, 4 Einheiten), smd, up
+
 Todo: Beschreibungen ergänzen!
 
 Ordner                         Beschreibung
