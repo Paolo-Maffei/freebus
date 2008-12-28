@@ -1,0 +1,266 @@
+*          PSPICE netlist created with
+* EAGLE Version 5.2.0 Copyright (c) 1988-2008 CadSoft
+* 09.09.2008 22:19:41
+*
+*
+*  Node    Net
+*
+*    0     GND
+*    1     EIB+
+*    2     EIB_IN
+*    3     EIB_OUT
+*    4     N$1
+*    5     N$2
+*    6     N$3
+*    7     N$4
+*    8     N$5
+*    9     N$6
+*   10     N$7
+*   11     N$8
+*   12     N$9
+*   13     N$12
+*   14     N$19
+*   15     N$20
+*   16     N$21
+*   17     N$22
+*   18     N$24
+*   19     PB0
+*   20     PB1/OC1A/PWM1
+*   21     PB2/OC1B/PWM2
+*   22     PB3/MOSI
+*   23     PB4/MISO
+*   24     PB5/SCK
+*   25     PC0/ADC0
+*   26     PC1/ADC1
+*   27     PC2/ADC2
+*   28     PC3/ADC3
+*   29     PC4/ADC4/SDA
+*   30     PC5/ADC5/SCL
+*   31     PD0/RXD
+*   32     PD1/TXD
+*   33     PD3/INT1
+*   34     PD5/T1
+*   35     PD6/AIN0
+*   36     PD7/AIN1
+*   37     RESET
+*   38     V+
+*   39     VCC
+*   40     VEXT
+*
+
+* C1
+C1  9 0 100u
+
+* C2
+C2  38 10 100n
+
+* C3
+C3  16 0 470p
+
+* C4
+C4  0 37 47n
+
+* C5
+C5  18 0 100n
+
+* C6
+C6  39 0 100u
+
+* C7
+C7  0 39 100n
+
+* C8
+C8  0 11 33p
+
+* C9
+C9  0 12 33p
+
+* D1
+D1  1 38 1N4148
+
+* D2
+D2  0 1 P6KEXXA
+
+* D3
+D3  5 9 1N4148
+
+* D4
+D4  0 15 BAT46
+
+* D5
+D5  8 4 18V
+
+* GND1
+* dropped (assumed supply symbol)!!!
+
+* GND2
+* dropped (assumed supply symbol)!!!
+
+* GND3
+* dropped (assumed supply symbol)!!!
+
+* GND5
+* dropped (assumed supply symbol)!!!
+
+* GND6
+* dropped (assumed supply symbol)!!!
+
+* GND7
+* dropped (assumed supply symbol)!!!
+
+* GND8
+* dropped (assumed supply symbol)!!!
+
+* GND9
+* dropped (assumed supply symbol)!!!
+
+* GND10
+* dropped (assumed supply symbol)!!!
+
+* GND11
+* dropped (assumed supply symbol)!!!
+
+* GND12
+* dropped (assumed supply symbol)!!!
+
+* GND13
+* dropped (assumed supply symbol)!!!
+
+* GND14
+* dropped (assumed supply symbol)!!!
+
+* GND15
+* dropped (assumed supply symbol)!!!
+
+* GND16
+* dropped (assumed supply symbol)!!!
+
+* GND17
+* dropped (assumed supply symbol)!!!
+
+* GND18
+* dropped (assumed supply symbol)!!!
+
+* GND19
+* dropped (assumed supply symbol)!!!
+
+* GND20
+* dropped (assumed supply symbol)!!!
+
+* GND21
+* dropped (assumed supply symbol)!!!
+
+* GND22
+* dropped (assumed supply symbol)!!!
+
+* IC2
+IC2  0 18 39 0 19 20 21 22 23 24 11 12 25 26 27 28 29 30 37 31 32 2 33 3 34 35 36 39 MEGA8-P
+
+* IC3
+IC3  13 17 0 13 13 15 16 9 MC34063AP
+
+* JP1
+JP1  38 5 40 
+
+* JP3
+JP3  23 39 24 22 37 0 
+
+* L1
+L1  15 39 220u
+
+* LED9
+LED9  14 19 
+
+* P+1
+* dropped (assumed supply symbol)!!!
+
+* P+2
+* dropped (assumed supply symbol)!!!
+
+* P+3
+* dropped (assumed supply symbol)!!!
+
+* P+5
+* dropped (assumed supply symbol)!!!
+
+* P+6
+* dropped (assumed supply symbol)!!!
+
+* P+7
+* dropped (assumed supply symbol)!!!
+
+* P+8
+* dropped (assumed supply symbol)!!!
+
+* Q1
+Q1  10 0 2 BC557
+
+* Q2
+Q2  4 7 38 BC557
+
+* Q3
+Q3  12 11 8,000
+
+* Q4
+Q4  7 6 8 BC547
+
+* Q5
+Q5  8 3 0 BS170
+
+* R1
+R1  9 13 3R
+
+* R2
+R2  17 0 2k2
+
+* R3
+R3  38 0 100k
+
+* R4
+R4  38 4 68R
+
+* R5
+R5  14 39 1k
+
+* R6
+R6  38 6 68R/0.25W
+
+* R7
+R7  39 10 82k
+
+* R8
+R8  0 10 47k
+
+* R9
+R9  39 37 4k7
+
+* R10
+R10  17 39 3k2
+
+* R11
+R11  7 8 220R
+
+* R12
+R12  3 0 4k75
+
+* S1
+S1  19 19 0 0 
+
+* SL1
+SL1  0 20 21 25 24 26 33 27 28 
+
+* SUPPLY1
+* dropped (assumed supply symbol)!!!
+
+* SUPPLY2
+* dropped (assumed supply symbol)!!!
+
+* SUPPLY3
+* dropped (assumed supply symbol)!!!
+
+* SUPPLY4
+* dropped (assumed supply symbol)!!!
+
+* X1
+X1  22 1 0 20 21 24 25 26 33 27 28 19 -1 -2 31 32 -3 -4 39 40 FB_KOMPAKT-APP
+.END
