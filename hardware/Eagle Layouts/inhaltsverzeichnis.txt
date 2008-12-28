@@ -15,7 +15,7 @@ freebus kombi relais 8.1	 Freebus 8-fach Ausgang mit wechsler bestückbar für Jal
 freebus lpc			 Freebus Controllerschaltung mit 2 senkrechten LED Reihen und aussenliegendem Jumper
 freebus relais 4.1 by kubi 
 freebus relais 4x16a
-freebus relais 8.1
+freebus relais 8port             Freebus 8-fach Ausgang
 freebus-grundschaltung2          Freebus Grundschaltung (z.Zt. nur Sendestufe als Vorschlag)
 freebus-avr-grundschaltung       Freebus Grundschaltung mit Schaltregler MC34063
 freebus-avr-smd-grundschaltung   Freebus Grundschaltung mit Schaltregler MC34063 SMD Version
