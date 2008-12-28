@@ -1,5 +1,5 @@
 [Eagle]
-Version="05 02 00"
+Version="05 03 00"
 Platform="Windows"
 Serial="62191E841E-LSR-WLM-1EL"
 Globals="Globals"
@@ -15,7 +15,7 @@ Type="Schematic Editor"
 Loc="452 23 1624 921"
 State=2
 Number=1
-File="Controller_V5.sch"
+File="Controller.sch"
 View="42353 22247 2193039 1234969"
 WireWidths=" 0 3048 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 4064 1524"
 PadDiameters=" 2540 3048 4064 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 0"
@@ -52,7 +52,7 @@ Sheet=1
 
 [Win_2]
 Type="Control Panel"
-Loc="33 49 1298 723"
+Loc="1691 29 2549 758"
 State=2
 Number=0
 
