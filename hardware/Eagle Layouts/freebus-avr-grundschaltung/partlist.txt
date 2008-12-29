@@ -1,0 +1,46 @@
+Partlist
+
+Exported from avr-grundschaltung.sch at 21.04.2008 18:00:54 
+
+EAGLE Version 4.16r2 Copyright (c) 1988-2006 CadSoft
+
+Part     Value          Device          Package          Library        Sheet
+
+C1       1u             CPOL-EUE2-5     E2-5             rcl            1
+C2       100n           C-EU050-025X075 C050-025X075     rcl            1
+C4       47n            C-EU050-024X044 C050-024X044     rcl            1
+C5       100n           C-EU050-025X075 C050-025X075     rcl            1
+C7       100n           C-EU050-025X075 C050-025X075     rcl            1
+C8       33p            C-EU025-025X050 C025-025X050     rcl            1
+C9       33p            C-EU025-025X050 C025-025X050     rcl            1
+D1       1N4148         1N4148          DO35-10          diode          1
+D2       1N4148         1N4148          DO35-10          diode          1
+IC1      LM317          LM317L          317L             v-reg          1
+IC2      MEGA8-P        MEGA8-P         DIL28-3          atmel          1
+JP1                     JP2E            JP2              jumper         1
+JP2                     JP1E            JP1              jumper         1
+JP3                     JP3Q            JP3Q             jumper         1
+LED1                    LED3MM          LED3MM           led            1
+LED2                    LED3MM          LED3MM           led            1
+LED3                    LED3MM          LED3MM           led            1
+LED4                    LED3MM          LED3MM           led            1
+LED5                    LED3MM          LED3MM           led            1
+LED6                    LED3MM          LED3MM           led            1
+LED7                    LED3MM          LED3MM           led            1
+LED8                    LED3MM          LED3MM           led            1
+LED9                    LED3MM          LED3MM           led            1
+Q1       BC557          BC557           TO92             transistor-pnp 1
+Q2       2N7000         VN2222KM        TO237            transistor-fet 1
+Q3       8,000          XTAL/S          QS               special        1
+R1       330R           R-EU_0207/10    0207/10          rcl            1
+R2       470R           R-EU_0207/10    0207/10          rcl            1
+R3       100k           R-EU_0207/10    0207/10          rcl            1
+R4       68R            R-EU_0207/10    0207/10          rcl            1
+R5       1k             R-EU_0207/10    0207/10          rcl            1
+R6       4k7            R-EU_0207/10    0207/10          rcl            1
+R7       82k            R-EU_0207/10    0207/10          rcl            1
+R8       47k            R-EU_0207/10    0207/10          rcl            1
+R9       4k7            R-EU_0207/10    0207/10          rcl            1
+RN1      470R           G08R            SIL9             resistor-sil   1
+S1                      10-XX           B3F-10XX         switch-omron   1
+X1       FB_KOMPAKT-APP FB_KOMPAKT-APP  EIB_10X2_STECKER EIB_Freebus    1
