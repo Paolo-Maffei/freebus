@@ -1,0 +1,739 @@
+Content for xxx_app.h :
+----------------------------------------
+#define USER_RAM_START 206
+#define USER_RAM_END 223
+#define USER_EEPROM_START 256
+#define USER_EEPROM_END 510
+#define RUN_ERROR_ADDRESS 269
+#define ADDRESS_TAB_ADDRESS 278
+#define ASSOCTABPTR_ADDRESS 273
+#define COMMSTABPTR_ADDRESS 274
+#define MANUFACTURER_DATA_ADDRESS 257
+#define MANUFACTURER_DATA_SIZE 3
+#define MANUFACTURER_ID_ADDRESS 260
+#define ROUTECNT_ADDRESS 270
+ 
+ 
+Content for restart_app(void) in xxx_app.c :
+----------------------------------------------------------------------------
+  write_byte(USER_EEPROM_START+7,1);  //program_version
+  write_byte(USER_EEPROM_START+5,48);  //device_type MSB
+  write_byte(USER_EEPROM_START+6,21);  //device_type LSB
+  write_byte(COMMSTAB_PTR_ADDRESS,138);  //commstab_pointer
+  write_byte(MANUFACTURER_ID_ADDRESS,8);   //manufacturer_id
+  write_byte(RUN_ERROR_ADDRESS,255);  //run_error (0=stop, 255=run)
+  write_byte(USER_EEPROM_START+12,0);
+ 
+ 
+Parameters :
+ADDRESS  BITS  DESCRIPTION
+------------------------------------------
+0x01C2  0-2  Ausgang 1 Grundhelligkeit (Helligkeitswert = 1)\r\n(abhängig vom Leuchtmittel)
+     0 = Stufe 1
+     1 = Stufe 2
+     2 = Stufe 3 (Glühlampen)
+     3 = Stufe 4
+     4 = Stufe 5 (Standard Halogen)
+     5 = Stufe 6
+     6 = Stufe 7
+     7 = Stufe 8
+0x01C2  4-6  Ausgang 2 Grundhelligkeit (Helligkeitswert = 1)\r\n(abhängig vom Leuchtmittel)
+     0 = Stufe 1
+     1 = Stufe 2
+     2 = Stufe 3 (Glühlampen)
+     3 = Stufe 4
+     4 = Stufe 5 (Standard Halogen)
+     5 = Stufe 6
+     6 = Stufe 7
+     7 = Stufe 8
+0x01C2  7-7  1C2
+0x01C3  0-2  Ausgang 3 Dummy_Dimm Grundhelligkeit\r\n[anhängig vom Leuchtmittel]
+     0 = Stufe 1
+     1 = Stufe 2
+     2 = Stufe 3 (Glühlampen)
+     3 = Stufe 4
+     4 = Stufe 5 (Standard Halogen)
+     5 = Stufe 6
+     6 = Stufe 7
+     7 = Stufe 8
+0x01C3  3-3  A 1, Sperren\r\n Sperrfunktion ? Ausgang 1, Freigabe Ausgang 1 Polarität des Sperrobjekts
+     0 = nicht invertiert (sperren = 1; Freigabe = 0)
+     1 = invertiert (sperren = 0; Freigabe = 1)
+0x01C3  4-4  A 2, Sperren\r\n Sperrfunktion ? Ausgang 2, Freigabe Ausgang 2 Polarität des Sperrobjekts
+     0 = nicht invertiert (sperren = 1; Freigabe = 0)
+     1 = invertiert (sperren = 0; Freigabe = 1)
+0x01C3  5-5  A 3, Sperren Sperrfunktion ? Ausgang 3, Freigabe Dummy_Dimm Funktion des Sperrobjekts
+     0 = nicht invertiert (sperren = 1; Freigabe = 0)
+     1 = invertiert (sperren = 0; Freigabe = 1)
+0x01C3  6-6  Ausgang 1, Freigabe Ausgang 1 Wert-Rückmeldeobjekt vorhanden ?
+     0 = NEIN
+     1 = JA
+0x01C3  7-7  Ausgang 2, Freigabe Ausgang 2 Wert-Rückmeldeobjekt vorhanden ?
+     0 = NEIN
+     1 = JA
+0x01C4  0-3  Ausgang 1 Einschalthelligkeit: Einschalten auf
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     13 = Helligkeitswert vor letztem Ausschalten
+0x01C4  4-7  Ausgang 2 Einschalthelligkeit: Einschalten auf
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     13 = Helligkeitswert vor letztem Ausschalten
+0x01C5  0-3  Ausgang 3 Dummy_Dimm Einschalthelligkeit: Einschalten auf
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     13 = Helligkeitswert vor letztem Ausschalten
+0x01C5  4-6  Ausschalten ? Ausgang 3 Dummy_Dimm Verzögerung bis zum Ausschalten \r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01C5  7-7  Ausgang 3 Dummy_Dimm Ausschalten ?
+     0 = NEIN
+     1 = JA
+0x01C6  0-2  Ausgang 1 Zeit zwischen 2 von 255 Dimmstufen\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01C6  3-3  Ausgang 1 Verhalten beim Empfang eines Wertes
+     0 = Helligkeitswert andimmen
+     1 = Helligkeitswert anspringen
+0x01C6  4-6  Ausgang 2 Zeit zwischen 2 von 255 Dimmstufen\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01C6  7-7  Ausgang 2 Verhalten beim Empfang eines Wertes
+     0 = Helligkeitswert andimmen
+     1 = Helligkeitswert anspringen
+0x01C7  0-2  Ausgang 3 Dummy_Dimm Zeit zwischen 2 von 255 Dimmstufen\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01C7  3-3  Ausgang 3 Dummy_Dimm Verhalten beim Empfang eines Wertes
+     0 = Helligkeitswert andimmen
+     1 = Helligkeitswert anspringen
+0x01C7  4-6  A 3, Zeitfunktionen Zeitfunktionen ? Ausgang 3, Freigabe Dummy_Dimm Soft-EIN Basis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01C8  0-7  Ausgang 1 Zeit zwischen 2 von 255 Dimmstufen\r\nFaktor (3...255)
+0x01C9  0-7  Ausgang 2 Zeit zwischen 2 von 255 Dimmstufen\r\nFaktor (3...255)
+0x01CA  0-7  Ausgang 3 Dummy_Dimm Zeit zwischen 2 von 255 Dimmstufen\r\nFaktor (1...255)
+0x01CB  0-7  A 1, Ausschaltfunktion Ausschaltfunktion ? Ausgang 1, Freigabe Ausgang 1 Ausschalten bei Helligkeitswert\r\nkleiner als
+     13 = 5 % (entspricht Helligkeitswert = 13)
+     25 = 10 % (entspricht Helligkeitswert = 25)
+     38 = 15 % (entspricht Helligkeitswert = 38)
+     51 = 20 % (entspricht Helligkeitswert = 51)
+     64 = 25 % (entspricht Helligkeitswert = 64)
+     77 = 30 % (entspricht Helligkeitswert = 77)
+     89 = 35 % (entspricht Helligkeitswert = 89)
+     102 = 40 % (entspricht Helligkeitswert = 102)
+     115 = 45 % (entspricht Helligkeitswert = 115)
+     127 = 50 % (entspricht Helligkeitswert = 127)
+     140 = 55 % (entspricht Helligkeitswert = 140)
+     153 = 60 % (entspricht Helligkeitswert = 153)
+     166 = 65 % (entspricht Helligkeitswert = 166)
+     179 = 70 % (entspricht Helligkeitswert = 179)
+     191 = 75 % (entspricht Helligkeitswert = 191)
+     204 = 80 % (entspricht Helligkeitswert = 204)
+     217 = 85 % (entspricht Helligkeitswert = 217)
+     230 = 90 % (entspricht Helligkeitswert = 230)
+     242 = 95 % (entspricht Helligkeitswert = 242)
+     255 = max. Helligkeit (entspricht Helligkeitswert = 255)
+0x01CC  0-7  A 2, Ausschaltfunktion Ausschaltfunktion ? Ausgang 2, Freigabe Ausgang 2 Ausschalten bei Helligkeitswert\r\nkleiner als
+     13 = 5 % (entspricht Helligkeitswert = 13)
+     25 = 10 % (entspricht Helligkeitswert = 25)
+     38 = 15 % (entspricht Helligkeitswert = 38)
+     51 = 20 % (entspricht Helligkeitswert = 51)
+     64 = 25 % (entspricht Helligkeitswert = 64)
+     77 = 30 % (entspricht Helligkeitswert = 77)
+     89 = 35 % (entspricht Helligkeitswert = 89)
+     102 = 40 % (entspricht Helligkeitswert = 102)
+     115 = 45 % (entspricht Helligkeitswert = 115)
+     127 = 50 % (entspricht Helligkeitswert = 127)
+     140 = 55 % (entspricht Helligkeitswert = 140)
+     153 = 60 % (entspricht Helligkeitswert = 153)
+     166 = 65 % (entspricht Helligkeitswert = 166)
+     179 = 70 % (entspricht Helligkeitswert = 179)
+     191 = 75 % (entspricht Helligkeitswert = 191)
+     204 = 80 % (entspricht Helligkeitswert = 204)
+     217 = 85 % (entspricht Helligkeitswert = 217)
+     230 = 90 % (entspricht Helligkeitswert = 230)
+     242 = 95 % (entspricht Helligkeitswert = 242)
+     255 = max. Helligkeit (entspricht Helligkeitswert = 255)
+0x01CD  0-7  Ausschalten ? Ausgang 3 Dummy_Dimm Ausschalten bei Helligkeitswert (1..255)
+0x01CE  0-2  A 1, Ausschaltfunktion Ausschaltfunktion ? Ausgang 1, Freigabe Ausgang 1 Verzögerung bis zum Ausschalten \r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01CE  3-3  Ausgang 1, Freigabe Ausgang 1 Ausschaltfunktion ?
+     0 = NEIN
+     1 = JA
+0x01CE  4-6  A 2, Ausschaltfunktion Ausschaltfunktion ? Ausgang 2, Freigabe Ausgang 2 Verzögerung bis zum Ausschalten \r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01CE  7-7  Ausgang 2, Freigabe Ausgang 2 Ausschaltfunktion ?
+     0 = NEIN
+     1 = JA
+0x01CF  0-7  A 1, Ausschaltfunktion Ausschaltfunktion ? Ausgang 1, Freigabe Ausgang 1 Verzögerung bis zum Ausschalten\r\nFaktor (3...255)
+0x01D0  0-7  A 2, Ausschaltfunktion Ausschaltfunktion ? Ausgang 2, Freigabe Ausgang 2 Verzögerung bis zum Ausschalten\r\nFaktor (3...255)
+0x01D1  0-7  Ausschalten ? Ausgang 3 Dummy_Dimm Verzögerung bis zum Ausschalten\r\nFaktor (1...255)
+0x01D2  0-2  "Soft-EIN"-Funktion ? A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Soft-EIN Basis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01D2  4-6  "Soft-EIN"-Funktion ? A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Soft-EIN Basis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01D3  0-7  "Soft-EIN"-Funktion ? A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Soft-EIN Faktor (0...255)\r\n(0 = keine Funktion)
+0x01D4  0-7  "Soft-EIN"-Funktion ? A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Soft-EIN - Zeit für eine Dimmstufe\r\nFaktor (3...255)
+0x01D5  0-7  A 3, Zeitfunktionen Zeitfunktionen ? Ausgang 3, Freigabe Dummy_Dimm Soft-EIN Faktor [0...255]\r\n(0 = keine Funktion)
+0x01D6  0-2  "Soft-AUS"-Funktion ? A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Soft-AUS - Zeit für eine Dimmstufe\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01D6  4-6  "Soft-AUS"-Funktion ? A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Soft-AUS - Zeit für eine Dimmstufe\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01D7  0-7  "Soft-AUS"-Funktion ? A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Soft-AUS - Zeit für eine Dimmstufe\r\nFaktor (3...255)
+0x01D8  0-7  "Soft-AUS"-Funktion ? A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Soft-AUS - Zeit für eine Dimmstufe\r\nFaktor (3...255)
+0x01DA  0-2  Zeitdimmerfunktion aktivieren ? A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Zeit zwischen EIN und AUS\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01DA  3-3  A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Zeitdimmerfunktion aktivieren ?
+     0 = NEIN
+     1 = JA
+0x01DA  4-6  Zeitdimmerfunktion aktivieren ? A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Zeit zwischen EIN und AUS\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01DA  7-7  A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Zeitdimmerfunktion aktivieren ?
+     0 = NEIN
+     1 = JA
+0x01DB  0-2  Zeitdimmerfunktion einschalten ? A 3, Zeitfunktionen Zeitfunktionen ? Ausgang 3, Freigabe Dummy_Dimm Zeit zwischen EIN- und AUS-Funktion\r\nBasis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01DB  3-3  A 3, Zeitfunktionen Zeitfunktionen ? Ausgang 3, Freigabe Dummy_Dimm Zeitdimmerfunktion einschalten ?
+     0 = NEIN
+     1 = JA
+0x01DB  4-6  A 3, Zeitfunktionen Zeitfunktionen ? Ausgang 3, Freigabe Dummy_Dimm Soft-AUS Basis
+     1 = 0,5 ms
+     2 = 8 ms
+     3 = 130 ms
+     4 = 2,1 s
+     5 = 33 s
+0x01DC  0-7  Zeitdimmerfunktion aktivieren ? A 1, Zeitfunktionen Zeitfunktionen ? Ausgang 1, Freigabe Ausgang 1 Zeit zwischen EIN und AUS\r\nFaktor (3...255)
+0x01DD  0-7  Zeitdimmerfunktion aktivieren ? A 2, Zeitfunktionen Zeitfunktionen ? Ausgang 2, Freigabe Ausgang 2 Zeit zwischen EIN und AUS\r\nFaktor (3...255)
+0x01DE  0-7  Zeitdimmerfunktion einschalten ? A 3, Zeitfunktionen Zeitfunktionen ? Ausgang 3, Freigabe Dummy_Dimm Zeit zwischen EIN- und AUS-Funktion\r\nFaktor (1...255)
+0x01DF  0-3  A 1, Sperren\r\n Sperrfunktion ? Ausgang 1, Freigabe Ausgang 1 Helligkeit zu Beginn der Sperrung
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = keine Aktion
+     13 = Helligkeitswert vor letztem Ausschalten
+0x01DF  4-7  A 1, Sperren\r\n Sperrfunktion ? Ausgang 1, Freigabe Ausgang 1 Helligkeit am Ende der Sperrung\r\n
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = keine Aktion
+     13 = Helligkeitswert vor letztem Ausschalten
+     14 = nachgeführter Helligkeitswert
+0x01E0  0-3  A 2, Sperren\r\n Sperrfunktion ? Ausgang 2, Freigabe Ausgang 2 Helligkeit zu Beginn der Sperrung
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = keine Aktion
+     13 = Helligkeitswert vor letztem Ausschalten
+0x01E0  4-7  A 2, Sperren\r\n Sperrfunktion ? Ausgang 2, Freigabe Ausgang 2 Helligkeit am Ende der Sperrung\r\n
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = keine Aktion
+     13 = Helligkeitswert vor letztem Ausschalten
+     14 = nachgeführter Helligkeitswert
+0x01E1  0-3  A 3, Sperren Sperrfunktion ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit zu Beginn der Sperrung
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = keine Aktion
+     13 = Helligkeitswert vor letztem Ausschalten
+0x01E1  4-7  A 3, Sperren Sperrfunktion ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit am Ende der Sperrung
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = keine Aktion
+     13 = Helligkeitswert vor letztem Ausschalten
+     14 = nachgeführter Helligkeitswert
+0x01E2  0-3  Ausgang 1 Verhalten bei Busspannungswiederkehr
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = Helligkeitswert bei Busspannungsausfall
+0x01E2  4-7  Ausgang 2 Verhalten bei Busspannungswiederkehr
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = Helligkeitswert bei Busspannungsausfall
+0x01E3  0-3  Ausgang 3 Dummy_Dimm Verhalten bei Busspannungswiederkehr
+     0 = AUS
+     1 = Grundhelligkeit
+     2 = 10 %
+     3 = 20 %
+     4 = 30 %
+     5 = 40 %
+     6 = 50 %
+     7 = 60 %
+     8 = 70 %
+     9 = 80 %
+     10 = 90 %
+     11 = maximale Helligkeit
+     12 = Helligkeitswert bei Busspannungsausfall
+0x01E3  4-4  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Speicherfunktion ?
+     0 = NEIN
+     1 = JA
+0x01E3  5-5  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Speicherfunktion ?
+     0 = NEIN
+     1 = JA
+0x01E7  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 1
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01E8  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 2
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01E9  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 3
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01EA  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 4
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01EB  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 5
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01EC  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 6
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01ED  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 7
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01EE  0-7  A 1, Lichtszenen \r\n                Lichtszenen ? Ausgang 1, Freigabe Ausgang 1 Helligkeit bei Lichtszene 8
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01EF  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 1
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F0  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 2
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F1  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 3
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F2  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 4
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F3  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 5
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F4  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 6
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F5  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 7
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F6  0-7  A 2, Lichtszenen\r\n                Lichtszenen ? Ausgang 2, Freigabe Ausgang 2 Helligkeit bei Lichtszene 8
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F7  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 1
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F8  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 2
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01F9  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 3
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01FA  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 4
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01FB  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 5
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01FC  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 6
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01FD  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 7
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
+0x01FE  0-7  A 3, Lichtszenen\r\n                Lichtszenen ? Ausgang 3, Freigabe Dummy_Dimm Helligkeit bei Lichtszene 8
+     0 = AUS
+     1 = Grundhelligkeit
+     25 = 10 %
+     51 = 20 %
+     77 = 30 %
+     102 = 40 %
+     127 = 50 %
+     154 = 60 %
+     179 = 70 %
+     204 = 80 %
+     230 = 90 %
+     255 = maximale Helligkeit
