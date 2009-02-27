@@ -1,0 +1,1005 @@
+File created by kubi's vdTool 2.0
+---------------------------------
+
+Product Name ............ : #Kombisensor AP 254
+Serial Number ........... : hp_00139
+Manufacturer ID ......... : 0x01
+Mask Version ............ : 0x0012
+User Ram Start .......... : 0x00CE
+User Ram End ............ : 0x00DF
+EEPROM Start ............ : 0x0100
+EEPROM End .............. : 0x01FE
+RUN Error Adress ........ : 0x010D
+Address Table Address ... : 0x0116
+Association Table Address : 0x0111
+Commstab Pointer Address  : 0x0112
+Device Type ............. : 0x221C
+Commstab Address ........ : 0x56
+
+Application Program 23301  12 S2 Helligkeit und Temperatur 221C01
+--------------------------------------------------
+0x01C9  Bit 0-7  Param-ID: 42857  Ger?tekennung  Test  
+  0  $falsche Nummer (!)
+  131  $Luna 131
+
+0x01CA  Bit 0-7  Param-ID: 42873  Temperaturabgleich  Temperaturwert  
+
+0x01CB  Bit 6-6  Param-ID: 58280  Format des Telegramms  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  Schalten
+  1  Wert senden
+
+0x01CB  Bit 5-5  Param-ID: 58281  Format des Telegramms  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  Schalten
+  1  Wert senden
+
+0x01CB  Bit 4-4  Param-ID: 52908  Format des Telegramms  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  Schalten
+  1  Wert senden
+
+0x01CB  Bit 3-3  Param-ID: 52894  Format des Telegramms  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  Schalten
+  1  Wert senden
+
+0x01CB  Bit 2-2  Param-ID: 53042  Format des Telegramms  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  Schalten
+  1  Wert senden
+
+0x01CB  Bit 1-1  Param-ID: 53016  Format des Telegramms  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  Schalten
+  1  Wert senden
+
+0x01CB  Bit 0-0  Param-ID: 44880  Format des Telegramms  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  Schalten
+  1  Wert senden
+
+0x01CC  Bit 4-7  Param-ID: 53051  Abfallzeit Helligkeit 3  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  unverz?gert
+  1  2 Sekunden
+  2  5 Sekunden
+  3  10 Sekunden
+  4  15 Sekunden
+  5  20 Sekunden
+  6  30 Sekunden
+  7  45 Sekunden
+  8  60 Sekunden
+  9  90 Sekunden
+  10  2 Minuten
+  11  3 Minuten
+  12  5 Minuten
+  13  10 Minuten
+  14  15 Minuten
+  15  30 Minuten
+
+0x01CD  Bit 0-3  Param-ID: 52882  Abfallzeit Helligkeit 2  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  unverz?gert
+  1  2 Sekunden
+  2  5 Sekunden
+  3  10 Sekunden
+  4  15 Sekunden
+  5  20 Sekunden
+  6  30 Sekunden
+  7  45 Sekunden
+  8  60 Sekunden
+  9  90 Sekunden
+  10  2 Minuten
+  11  3 Minuten
+  12  5 Minuten
+  13  10 Minuten
+  14  15 Minuten
+  15  30 Minuten
+
+0x01CE  Bit 4-7  Param-ID: 44900  Ansprechverz?gerung Regen  Regenf?hler vorhanden  Allgemein  
+
+0x01CE  Bit 0-3  Param-ID: 44904  Ansprechverz?gerung Regen  Regenf?hler vorhanden  Allgemein  
+
+0x01CF  Bit 4-7  Param-ID: 44948  Verzzeit Windsw 2 ?berschritten  Windf?hler vorhanden  Allgemein  
+
+0x01CF  Bit 0-3  Param-ID: 44952  Verzzeit Windsw 2 unterschritten  Windf?hler vorhanden  Allgemein  
+
+0x01D0  Bit 4-7  Param-ID: 44940  Verzzeit Windsw 1 ?berschritten  Windf?hler vorhanden  Allgemein  
+
+0x01D0  Bit 0-3  Param-ID: 44944  Verzzeit Windsw 1 unterschritten  Windf?hler vorhanden  Allgemein  
+
+0x01D1  Bit 4-6  Param-ID: 53000  Delta f?r Senden der Windgeschw.  Windgeschwindigkeit  Windf?hler vorhanden  Allgemein  
+  0  zyklisches Senden
+  1  bei ?nderung um 1 m/s
+  2  bei ?nderung um 2 m/s
+  3  bei ?nderung um 3 m/s
+  5  bei ?nderung um 5 m/s
+
+0x01D1  Bit 0-3  Param-ID: 52996  zykl Senden Windgeschwindigkeit  Windgeschwindigkeit  Windf?hler vorhanden  Allgemein  
+  0  kein zyklisches Senden
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+  8  60 Minuten
+
+0x01D2  Bit 4-6  Param-ID: 42871  Delta f?r Senden Temperatur  Temperaturwert  
+  0  kein Senden bei ?nderung
+  1  bei ?nderung um 1 K
+  2  bei ?nderung um 2 K
+  3  bei ?nderung um 3 K
+
+0x01D2  Bit 0-3  Param-ID: 42872  Zykl Senden der Temperatur  Temperaturwert  
+  0  kein zyklisches Senden
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+  8  60 Minuten
+
+0x01D3  Bit 7-7  Param-ID: 40227  Art von Lichtobjekt 1  
+  0  Helligkeitsschwelle
+  1  Helligkeitsregelung
+
+0x01D3  Bit 4-6  Param-ID: 42874  Sendebedingung f?r Helligkeitswert  Helligkeitswert  
+  0  kein Senden bei ?nderung
+  1  5 % jedoch mindestens 1 Lux
+  2  10 % jedoch mindestens 1 Lux
+  3  20 % jedoch mindestens 1 Lux
+  4  30 % jedoch mindestens 1 Lux
+
+0x01D3  Bit 0-3  Param-ID: 42875  zykl Senden Helligkeitswert  Helligkeitswert  
+  0  kein zyklisches Senden
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+  8  60 Minuten
+
+0x01D4  Bit 0-7  Param-ID: 44912  Impulse f?r Windrad  Windf?hler vorhanden  Allgemein  
+
+0x01D5  Bit 0-7  Param-ID: 44888  Schwelle f?r kein Regen  Regenf?hler vorhanden  Allgemein  
+
+0x01D7  Bit 0-7  Param-ID: 61803  Telegramm bei Unterschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung nicht erf?llt ist  Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01D7  Bit 0-7  Param-ID: 61809  Wert bei Unterschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung nicht erf?llt ist  Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+
+0x01D8  Bit 0-7  Param-ID: 61805  Telegramm bei ?berschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung erf?llt ist  Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01D8  Bit 0-7  Param-ID: 61807  Wert bei ?berschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung erf?llt ist  Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+
+0x01D9  Bit 4-7  Param-ID: 52948  Lichtbedingung 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  beliebig
+  1  gr??er als Helligkeitsschwelle 1
+  2  gr??er als Helligkeitsschwelle 2
+  3  gr??er als Helligkeitsschwelle 3
+  4  kleiner als Helligkeitsschwelle 1
+  5  kleiner als Helligkeitsschwelle 2
+  6  kleiner als Helligkeitsschwelle 3
+
+0x01D9  Bit 2-3  Param-ID: 44896  Abh?ngigkeit von Regen  Regenf?hler vorhanden  Allgemein  
+  0  Regen beliebig
+  1  Regen
+  2  kein Regen
+
+0x01D9  Bit 0-1  Param-ID: 44936  Abh?ngikeit von Windsw 2  Windf?hler vorhanden  Allgemein  
+  0  beliebig
+  1  gr??er als folgende Schwelle
+  2  kleiner als folgende Schwelle
+
+0x01DA  Bit 6-7  Param-ID: 60568  Sendeverhalten bei Unterschreiten   Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01DA  Bit 6-7  Param-ID: 60574  Sendeverhalten bei Unterschreiten   Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01DA  Bit 4-5  Param-ID: 60570  Sendeverhalten bei ?berschreiten   Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01DA  Bit 4-5  Param-ID: 60572  Sendeverhalten bei ?berschreiten   Funktion des Verkn?pfungsobjekts 2  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01DA  Bit 3-3  Param-ID: 58279  Verhalten bei Sperren  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01DA  Bit 0-2  Param-ID: 44928  Windhysterese 2  Windf?hler vorhanden  Allgemein  
+  1  1 m/s
+  2  2 m/s
+  3  3 m/s
+  4  4 m/s
+  5  5 m/s
+
+0x01DB  Bit 4-6  Param-ID: 52952  Temperaturbedingung  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  beliebig
+  1  gr??er als Temperaturschwelle 1
+  2  gr??er als Temperaturschwelle 2
+  3  kleiner als Temperaturschwelle 1
+  4  kleiner als Temperaturschwelle 2
+
+0x01DB  Bit 0-3  Param-ID: 58278  Zykluszeit  Verkn?pfungsobjekt 2  Verkn?pfung 2  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01DC  Bit 0-4  Param-ID: 44932  Windschwelle 2  Windf?hler vorhanden  Allgemein  
+
+0x01DD  Bit 0-7  Param-ID: 61815  Wert bei Unterschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung nicht erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+
+0x01DD  Bit 0-7  Param-ID: 61817  Telegramm bei Unterschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung nicht erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01DD  Bit 0-7  Param-ID: 61823  Wert bei Unterschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung nicht erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+
+0x01DD  Bit 0-7  Param-ID: 61825  Telegramm bei Unterschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung nicht erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01DE  Bit 0-7  Param-ID: 61813  Wert bei ?berschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+
+0x01DE  Bit 0-7  Param-ID: 61819  Telegramm bei Erf?llung  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01DE  Bit 0-7  Param-ID: 61821  Wert bei ?berschreiten  Sendeverhalten wenn Verkn?pfungs-\r\nbed\\ingung erf?llt ist  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+
+0x01DF  Bit 4-7  Param-ID: 52960  Lichtbedingung 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  beliebig
+  1  gr??er als Helligkeitsschwelle 1
+  2  gr??er als Helligkeitsschwelle 2
+  3  gr??er als Helligkeitsschwelle 3
+  4  kleiner als Helligkeitsschwelle 1
+  5  kleiner als Helligkeitsschwelle 2
+  6  kleiner als Helligkeitsschwelle 3
+
+0x01DF  Bit 2-3  Param-ID: 44892  Abh?ngigkeit von Regen  Regenf?hler vorhanden  Allgemein  
+  0  Regen beliebig
+  1  Regen
+  2  kein Regen
+
+0x01DF  Bit 0-1  Param-ID: 44916  Abh?ngikeit von Wind  Windf?hler vorhanden  Allgemein  
+  0  beliebig
+  1  gr??er als folgende Schwelle
+  2  kleiner als folgende Schwelle
+
+0x01E0  Bit 6-7  Param-ID: 60580  Sendeverhalten bei nicht Erf?llung  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01E0  Bit 6-7  Param-ID: 60582  Sendeverhalten bei nicht Erf?llung  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01E0  Bit 6-7  Param-ID: 60588  Sendeverhalten bei nicht Erf?llung  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01E0  Bit 6-7  Param-ID: 60590  Sendeverhalten bei nicht Erf?llung  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01E0  Bit 4-5  Param-ID: 60576  Sendeverhalten bei erf?llter Bedingung  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01E0  Bit 4-5  Param-ID: 60578  Sendeverhalten bei erf?llter Bedingung   Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01E0  Bit 4-5  Param-ID: 60584  Sendeverhalten bei erf?llter Bedingung  Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01E0  Bit 4-5  Param-ID: 60586  Sendeverhalten bei erf?llter Bedingung   Funktion des Verkn?pfungsobjekts 1  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01E0  Bit 3-3  Param-ID: 58283  Verhalten bei Sperren  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01E0  Bit 0-2  Param-ID: 44924  Windhysterese  Windf?hler vorhanden  Allgemein  
+  1  1 m/s
+  2  2 m/s
+  3  3 m/s
+  4  4 m/s
+  5  5 m/s
+
+0x01E1  Bit 4-6  Param-ID: 52964  Temperaturbedingung  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  beliebig
+  1  gr??er als Temperaturschwelle 1
+  2  gr??er als Temperaturschwelle 2
+  3  kleiner als Temperaturschwelle 1
+  4  kleiner als Temperaturschwelle 2
+
+0x01E1  Bit 0-3  Param-ID: 58282  Zykluszeit  Verkn?pfungsobjekt 1  Verkn?pfung 1  Anzahl der Verkn?pfungsobjekte  Allgemein  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01E2  Bit 7-7  Param-ID: 42876  Regenf?hler vorhanden  Allgemein  
+  0  nein
+  1  ja
+
+0x01E2  Bit 6-6  Param-ID: 42877  Windf?hler  Allgemein  
+  0  nein
+  1  ja
+
+0x01E2  Bit 0-4  Param-ID: 44920  Windschwelle 1 f?r Beschattung  Windf?hler vorhanden  Allgemein  
+
+0x01E3  Bit 0-7  Param-ID: 60544  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01E3  Bit 0-7  Param-ID: 60548  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01E4  Bit 0-7  Param-ID: 60540  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01E5  Bit 6-7  Param-ID: 58272  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01E5  Bit 6-7  Param-ID: 58273  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01E5  Bit 4-5  Param-ID: 58270  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01E5  Bit 4-5  Param-ID: 58271  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01E5  Bit 3-3  Param-ID: 52904  Verhalten bei Sperren  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01E5  Bit 0-2  Param-ID: 52916  Hysterese   Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  1  1 K
+  2  2 K
+  3  3 K
+  4  4 K
+
+0x01E6  Bit 0-3  Param-ID: 52912  Zykluszeit  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01E7  Bit 0-7  Param-ID: 52920  Temperaturschwelle  Temperaturschwelle 2  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01E8  Bit 0-7  Param-ID: 60528  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01E8  Bit 0-7  Param-ID: 60532  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01E8  Bit 0-7  Param-ID: 60560  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01E8  Bit 0-7  Param-ID: 60564  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01E9  Bit 0-7  Param-ID: 60524  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01E9  Bit 0-7  Param-ID: 60552  Telegramm bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01E9  Bit 0-7  Param-ID: 60556  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01EA  Bit 6-7  Param-ID: 58268  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01EA  Bit 6-7  Param-ID: 58269  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01EA  Bit 6-7  Param-ID: 58276  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01EA  Bit 6-7  Param-ID: 58277  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01EA  Bit 4-5  Param-ID: 58266  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01EA  Bit 4-5  Param-ID: 58267  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01EA  Bit 4-5  Param-ID: 58274  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01EA  Bit 4-5  Param-ID: 58275  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01EA  Bit 3-3  Param-ID: 52891  Verhalten bei Sperren  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01EA  Bit 0-2  Param-ID: 52900  Hysterese   Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  1  1 K
+  2  2 K
+  3  3 K
+  4  4 K
+
+0x01EB  Bit 7-7  Param-ID: 42856  Verhalten nach Restart  Test  
+  0  nein
+  1  ja
+
+0x01EB  Bit 0-3  Param-ID: 52897  Zykluszeit  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01EC  Bit 0-7  Param-ID: 52888  Temperaturschwelle  Temperaturschwelle 1  Anzahl der Temperaturschwellen  Allgemein  
+
+0x01ED  Bit 0-7  Param-ID: 60616  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+
+0x01ED  Bit 0-7  Param-ID: 60620  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01EE  Bit 0-7  Param-ID: 60612  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+
+0x01EF  Bit 6-7  Param-ID: 58301  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01EF  Bit 6-7  Param-ID: 58302  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01EF  Bit 4-5  Param-ID: 58299  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01EF  Bit 4-5  Param-ID: 58300  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01EF  Bit 3-3  Param-ID: 53036  Verhalten bei Sperren  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01EF  Bit 0-2  Param-ID: 53048  Hysterese   Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  1  50 % jedoch mindestens 1 Lux
+  2  10 % jedoch mindestens 1 Lux
+  3  20 % jedoch mindestens 1 Lux
+  4  30 % jedoch mindestens 1 Lux
+
+0x01F0  Bit 4-7  Param-ID: 53039  Ansprechverz?gerung 3  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  unverz?gert
+  1  2 Sekunden
+  2  5 Sekunden
+  3  10 Sekunden
+  4  15 Sekunden
+  5  20 Sekunden
+  6  30 Sekunden
+  7  45 Sekunden
+  8  60 Sekunden
+  9  90 Sekunden
+  10  2 Minuten
+  11  3 Minuten
+  12  5 Minuten
+  13  10 Minuten
+  14  15 Minuten
+  15  30 Minuten
+
+0x01F0  Bit 0-3  Param-ID: 53045  Zykluszeit  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01F1  Bit 0-7  Param-ID: 53033  Lichtschwelle  Helligkeitsschwelle 3  Anzahl der Helligkeitsschwellen  Allgemein  
+  7  2 Lux
+  10  3 Lux
+  12  4 Lux
+  14  5 Lux
+  16  6 Lux
+  17  7 Lux
+  18  8 Lux
+  19  9 Lux
+  20  10 Lux
+  21  11 Lux
+  22  12,5 Lux
+  23  14 Lux
+  24  16 Lux
+  25  18 Lux
+  26  20 Lux
+  27  23 Lux
+  28  26 Lux
+  29  30 Lux
+  30  35 Lux
+  31  40 Lux
+  32  45 Lux
+  33  50 Lux
+  34  55 Lux
+  35  60 Lux
+  36  70 Lux
+  37  80 Lux
+  38  90 Lux
+  39  100 Lux
+  40  110 Lux
+  41  125 Lux
+  42  140 Lux
+  43  160 Lux
+  44  180 Lux
+  45  200 Lux
+  46  230 Lux
+  47  260 Lux
+  48  300 Lux
+  49  350 Lux
+  50  400 Lux
+  51  450 Lux
+  52  500 Lux
+  53  550 Lux
+  54  600 Lux
+  55  700 Lux
+  56  800 Lux
+  57  900 Lux
+  58  1000 Lux
+  59  1100 Lux
+  60  1250 Lux
+  61  1400 Lux
+  62  1600 Lux
+  63  1800 Lux
+  64  2000 Lux
+  65  2300 Lux
+  66  2600 Lux
+  67  3000 Lux
+  68  3500 Lux
+  69  4000 Lux
+  70  4500 Lux
+  71  5000 Lux
+  72  5500 Lux
+  73  6000 Lux
+  74  7000 Lux
+  75  8000 Lux
+  76  9000 Lux
+  77  10000 Lux
+  78  11000 Lux
+  79  12500 Lux
+  80  14000 Lux
+  81  16000 Lux
+  82  18000 Lux
+  83  20000 Lux
+  84  23000 Lux
+  85  26000 Lux
+  86  30000 Lux
+  87  35000 Lux
+  88  40000 Lux
+  89  45000 Lux
+  90  50000 Lux
+  91  55000 Lux
+  92  60000 Lux
+  93  70000 Lux
+  94  80000 Lux
+  95  90000 Lux
+  96  100000 Lux
+
+0x01F2  Bit 0-7  Param-ID: 60600  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+
+0x01F2  Bit 0-7  Param-ID: 60604  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01F2  Bit 0-7  Param-ID: 60632  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+
+0x01F2  Bit 0-7  Param-ID: 60636  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01F3  Bit 0-7  Param-ID: 60596  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+
+0x01F3  Bit 0-7  Param-ID: 60624  Telegramm bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  ausschalten
+  1  einschalten
+
+0x01F3  Bit 0-7  Param-ID: 60628  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+
+0x01F4  Bit 6-7  Param-ID: 58297  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01F4  Bit 6-7  Param-ID: 58298  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01F4  Bit 6-7  Param-ID: 58305  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01F4  Bit 6-7  Param-ID: 58306  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01F4  Bit 4-5  Param-ID: 58295  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01F4  Bit 4-5  Param-ID: 58296  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01F4  Bit 4-5  Param-ID: 58303  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01F4  Bit 4-5  Param-ID: 58304  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01F4  Bit 3-3  Param-ID: 53008  Verhalten bei Sperren  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01F4  Bit 0-2  Param-ID: 52879  Hysterese   Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  1  50 % jedoch mindestens 1 Lux
+  2  10 % jedoch mindestens 1 Lux
+  3  20 % jedoch mindestens 1 Lux
+  4  30 % jedoch mindestens 1 Lux
+
+0x01F5  Bit 4-7  Param-ID: 53012  Ansprechverz?gerung 2  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  unverz?gert
+  1  2 Sekunden
+  2  5 Sekunden
+  3  10 Sekunden
+  4  15 Sekunden
+  5  20 Sekunden
+  6  30 Sekunden
+  7  45 Sekunden
+  8  60 Sekunden
+  9  90 Sekunden
+  10  2 Minuten
+  11  3 Minuten
+  12  5 Minuten
+  13  10 Minuten
+  14  15 Minuten
+  15  30 Minuten
+
+0x01F5  Bit 0-3  Param-ID: 52876  Zykluszeit  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01F6  Bit 0-7  Param-ID: 53004  Lichtschwelle  Helligkeitsschwelle 2  Anzahl der Helligkeitsschwellen  Allgemein  
+  7  2 Lux
+  10  3 Lux
+  12  4 Lux
+  14  5 Lux
+  16  6 Lux
+  17  7 Lux
+  18  8 Lux
+  19  9 Lux
+  20  10 Lux
+  21  11 Lux
+  22  12,5 Lux
+  23  14 Lux
+  24  16 Lux
+  25  18 Lux
+  26  20 Lux
+  27  23 Lux
+  28  26 Lux
+  29  30 Lux
+  30  35 Lux
+  31  40 Lux
+  32  45 Lux
+  33  50 Lux
+  34  55 Lux
+  35  60 Lux
+  36  70 Lux
+  37  80 Lux
+  38  90 Lux
+  39  100 Lux
+  40  110 Lux
+  41  125 Lux
+  42  140 Lux
+  43  160 Lux
+  44  180 Lux
+  45  200 Lux
+  46  230 Lux
+  47  260 Lux
+  48  300 Lux
+  49  350 Lux
+  50  400 Lux
+  51  450 Lux
+  52  500 Lux
+  53  550 Lux
+  54  600 Lux
+  55  700 Lux
+  56  800 Lux
+  57  900 Lux
+  58  1000 Lux
+  59  1100 Lux
+  60  1250 Lux
+  61  1400 Lux
+  62  1600 Lux
+  63  1800 Lux
+  64  2000 Lux
+  65  2300 Lux
+  66  2600 Lux
+  67  3000 Lux
+  68  3500 Lux
+  69  4000 Lux
+  70  4500 Lux
+  71  5000 Lux
+  72  5500 Lux
+  73  6000 Lux
+  74  7000 Lux
+  75  8000 Lux
+  76  9000 Lux
+  77  10000 Lux
+  78  11000 Lux
+  79  12500 Lux
+  80  14000 Lux
+  81  16000 Lux
+  82  18000 Lux
+  83  20000 Lux
+  84  23000 Lux
+  85  26000 Lux
+  86  30000 Lux
+  87  35000 Lux
+  88  40000 Lux
+  89  45000 Lux
+  90  50000 Lux
+  91  55000 Lux
+  92  60000 Lux
+  93  70000 Lux
+  94  80000 Lux
+  95  90000 Lux
+  96  100000 Lux
+
+0x01F7  Bit 0-7  Param-ID: 58287  Telegramm bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  ausschalten
+  1  einschalten
+
+0x01F7  Bit 0-7  Param-ID: 58293  Wert bei Unterschreiten  Sendeverhalten bei Unterschreiten\r\nder\\ Schwelle  Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+
+0x01F8  Bit 0-7  Param-ID: 58289  Telegramm bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  ausschalten
+  1  einschalten
+
+0x01F8  Bit 0-7  Param-ID: 58291  Wert bei ?berschreiten  Sendeverhalten bei ?berschreiten\r\nder \\Schwelle  Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+
+0x01F9  Bit 4-7  Param-ID: 42863  Regelstrategie  Funktion von Helligkeitsschwelle 1  
+  0  langsam
+  1  mittel
+  2  schnell
+
+0x01F9  Bit 6-7  Param-ID: 52980  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01F9  Bit 6-7  Param-ID: 52992  Sendeverhalten bei Unterschreiten   Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01F9  Bit 4-5  Param-ID: 52984  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  kein Telegramm senden
+  1  nur ein Telegramm senden
+  2  Telegramm zyklisch senden
+
+0x01F9  Bit 4-5  Param-ID: 52988  Sendeverhalten bei ?berschreiten   Funktion des Schwellwertobjektes  Helligkeitsobjekt 1  Funktion von Helligkeitsschwelle 1  
+  0  keinen Wert senden
+  1  nur einmal Wert senden
+  2  zyklisches Senden
+
+0x01F9  Bit 3-3  Param-ID: 42861  Verhalten bei Sperren  Funktion von Helligkeitsschwelle 1  
+  0  Sperren ignorieren
+  1  Sperren beachten
+
+0x01F9  Bit 0-2  Param-ID: 42859  Hysterese   Funktion von Helligkeitsschwelle 1  
+  1  50 % jedoch mindestens 1 Lux
+  2  10 % jedoch mindestens 1 Lux
+  3  20 % jedoch mindestens 1 Lux
+  4  30 % jedoch mindestens 1 Lux
+
+0x01FA  Bit 4-7  Param-ID: 42860  Ansprechverz?gerung  Funktion von Helligkeitsschwelle 1  
+  0  unverz?gert
+  1  2 Sekunden
+  2  5 Sekunden
+  3  10 Sekunden
+  4  15 Sekunden
+  5  20 Sekunden
+  6  30 Sekunden
+  7  45 Sekunden
+  8  60 Sekunden
+  9  90 Sekunden
+  10  2 Minuten
+  11  3 Minuten
+  12  5 Minuten
+  13  10 Minuten
+  14  15 Minuten
+  15  30 Minuten
+
+0x01FA  Bit 4-7  Param-ID: 42862  Telegrammlimitierung f?r Regelung  Funktion von Helligkeitsschwelle 1  
+  0  max. 2 Telegramme pro Sekunde
+  1  max. 1 Telegramm pro Sekunde 
+  2  max. 1 Telegramm in 2 Sekunden
+
+0x01FA  Bit 0-3  Param-ID: 42870  Zykluszeit  Funktion von Helligkeitsschwelle 1  
+  0  60 Minuten
+  1  1 Minute
+  2  3 Minuten
+  3  5 Minuten
+  4  10 Minuten
+  5  20 Minuten
+  6  30 Minuten
+  7  45 Minuten
+
+0x01FB  Bit 0-7  Param-ID: 42858  Lichtschwelle  Funktion von Helligkeitsschwelle 1  
+  7  2 Lux
+  10  3 Lux
+  12  4 Lux
+  14  5 Lux
+  16  6 Lux
+  17  7 Lux
+  18  8 Lux
+  19  9 Lux
+  20  10 Lux
+  21  11 Lux
+  22  12,5 Lux
+  23  14 Lux
+  24  16 Lux
+  25  18 Lux
+  26  20 Lux
+  27  23 Lux
+  28  26 Lux
+  29  30 Lux
+  30  35 Lux
+  31  40 Lux
+  32  45 Lux
+  33  50 Lux
+  34  55 Lux
+  35  60 Lux
+  36  70 Lux
+  37  80 Lux
+  38  90 Lux
+  39  100 Lux
+  40  110 Lux
+  41  125 Lux
+  42  140 Lux
+  43  160 Lux
+  44  180 Lux
+  45  200 Lux
+  46  230 Lux
+  47  260 Lux
+  48  300 Lux
+  49  350 Lux
+  50  400 Lux
+  51  450 Lux
+  52  500 Lux
+  53  550 Lux
+  54  600 Lux
+  55  700 Lux
+  56  800 Lux
+  57  900 Lux
+  58  1000 Lux
+  59  1100 Lux
+  60  1250 Lux
+  61  1400 Lux
+  62  1600 Lux
+  63  1800 Lux
+  64  2000 Lux
+  65  2300 Lux
+  66  2600 Lux
+  67  3000 Lux
+  68  3500 Lux
+  69  4000 Lux
+  70  4500 Lux
+  71  5000 Lux
+  72  5500 Lux
+  73  6000 Lux
+  74  7000 Lux
+  75  8000 Lux
+  76  9000 Lux
+  77  10000 Lux
+  78  11000 Lux
+  79  12500 Lux
+  80  14000 Lux
+  81  16000 Lux
+  82  18000 Lux
+  83  20000 Lux
+  84  23000 Lux
+  85  26000 Lux
+  86  30000 Lux
+  87  35000 Lux
+  88  40000 Lux
+  89  45000 Lux
+  90  50000 Lux
+  91  55000 Lux
+  92  60000 Lux
+  93  70000 Lux
+  94  80000 Lux
+  95  90000 Lux
+  96  100000 Lux
+
+0x01FB  Bit 0-7  Param-ID: 42865  Sollwert f?r Lichtregelung  Funktion von Helligkeitsschwelle 1  
+
+
