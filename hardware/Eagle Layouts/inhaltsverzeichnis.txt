@@ -49,3 +49,4 @@ Tastsensor_by_kubi
 Universaldimmer			
 UP Leergeh			Dimension für das UP Gehäuse
 wippe				Dimension für die Funkschaltergehäuse
+kombi_AVR_Sniffer mit USB	EIB-Sniffer mit USB-Anschluss, galv. getrennt
