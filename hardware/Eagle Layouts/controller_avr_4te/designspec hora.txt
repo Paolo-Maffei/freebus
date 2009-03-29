@@ -1,0 +1,26 @@
+Horst Rauch 22.03.2009
+
+Powerconverter:
+
+(nach designspec)
+Uinmin 16V, Uinmax 30V, Iout 50mA, Uout 3,3V, f>50kHz;ripple <50mV
+
+50kHz:
+
+tonmax 5,1us, toff 14,9us; 
+Ct= 220pF, L= 620uH, Cout >15uF (33uF hatte sonst nix anders) low ESR! ;Rsc 1,5R (Imax 216mA), R13=12k, R12=20k (22k für 3,6V)
+
+70kHz:
+tonmax 3,3us, toff 10,6us
+Ct 150pf, L= 420uH, Cout 33uF low ESR
+
+
+Altes design aus Datenblatt ist für 500mA Iout ausgelegt- strom durch drossel bei ton kann bis 1A erreichen, drossel verliert die induktivität durch magnetische sättigung bei <200mA ->datenblatt
+strombegrenzung nur durch kurzschlußbetrieb über Rsense-> kurze stromspitzen die grossen eingangs und ausganskondensator erfordern
+ 
+
+EIB- Input AVR:
+ohne T, Low-pass filter über Cin des AVR ~10pF, kein pull-up, fg~700kHz (5-fach der Signalfrequenz, für 3te und 5te Harmonische)
+
+
+Einige Dioden in 1n4148 bzw 1n4448 (300mA) geändert. Schottky nur im SMPS
