@@ -295,9 +295,9 @@ UsedLibrary="C:/Program Files/EAGLE-5.4.0/lbr/zilog.lbr"
 
 [Win_1]
 Type="Schematic Editor"
-Loc="38 18 1612 968"
-State=2
-Number=1
+Loc="161 161 760 560"
+State=0
+Number=2
 File="Ctrl_AVR_Reg.sch"
 View="297462 -854154 3053578 1030026"
 WireWidths=" 0 3048 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 4064 1524"
@@ -331,16 +331,15 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: 297462 -854154 3053578 1030026"
 Sheet=1
 
 [Win_2]
 Type="Board Editor"
-Loc="1710 26 3352 1034"
+Loc="39 6 1619 1014"
 State=2
-Number=2
+Number=1
 File="Ctrl_AVR_Reg.brd"
-View="32823 204322 711217 559618"
+View="-22476 -12835 1133004 601379"
 WireWidths=" 0 2540 3048 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 4064"
 PadDiameters=" 2540 3048 4064 6096 8128 10160 12700 14224 16764 17780 19304 21844 25400 38100 64516 0"
 PadDrills=" 5000 6000 7000 9000 10000 11000 12000 13000 14000 15000 16000 20000 22000 28000 32000 8000"
@@ -371,7 +370,7 @@ SwapLevel=0
 ArcDirection=0
 AddLevel=2
 PadsSameType=0
-Layer=1
+Layer=16
 
 [Win_3]
 Type="Control Panel"
