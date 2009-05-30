@@ -1,0 +1,972 @@
+//#  ** Public Protocol Parser **
+//#  (c) 2008 Kent Filek (www.filek.com), email: kent@filek.com
+//#
+//#  Title:       EIPnet/IP, cEMI
+//#
+//#  Details:     
+//#
+//#  Version:     1.00.00 15.Oct.2008 Alpha Version supporting basic Tunneling and Busmon frames
+//#
+//#  References:  Konnex EIBnet/IP Handbook
+//#
+//#  Comments:    
+//#
+//####
+
+const EIBnet_HeaderSize = 0x06;
+const EIBnet_Version 		= 0x10;
+
+const EIBnet_SearchReq 		= 0x0201;
+const EIBnet_SearchRes 		= 0x0202;
+const EIBnet_DescrReq  		= 0x0203;
+const EIBnet_DescrRes  		= 0x0204;
+const EIBnet_ConnReq   		= 0x0205;
+const EIBnet_ConnRes			= 0x0206;
+const EIBnet_ConnStateReq = 0x0207;
+const EIBnet_ConnStateRes = 0x0208;
+const EIBnet_DiscReq   		= 0x0209;
+const EIBnet_DiscRes   		= 0x020A;
+
+const EIBnet_DevConfReq 	= 0x0310;
+const EIBnet_DevConfAck 	= 0x0311;
+
+const EIBnet_TunnelReq 		= 0x0420;
+const EIBnet_TunnelAck 		= 0x0421;
+
+const EIBnet_RoutingInd 		= 0x0530;
+const EIBnet_RoutingLostMsg = 0x0531;
+
+UnsignedNumber EIBnetWORD 
+{
+	Size = 2;
+	DisplayFormat = FormatString( "%d (0x%X)", this, this );
+	ByteOrder = 1;	
+};
+
+UnsignedNumber EIBnetDWORD 
+{
+	Size = 4;
+	DisplayFormat = FormatString( "%d (0x%X)", this, this );
+	ByteOrder = 1;	
+};
+
+UnsignedNumber EIBnetKey 
+{
+	Size = 4;
+	DisplayFormat = FormatString( "0x%X", this );
+	ByteOrder = 1;	
+};
+
+UnsignedNumber EIBnetAccessLevel 
+{
+	Size = 1;
+	DisplayFormat = FormatString( "%u%s", this, this == 0 ? " (maximum)" : "" );
+};
+
+Struct EIBnetKNXAddress = FormatString("%u.%u.%u",Area,Line,Address)
+{
+	EIBnetWORD  Area:4;
+	EIBnetWORD  Line:4;
+	EIBnetWORD  Address:8;
+};
+
+Struct EIBnetKNXGroup = FormatString("%u/%u/%u",Area,Line,Address)
+{
+	EIBnetWORD  Res:1
+	EIBnetWORD  Area:4;
+	EIBnetWORD  Line:3;
+	EIBnetWORD  Address:8;
+};
+
+Table EIBnetServiceTypeTable(type)
+{
+	switch (type & 0x0ff00)
+	{
+		case 0x200: FormatString("%#x - Core", type & 0x0ff00);
+		case 0x300: FormatString("%#x - Device Management", type & 0x0ff00);
+		case 0x400: FormatString("%#x - Tunneling", type & 0x0ff00);
+		case 0x500: FormatString("%#x - Routing", type & 0x0ff00);
+		case 0x600: FormatString("%#x - Remlog", type & 0x0ff00);
+		case 0x700: FormatString("%#x - RemConf", type & 0x0ff00);
+		case 0x800: FormatString("%#x - Object Server", type & 0x0ff00);
+		default:    FormatString("%#x - Unknown ServiceType", type & 0x0ff00);
+	}
+}
+
+Table EIBnetServiceTable(type)
+{
+	switch (type)
+	{
+		case EIBnet_SearchReq:	FormatString("Search Request (%#x)", type);
+		case EIBnet_SearchRes:	FormatString("Search Response (%#x)", type);
+		case EIBnet_DescrReq: 	FormatString("Description Request (%#x)", type);
+		case EIBnet_DescrRes: 	FormatString("Description Response (%#x)", type);
+		case EIBnet_ConnReq: 	 FormatString("Connect Request (%#x)", type);
+		case EIBnet_ConnRes:  	FormatString("Connect Response (%#x)", type);
+		case EIBnet_ConnStateReq: FormatString("Connectionstate Request (%#x)", type);
+		case EIBnet_ConnStateRes: FormatString("Connectionstate Response (%#x)", type);
+		case EIBnet_DiscReq: 	 FormatString("Disconnect Request (%#x)", type);
+		case EIBnet_DiscRes: 	 FormatString("Disconnect Response (%#x)", type);
+
+		case EIBnet_DevConfReq:   FormatString("Device Configuration Request (%#x)", type);
+		case EIBnet_DevConfAck:   FormatString("Device Configuration Ack (%#x)", type);
+
+		case EIBnet_TunnelReq:    FormatString("Tunneling Request (%#x)", type);
+		case EIBnet_TunnelAck:    FormatString("Tunneling Ack (%#x)", type);
+
+		case EIBnet_RoutingInd:   FormatString("Routing Indication (%#x)", type);
+		case EIBnet_RoutingLostMsg: FormatString("Routing Lost Message (%#x)", type);
+
+		default:    FormatString("Unknown Service (%#x)", type);
+	}
+}
+
+Table EIBnetHostProtocolTable(prot)
+{
+	switch (prot)
+	{
+		case 0x01: "UDP";
+		case 0x02: "TCP";
+		default:   FormatString("Unknown Protocol (%#x)",prot);
+	}
+}
+
+Table EIBnetConnectionTypeTable(type)
+{
+	switch(type)
+	{
+		case 0x03: FormatString("Device Management (%#x)", type);
+		case 0x04: FormatString("Tunnel (%#x)", type);
+		case 0x06: FormatString("RemLog (%#x)", type);
+		case 0x07: FormatString("RemConf (%#x)", type);
+		case 0x08: FormatString("Object Server (%#x)", type);
+		default:   FormatString("Unknown Connection Type (%#x)",type);
+			}
+}
+
+Table EIBnetStatusTable(stat)
+{
+	switch(stat)
+	{
+		case 0x00: FormatString("E_NO_ERROR (%#x)", stat);
+		case 0x01: FormatString("E_HOST_PROTOCOL_TYPE (%#x)", stat);
+		case 0x02: FormatString("E_VERSION_NOT_SUPPORTED (%#x)", stat);
+		case 0x04: FormatString("E_SEQUENCE_NUMBER (%#x)", stat);
+		case 0x22: FormatString("E_CONNECTION_TYPE (%#x)", stat);
+		case 0x23: FormatString("E_CONNECTION_OPTION (%#x)", stat);
+		case 0x24: FormatString("E_NO_MORE_CONNECTIONS (%#x)", stat);
+		case 0x21: FormatString("E_CONNECTION_ID (%#x)", stat);
+		case 0x26: FormatString("E_DATA_CONNECTION (%#x)", stat);
+		case 0x27: FormatString("E_KNX_CONNECTION (%#x)", stat);
+		case 0x29: FormatString("E_TUNNELING_LAYER (%#x)", stat);
+		default:   FormatString("Unknown Error (%#x)",stat);
+	}
+}
+
+Table KNXLayerTable(layer)
+{
+	switch (layer)
+	{
+		case 0x02: "KNX Link Layer Tunnel";
+		case 0x04: "KNX Raw Tunnel";
+		case 0x80: "KNX Busmonitor Tunnel";
+		default:   FormatString("Unknown KNX Layer",layer);
+	}
+}
+
+Struct EIBnetHeader = FormatString("%s, TotalSize=%d",Service.ToString,TotalSize)
+{
+	UINT8 			HeaderSize;
+	UINT8 			Version;
+	EIBnetWORD  Service = EIBnetServiceTable(this);
+	EIBnetWORD  TotalSize;
+}
+
+Struct EIBnetHPAI = HostProtocol.ToString + ":" + Ip.ToString + FormatString(":%u",Port)
+{
+	UINT8   		Structlength;
+	UINT8   		HostProtocol = EIBnetHostProtocolTable(this);
+	IPv4Address Ip;
+	EIBnetWORD 	Port;
+}
+
+struct EIBnetCRD = "Type=" + Type.ToString + ", Address=" + IndividualAddress.ToString
+{
+	UINT8   					Structlength;
+	UINT8       			Type = EIBnetConnectionTypeTable(Type);
+	EIBnetKNXAddress  IndividualAddress;
+}
+
+struct EIBnetCRI = "Type=" + Type.ToString + ", Layer=" + Layer.ToString
+{
+	UINT8   		Structlength;
+	UINT8       Type = EIBnetConnectionTypeTable(Type);
+	UINT8       Layer = KNXLayerTable(this);
+	UINT8       Reserved;
+}
+
+struct EIBnetConnectionHeader = FormatString("ChannelId=%u, ",ChannelId) + Status.ToString
+{
+	[ Property.EIBnetChannel ]
+	UINT8	   ChannelId;
+	UINT8	   Status = EIBnetStatusTable(this);
+}
+
+struct EIBnetConnectionStateReq = FormatString("ChannelId=%u, ",ChannelId) + CtrlEndpoint.ToString
+{
+	[ Property.EIBnetChannel ]
+	UINT8	   		ChannelId;
+	UINT8	   		Reserved;
+	EIBnetHPAI	CtrlEndpoint;
+}
+
+struct KNXConnectionHeader = FormatString("ChannelId=%u, Seq=%u",ChannelId, SequenceCounter)
+{
+	UINT8   		Structlength;
+	[ Property.EIBnetChannel ]
+	UINT8	   		ChannelId;
+	UINT8       SequenceCounter;
+	UINT8       Reserved;	
+}
+
+struct KNXConnectionHeaderAck = FormatString("ChannelId=%u, Seq=%u, %s",ChannelId, SequenceCounter,Status.ToString)
+{
+	UINT8   		Structlength;
+	[ Property.EIBnetChannel ]
+	UINT8	   		ChannelId;
+	UINT8       SequenceCounter;
+	UINT8       Status = EIBnetStatusTable(this);	
+}
+
+[RegisterAfter( UDP.Dns, EIBnetIP, 3671 ).
+ BuildConversationWithParent( Property.EIBnetChannel)] 
+Protocol EIBnetIP = Header.Service.ToString + FormatString(" Channel=%u",Property.EIBnetChannel)
+{
+	EIBnetHeader Header;
+	
+	switch 
+	{
+		case Header.HeaderSize == EIBnet_HeaderSize && Header.Version == EIBnet_Version:
+			
+			switch Header.Service
+			{
+				
+				case EIBnet_ConnReq:
+					_struct {
+						EIBnetHPAI 					CtrlEndpoint;
+						EIBnetHPAI 					DataEndpoint;
+						EIBnetCRI  					ConnReqInfo;
+					}
+
+				case EIBnet_ConnRes:
+					_struct {
+						EIBnetConnectionHeader ConnectionHeader;
+						EIBnetHPAI 		 			DataEndpoint;
+						EIBnetCRD	       		ConnResData;
+					}
+
+   			case EIBnet_ConnStateReq:
+   				_struct {
+   					EIBnetConnectionStateReq Request;
+   				}
+				
+				case EIBnet_ConnStateRes:
+   				_struct {
+   					EIBnetConnectionHeader 		Response;
+   				}
+
+   			case EIBnet_DiscReq:
+   				_struct {
+   					EIBnetConnectionStateReq Request;
+   				}
+				
+				case EIBnet_DiscRes:
+   				_struct {
+   					EIBnetConnectionHeader 		 Response;
+   				}
+   				
+   			case EIBnet_TunnelReq:
+   				_struct {
+   					KNXConnectionHeader			  ConnectionHeader;
+   					cEMI                      cEMI;
+   				}
+				
+				case EIBnet_TunnelAck:
+   				_struct {
+   					KNXConnectionHeaderAck    Response;
+   				}
+				
+				case EIBnet_SearchReq:
+					_struct {
+						EIBnetHPAI HostIp;
+					}
+			}
+			
+		default: 
+			BLOB(FrameLength - FrameOffset) InvalidFrame;
+	}
+	switch
+	{
+		case FrameOffset < FrameLength:
+			BLOB(FrameLength - FrameOffset) UnhandledData;
+	}
+	
+
+}
+
+//#
+//#  This is the cEMI part
+//#
+//####
+
+
+
+             
+
+// data link layer message codes
+const L_BUSMON_IND	= 0x2B;
+const L_RAW_IND			= 0x2D;
+const L_RAW_REQ			= 0x10;
+const L_RAW_CON			= 0x2F;
+const L_DATA_REQ			= 0x11;
+const L_DATA_CON			= 0x2E;
+const L_DATA_IND			= 0x29;
+const L_POLL_DATA_REQ	= 0x13;
+const L_POLL_DATA_CON	= 0x25;
+const M_PROP_READ_REQ	= 0xFC;
+const M_PROP_READ_CON	= 0xFB;
+const M_PROP_WRITE_REQ	= 0xF6;
+const M_PROP_WRITE_CON	= 0xF5;
+const M_PROP_INFO_IND	= 0xF7;
+const M_RESET_REQ			= 0xF1;
+const M_RESET_IND			= 0xF0;
+
+Table cEMIMessageCodeTable(msg)          
+{                                        
+	switch(msg)                            
+	{                                      
+		case L_BUSMON_IND: "L_BUSMON_IND";	 
+		case L_RAW_IND: "L_RAW_IND";	       
+		case L_RAW_REQ: "L_RAW_REQ";	
+		case L_RAW_CON: "L_RAW_CON";	
+		case L_DATA_REQ: "L_DATA_REQ";	
+		case L_DATA_CON: "L_DATA_CON";	
+		case L_DATA_IND: "L_DATA_IND";	
+		case L_POLL_DATA_REQ: "L_POLL_DATA_REQ";	
+		case L_POLL_DATA_CON: "L_POLL_DATA_CON";	
+		case M_PROP_READ_REQ: "M_PROP_READ_REQ";	
+		case M_PROP_READ_CON: "M_PROP_READ_CON";	
+		case M_PROP_WRITE_REQ: "M_PROP_WRITE_REQ";	
+		case M_PROP_WRITE_CON: "M_PROP_WRITE_CON";	
+		case M_PROP_INFO_IND: "M_PROP_INFO_IND";	
+		case M_RESET_REQ: "M_RESET_REQ";	
+		case M_RESET_IND: "M_RESET_IND";	
+		default: "Unknown Message Code";
+	}
+}
+
+Table cEMICtrl1Prioritytable(prio)
+{
+	switch(prio)
+	{
+		case 0x00: "system";
+		case 0x02: "urgent";
+		case 0x01: "normal";
+		case 0x03: "low";
+	}
+}
+
+Table cEMITServiceCodeTable(tcpi,ncpi,destaddr)
+{
+	switch 
+	{
+		case (((ncpi&0x80) != 0) && ((tcpi & 0xfc) == 0) && destaddr == 0): "T_DATA_BROADCAST_REQ";
+		case (((ncpi&0x80) != 0) && ((tcpi & 0xfc) == 0) && destaddr != 0): "T_DATA_GROUP_REQ";
+		case (((ncpi&0x80) == 0) && ((tcpi & 0xfc) == 0) ): "T_DATA_INDIVIDUAL_REQ";
+		case (((ncpi&0x80) == 0) && ((tcpi & 0xc0) == 0x40) ): "T_DATA_CONNECTED_REQ";
+		case (((ncpi&0x80) == 0) && (tcpi == 0x80) ): "T_CONNECT_REQ";
+		case (((ncpi&0x80) == 0) && (tcpi == 0x81) ): "T_DISCONNECT_REQ";
+		case (((ncpi&0x80) == 0) && ((tcpi & 0xc3) == 0xc2) ): "T_ACK";
+		case (((ncpi&0x80) == 0) && ((tcpi & 0xc3) == 0xc3) ): "T_NAK";
+		default: "";
+	}	
+
+/*	
+	switch
+	{
+		default: FormatString("%u %u %u",tcpi,ncpi,destaddr);
+	}
+	*/
+}
+
+//##
+//##
+//##  NetMon Crashes with nested switches in a Table, but nested Tables work ...
+//##
+//##
+
+// mask 0x3ff - all bits relevant
+const A_GroupValue_Read =               0x000;
+const A_IndividualAddress_Write =       0x0c0;
+const A_IndividualAddress_Read =        0x100;
+const A_IndividualAddress_Response =    0x140;
+const A_UserMemory_Read =               0x2c0;
+const A_UserMemory_Response =           0x2c1;
+const A_UserMemory_Write =              0x2c2;
+const A_UserManufacturerInfo_Read =     0x2c5;
+const A_UserManufacturerInfo_Response = 0x2c6;
+const A_Restart =                       0x380;
+const A_Authorize_Request =             0x3d1;
+const A_Authorize_Response =            0x3d2;
+const A_Key_Write =				              0x3d3;
+const A_Key_Response =  			          0x3d4;
+const A_PropertyValue_Read =            0x3d5;
+const A_PropertyValue_Response =        0x3d6;
+const A_PropertyValue_Write =           0x3d7;
+const A_PropertyDescription_Read =      0x3d8;
+const A_PropertyDescription_Response =  0x3d9;
+                                                 
+// mask 0x3f0 - lowest 4 bits not relevant
+const A_Memory_Read =                   0x200;
+const A_Memory_Response =               0x240;
+const A_Memory_Write =                  0x280;
+                                                 
+// mask 0x3c0 - lowest 6 bits not relevant
+const A_ADC_Read =                     0x180;
+const A_ADC_Response =                 0x1c0;
+const A_GroupValue_Response =          0x040;
+const A_GroupValue_Write =             0x080;  
+const A_DeviceDescriptor_Read =        0x300;
+const A_DeviceDescriptor_Response =    0x340;
+
+Table cEMIAServiceCodeTable2(acpi)
+{
+	switch (acpi & 0x3c0)
+	{
+		case A_ADC_Read           : "A_ADC_Read" + FormatString("(chnl=%u)",acpi & 0x3f);
+		case A_ADC_Response       : "A_ADC_Response" + FormatString("(chnl=%u)",acpi & 0x3f);
+		case A_GroupValue_Response: "A_GroupValue_Response" + FormatString("(%#x)",acpi & 0x3f);
+		case A_GroupValue_Write   : "A_GroupValue_Write" + FormatString("(%#x)",acpi & 0x3f);
+		case A_DeviceDescriptor_Read       : "A_DeviceDescriptor_Read" + FormatString("(type=%u)",acpi & 0x3f);
+		case A_DeviceDescriptor_Response   : "A_DeviceDescriptor_Response" + FormatString("(type=%u)",acpi & 0x3f);
+		
+		default: FormatString(" A_Unknown (%#x)",acpi & 0x3ff);
+	}
+}
+
+Table cEMIAServiceCodeTable1(acpi)
+{
+	switch (acpi & 0x3f0)
+	{
+		case A_Memory_Read    : "A_Memory_Read" + FormatString("(%#x)",acpi & 0x0f);
+		case A_Memory_Response: "A_Memory_Response" + FormatString("(%#x)",acpi & 0x0f);
+		case A_Memory_Write   : "A_Memory_Write" + FormatString("(%#x)",acpi & 0x0f);
+		
+		default: cEMIAServiceCodeTable2(acpi);
+	} 
+}
+
+Table cEMIAServiceCodeTable(acpi)
+{
+	switch (acpi & 0x3ff)
+	{
+		case A_GroupValue_Read             : "A_GroupValue_Read";
+		case A_IndividualAddress_Write     : "A_IndividualAddress_Write";
+		case A_IndividualAddress_Read      : "A_IndividualAddress_Read";
+		case A_IndividualAddress_Response  : "A_IndividualAddress_Response";
+		case A_UserMemory_Read             : "A_UserMemory_Read";
+		case A_UserMemory_Response         : "A_UserMemory_Response";
+		case A_UserMemory_Write            : "A_UserMemory_Write";
+		case A_UserManufacturerInfo_Read   : "A_UserManufacturerInfo_Read";
+		case A_UserManufacturerInfo_Response: "A_UserManufacturerInfo_Response";
+		case A_Restart                     : "A_Restart";
+		case A_Authorize_Request           : "A_Authorize_Request";
+		case A_Authorize_Response          : "A_Authorize_Response";
+		case A_PropertyValue_Read          : "A_PropertyValue_Read";
+		case A_PropertyValue_Response      : "A_PropertyValue_Response";
+		case A_PropertyValue_Write         : "A_PropertyValue_Write";
+		case A_PropertyDescription_Read    : "A_PropertyDescription_Read";
+		case A_PropertyDescription_Response: "A_PropertyDescription_Response";
+		case A_Key_Write									 : "A_Key_Write";
+		case A_Key_Response					       : "A_Key_Response";
+		
+		default: cEMIAServiceCodeTable1(acpi);
+	}
+}
+
+// property identifiers
+const PID_OBJECT_TYPE                 = 1;
+const PID_OBJECT_NAME                 = 2;
+const PID_SEMAPHOR                    = 3;
+const PID_GROUP_OBJECT_REFERENCE      = 4;
+const PID_LOAD_STATE_CONTROL          = 5;
+const PID_RUN_STATE_CONTROL           = 6;
+const PID_TABLE_REFERENCE             = 7;
+const PID_SERVICE_CONTROL             = 8;
+const PID_FIRMWARE_REVISION           = 9;
+const PID_SERVICES_SUPPORTED          = 10;
+const PID_SERIAL_NUMBER               = 11;
+const PID_MANUFACTURER_ID             = 12;
+const PID_PROGRAM_VERSION             = 13;
+const PID_DEVICE_CONTROL              = 14;
+const PID_ORDER_INFO                  = 15;
+const PID_PEI_TYPE                    = 16;
+const PID_PORT_CONFIGURATION          = 17;
+const PID_POLL_GROUP_SETTINGS         = 18;
+const PID_MANUFACTURER_DATA           = 19;
+const PID_ENABLE                      = 20;
+const PID_DESCRIPTION                 = 21;
+const PID_FILE                        = 22;
+const PID_GROUP_ADDRESS_LIST          = 23;
+// specific for EIBnet 
+const PID_PROJECT_INSTALLATION_ID					= 51;
+const PID_KNX_INDIVIDUAL_ADDRESSES				=	52;
+const PID_ADDITIONAL_INDIVIDUAL_ADDRESSES	= 53;
+const PID_CURRENT_IP_ASSIGNMENT_METHOD		= 54;
+const PID_IP_ASSIGNMENT_METHOD						= 55;
+const PID_IP_CAPABILITIES									= 56;
+const PID_CURRENT_IP_ADDRESS							= 57;
+const PID_CURRENT_SUBNET_MASK							= 58;
+const PID_CURRENT_DEFAULT_GATEWAY					= 59;
+const PID_IP_ADDRESS											= 60;
+const PID_SUBNET_MASK										  = 61;
+const PID_DEFAULT_GATEWAY									= 62;
+const PID_DHCP_BOOTP_SERVER								= 63;
+const PID_MAC_ADDRESS											= 64;
+const PID_SYSTEM_SETUP_MULTICAST_ADDRESS	= 65;
+const PID_ROUTING_MULTICAST_ADDRESS				= 66;
+const PID_TTL															= 67;
+const PID_EIBNETIP_DEVICE_CAPABILITIES		= 68;
+const PID_EIBNETIP_DEVICE_STATE						= 69;
+const PID_EIBNETIP_ROUTING_CAPABILITIES		= 70;
+const PID_PRIORITY_FIFO_ENABLED						= 71;
+const PID_QUEUE_OVERFLOW_TO_IP						= 72;
+const PID_QUEUE_OVERFLOW_TO_KNX						= 73;
+const PID_MSG_TRANSMIT_TO_IP							= 74;
+const PID_MSG_TRANSMIT_TO_KNX							= 75;
+const PID_FRIENDLY_NAME										= 76;
+
+
+Table cEMIPropertyIDTable(pid)
+{
+	switch (pid)
+	{	
+		case PID_OBJECT_TYPE                     : "PID_OBJECT_TYPE"; 		
+		case PID_OBJECT_NAME                     : "PID_OBJECT_NAME"; 		
+		case PID_SEMAPHOR                        : "PID_SEMAPHOR"; 		
+		case PID_GROUP_OBJECT_REFERENCE          : "PID_GROUP_OBJECT_REFERENCE"; 		
+		case PID_LOAD_STATE_CONTROL              : "PID_LOAD_STATE_CONTROL"; 		
+		case PID_RUN_STATE_CONTROL               : "PID_RUN_STATE_CONTROL"; 		
+		case PID_TABLE_REFERENCE                 : "PID_TABLE_REFERENCE"; 		
+		case PID_SERVICE_CONTROL                 : "PID_SERVICE_CONTROL"; 		
+		case PID_FIRMWARE_REVISION               : "PID_FIRMWARE_REVISION"; 		
+		case PID_SERVICES_SUPPORTED              : "PID_SERVICES_SUPPORTED";		
+		case PID_SERIAL_NUMBER                   : "PID_SERIAL_NUMBER";		
+		case PID_MANUFACTURER_ID                 : "PID_MANUFACTURER_ID";		
+		case PID_PROGRAM_VERSION                 : "PID_PROGRAM_VERSION";		
+		case PID_DEVICE_CONTROL                  : "PID_DEVICE_CONTROL";		
+		case PID_ORDER_INFO                      : "PID_ORDER_INFO";		
+		case PID_PEI_TYPE                        : "PID_PEI_TYPE";		
+		case PID_PORT_CONFIGURATION              : "PID_PORT_CONFIGURATION";		
+		case PID_POLL_GROUP_SETTINGS             : "PID_POLL_GROUP_SETTINGS";		
+		case PID_MANUFACTURER_DATA               : "PID_MANUFACTURER_DATA";		
+		case PID_ENABLE                          : "PID_ENABLE";		
+		case PID_DESCRIPTION                     : "PID_DESCRIPTION";		
+		case PID_FILE                            : "PID_FILE";		
+		case PID_GROUP_ADDRESS_LIST              : "PID_GROUP_ADDRESS_LIST";		
+		case PID_PROJECT_INSTALLATION_ID					: "PID_PROJECT_INSTALLATION_ID";
+		case PID_KNX_INDIVIDUAL_ADDRESSES					:	"PID_KNX_INDIVIDUAL_ADDRESSES";
+		case PID_ADDITIONAL_INDIVIDUAL_ADDRESSES	: "PID_ADDITIONAL_INDIVIDUAL_ADDRESSES";
+		case PID_CURRENT_IP_ASSIGNMENT_METHOD			: "PID_CURRENT_IP_ASSIGNMENT_METHOD";
+		case PID_IP_ASSIGNMENT_METHOD							: "PID_IP_ASSIGNMENT_METHOD";
+		case PID_IP_CAPABILITIES									: "PID_IP_CAPABILITIES";
+		case PID_CURRENT_IP_ADDRESS								: "PID_CURRENT_IP_ADDRESS";
+		case PID_CURRENT_SUBNET_MASK							: "PID_CURRENT_SUBNET_MASK";
+		case PID_CURRENT_DEFAULT_GATEWAY					: "PID_CURRENT_DEFAULT_GATEWAY";
+		case PID_IP_ADDRESS												: "PID_IP_ADDRESS";
+		case PID_SUBNET_MASK										  : "PID_SUBNET_MASK";
+		case PID_DEFAULT_GATEWAY									: "PID_DEFAULT_GATEWAY";
+		case PID_DHCP_BOOTP_SERVER								: "PID_DHCP_BOOTP_SERVER";
+		case PID_MAC_ADDRESS											: "PID_MAC_ADDRESS";
+		case PID_SYSTEM_SETUP_MULTICAST_ADDRESS		: "PID_SYSTEM_SETUP_MULTICAST_ADDRESS";
+		case PID_ROUTING_MULTICAST_ADDRESS				: "PID_ROUTING_MULTICAST_ADDRESS";
+		case PID_TTL															: "PID_TTL";
+		case PID_EIBNETIP_DEVICE_CAPABILITIES			: "PID_EIBNETIP_DEVICE_CAPABILITIES";
+		case PID_EIBNETIP_DEVICE_STATE						: "PID_EIBNETIP_DEVICE_STATE";
+		case PID_EIBNETIP_ROUTING_CAPABILITIES		: "PID_EIBNETIP_ROUTING_CAPABILITIES";
+		case PID_PRIORITY_FIFO_ENABLED						: "PID_PRIORITY_FIFO_ENABLED";
+		case PID_QUEUE_OVERFLOW_TO_IP							: "PID_QUEUE_OVERFLOW_TO_IP";
+		case PID_QUEUE_OVERFLOW_TO_KNX						: "PID_QUEUE_OVERFLOW_TO_KNX";
+		case PID_MSG_TRANSMIT_TO_IP								: "PID_MSG_TRANSMIT_TO_IP";
+		case PID_MSG_TRANSMIT_TO_KNX							: "PID_MSG_TRANSMIT_TO_KNX";
+		case PID_FRIENDLY_NAME										: "PID_FRIENDLY_NAME"; 
+		default: FormatString("%u (%#x)",pid,pid);
+	}		
+}
+
+// property data types             
+const PDT_CONTROL =               0x00;
+const PDT_CHAR =                  0x01;
+const PDT_UNSIGNED_CHAR =         0x02;
+const PDT_INT =                   0x03;
+const PDT_UNSIGNED_INT =          0x04;
+const PDT_KNX_FLOAT =             0x05;
+const PDT_DATE =                  0x06;
+const PDT_TIME =                  0x07;
+const PDT_LONG =                  0x08;
+const PDT_UNSIGNED_LONG =         0x09;
+const PDT_FLOAT =                 0x0A;
+const PDT_DOUBLE =                0x0B;
+const PDT_CHAR_BLOCK =            0x0C;
+const PDT_POLL_GROUP_SETTINGS =   0x0D;
+const PDT_SHORT_CHAR_BLOCK =      0x0E;
+const PDT_GENERIC_01 =            0x11;
+const PDT_GENERIC_02 =            0x12;
+const PDT_GENERIC_03 =            0x13;
+const PDT_GENERIC_04 =            0x14;
+const PDT_GENERIC_05 =            0x15;
+const PDT_GENERIC_06 =            0x16;
+const PDT_GENERIC_07 =            0x17;
+const PDT_GENERIC_08 =            0x18;
+const PDT_GENERIC_09 =            0x19;
+const PDT_GENERIC_10 =            0x1A;
+
+
+
+Table cEMIPropertyTypeTable(type)
+{
+	switch (type)
+	{
+		case PDT_CONTROL :         		"PDT_CONTROL (1/10 bytes)";    
+		case PDT_CHAR :            		"PDT_CHAR (1 byte)";    
+		case PDT_UNSIGNED_CHAR :   		"PDT_UNSIGNED_CHAR (1 byte)";    
+		case PDT_INT :             		"PDT_INT (2 bytes)";    
+		case PDT_UNSIGNED_INT :    		"PDT_UNSIGNED_INT (2 bytes)";    
+		case PDT_KNX_FLOAT :       		"PDT_KNX_FLOAT (2 bytes)";    
+		case PDT_DATE :            		"PDT_DATE (3 bytes)";    
+		case PDT_TIME :            		"PDT_TIME (3 bytes)";    
+		case PDT_LONG :            		"PDT_LONG (4 bytes)";    
+		case PDT_UNSIGNED_LONG :   		"PDT_UNSIGNED_LONG (4 bytes)";    
+		case PDT_FLOAT :           		"PDT_FLOAT (4 bytes)";    
+		case PDT_DOUBLE :          		"PDT_DOUBLE (8 bytes)";    
+		case PDT_CHAR_BLOCK :      		"PDT_CHAR_BLOCK (10 bytes)";    
+		case PDT_POLL_GROUP_SETTINGS :"PDT_POLL_GROUP_SETTINGS (3 bytes)";
+		case PDT_SHORT_CHAR_BLOCK :   "PDT_SHORT_CHAR_BLOCK (5 bytes)"; 
+		case PDT_GENERIC_01 :         "PDT_GENERIC_01 (1 byte)"; 
+		case PDT_GENERIC_02 :         "PDT_GENERIC_02 (2 bytes)"; 
+		case PDT_GENERIC_03 :         "PDT_GENERIC_03 (3 bytes)"; 
+		case PDT_GENERIC_04 :         "PDT_GENERIC_04 (4 bytes)"; 
+		case PDT_GENERIC_05 :         "PDT_GENERIC_05 (5 bytes)"; 
+		case PDT_GENERIC_06 :         "PDT_GENERIC_06 (6 bytes)"; 
+		case PDT_GENERIC_07 :         "PDT_GENERIC_07 (7 bytes)"; 
+		case PDT_GENERIC_08 :         "PDT_GENERIC_08 (8 bytes)"; 
+		case PDT_GENERIC_09 :         "PDT_GENERIC_09 (9 bytes)"; 
+		case PDT_GENERIC_10 :         "PDT_GENERIC_10 (10 bytes)"; 
+		default: FormatString("Unknown Type (%u)",type);
+	}	
+}
+
+const InfoType_BusMonStatus = 0x03;
+const InfoType_RelTimeStamp = 0x04;
+const InfoType_TimeDelay    = 0x05;
+const InfoType_TimeStamp    = 0x06;
+
+Table cEMIAddInfoTypeTable(type)
+{
+	switch (type)
+	{
+		case 	InfoType_BusMonStatus: "Status";
+		case 	InfoType_RelTimeStamp: "Relative TimeStamp";
+		case 	InfoType_TimeDelay: "Time Delay";
+		case 	InfoType_TimeStamp: "Relative TimeStamp";
+		default: FormatString("Unknown Infotype (%u)",type);		
+	}	
+}
+
+struct cEMICtrl1 = FormatString("%s%s%s%s%u%s%s",ft?"F":".",".",r?"R":".",sb?"S":".",pri,ack?"A":".",cnf?"C":"." )
+{
+	UINT8 		ft:1 = FormatString("   (%s) %s", this.ToBitString, this ? "standard frame" : "extended frame");	
+	UINT8 		res:1 = FormatString("  (%s) reserved", this.ToBitString);	
+	UINT8 		r:1 = FormatString("    (%s) %s", this.ToBitString, this ? "no repeat" : "repeat");	
+	UINT8 		sb:1 = FormatString("   (%s) %s", this.ToBitString, this ? "system broadcast" : "broadcast");	
+	UINT8 		pri:2 = FormatString("  (%s) %s", this.ToBitString, cEMICtrl1Prioritytable(this));	
+	UINT8 		ack:1 = FormatString("  (%s) %s", this.ToBitString, this ? "ack requested" : "no ack requested");	
+	UINT8 		cnf:1 = FormatString("  (%s) %s", this.ToBitString, this ? "error if L_DATA.con" : "ok");	
+}
+
+struct cEMICtrl2 = FormatString("%s, hops=%u, ext-frame-format=%u",at?"group-address":"individual-address",hops,eff )
+{
+	UINT8 		at:1 = FormatString("   (%s) %s", this.ToBitString, this ? "group address" : "physical address");	
+	UINT8 		hops:3 = FormatString(" (%s) %u", this.ToBitString, this );	
+	UINT8 		eff:4 = FormatString("  (%s) %u", this.ToBitString, this );	
+}
+
+struct cEMINCPI = FormatString("len=%u",len)
+{
+	UINT8     daf:1 = FormatString("  (%s) %s", this.ToBitString, this ? "multicast address":"individual address");		
+	UINT8     nc:3 = FormatString("   (%s) network control", this.ToBitString);		
+	UINT8     len:4 = FormatString("  (%s) len=%u", this.ToBitString, this);		
+}
+
+struct cEMITCPI = FormatString("seq=%u",seq)
+{
+	UINT8     dc:1 = FormatString("   (%s) %s", this.ToBitString, this ? "ctrl PDU":"data PDU");		
+	UINT8     nr:1 = FormatString("   (%s) %s", this.ToBitString, this ? "numbered":"not numbered");		
+	UINT8     seq:4 = FormatString("  (%s) sequence=%u", this.ToBitString, this);		
+	UINT8     ac:2 = FormatString("   (%s) acpi", this.ToBitString);		
+}
+
+struct cEMIProperyType = PDT.ToString
+{
+	UINT8     Writable:1;
+	UINT8     Reserved:1;
+	UINT8     PDT:6       = cEMIPropertyTypeTable(this);
+}
+
+struct cEMIBusMonStatus = FormatString("seq=%u (%s%s%s%s%s)", Sequence, FrameError ? "f":".",BitError ? "b":".", ParityError ? "p":".", Overflow ? "v":".",Lost ? "l":".")
+{
+	UINT8     FrameError:1		 = FormatString(" (%s) %s", this.ToBitString, this ? "error occured":"no error");		
+	UINT8			BitError:1     = FormatString("   (%s) %s", this.ToBitString, this ? "error occured":"no error");		
+  UINT8     ParityError:1     = FormatString("(%s) %s", this.ToBitString, this ? "error occured":"no error");		
+  UINT8     Overflow:1     = FormatString("   (%s) %s", this.ToBitString, this ? "error occured":"no error");		
+  UINT8     Lost:1     = FormatString("       (%s) %s", this.ToBitString, this ? "frame(s) were lost":"no error");		
+  UINT8     Sequence:3;
+}
+
+struct cEMIAddInfoValue = Type.ToString + "=" + AddInfoValueString
+{
+		UINT8		Type = cEMIAddInfoTypeTable(this);
+		UINT8   Length;
+		switch ( Type ) 
+		{
+			case InfoType_BusMonStatus: 
+				[ AddInfoValueString = Status.ToString ]
+				cEMIBusMonStatus  Status;
+			case InfoType_RelTimeStamp: 
+				[ AddInfoValueString = RelTimeStamp.ToString ]
+				EIBnetWORD        RelTimeStamp = FormatString("%u",this);
+			case InfoType_TimeDelay:    
+				[ AddInfoValueString = TimeDelay.ToString ]
+				EIBnetDWORD       TimeDelay;
+			case InfoType_TimeStamp:    
+				_struct {
+					[ conversation.cEMITimeDelta$[FrameNumber] = this - conversation.cEMITimeStamp,
+						conversation.cEMITimeStamp = this,
+						AddInfoValueString = TimeStamp.ToString + FormatString(" (Delta=%u)",conversation.cEMITimeDelta$[FrameNumber]) ]
+					UINT32       TimeStamp = FormatString("%u",this);
+				}
+			default:                    
+				[ AddInfoValueString = InfoData.ToString ]
+				BLOB(Length)      InfoData;			
+		}
+}
+
+struct cEMIAddI = FormatString("len=%u%s",AdditionalInfoLength,AddInfoValueStrings)
+{
+	[AddInfoEnd = FrameOffset + this + 1]
+	UINT8 		AdditionalInfoLength;
+	while [ FrameOffset < AddInfoEnd ]
+	{
+		[AddInfoValueStrings = AddInfoValueStrings + ", " + InfoValue.ToString]
+		cEMIAddInfoValue  InfoValue;	
+	}
+}
+
+/* Memory Addresses:
+	
+	Runtime Error Flags: Loc=0x10d ( Flags[1] )
+	Group Address Table: Loc=0x116 ( Length[1], Individual Address[2], Group Adress 1 [2], ... )
+	GroupObjects Association Table Pointer: Loc=0x111 ( Length[1] ... 0x19-0xfe )
+	GroupObjects Association Table: Loc= GrObAssTabPtr + 0x100 ( Size[1], (TSAP[1],ASAP[1)), ... )
+	GroupObject Table pointer: Loc= 0x112 ( Length[1] ... 0x19-0xfe )
+	GroupObject Table: Loc= GrObjTabPtr + 0x100 ( Size[1], RAM-Flags_Table_ptr[1], GrObjDescr[3], ... )
+	
+	RAM Register B..N: Loc= 0x50..0x5c
+	
+
+*/
+
+protocol cEMI = (IsIACK) ? (MessageCode.ToString + " " + IACK.ToString) :
+						("Src=" + SrcAddress.ToString + " Dst=" + DstAddress.ToString + DstGrpAddress.ToString + " " + MessageCode.ToString + " / " + TCPI.ToString + " len=" + NCPI.len + " / " + ACPI.ToString)
+						
+{
+	// carry over the previous timestamp as a default
+	UINT8 		MessageCode = cEMIMessageCodeTable(this) + FormatString(" (%#x)", this);
+	
+	switch (MessageCode)
+	{
+		case L_DATA_IND: 
+		case L_DATA_REQ: 
+		case L_DATA_CON: 
+		case L_BUSMON_IND: 
+			_struct {
+				cEMIAddI						AdditionalInfo;
+				switch
+				{
+// catch the short ACK Busmon Frame Format
+					case ((FrameLength - FrameOffset) == 1 && MessageCode == L_BUSMON_IND):
+						[IsIACK = 1]
+						switch ( UINT8( FrameData, FrameOffset ) )
+						{
+							case 0xCC: 	_struct { UINT8 IACK = FormatString("ACK (%#x)",this); }
+							case 0x0C: 	_struct { UINT8 IACK = FormatString("NACK (%#x)",this); }
+							case 0xC0: 	_struct { UINT8 IACK = FormatString("BUSY (%#x)",this); }
+							default :      _struct { UINT8 IACK = FormatString("unknown ack (%#x)",this); }
+						}
+						
+					default:
+// normal Frames	
+						_struct {
+							cEMICtrl1   				Ctrl1;
+							switch {
+								case (MessageCode != L_BUSMON_IND): cEMICtrl2 					Ctrl2;
+							}
+							EIBnetKNXAddress		SrcAddress;
+							switch
+			        		{
+							  case ( Ctrl2.at != 1 && (UINT8(FrameData, FrameOffset + 4) & 0x80) != 0x80 ) :  EIBnetKNXAddress		DstAddress;
+							  default: EIBnetKNXGroup 		DstGrpAddress;
+							}
+							cEMINCPI	          NCPI;
+							cEMITCPI            TCPI = cEMITServiceCodeTable(UINT8( FrameData, FrameOffset ), UINT8( FrameData, FrameOffset - 1 ), UINT16( FrameData, FrameOffset - 3 ) ) + FormatString(" seq=%u",TCPI.seq);
+							
+							switch {
+								case (!TCPI.dc):
+									_struct {
+										[AServiceCode = EIBnetWORD( FrameData, FrameOffset-1 ) & 0x3ff,
+										 AFrameLen = NCPI.len - 1]
+			  				    UINT8				 ACPI = cEMIAServiceCodeTable( AServiceCode );
+			  				    
+			  				    switch ( AServiceCode & 0x3f0 ) 
+			  				    {
+			  				    	case A_Memory_Read    :
+			   				    	case A_Memory_Response:
+			  				    	case A_Memory_Write   :
+			  				    		_struct {
+			  				    			 [AMemLen = AServiceCode & 0x0f]
+			  				    			 EIBnetWORD    MemoryAddress;
+			  				    			 switch 
+			  				    			 {
+			  				    			 	 case AFrameLen > 0 && AMemLen > 0: BLOB( AMemLen ) MemoryData;
+			  				    			}
+			  				    		};
+			  				    } 
+			  				    switch ( AServiceCode & 0x3c0 ) 
+			  				    {
+			  				    	case A_GroupValue_Response:
+			  				    	case A_GroupValue_Write   :
+				  				    	switch 
+			  					    	{
+			  					    		case AFrameLen > 0: BLOB( AFrameLen ) ValueData;
+			  					    	}
+			  				    	
+			  				    	case A_ADC_Read     :      
+			  				    	case A_ADC_Response :    
+			  				    		_struct {
+			  				    			 UINT8  ADCReadCount;
+			  				    			 switch
+			  				    			 {
+			  				    			 	 case AFrameLen >= 2: EIBnetWORD  ADCSum = FormatString("%u",this,this) + (ADCReadCount > 0 ? FormatString(" (avg=%u)",this/ADCReadCount) : "");
+			  				    			}
+			  				    		}  
+			  				    		
+											case A_DeviceDescriptor_Response:
+												EIBnetWORD    DeviceDescriptor;
+			  				    }
+			  				    
+			  				    switch ( AServiceCode )
+			  				    {
+											case A_PropertyValue_Read          :																																																												
+											case A_PropertyValue_Response      :																																																												
+											case A_PropertyValue_Write         :	
+												_struct {
+													UINT8  			ObjectIndex;
+													UINT8  			PID = cEMIPropertyIDTable(this);
+													UINT16			NrElements:4;
+													UINT16      StartIndex:12;
+													switch {
+														case (AFrameLen > 4): BLOB( AframeLen-4 ) PropertyData;
+													}
+												}																																																												
+			
+											case A_PropertyDescription_Read    :																																																												
+											case A_PropertyDescription_Response:																																																												
+												_struct {
+													UINT8  			ObjectIndex;
+													UINT8  			PID = cEMIPropertyIDTable(this);
+													UINT8				PropertyIndex;
+													switch {
+														case (AFrameLen >= 7): 
+															_struct {
+																cEMIProperyType Type;
+																EIBnetWORD			MaxNrElements;
+																UINT8						ReadLevel:4;
+																UINT8						WriteLevel:4;
+															}
+													}
+												}																																																												
+			
+											case A_IndividualAddress_Write     :																																																												
+												EIBnetKNXAddress				NewAddress;
+			
+											case A_UserMemory_Read             :																																																												
+											case A_UserMemory_Response         :																																																												
+											case A_UserMemory_Write            :	
+												_struct {
+													UINT8				MemAddressExtension:4;
+													UINT8     	ByteCount;
+													EIBnetWORD	MemAddress   = FormatString("%#x%04x",MemAddressExtension,this);
+													switch {
+														case ByteCount > 0 && AFrameLen > 4: BLOB( AframeLen-4 ) MemoryData;
+													}
+												}																																																											
+												
+											case A_UserManufacturerInfo_Response:																																																												
+												_struct {
+													UINT8					ManufacturerID;
+													EIBnetWORD		ManufacturerSpecific;
+												}
+												
+											case A_Authorize_Request           :			
+												_struct {
+													UINT8				AllZeros;
+													EIBnetKey		AuthorizationKey;
+												}																																																									
+			
+											case A_Authorize_Response          :		
+											case A_Key_Response			    : 
+												EIBnetAccessLevel 				AccessLevel;				
+												
+											case A_Key_Write									 : 
+												_struct {
+													EIBnetAccessLevel				AccessLevel;				
+													EIBnetKey	  						AuthorizationKey;
+												}
+																																																																		
+											
+			/* nothing to do for the ones below
+											case A_GroupValue_Read             :																																																												
+											case A_IndividualAddress_Read      :																																																												
+											case A_IndividualAddress_Response  :		
+											case A_Restart                     :																																																												
+											case A_DeviceDescriptor_Read       :																																																												
+			// not yet implemented																																																																		
+			*/  				    	
+			  				    }
+								  }   
+							}
+							
+							// FCS for Busmon frames
+							switch {
+								case (MessageCode == L_BUSMON_IND): UINT8 		CheckSum;
+							}
+						}
+				}
+			}
+	}
+	switch
+	{
+		case FrameOffset < FrameLength:
+			BLOB(FrameLength - FrameOffset) UnhandledData;
+	}
+}
