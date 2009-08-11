@@ -26,13 +26,22 @@ V0.2
 - C5 entfern da unnötig
 
 
+V0.3
+----
+- Zwischenversion
+
+
+V0.4
+----
+- Kondensatoren nach DC/DC entfernt
+- R13 und R14 hinzugefügt
+- Schaltung auf Steckbrett aufgebaut und getestet (nur mit 5V geleichspannung, ohne Controller
+  --> U-Signal und I-Signal werden sauber erzeugt.
+      Damit sinddie Nulldurchgänge von Spannungund Strom genau detektierbar
+
+
 ToDo
 ----
-- Aufbau der Prototypschaltung (Teile sind heute (8.8.09) eingetroffen.
-- Test der Prototypschaltung
-  - Ansteuerung FETS
-  - Erzeugung U-Signal
-  - Erzeugung I-Signal
 - Erstellung des Applikationsprogramms
 - Optimierung des Netzteils
 - 2. Kanal aufbauen
