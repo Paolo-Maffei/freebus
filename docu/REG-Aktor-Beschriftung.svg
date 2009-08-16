@@ -15,7 +15,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.45.1"
    sodipodi:docbase="D:\bau\eib\Freebus\Reg-Beschriftung"
-   sodipodi:docname="REG-Aktor.svg"
+   sodipodi:docname="REG-Aktor-Beschriftung.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs4" />
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.68376925"
-     inkscape:cx="169.72494"
-     inkscape:cy="502.91133"
+     inkscape:zoom="1.9339915"
+     inkscape:cx="262.40266"
+     inkscape:cy="461.05635"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:window-width="1400"
@@ -3099,5 +3099,25 @@
          d="M 242.74299,392.96903 L 288.63441,392.52073"
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.01678038px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:9px;font-family:Constantia"
+       x="220.93723"
+       y="226.91205"
+       id="text2634"><tspan
+         sodipodi:role="line"
+         x="220.93723"
+         y="226.91205"
+         id="tspan2636">PROG</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9px;font-family:Constantia"
+       x="220.93723"
+       y="471.23239"
+       id="text2638"><tspan
+         sodipodi:role="line"
+         x="220.93723"
+         y="471.23239"
+         id="tspan2640">PROG</tspan></text>
   </g>
 </svg>
