@@ -40,6 +40,15 @@ V0.4
       Damit sinddie Nulldurchgänge von Spannungund Strom genau detektierbar
 
 
+V0.5
+----
+- Operationsverstärker für I-Signal invertiert
+- Widerständen nach Optokopplern eingefügt (falls Port = Ausgang)
+- DC/DC Wandler nur mit einfachen 12V
+- Portzuordnung neu festgelegt
+
+
+
 ToDo
 ----
 - Erstellung des Applikationsprogramms
