@@ -1,29 +1,29 @@
 V0.1
 ----
 - Erster Entwurf eines Universaldimmers, der die Lastart erkennt und entsprechend das 
-  Phasenanschnittsverfahren ausw‰hlt.
-- Bisher ist nur der Leistungsteil geplant, die Ansteuerung sollte der eigentliche EIB-Controller mit ¸bernehmen.
+  Phasenanschnittsverfahren ausw√§hlt.
+- Bisher ist nur der Leistungsteil geplant, die Ansteuerung sollte der eigentliche EIB-Controller mit √ºbernehmen.
   Hier kenne ich die Software noch nicht, so dass ich nicht weiss, ob das funktioniert.
-  Es muss wohl ¸ber Interrupts und Timer laufen, wieviele davon frei sind ist mir noch unbekannt
-- Ansteuerung der FETS ¸ber IO4 und einen Optokoppler
-- Phasenlage der Spannung (U-Signal) ¸ber einen Operationsverst‰rker und Optokoppler auf Port IO1 und SDA (wegen IRQ)
-  Muss noch gekl‰rt werden ob nˆtig / mˆglich.
-- Phasenlage des Stroms ¸ber R1 einen Operationsverst‰rker und Optokoppler auf Port IO2
+  Es muss wohl √ºber Interrupts und Timer laufen, wieviele davon frei sind ist mir noch unbekannt
+- Ansteuerung der FETS √ºber IO4 und einen Optokoppler
+- Phasenlage der Spannung (U-Signal) √ºber einen Operationsverst√§rker und Optokoppler auf Port IO1 und SDA (wegen IRQ)
+  Muss noch gekl√§rt werden ob n√∂tig / m√∂glich.
+- Phasenlage des Stroms √ºber R1 einen Operationsverst√§rker und Optokoppler auf Port IO2
 - Feststellen der Lastart: z.B. nach Erkennung eines Spannungssignals wird die rel. Phasenlage zwischen U-Signal und I-Signal gemessen
   und daraus die Lastart bestimmt. 
-- zur Spannungsversorgung der Operationsverst‰rker ist bisher ein C-Netzteil geplant,
-  dies ist wegen dem C allerdings recht groﬂ, vielleicht f‰llt mir ja noch was besseres ein
+- zur Spannungsversorgung der Operationsverst√§rker ist bisher ein C-Netzteil geplant,
+  dies ist wegen dem C allerdings recht gro√ü, vielleicht f√§llt mir ja noch was besseres ein
   Nachgeschaltet ist ein DC-CD-Wanderler, der 2x12V galvanisch getrennt daraus macht.
   Damit liegen die +-12V immer relativ zu AGND, welches an R1 fixiert ist.
   Vielleicht kann bei geeigneter Schaltung die galvanische Trennung und die +-12V entfallen,
-  das w¸rde den Schaltungsaufwand und den Platzbedart erheblich minimieren.
-  Ideen f¸r eine Anschaltung?
+  das w√ºrde den Schaltungsaufwand und den Platzbedart erheblich minimieren.
+  Ideen f√ºr eine Anschaltung?
 - Schaltung ist bisher nur theoretisch Entworfen
 
 
 V0.2
 ----
-- C5 entfern da unnˆtig
+- C5 entfern da unn√∂tig
 
 
 V0.3
@@ -34,27 +34,35 @@ V0.3
 V0.4
 ----
 - Kondensatoren nach DC/DC entfernt
-- R13 und R14 hinzugef¸gt
+- R13 und R14 hinzugef√ºgt
 - Schaltung auf Steckbrett aufgebaut und getestet (nur mit 5V geleichspannung, ohne Controller
   --> U-Signal und I-Signal werden sauber erzeugt.
-      Damit sinddie Nulldurchg‰nge von Spannungund Strom genau detektierbar
+      Damit sinddie Nulldurchg√§nge von Spannungund Strom genau detektierbar
 
 
 V0.5
 ----
-- Operationsverst‰rker f¸r I-Signal invertiert
-- Widerst‰nden nach Optokopplern eingef¸gt (falls Port = Ausgang)
+- Operationsverst√§rker f√ºr I-Signal invertiert
+- Widerst√§nden nach Optokopplern eingef√ºgt (falls Port = Ausgang)
 - DC/DC Wandler nur mit einfachen 12V
 - Portzuordnung neu festgelegt
+
+
+V0.6
+----
+- C-Netzteil und DC/DC-Wandler durch Trafo ersetzt
+- Ueberlasterkennung hinzugefuegt
+- 2. Kanal hinzugefuegt
 
 
 
 ToDo
 ----
-- Erstellung des Applikationsprogramms
-- Optimierung des Netzteils
-- 2. Kanal aufbauen
+HW:
 - Layout in REG4
-- Erkennung Lastausfall (kein I-Signal trots U-Signal und Eingeschaltet)
+
+SW:
+- Erstellung des Applikationsprogramms
+- Erkennung Lastausfall (kein I-Signal trotz U-Signal und Eingeschaltet)
 - Erkennung Spannungsausfall (kein U-Signal)
-- Helligkeitswert immer 0-255 unabh‰ngig von der Grundhelligkeit (wie beim GIRA-Dimmer)
+- Helligkeitswert immer 0-255 unabh√§ngig von der Grundhelligkeit (wie beim GIRA-Dimmer)
