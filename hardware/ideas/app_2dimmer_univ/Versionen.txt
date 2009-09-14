@@ -55,6 +55,11 @@ V0.6
 - 2. Kanal hinzugefuegt
 
 
+V0.6.1
+------
+- C5,C6 hinzugefuegt
+
+
 
 ToDo
 ----
