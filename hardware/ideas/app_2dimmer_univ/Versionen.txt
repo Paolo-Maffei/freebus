@@ -59,7 +59,10 @@ V0.6.1
 ------
 - C5,C6 hinzugefuegt
 
-
+V0.6.3
+------
+- R16,R16,R116,R117 geaendert
+- erstes Boardlayout erstellt (noch ohne Pullup)
 
 ToDo
 ----
