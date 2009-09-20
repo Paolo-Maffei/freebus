@@ -64,6 +64,15 @@ V0.6.3
 - R16,R16,R116,R117 geaendert
 - erstes Boardlayout erstellt (noch ohne Pullup)
 
+
+V0.7
+----
+- Pullupwiderstaende (R13,R18,R19,R113,R118,R119) entfernt
+  sind unnoetig wenn uC im Modus Quasi-Bidirektional
+
+
+
+
 ToDo
 ----
 HW:
