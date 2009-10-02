@@ -71,15 +71,33 @@ V0.7
   sind unnoetig wenn uC im Modus Quasi-Bidirektional
 
 
+V0.8
+----
+- Ueberlastsensor schaltet nun hardwaremaessig die FETs aus
+  --> Kurzschlußchutz
+
+V0.8.1
+------
+- Testpins hinzugefügt
+
+
+V0.9
+----
+- Überlastschutz geändert:
+    R20,R120 Hysterese eingebaut
+    R21,R121 Strombegrenzung wegen Einschaltstromspitzen
+    R16,R116 Strombegrenzung auf 350W eingestellt 3k9
+  Bei Ueberlast werden die FETs für 3s hardwaremaessig abgeschaltet und 
+  der Ueberlastfall an den Controller gemeldet
 
 
 ToDo
 ----
 HW:
-- Layout in REG4
+- erste Platine aufbauen
 
 SW:
 - Erstellung des Applikationsprogramms
 - Erkennung Lastausfall (kein I-Signal trotz U-Signal und Eingeschaltet)
 - Erkennung Spannungsausfall (kein U-Signal)
-- Helligkeitswert immer 0-255 unabhÃ¤ngig von der Grundhelligkeit (wie beim GIRA-Dimmer)
+- Helligkeitswert immer 0-255 unabaengig von der Grundhelligkeit (wie beim GIRA-Dimmer)
