@@ -1,0 +1,62 @@
+Design-Specification EIB Empfänger, Sender, Stromversorgung 18.Oct 2008; 24.10.08; 16.10.09
+
+Änderungen:
+2.1108- dc part erzeugung L2 ersetzt durch Diode (bat41) , Spitzenwertgleichrichtung unkritisch- (messung Id3 < 300uA, in alter Schaltung mit Darlington aus Bf421, BC640 da ich kein bSP61 habe) R15 10k, C1 680nF...1uF, DC-part bei Überschwinger von ca 10V der busspannung ca 0,5V-1,5V über busspannung- Berücksichtigung im Design- d3 auf <=8,2V reduzieren
+
+16.10.09:
+EIB-send/receive update, eib bus-voltage messung, temp-sensor KTy81-210 oder KTY10-62 2Kohm, LUX-messung: Fotodiode-log amplifier
+
+__________________________________________
+
+EiB Spec (TP64-TP256):
+
+Bus-Spannung max 30V, min 21V
+
+Device Versorgung(power converter): 
+max slope durch Device Stromänderung: 0,5mA/ms, max device strom 12mA
+
+spms efficiency ca 80% (annahme), Uemin 16v (sollte bei/bis 18v im idle mode sein und sw initialisieren), Uemax 30v (max Ucc von MC34063...beachten 40V!) 
+-> max leistung 16Vx12mAX0,8=153mW ->Ucc 3,3V Icc:max 46mA Versorgungsstrom uC
+Schaltfrequenz >> bitfrequenz:  9,6kHZ (104uS), 3;5 harmonische 48kHz) -> Schaltfrequenz >50kHz, max 100kHz
+
+
+Sender:
+Sendestrom max 300mA (abweichend von EIB spec, sollte aber genügen)
+Low Pegel hub max 9V (bei 30V), min 3V (bei 20V) und max Buslast (e.g. 22R, 1000uF in Serie als Last)
+2-3uS Flankensteilheit (spec:1V/us < Slope < 100V/us
+
+Empfänger:
+Empfindlichkeit durch analogKomparator AtMega ca 1,2V (bandgap ref)
+Spike-Filter 140kHz (10x fe)
+
+device dyn. Impedaz:
+während low bit dI max 1,9mA bitanfang, max2.0mA nach35us jeweils unter mittlerem devicestrom bei Udev 25V,Upuls 6V (testspec vol8 seite 18)
+
+
+Design:
+
+Sender- Stromquelle: einfache stromquelle mit pulsebegrenzung über z-diode, treiber fet mit vorspannung, Eib bus-voltage messung über 100k an Fet-Vorspannung
+
+
+
+Powerconverter:
+DCpart versorgung: 150mH, 33uF, Il max 100mA durch SMPS
+
+(nach designvoschlag)
+Uinmin 16V, Uinmax 30V, Iout 50mA, Uout 3,3V, f>70kHz;ripple <50mV
+
+tonmax 3,5us, toff 10,5us; 
+Ct= 150pF, L= 470uH, Cout 10uF;Rsc 3,3R (Imax 100mA), R13=12k, R12=20k (22k bei 3,6V)
+
+Eingangsfilter (arbeitet als step down mit eingangsannung Umax:Umax-hub, 30V-21V;)
+
+
+Empfänger:
+
+Über ATMega-eingang mit Tp am eingang durch Pin-kapazität 15pF und Rs 20k ~650khZ
+
+Idle-Spannungsüberwachung 18V über 100kOhm abgriff der Fet Vorspannung - belastet unwesentlich- über ADC0, Spannungsteiler 220k:12K- Faktor:0,0517
+
+Temp-messung über kty81-2k +-1% und serienwiderstand zu Vcc(3,3V) von 4920ohm (3,92k+1k) - Bereich -20°C bis max +50°c,ADC mit bandgap als Vref ergibt ~0,2°C pro ADC step über ADC5
+
+in design-phase - lux meter mit log verstärker
