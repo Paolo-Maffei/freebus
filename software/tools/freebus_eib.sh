@@ -114,6 +114,7 @@ setupSerial()
     fi
 }
 
+# to have debugging use eibd -t 1023 -i -D -T -S ft12:/dev/ttyS1
 createStartup()
 {
     echo -n "Creating eibd startup file..."
