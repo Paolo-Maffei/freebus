@@ -1,0 +1,293 @@
+;ports
+DH bit p3.2	;int0
+DL bit p3.3	;int1
+
+
+;bits
+rfid_sense 	bit 0x00
+rfid_flag_full 	bit 0x01
+DH_DL_bit	bit 0x02
+
+;variables
+rfid_ptr	equ 0x30
+rfid_bank	equ 0x31;0x32,0x33,0x34(total 4 ram locations)
+buffer 		equ 0x34
+pulse_cnt0	equ 0x35
+pulse_cnt1	equ 0x36
+
+
+	org 0000
+	ljmp on_rst
+
+
+
+	org 0003h	;int0 isr
+	setb rfid_sense
+	reti
+
+	org 000bh	;timer0 isr
+	lcall isr_t0
+	reti
+
+	org 0013h	;int1 isr
+	setb rfid_sense
+	reti
+
+
+	org 0050h
+on_rst:
+	lcall all_init
+
+main_loop:
+	jb rfid_sense,collect_rfid
+	jb rfid_flag_full,parse_rfid
+	sjmp main_loop
+
+
+
+;####################################################################################
+collect_rfid:
+	clr ea			;diasable all ints(global enable bit)
+	clr ex0			;disable int0
+	clr ex1			;disable int1
+	jnb DH,$		;wait till it comes back to high,igonre first bit(parity bit)
+	jnb DL,$		;wait till it comes back to high,igonre first bit(parity bit)
+	lcall rfid_loop		;go collect the remaining bits 
+	clr rfid_sense		;clear the flag
+	ljmp main_loop		;go back to the main loop
+
+rfid_loop:
+	jnb DH,update_rfid_DH
+	jnb DL,update_rfid_DL
+	jnb rfid_flag_full,rfid_loop	;keep looping till all the 24 bits are collected(2 bist are ignored ->parity bits)
+	ret
+
+update_rfid_DH:
+	setb ea			;interrupt golbal enable bit,enable timer0 int
+	clr tr0			;stop timer0 for reload
+	mov th0,#00		;reload the timer0
+	mov tl0,#00		;reload the timer0
+	setb tr0		;start the timer0 for 65 milli sec
+	jnb DH,$		;wait till the DH goes back to high state
+	setb DH_DL_bit		;
+	sjmp backup_rfid	;store the received bit
+
+update_rfid_DL:
+	setb ea			;interrupt golbal enable bit,enable timer0 int
+	clr tr0			;stop timer0 for reload
+	mov th0,#00		;reload the timer0
+	mov tl0,#00		;reload the timer0
+	setb tr0		;start the timer0 for 65 milli sec
+	jnb DL,$		;wait till the DH goes back to high state
+	clr DH_DL_bit		;
+	sjmp backup_rfid	;store the received bit
+
+backup_rfid:
+	inc pulse_cnt0
+	inc pulse_cnt1
+	mov a,buffer
+	mov c,DH_DL_bit
+	rrc a
+	mov buffer,a
+	mov a,pulse_cnt0
+	cjne a,#8,chk1
+		mov r0,rfid_ptr
+		mov @r0,buffer
+		inc r0
+		mov rfid_ptr,r0
+		mov buffer,#00
+		mov pulse_cnt0,#00
+chk1:
+	mov a,pulse_cnt1
+	cjne a,#24,backup_rfid_exit
+		setb rfid_flag_full	;all the bits have arrived
+		clr ea			;disable all int's
+		clr tr0			;stop timer0
+		mov pulse_cnt0,#00
+		mov pulse_cnt1,#00
+backup_rfid_exit:
+	sjmp rfid_loop
+
+
+;####################################################################################
+
+;####################################################################################
+parse_rfid:
+
+	mov rfid_ptr,#rfid_bank		;get the base arrds of the rfid bytes(26 bits,4 bytes)
+	mov r0,rfid_ptr
+	mov a,@r0
+	inc r0
+	mov rfid_ptr,r0
+	lcall convert;arugument in acc
+	
+	mov sbuf,r0			;first send the facility code
+	jnb ti,$
+	clr ti
+
+
+	mov sbuf,r1
+	jnb ti,$
+	clr ti
+
+	mov sbuf,r2
+	jnb ti,$
+	clr ti
+
+
+
+	mov sbuf,#','			;delimiter
+	jnb ti,$
+	clr ti
+
+
+	mov r0,rfid_ptr
+	mov a,@r0
+	inc r0
+	mov rfid_ptr,r0
+	lcall convert
+
+	mov sbuf,r0			;send the higher part of the 16 bit card id
+	jnb ti,$
+	clr ti
+
+
+	mov sbuf,r1
+	jnb ti,$
+	clr ti
+
+
+	mov sbuf,r2
+	jnb ti,$
+	clr ti
+
+
+	mov r0,rfid_ptr
+	mov a,@r0
+	inc r0
+	mov rfid_ptr,r0
+	lcall convert
+
+
+
+	mov sbuf,r0			;send the lower part of the 16 bit card id
+	jnb ti,$
+	clr ti
+
+
+	mov sbuf,r1
+	jnb ti,$
+	clr ti
+
+	
+
+	mov sbuf,r2
+	jnb ti,$
+	clr ti
+
+	
+
+	mov sbuf,#13			;carriage return
+	jnb ti,$
+	clr ti
+	mov sbuf,#10			;line feed
+	jnb ti,$
+	clr ti
+
+
+
+	clr rfid_flag_full		;clear to indicate that the 26 bits are parsed
+
+	mov ie,#1000$0101b		;int0 and int1 enabled
+
+	ljmp main_loop
+;####################################################################################
+
+;####################################################################################
+all_init:
+	mov ie,#1000$0101b	;int0 and int1 enabled
+	setb tcon.0		;make int0 edge triggerd
+	setb tcon.2		;make int1 edge triggered
+
+	clr rfid_sense		;flag to indicate start of the 26 bits
+	clr rfid_flag_full	;flag to indicate all 26 bits have arrived
+	clr DH_DL_bit
+	mov buffer,#00		;ponter to point one location in the 4 bytes
+	mov rfid_ptr,#rfid_bank;4 memory locations to hold 26 bits
+	mov pulse_cnt0,#00
+	mov pulse_cnt1,#00
+
+;timer0 intialise used to generate 65 milli sec
+	mov tmod,#01h		;timer0 in mode1(16 bit timer)
+	mov th0,#00
+	mov tl0,#00	
+;serial intialise for 9600 baud
+	MOV	TMOD,#21H	;TIMER 1 , MODE 2(AUTO RELOAD) and timer0 in mode 1(16 bit timer)
+	MOV	TH1,#0FDH	;9600 BAUD RATE
+	MOV	SCON,#50H	;8 BIT,1 STOP, REN ENABLE
+	SETB	TR1		;START TIMER 1
+
+	ret
+
+;####################################################################################
+
+;####################################################################################
+isr_t0:
+	clr tr0
+	mov th0,#00
+	mov tl0,#00
+
+	clr ti
+	mov sbuf,#'T'
+	jnb ti,$
+	clr ti
+
+
+	clr rfid_sense		;flag to indicate start of the 26 bits
+	clr rfid_flag_full	;flag to indicate all 26 bits have arrived
+	clr DH_DL_bit
+	mov buffer,#00		;ponter to point one location in the 4 bytes
+	mov rfid_ptr,#rfid_bank;4 memory locations to hold 26 bits
+	mov pulse_cnt0,#00
+	mov pulse_cnt1,#00
+
+	mov ie,#1000$0101b	;int0 and int1 enabled
+	ret
+;####################################################################################
+
+
+;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;THIS  WILL CONVER THE BINARY NUMBER IN ACCUMULATOR INTO ASCII
+;ARGUMENT1 --> ACCUMULATOR ==>THE NUMBER TO BE CONVERTED
+;RETURN  -->   R2 ==> UNITS PLACE
+;	 -->   R1 ==> TENTS PLACE
+;	 -->   R0 ==> HUNDREDS PLACE
+
+CONVERT:
+	MOV B,#10
+	DIV AB
+	MOV R2,B
+
+	MOV B,#10
+	DIV AB
+	MOV R1,B
+
+	MOV R0,A
+
+	MOV A,#30H		;CONVERT THE BCD INTO ASCII
+	ORL A,R2
+	MOV R2,A		;R2 ==> UNITS PLACE
+
+	MOV A,#30H		;CONVERT THE BCD INTO ASCII
+	ORL A,R1
+	MOV R1,A		;R1 ==> TENTS PLACE
+
+	MOV A,#30H		;CONVERT THE BCD INTO ASCII
+	ORL A,R0
+	MOV R0,A		;R0 ==> HUNDREDS PLACE
+
+	RET
+;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+end
+
+
