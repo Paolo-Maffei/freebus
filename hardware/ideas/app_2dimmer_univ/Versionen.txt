@@ -90,12 +90,41 @@ V0.9
   Bei Ueberlast werden die FETs für 3s hardwaremaessig abgeschaltet und 
   der Ueberlastfall an den Controller gemeldet
 
+Erfahrungen aus der aufgebauten Version 0.9:
+1)Lochdurchmesser bei selbstgefertigter Platine:
+  alle Bohrungen mit 0,8mm außer
+	+ 0,5mm für die VIAs
+	+ 1,0mm für SV1 Stiftleiste
+	+ 1,2mm für R1,R101 und alle Klemmen
+	+ 1,5mm für Q1..Q4 und Sicherung
+	+ 2,0mm für die Schraubenlöcher
+2)Kupferring für die Schraubenlöcher, damit diese einfacher zu bohren sind
+3)Klemmen KL1A, KL1B, KL2A, KL2B stehen über den Platinenrand und müssen um 2mm versetzt werden
+4)Routing optimieren: Abstände der Leiterbahnen
+5)Debugpins entfernen
+6)FETs Q2 und Q4 müssen etwas weiter zur Mitte versetzt werden (stoßen sonst oben an Sicherung an)
+
+
+V1.0         9.11.2009
+----         
+- Klemmen KL1A, KL1B, KL2A, KL2B versetzt
+- Kupferring für die Schraubenlöcher, damit diese einfacher zu bohren sind
+- FETs Q2 und Q4 etwas weiter zur Mitte versetzt 
+- Debugpins entfernt
+- Kontrolle: Lochdurchmesser
+	+ 1,5mm Q1..Q4
+	+ 2,8mm Schraubenlöcher
+	+ 0,7 VIAS
+	+ 1,2 Klemmen
+	+ 1,4 Sicherungen
+	+ 1,3 R1, R101   (geändert)
+	+ 1,0 SV1 (geändert)
+	
+
+
 
 ToDo
 ----
-HW:
-- erste Platine aufbauen
-
 SW:
 - Erstellung des Applikationsprogramms
 - Erkennung Lastausfall (kein I-Signal trotz U-Signal und Eingeschaltet)
