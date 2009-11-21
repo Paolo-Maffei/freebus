@@ -1,0 +1,91 @@
+File created by kubi's vdTool 2.0
+---------------------------------
+
+Product Name ............ : KNX Zeitgeber
+Serial Number ........... : 677290
+Manufacturer ID ......... : 0x0C
+Mask Version ............ : 0x0012
+User Ram Start .......... : 0x00CE
+User Ram End ............ : 0x00DF
+EEPROM Start ............ : 0x0100
+EEPROM End .............. : 0x01FE
+RUN Error Adress ........ : 0x010D
+Address Table Address ... : 0x0116
+Association Table Address : 0x0111
+Commstab Pointer Address  : 0x0112
+Device Type ............. : 0x2422
+Commstab Address ........ : 0x3A
+
+Application Program 60834  Zeitgeber 2422/1.0
+--------------------------------------------------
+0x01F8  Bit 0-7  Param-ID: 60984  Sowiregel  Allgemein  
+  0  keine
+  1  wie Mitteleuropa
+  2  wie Gro?britannien
+  3  Griechenland, Finnland, T?rkei
+  4  wie Nordamerika
+  5  benutzerdefiniert
+  6  keine Sommerzeitumschaltung trotz DCF-Si\\gnal
+  7  UTC ohne Sommerzeitumschaltung trotz DCF\\-Signal
+
+0x01F9  Bit 4-7  Param-ID: 60995  Sommerzeit ab Monat  Sommerzeitregel  Sommer-/Winterzeit Umschaltung  Allgemein  
+  1  Januar
+  2  Februar
+  3  M?rz
+  4  April
+  5  Mai
+  6  Juni
+  7  Juli
+  8  August
+  9  September
+  10  Oktober
+  11  November
+  12  Dezember
+
+0x01F9  Bit 0-3  Param-ID: 60992  Sommerzeit ab Woche  Sommerzeitregel  Sommer-/Winterzeit Umschaltung  Allgemein  
+  1  erster Sonntag im
+  2  zweiter Sonntag im
+  3  dritter Sonntag im
+  4  vierter Sonntag im
+  5  letzter Sonntag im
+
+0x01FA  Bit 0-7  Param-ID: 60989  Sommerzeit Uhrzeit  Sommerzeitregel  Sommer-/Winterzeit Umschaltung  Allgemein  
+  0  0:00 Uhr
+  1  1:00 Uhr
+  2  2:00 Uhr
+  3  3:00 Uhr
+  4  4:00 Uhr
+  5  5:00 Uhr
+  6  6:00 Uhr
+
+0x01FB  Bit 4-7  Param-ID: 60998  Winterzeitzeit ab Monat  Sommerzeitregel  Sommer-/Winterzeit Umschaltung  Allgemein  
+  1  Januar
+  2  Februar
+  3  M?rz
+  4  April
+  5  Mai
+  6  Juni
+  7  Juli
+  8  August
+  9  September
+  10  Oktober
+  11  November
+  12  Dezember
+
+0x01FB  Bit 0-3  Param-ID: 60986  Winterzeitzeit ab Woche  Sommerzeitregel  Sommer-/Winterzeit Umschaltung  Allgemein  
+  1  erster Sonntag im
+  2  zweiter Sonntag im
+  3  dritter Sonntag im
+  4  vierter Sonntag im
+  5  letzter Sonntag im
+
+0x01FD  Bit 0-7  Param-ID: 61005  Zeitkorrektur f?r Quarzzeit  Allgemein  
+
+0x01FE  Bit 0-7  Param-ID: 60981  Zeit und Datum senden  Allgemein  
+  0  nur auf Anfrage
+  1  jede Minute
+  2  jede Stunde
+  3  jeden Tag um 00:00 Uhr und bei Sowi-Umsc\\haltung
+  4  jeden Tag um 00:02 und bei Sowi-Umschalt\\ung
+
+

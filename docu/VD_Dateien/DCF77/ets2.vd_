@@ -1,0 +1,4410 @@
+EX-IM
+N C:\PROGRA~1\ETS2V13\ets2.vd_
+K Manufacturer tool
+K 
+D 2008-04-04 10:11:34
+V 4.9
+H virtual_device
+-------------------------------------
+T 3 manufacturer
+C1 T3 1 4 N MANUFACTURER_ID
+C2 T3 3 50 Y MANUFACTURER_NAME
+C3 T3 1 4 Y ADDRESS_ID
+R 1 T 3 manufacturer
+12
+Merten
+
+R 2 T 3 manufacturer
+72
+Theben AG
+
+-------------------------------------
+T 4 functional_entity
+C1 T4 1 4 N FUNCTIONAL_ENTITY_ID
+C2 T4 1 4 Y MANUFACTURER_ID
+C3 T4 3 50 Y FUNCTIONAL_ENTITY_NAME
+C4 T4 3 20 Y FUNCTIONAL_ENTITY_NUMB
+C5 T4 3 80 Y FUNCTIONAL_ENTITY_DESCRIPTION
+C6 T4 1 4 Y FUN_FUNCTIONAL_ENTITY_ID
+C7 T4 3 255 Y HELP_FILE_NAME
+C8 T4 1 4 Y CONTEXT_ID
+R 1 T 4 functional_entity
+61062
+12
+3.3 Zeitfunktion
+3.3
+
+
+
+
+R 2 T 4 functional_entity
+61090
+12
+3.3.03 Zeitgeber
+3.3.03
+
+61062
+
+
+-------------------------------------
+T 5 bcu_type
+C1 T5 2 2 N BCU_TYPE_NUMBER
+C2 T5 3 50 Y BCU_TYPE_NAME
+C3 T5 3 50 Y BCU_TYPE_CPU
+R 1 T 5 bcu_type
+1
+BCU 1
+68HCO5B6
+-------------------------------------
+T 6 symbol
+C1 T6 1 4 N SYMBOL_ID
+C2 T6 3 80 Y SYMBOL_FILENAME
+C3 T6 3 50 Y SYMBOL_NAME
+C4 T6 8 32767 Y SYMBOL_DATA
+R 1 T 6 symbol
+18
+IDB_UHR
+Timer
+424df603000000000000360000002800000014000000140000000100180000000000b00400000000
+\\0000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000ffffff000000
+\\ffffffffffffffffff000000000000ffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffff000000ffffff000000ffffff000000ffffff000000ffffff000000ffffff000000ffff
+\\ffffffffffffffffffffffffffffffffffffffffffff000000ffffffffffff000000ffffff000000
+\\000000000000000000000000ffffffffffff000000ffffffffffffffffffffffffffffffffffff00
+\\0000000000000000ffffff000000ffffff000000000000000000000000000000ffffffffffffffff
+\\ff000000ffffffffffffffffffffffffffffffffffff000000ffffffffffff000000ffffff000000
+\\ffffff000000ffffff000000ffffffffffffffffffffffff000000ffffffffffffffffffffffffff
+\\ffffffffffffffffffffff000000ffffff000000ffffff000000ffffff000000ffffffffffffffff
+\\ffffffffffffff000000ffffffffffffffffff000000ffffff000000ffffff000000000000000000
+\\ffffff000000ffffff000000ffffffffffffffffffffffffffffffffffff000000ffffffffffff00
+\\0000ffffff000000ffffff000000ffffff000000ffffff000000ffffff000000ffffffffffffffff
+\\ffffffffffffffffffffffffff000000ffffff000000000000000000ffffff000000ffffff000000
+\\ffffff000000ffffff000000ffffffffffffffffffffffffffffffffffffffffffffffff000000ff
+\\ffffffffffffffffffffff000000ffffff000000ffffff000000ffffff000000ffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffff000000ffffffffffffffffff000000ffffff000000
+\\000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffff000000ffffffffffff000000ffffff000000000000000000000000000000ffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffffffffffffffff000000ffffff000000ffffff000000
+\\ffffff000000ffffff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffff000000000000ffffff000000ffffffffffffffffff000000ffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000ffffff000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\0000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+\\ffffffffffffffffffffffffffff
+-------------------------------------
+T 7 hw_product
+C1 T7 1 4 N PRODUCT_ID
+C2 T7 1 4 N MANUFACTURER_ID
+C3 T7 1 4 Y SYMBOL_ID
+C4 T7 3 50 Y PRODUCT_NAME
+C5 T7 2 2 Y PRODUCT_VERSION_NUMBER
+C6 T7 2 2 Y COMPONENT_TYPE
+C7 T7 2 2 Y COMPONENT_ATTRIBUTES
+C8 T7 2 2 Y BUS_CURRENT
+C9 T7 3 30 Y PRODUCT_SERIAL_NUMBER
+C10 T7 2 2 Y COMPONENT_TYPE_NUMBER
+C11 T7 3 255 Y PRODUCT_PICTURE
+C12 T7 2 2 Y BCU_TYPE_NUMBER
+C13 T7 2 2 Y PRODUCT_HANDLING
+C14 T7 3 255 Y PRODUCT_DLL
+C15 T7 1 4 Y ORIGINAL_MANUFACTURER_ID
+R 1 T 7 hw_product
+60831
+12
+18
+KNX Zeitgeber
+1
+
+30
+
+677290
+
+
+1
+0
+
+72
+-------------------------------------
+T 8 catalog_entry
+C1 T8 1 4 N CATALOG_ENTRY_ID
+C2 T8 1 4 N PRODUCT_ID
+C3 T8 1 4 N MANUFACTURER_ID
+C4 T8 1 4 Y SYMBOL_ID
+C5 T8 3 20 Y ORDER_NUMBER
+C6 T8 3 50 Y ENTRY_NAME
+C7 T8 3 20 Y ENTRY_COLOUR
+C8 T8 5 8 Y ENTRY_WIDTH_IN_MODULES
+C9 T8 5 8 Y ENTRY_WIDTH_IN_MILLIMETERS
+C10 T8 5 8 Y PRICE
+C11 T8 3 3 Y CURRENCY
+C12 T8 3 10 Y QUANTITY_UNIT
+C13 T8 5 8 Y MATERIAL_PRICE
+C14 T8 2 2 Y MOUNTING_HOURS
+C15 T8 2 2 Y MOUNTING_MINUTES
+C16 T8 2 2 Y MOUNTING_SECONDS
+C17 T8 2 2 Y DIN_FLAG
+C18 T8 3 20 Y SERIES
+C19 T8 3 50 Y CATALOG_NAME
+C20 T8 2 2 Y PAGE_NUMBER
+C21 T8 3 255 Y ENTRY_PICTURE
+C22 T8 3 1 Y DESIGNATION_TYPE
+C23 T8 3 2 Y DESIGNATION_FUNCTION
+C24 T8 3 255 Y HELP_FILE_NAME
+C25 T8 1 4 Y CONTEXT_ID
+C26 T8 1 4 Y RAM_SIZE
+C27 T8 1 4 Y REGISTRATION_NUMBER
+C28 T8 2 2 Y REGISTRATION_YEAR
+C29 T8 2 2 Y ENTRY_STATUS_CODE
+C30 T8 3 42 Y REGISTRATION_TS
+C31 T8 3 42 Y REGISTRATION_DATE
+C32 T8 3 50 Y REGISTRATION_COMMENT
+R 1 T 8 catalog_entry
+61044
+60831
+12
+
+677290
+KNX Zeitgeber
+
+
+
+
+
+
+
+
+
+
+0
+
+
+0
+
+A
+
+
+
+
+
+
+20
+2008-02-20 09:34:08.500
+
+
+-------------------------------------
+T 9 medium_type
+C1 T9 2 2 N MEDIUM_TYPE_NUMBER
+C2 T9 3 50 Y MEDIUM_TYPE_NAME
+C3 T9 3 20 Y MEDIUM_TYPE_SHORT_NAME
+C4 T9 3 1 Y STANDARD_SYSTEM_ID_LEVEL
+C5 T9 2 2 Y SYSTEM_ID_LENGTH
+C6 T9 5 8 Y DCY_F_INDIVIDUAL
+C7 T9 5 8 Y DCY_G_INDIVIDUAL
+C8 T9 5 8 Y DCY_F_GROUP
+C9 T9 5 8 Y DCY_G_GROUP
+C10 T9 2 2 Y DUTY_CYCLE_CALCULATION
+R 1 T 9 medium_type
+0
+Twisted Pair
+TP
+
+
+
+
+
+
+
+-------------------------------------
+T 10 mask
+C1 T10 1 4 N MASK_ID
+C2 T10 1 4 Y MASK_VERSION
+C3 T10 1 4 Y USER_RAM_START
+C4 T10 1 4 Y USER_RAM_END
+C5 T10 1 4 Y USER_EEPROM_START
+C6 T10 1 4 Y USER_EEPROM_END
+C7 T10 1 4 Y RUN_ERROR_ADDRESS
+C8 T10 1 4 Y ADDRESS_TAB_ADDRESS
+C9 T10 1 4 Y ASSOCTABPTR_ADDRESS
+C10 T10 1 4 Y COMMSTABPTR_ADDRESS
+C11 T10 1 4 Y MANUFACTURER_DATA_ADDRESS
+C12 T10 1 4 Y MANUFACTURER_DATA_SIZE
+C13 T10 1 4 Y MANUFACTURER_ID_ADDRESS
+C14 T10 1 4 Y ROUTECNT_ADDRESS
+C15 T10 2 2 Y MANUFACTURER_ID_PROTECTED
+C16 T10 3 50 Y MASK_VERSION_NAME
+C17 T10 8 32767 Y MASK_EEPROM_DATA
+C18 T10 1 4 Y MASK_DATA_LENGTH
+C19 T10 1 4 Y ADDRESS_TAB_LCS
+C20 T10 1 4 Y ASSOC_TAB_LCS
+C21 T10 1 4 Y APPLICATION_PROGRAM_LCS
+C22 T10 1 4 Y PEI_PROGRAM_LCS
+C23 T10 1 4 Y LOAD_CONTROL_ADDRESS
+C24 T10 1 4 Y RUN_CONTROL_ADDRESS
+C25 T10 1 4 Y EXTERNAL_MEMORY_START
+C26 T10 1 4 Y EXTERNAL_MEMORY_END
+C27 T10 1 4 Y APPLICATION_PROGRAM_RCS
+C28 T10 1 4 Y PEI_PROGRAM_RCS
+C29 T10 1 4 Y PORT_A_DDR
+C30 T10 2 2 Y PORT_ADDRESS_PROTECTED
+C31 T10 2 2 Y MEDIUM_TYPE_NUMBER
+C32 T10 2 2 Y MEDIUM_TYPE_NUMBER2
+C33 T10 2 2 Y BCU_TYPE_NUMBER
+R 1 T 10 mask
+20006
+18
+206
+223
+256
+510
+269
+278
+273
+274
+257
+3
+260
+270
+1
+1.2
+ff00000000000000ff14ff0000ff6063eeffffffffff000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000
+256
+
+
+
+
+
+
+
+
+
+
+
+1
+0
+
+1
+-------------------------------------
+T 11 assembler
+C1 T11 1 4 N ASSEMBLER_ID
+C2 T11 3 50 Y ASSEMBLER_NAME
+C3 T11 2 2 Y ASSEMBLER_TYPE
+R 1 T 11 assembler
+1
+IASM
+1
+-------------------------------------
+T 12 application_program
+C1 T12 1 4 N PROGRAM_ID
+C2 T12 1 4 Y SYMBOL_ID
+C3 T12 1 4 Y MASK_ID
+C4 T12 3 50 Y PROGRAM_NAME
+C5 T12 3 5 Y PROGRAM_VERSION
+C6 T12 2 2 Y PROGRAM_VERSION_NUMBER
+C7 T12 2 2 Y LINKABLE
+C8 T12 1 4 Y DEVICE_TYPE
+C9 T12 2 2 Y PEI_TYPE
+C10 T12 1 4 Y ADDRESS_TAB_SIZE
+C11 T12 1 4 Y ASSOCTAB_ADDRESS
+C12 T12 1 4 Y ASSOCTAB_SIZE
+C13 T12 1 4 Y COMMSTAB_ADDRESS
+C14 T12 1 4 Y COMMSTAB_SIZE
+C15 T12 3 20 Y PROGRAM_SERIAL_NUMBER
+C16 T12 1 4 Y MANUFACTURER_ID
+C17 T12 8 32767 Y EEPROM_DATA
+C18 T12 1 4 Y DATA_LENGTH
+C19 T12 3 255 Y S19_FILE
+C20 T12 3 255 Y MAP_FILE
+C21 T12 1 4 Y ASSEMBLER_ID
+C22 T12 3 255 Y HELP_FILE_NAME
+C23 T12 1 4 Y CONTEXT_ID
+C24 T12 2 2 Y DYNAMIC_MANAGEMENT
+C25 T12 2 2 Y PROGRAM_TYPE
+C26 T12 1 4 Y RAM_SIZE
+C27 T12 1 4 Y ORIGINAL_MANUFACTURER_ID
+C28 T12 1 4 Y API_VERSION
+C29 T12 2 2 Y PROGRAM_STYLE
+C30 T12 2 2 Y IS_POLLING_MASTER
+C31 T12 2 2 Y NUMBER_OF_POLLING_GROUPS
+R 1 T 12 application_program
+60834
+18
+20006
+Zeitgeber 2422/1.0
+16
+
+1
+9250
+14
+19
+297
+17
+314
+14
+
+12
+ff00000048601a19fb0ec00000ff6063ef293af7f7f7090000100110021003100410051006100710
+\\08080100020103020403050406050706080704ced0df09d3df09d6df00d7cf000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\00000000000000000000000000000000000000000000000000000000000000000000000000000000
+\\0000000000000081003502a503000100
+256
+C:\\ASM6805\\ZEITGE~1\\ZEITGBA.S19
+
+1
+
+
+1
+0
+
+72
+
+0
+0
+
+-------------------------------------
+T 13 virtual_device
+C1 T13 1 4 N VIRTUAL_DEVICE_ID
+C2 T13 1 4 Y SYMBOL_ID
+C3 T13 1 4 N CATALOG_ENTRY_ID
+C4 T13 1 4 Y PROGRAM_ID
+C5 T13 3 50 Y VIRTUAL_DEVICE_NAME
+C6 T13 3 80 Y VIRTUAL_DEVICE_DESCRIPTION
+C7 T13 1 4 Y FUNCTIONAL_ENTITY_ID
+C8 T13 1 4 Y PRODUCT_TYPE_ID
+C9 T13 3 255 Y HELP_FILE_NAME
+C10 T13 1 4 Y CONTEXT_ID
+C11 T13 1 4 Y PEI_PROGRAM_ID
+C12 T13 2 2 Y VIRTUAL_DEVICE_NUMBER
+C13 T13 3 255 Y MEDIUM_TYPES
+R 1 T 13 virtual_device
+69409
+18
+61044
+60834
+KNX Zeitgeber
+677290
+61090
+61090
+
+
+
+1
+TP
+-------------------------------------
+T 14 mask_entry
+C1 T14 1 4 N MASK_ENTRY_ID
+C2 T14 1 4 Y MASK_ID
+C3 T14 3 50 Y MASK_ENTRY_NAME
+C4 T14 2 2 Y MASK_ENTRY_ADDRESS
+R 1 T 14 mask_entry
+20281
+20006
+AllocBuf
+4478
+R 2 T 14 mask_entry
+20282
+20006
+PopBuf
+4544
+R 3 T 14 mask_entry
+20283
+20006
+FreeBuf
+4512
+R 4 T 14 mask_entry
+20284
+20006
+rolA1
+2804
+R 5 T 14 mask_entry
+20285
+20006
+rolA2
+2802
+R 6 T 14 mask_entry
+20286
+20006
+rolA3
+2800
+R 7 T 14 mask_entry
+20287
+20006
+rolA4
+2798
+R 8 T 14 mask_entry
+20288
+20006
+rolA7
+2796
+R 9 T 14 mask_entry
+20289
+20006
+shlA4
+2985
+R 10 T 14 mask_entry
+20290
+20006
+shlA5
+2984
+R 11 T 14 mask_entry
+20291
+20006
+shlA6
+2983
+R 12 T 14 mask_entry
+20292
+20006
+shlA7
+2982
+R 13 T 14 mask_entry
+20293
+20006
+shrA4
+3049
+R 14 T 14 mask_entry
+20294
+20006
+shrA5
+3048
+R 15 T 14 mask_entry
+20295
+20006
+shrA6
+3047
+R 16 T 14 mask_entry
+20312
+20006
+shrA7
+3046
+R 17 T 14 mask_entry
+20313
+20006
+divDE_BC
+2827
+R 18 T 14 mask_entry
+20314
+20006
+multDE_FG
+2891
+R 19 T 14 mask_entry
+20315
+20006
+TM_GetFlg
+3657
+R 20 T 14 mask_entry
+20316
+20006
+TM_Load
+3627
+R 21 T 14 mask_entry
+20317
+20006
+EEsetChecksum
+3176
+R 22 T 14 mask_entry
+20318
+20006
+EEwrite
+3128
+R 23 T 14 mask_entry
+20319
+20006
+S_AstShift
+4375
+R 24 T 14 mask_entry
+20320
+20006
+S_LAstShift
+4373
+R 25 T 14 mask_entry
+20321
+20006
+U_SerialShift
+3216
+R 26 T 14 mask_entry
+20322
+20006
+U_deb10
+3187
+R 27 T 14 mask_entry
+20323
+20006
+U_deb30
+3183
+R 28 T 14 mask_entry
+20324
+20006
+U_debounce
+3189
+R 29 T 14 mask_entry
+20325
+20006
+U_Delay
+3578
+R 30 T 14 mask_entry
+20326
+20006
+U_delMsgs
+3219
+R 31 T 14 mask_entry
+20327
+20006
+U_flagsGet
+3229
+R 32 T 14 mask_entry
+20328
+20006
+U_flagsSet
+3251
+R 33 T 14 mask_entry
+20329
+20006
+U_GetTM
+3441
+R 34 T 14 mask_entry
+20330
+20006
+U_GetTMx
+3436
+R 35 T 14 mask_entry
+20331
+20006
+U_ioAST
+3535
+R 36 T 14 mask_entry
+20332
+20006
+U_map
+3258
+R 37 T 14 mask_entry
+20333
+20006
+U_readAD
+3412
+R 38 T 14 mask_entry
+20334
+20006
+U_SetTM
+3507
+R 39 T 14 mask_entry
+20335
+20006
+U_SetTMx
+3503
+R 40 T 14 mask_entry
+20336
+20006
+U_GetBit
+3596
+R 41 T 14 mask_entry
+20337
+20006
+U_SetBit
+3608
+R 42 T 14 mask_entry
+20338
+20006
+U_testObj
+3237
+R 43 T 14 mask_entry
+20339
+20006
+U_transRequest
+3513
+-------------------------------------
+T 17 device_info
+C1 T17 1 4 N DEVICE_INFO_ID
+C2 T17 1 4 N MASK_ID
+C3 T17 1 4 Y DEV_DEVICE_INFO_ID
+C4 T17 3 50 Y DEVICE_INFO_NAME
+C5 T17 2 2 Y FUNCTION_NUMBER
+C6 T17 2 2 Y DEVICE_INFO_TYPE
+C7 T17 2 2 Y BIT_POSITION
+C8 T17 2 2 Y DEVICE_INFO_VISIBLE
+R 1 T 17 device_info
+20420
+20006
+
+BCU 1
+
+
+
+2
+-------------------------------------
+T 18 ete_language
+C1 T18 1 4 N LANGUAGE_ID
+C2 T18 3 50 Y LANGUAGE_NAME
+C3 T18 2 2 Y DATABASE_LANGUAGE
+R 1 T 18 ete_language
+1031
+German
+1
+R 2 T 18 ete_language
+1033
+English
+0
+R 3 T 18 ete_language
+1034
+Spanish
+0
+R 4 T 18 ete_language
+1036
+French
+0
+R 5 T 18 ete_language
+1043
+Dutch
+0
+-------------------------------------
+T 19 device_info_value
+C1 T19 1 4 N DEVICE_INFO_VALUE_ID
+C2 T19 1 4 N DEVICE_INFO_ID
+C3 T19 1 4 Y BITMAP_ID
+C4 T19 1 4 Y MINIMUM_VALUE
+C5 T19 1 4 Y MAXIMUM_VALUE
+C6 T19 3 50 Y DISPLAYED_VALUE
+R 1 T 19 device_info_value
+21082
+20420
+5507
+
+
+
+-------------------------------------
+T 20 parameter_atomic_type
+C1 T20 2 2 N ATOMIC_TYPE_NUMBER
+C2 T20 3 50 Y ATOMIC_TYPE_NAME
+C3 T20 3 1 Y DISPATTR
+R 1 T 20 parameter_atomic_type
+0
+none
+ 
+R 2 T 20 parameter_atomic_type
+2
+signed
+-
+R 3 T 20 parameter_atomic_type
+4
+enum
+Y
+-------------------------------------
+T 21 parameter_type
+C1 T21 1 4 N PARAMETER_TYPE_ID
+C2 T21 2 2 Y ATOMIC_TYPE_NUMBER
+C3 T21 1 4 Y PROGRAM_ID
+C4 T21 3 50 Y PARAMETER_TYPE_NAME
+C5 T21 1 4 Y PARAMETER_MINIMUM_VALUE
+C6 T21 1 4 Y PARAMETER_MAXIMUM_VALUE
+C7 T21 3 80 Y PARAMETER_TYPE_DESCRIPTION
+C8 T21 2 2 Y PARAMETER_TYPE_LOW_ACCESS
+C9 T21 2 2 Y PARAMETER_TYPE_HIGH_ACCESS
+C10 T21 2 2 Y PARAMETER_TYPE_SIZE
+C11 T21 5 8 Y PARAMETER_MINIMUM_DOUBLE_VALUE
+C12 T21 5 8 Y PARAMETER_MAXIMUM_DOUBLE_VALUE
+C13 T21 3 40 Y PARAMETER_UI_HINT
+R 1 T 21 parameter_type
+60835
+4
+60834
+Sichtbar
+
+
+
+2
+2
+1
+
+
+
+R 2 T 21 parameter_type
+60842
+0
+60834
+Seite
+
+
+
+2
+2
+0
+
+
+
+R 3 T 21 parameter_type
+60843
+4
+60834
+Zeit und Datum senden
+
+
+
+2
+2
+8
+
+
+
+R 4 T 21 parameter_type
+60859
+2
+60834
+Zeitkorrektur in 0.1 sek/d
+-128
+127
+
+2
+2
+8
+
+
+
+R 5 T 21 parameter_type
+60860
+4
+60834
+Quelle für Zeit
+
+
+
+2
+2
+8
+
+
+
+R 6 T 21 parameter_type
+60870
+4
+60834
+Sommerzeit/Winterzeitregel
+
+
+
+2
+2
+8
+
+
+
+R 7 T 21 parameter_type
+60895
+4
+60834
+Monat
+
+
+
+2
+2
+4
+
+
+
+R 8 T 21 parameter_type
+60932
+4
+60834
+woche
+
+
+
+2
+2
+4
+
+
+
+R 9 T 21 parameter_type
+60948
+4
+60834
+Uhrzeit
+
+
+
+2
+2
+8
+
+
+
+-------------------------------------
+T 22 parameter_list_of_values
+C1 T22 1 4 N PARAMETER_TYPE_ID
+C2 T22 1 4 Y REAL_VALUE
+C3 T22 3 50 Y DISPLAYED_VALUE
+C4 T22 2 2 Y DISPLAY_ORDER
+C5 T22 1 4 N PARAMETER_VALUE_ID
+C6 T22 8 32767 Y BINARY_VALUE
+C7 T22 1 4 Y BINARY_VALUE_LENGTH
+C8 T22 5 8 Y DOUBLE_VALUE
+R 1 T 22 parameter_list_of_values
+60835
+0
+unsichtbar
+0
+60836
+
+0
+
+R 2 T 22 parameter_list_of_values
+60835
+1
+sichtbar
+1
+60839
+
+0
+
+R 3 T 22 parameter_list_of_values
+60843
+1
+jede Minute
+1
+60844
+
+0
+
+R 4 T 22 parameter_list_of_values
+60843
+4
+jeden Tag um 00:02 und bei Sowi-Umschalt
+\\ung
+4
+60847
+
+0
+
+R 5 T 22 parameter_list_of_values
+60843
+3
+jeden Tag um 00:00 Uhr und bei Sowi-Umsc
+\\haltung
+3
+60850
+
+0
+
+R 6 T 22 parameter_list_of_values
+60843
+2
+jede Stunde
+2
+60853
+
+0
+
+R 7 T 22 parameter_list_of_values
+60843
+0
+nur auf Anfrage
+0
+60856
+
+0
+
+R 8 T 22 parameter_list_of_values
+60860
+0
+automatische DCF-Erkennung
+0
+60861
+
+0
+
+R 9 T 22 parameter_list_of_values
+60860
+1
+Quarzzeit
+1
+60864
+
+0
+
+R 10 T 22 parameter_list_of_values
+60860
+2
+DCF-Zeit
+2
+60867
+
+0
+
+R 11 T 22 parameter_list_of_values
+60870
+7
+UTC ohne Sommerzeitumschaltung trotz DCF
+\\-Signal
+8
+60871
+
+0
+
+R 12 T 22 parameter_list_of_values
+60870
+5
+benutzerdefiniert
+6
+60874
+
+0
+
+R 13 T 22 parameter_list_of_values
+60870
+2
+wie Großbritannien
+3
+60877
+
+0
+
+R 14 T 22 parameter_list_of_values
+60870
+4
+wie Nordamerika
+5
+60880
+
+0
+
+R 15 T 22 parameter_list_of_values
+60870
+1
+wie Mitteleuropa
+2
+60883
+
+0
+
+R 16 T 22 parameter_list_of_values
+60870
+6
+keine Sommerzeitumschaltung trotz DCF-Si
+\\gnal
+7
+60886
+
+0
+
+R 17 T 22 parameter_list_of_values
+60870
+3
+Griechenland, Finnland, Türkei
+4
+60889
+
+0
+
+R 18 T 22 parameter_list_of_values
+60870
+0
+keine
+1
+60892
+
+0
+
+R 19 T 22 parameter_list_of_values
+60895
+3
+März
+2
+60896
+
+0
+
+R 20 T 22 parameter_list_of_values
+60895
+12
+Dezember
+11
+60899
+
+0
+
+R 21 T 22 parameter_list_of_values
+60895
+5
+Mai
+4
+60902
+
+0
+
+R 22 T 22 parameter_list_of_values
+60895
+7
+Juli
+6
+60905
+
+0
+
+R 23 T 22 parameter_list_of_values
+60895
+1
+Januar
+0
+60908
+
+0
+
+R 24 T 22 parameter_list_of_values
+60895
+10
+Oktober
+9
+60911
+
+0
+
+R 25 T 22 parameter_list_of_values
+60895
+6
+Juni
+5
+60914
+
+0
+
+R 26 T 22 parameter_list_of_values
+60895
+8
+August
+7
+60917
+
+0
+
+R 27 T 22 parameter_list_of_values
+60895
+4
+April
+3
+60920
+
+0
+
+R 28 T 22 parameter_list_of_values
+60895
+11
+November
+10
+60923
+
+0
+
+R 29 T 22 parameter_list_of_values
+60895
+2
+Februar
+1
+60926
+
+0
+
+R 30 T 22 parameter_list_of_values
+60895
+9
+September
+8
+60929
+
+0
+
+R 31 T 22 parameter_list_of_values
+60932
+5
+letzter Sonntag im
+4
+60933
+
+0
+
+R 32 T 22 parameter_list_of_values
+60932
+1
+erster Sonntag im
+0
+60936
+
+0
+
+R 33 T 22 parameter_list_of_values
+60932
+2
+zweiter Sonntag im
+1
+60939
+
+0
+
+R 34 T 22 parameter_list_of_values
+60932
+3
+dritter Sonntag im
+2
+60942
+
+0
+
+R 35 T 22 parameter_list_of_values
+60932
+4
+vierter Sonntag im
+3
+60945
+
+0
+
+R 36 T 22 parameter_list_of_values
+60948
+0
+0:00 Uhr
+0
+60949
+
+0
+
+R 37 T 22 parameter_list_of_values
+60948
+1
+1:00 Uhr
+1
+60952
+
+0
+
+R 38 T 22 parameter_list_of_values
+60948
+2
+2:00 Uhr
+2
+60955
+
+0
+
+R 39 T 22 parameter_list_of_values
+60948
+3
+3:00 Uhr
+3
+60958
+
+0
+
+R 40 T 22 parameter_list_of_values
+60948
+4
+4:00 Uhr
+4
+60961
+
+0
+
+R 41 T 22 parameter_list_of_values
+60948
+6
+6:00 Uhr
+6
+60964
+
+0
+
+R 42 T 22 parameter_list_of_values
+60948
+5
+5:00 Uhr
+5
+60967
+
+0
+
+-------------------------------------
+T 23 parameter
+C1 T23 1 4 N PROGRAM_ID
+C2 T23 1 4 Y PARAMETER_TYPE_ID
+C3 T23 2 2 Y PARAMETER_NUMBER
+C4 T23 3 50 Y PARAMETER_NAME
+C5 T23 2 2 Y PARAMETER_LOW_ACCESS
+C6 T23 2 2 Y PARAMETER_HIGH_ACCESS
+C7 T23 1 4 Y PARENT_PARM_VALUE
+C8 T23 2 2 Y PARAMETER_SIZE
+C9 T23 3 30 Y PARAMETER_FUNCTION
+C10 T23 2 2 Y PARAMETER_DISPLAY_ORDER
+C11 T23 1 4 Y PARAMETER_ADDRESS
+C12 T23 2 2 Y PARAMETER_BITOFFSET
+C13 T23 3 80 Y PARAMETER_DESCRIPTION
+C14 T23 1 4 N PARAMETER_ID
+C15 T23 1 4 Y PAR_PARAMETER_ID
+C16 T23 3 30 Y PARAMETER_LABEL
+C17 T23 1 4 Y PARAMETER_DEFAULT_LONG
+C18 T23 3 255 Y PARAMETER_DEFAULT_STRING
+C19 T23 1 4 Y CONTEXT_ID
+C20 T23 5 8 Y PARAMETER_DEFAULT_DOUBLE
+C21 T23 2 2 Y PATCH_ALWAYS
+C22 T23 2 2 Y ADDRESS_SPACE
+C23 T23 2 2 Y EIB_OBJECT_REF
+C24 T23 1 4 Y EIB_PROPERTY_ID
+R 1 T 23 parameter
+60834
+60835
+13
+Objekt "Zeit ungültig"
+0
+0
+
+1
+
+180
+0
+0
+Objekt "Zeit ungültig"
+60970
+
+
+0
+
+
+
+0
+1
+
+
+R 2 T 23 parameter
+60834
+60860
+1
+Allgemein
+2
+2
+
+8
+
+100
+
+0
+Allgemein
+60980
+
+
+
+
+
+
+0
+0
+
+
+R 3 T 23 parameter
+60834
+60843
+2
+Zeit und Datum senden
+2
+2
+
+8
+
+110
+510
+0
+Zeit und Datum senden
+60981
+60980
+
+2
+
+
+
+0
+2
+
+
+R 4 T 23 parameter
+60834
+60870
+4
+Sowiregel
+2
+2
+
+8
+
+130
+504
+0
+Sommer-/Winterzeit Umschaltung
+60984
+60980
+
+1
+
+
+
+0
+2
+
+
+R 5 T 23 parameter
+60834
+60859
+12
+Zeitkorrektur für Quarzzeit
+2
+2
+
+8
+
+140
+509
+0
+Zeitkorrektur für Quarzzeit \r\nin 1/10 
+\\sek pro Tag (-128..127) 
+61005
+60980
+
+0
+
+
+
+0
+2
+
+
+R 6 T 23 parameter
+60834
+60842
+9
+Sommerzeitregel
+2
+2
+5
+0
+
+200
+
+0
+Sommerzeitregel
+60985
+60984
+
+
+
+
+
+0
+0
+
+
+R 7 T 23 parameter
+60834
+60932
+8
+Winterzeitzeit ab Woche
+2
+2
+
+4
+
+240
+507
+4
+Winterzeit ab
+60986
+60985
+
+5
+
+
+
+0
+2
+
+
+R 8 T 23 parameter
+60834
+60948
+10
+Sommerzeit Uhrzeit
+2
+2
+
+8
+
+230
+506
+0
+
+60989
+60985
+
+2
+
+
+
+0
+2
+
+
+R 9 T 23 parameter
+60834
+60932
+5
+Sommerzeit ab Woche
+2
+2
+
+4
+
+210
+505
+4
+Sommerzeit ab
+60992
+60985
+
+5
+
+
+
+0
+2
+
+
+R 10 T 23 parameter
+60834
+60895
+6
+Sommerzeit ab Monat
+2
+2
+
+4
+
+220
+505
+0
+
+60995
+60985
+
+3
+
+
+
+0
+2
+
+
+R 11 T 23 parameter
+60834
+60895
+7
+Winterzeitzeit ab Monat
+2
+2
+
+4
+
+250
+507
+0
+
+60998
+60985
+
+10
+
+
+
+0
+2
+
+
+-------------------------------------
+T 24 object_type
+C1 T24 2 2 N OBJECT_TYPE_CODE
+C2 T24 3 50 Y OBJECT_TYPE_NAME
+C3 T24 2 2 Y LENGTH_IN_BIT
+R 1 T 24 object_type
+0
+1 Bit
+1
+R 2 T 24 object_type
+9
+3 Byte
+24
+-------------------------------------
+T 25 object_priority
+C1 T25 2 2 N OBJECT_PRIORITY_CODE
+C2 T25 3 50 Y OBJECT_PRIORITY_NAME
+R 1 T 25 object_priority
+3
+Low
+-------------------------------------
+T 26 communication_object
+C1 T26 1 4 Y PROGRAM_ID
+C2 T26 3 50 Y OBJECT_NAME
+C3 T26 3 30 Y OBJECT_FUNCTION
+C4 T26 2 2 Y OBJECT_READENABLED
+C5 T26 2 2 Y OBJECT_WRITEENABLED
+C6 T26 2 2 Y OBJECT_COMMENABLED
+C7 T26 2 2 Y OBJECT_TRANSENABLED
+C8 T26 1 4 Y OBJECT_DISPLAY_ORDER
+C9 T26 1 4 Y PARENT_PARAMETER_VALUE
+C10 T26 1 4 N OBJECT_ID
+C11 T26 1 4 Y PARAMETER_ID
+C12 T26 2 2 Y OBJECT_NUMBER
+C13 T26 3 80 Y OBJECT_DESCRIPTION
+C14 T26 2 2 Y OBJECT_TYPE
+C15 T26 2 2 Y OBJECT_PRIORITY
+C16 T26 2 2 Y OBJECT_UPDATEENABLED
+C17 T26 2 2 Y OBJECT_UNIQUE_NUMBER
+C18 T26 2 2 Y EIB_DATA_TYPE_CODE
+C19 T26 2 2 Y EIB_DATA_SUBTYPE_CODE
+R 1 T 26 communication_object
+60834
+Zeit ungültig
+Zeit ungültig
+1
+0
+1
+1
+3
+1
+60971
+60970
+3
+
+0
+3
+0
+4
+
+
+R 2 T 26 communication_object
+60834
+Uhrzeit
+Uhrzeit senden/empfangen
+1
+1
+1
+1
+0
+
+61010
+
+0
+
+9
+3
+0
+1
+
+
+R 3 T 26 communication_object
+60834
+Datum
+Datum senden/empfangen
+1
+1
+1
+1
+1
+
+61017
+
+1
+
+9
+3
+0
+2
+
+
+R 4 T 26 communication_object
+60834
+Zeitanfrage
+Zeit und Datum senden
+0
+1
+1
+0
+2
+
+61024
+
+2
+
+0
+3
+0
+3
+
+
+-------------------------------------
+T 30 text_attribute
+C1 T30 1 4 N TEXT_ATTRIBUTE_ID
+C2 T30 1 4 N LANGUAGE_ID
+C3 T30 1 4 N COLUMN_ID
+C4 T30 1 4 N ENTITY_ID
+C5 T30 3 80 Y TEXT_ATTRIBUTE_TEXT
+R 1 T 30 text_attribute
+74314
+1033
+30
+61062
+3.3 Time function
+R 2 T 30 text_attribute
+74315
+1033
+31
+61062
+
+R 3 T 30 text_attribute
+88896
+1034
+30
+61090
+3.3.03 Temporizador
+R 4 T 30 text_attribute
+88897
+1034
+31
+61090
+
+R 5 T 30 text_attribute
+88898
+1034
+40
+69409
+
+R 6 T 30 text_attribute
+88899
+1034
+41
+69409
+
+R 7 T 30 text_attribute
+88900
+1034
+1
+61044
+
+R 8 T 30 text_attribute
+88901
+1034
+2
+61044
+
+R 9 T 30 text_attribute
+88902
+1034
+3
+61044
+
+R 10 T 30 text_attribute
+88903
+1034
+4
+61044
+
+R 11 T 30 text_attribute
+88904
+1034
+5
+61044
+
+R 12 T 30 text_attribute
+88905
+1034
+80
+60834
+
+R 13 T 30 text_attribute
+88906
+1034
+20
+60971
+
+R 14 T 30 text_attribute
+88907
+1034
+21
+60971
+
+R 15 T 30 text_attribute
+88908
+1034
+22
+60971
+
+R 16 T 30 text_attribute
+88909
+1034
+20
+61010
+
+R 17 T 30 text_attribute
+88910
+1034
+21
+61010
+
+R 18 T 30 text_attribute
+88911
+1034
+22
+61010
+
+R 19 T 30 text_attribute
+88912
+1034
+20
+61017
+
+R 20 T 30 text_attribute
+88913
+1034
+21
+61017
+
+R 21 T 30 text_attribute
+88914
+1034
+22
+61017
+
+R 22 T 30 text_attribute
+88915
+1034
+20
+61024
+
+R 23 T 30 text_attribute
+88916
+1034
+21
+61024
+
+R 24 T 30 text_attribute
+88917
+1034
+22
+61024
+
+R 25 T 30 text_attribute
+88918
+1034
+11
+60836
+
+R 26 T 30 text_attribute
+88919
+1034
+11
+60839
+
+R 27 T 30 text_attribute
+88920
+1034
+11
+60844
+
+R 28 T 30 text_attribute
+88921
+1034
+11
+60847
+
+R 29 T 30 text_attribute
+88922
+1034
+11
+60850
+
+R 30 T 30 text_attribute
+88923
+1034
+11
+60853
+
+R 31 T 30 text_attribute
+88924
+1034
+11
+60856
+
+R 32 T 30 text_attribute
+88925
+1034
+11
+60861
+
+R 33 T 30 text_attribute
+88926
+1034
+11
+60864
+
+R 34 T 30 text_attribute
+88927
+1034
+11
+60867
+
+R 35 T 30 text_attribute
+88928
+1034
+11
+60871
+
+R 36 T 30 text_attribute
+88929
+1034
+11
+60874
+
+R 37 T 30 text_attribute
+88930
+1034
+11
+60877
+
+R 38 T 30 text_attribute
+88931
+1034
+11
+60880
+
+R 39 T 30 text_attribute
+88932
+1034
+11
+60883
+
+R 40 T 30 text_attribute
+88933
+1034
+11
+60886
+
+R 41 T 30 text_attribute
+88934
+1034
+11
+60889
+
+R 42 T 30 text_attribute
+88935
+1034
+11
+60892
+
+R 43 T 30 text_attribute
+88936
+1034
+11
+60896
+
+R 44 T 30 text_attribute
+88937
+1034
+11
+60899
+
+R 45 T 30 text_attribute
+88938
+1034
+11
+60902
+
+R 46 T 30 text_attribute
+88939
+1034
+11
+60905
+
+R 47 T 30 text_attribute
+88940
+1034
+11
+60908
+
+R 48 T 30 text_attribute
+88941
+1034
+11
+60911
+
+R 49 T 30 text_attribute
+88942
+1034
+11
+60914
+
+R 50 T 30 text_attribute
+88943
+1034
+11
+60917
+
+R 51 T 30 text_attribute
+88944
+1034
+11
+60920
+
+R 52 T 30 text_attribute
+88945
+1034
+11
+60923
+
+R 53 T 30 text_attribute
+88946
+1034
+11
+60926
+
+R 54 T 30 text_attribute
+88947
+1034
+11
+60929
+
+R 55 T 30 text_attribute
+88948
+1034
+11
+60933
+
+R 56 T 30 text_attribute
+88949
+1034
+11
+60936
+
+R 57 T 30 text_attribute
+88950
+1034
+11
+60939
+
+R 58 T 30 text_attribute
+88951
+1034
+11
+60942
+
+R 59 T 30 text_attribute
+88952
+1034
+11
+60945
+
+R 60 T 30 text_attribute
+88953
+1034
+11
+60949
+
+R 61 T 30 text_attribute
+88954
+1034
+11
+60952
+
+R 62 T 30 text_attribute
+88955
+1034
+11
+60955
+
+R 63 T 30 text_attribute
+88956
+1034
+11
+60958
+
+R 64 T 30 text_attribute
+88957
+1034
+11
+60961
+
+R 65 T 30 text_attribute
+88958
+1034
+11
+60964
+
+R 66 T 30 text_attribute
+88959
+1034
+11
+60967
+
+R 67 T 30 text_attribute
+88960
+1034
+10
+60970
+
+R 68 T 30 text_attribute
+88961
+1034
+10
+60980
+
+R 69 T 30 text_attribute
+88962
+1034
+10
+60981
+
+R 70 T 30 text_attribute
+88963
+1034
+10
+60984
+
+R 71 T 30 text_attribute
+88964
+1034
+10
+60985
+
+R 72 T 30 text_attribute
+88965
+1034
+10
+60986
+
+R 73 T 30 text_attribute
+88966
+1034
+10
+60989
+
+R 74 T 30 text_attribute
+88967
+1034
+10
+60992
+
+R 75 T 30 text_attribute
+88968
+1034
+10
+60995
+
+R 76 T 30 text_attribute
+88969
+1034
+10
+60998
+
+R 77 T 30 text_attribute
+88970
+1034
+10
+61005
+
+R 78 T 30 text_attribute
+88983
+1036
+30
+61062
+
+R 79 T 30 text_attribute
+88984
+1036
+31
+61062
+
+R 80 T 30 text_attribute
+74672
+1033
+30
+61090
+3.3.03 Timer
+R 81 T 30 text_attribute
+74673
+1033
+31
+61090
+
+R 82 T 30 text_attribute
+74674
+1033
+40
+69409
+KNX timer
+R 83 T 30 text_attribute
+74675
+1033
+41
+69409
+677290
+R 84 T 30 text_attribute
+74676
+1033
+1
+61044
+KNX timer
+R 85 T 30 text_attribute
+74677
+1033
+2
+61044
+
+R 86 T 30 text_attribute
+74678
+1033
+3
+61044
+
+R 87 T 30 text_attribute
+74679
+1033
+4
+61044
+
+R 88 T 30 text_attribute
+74680
+1033
+5
+61044
+
+R 89 T 30 text_attribute
+74693
+1043
+30
+61062
+3.3 Tijdschakelfunctie
+R 90 T 30 text_attribute
+74694
+1043
+31
+61062
+
+R 91 T 30 text_attribute
+60837
+1031
+11
+60836
+unsichtbar
+R 92 T 30 text_attribute
+60838
+1033
+11
+60836
+invisible
+R 93 T 30 text_attribute
+60840
+1031
+11
+60839
+sichtbar
+R 94 T 30 text_attribute
+60841
+1033
+11
+60839
+visible
+R 95 T 30 text_attribute
+60845
+1033
+11
+60844
+every minute
+R 96 T 30 text_attribute
+60846
+1031
+11
+60844
+jede Minute
+R 97 T 30 text_attribute
+60848
+1031
+11
+60847
+jeden Tag um 00:02 und bei Sowi-Umschalt
+\\ung
+R 98 T 30 text_attribute
+60849
+1033
+11
+60847
+every day 00:02 + on summer/winter chang
+\\eover
+R 99 T 30 text_attribute
+60851
+1033
+11
+60850
+every day 00:00 + on summer/winter chang
+\\eover
+R 100 T 30 text_attribute
+60852
+1031
+11
+60850
+jeden Tag um 00:00 Uhr und bei Sowi-Umsc
+\\haltung
+R 101 T 30 text_attribute
+60854
+1033
+11
+60853
+every hour
+R 102 T 30 text_attribute
+60855
+1031
+11
+60853
+jede Stunde
+R 103 T 30 text_attribute
+60857
+1033
+11
+60856
+only on request
+R 104 T 30 text_attribute
+60858
+1031
+11
+60856
+nur auf Anfrage
+R 105 T 30 text_attribute
+60862
+1033
+11
+60861
+Automatical DCF detection
+R 106 T 30 text_attribute
+60863
+1031
+11
+60861
+automatische DCF-Erkennung
+R 107 T 30 text_attribute
+60865
+1031
+11
+60864
+Quarzzeit
+R 108 T 30 text_attribute
+60866
+1033
+11
+60864
+quarz time
+R 109 T 30 text_attribute
+60868
+1031
+11
+60867
+DCF-Zeit
+R 110 T 30 text_attribute
+60869
+1033
+11
+60867
+DCF time
+R 111 T 30 text_attribute
+60872
+1031
+11
+60871
+UTC ohne Sommerzeitumschaltung trotz DCF
+\\-Signal
+R 112 T 30 text_attribute
+60873
+1033
+11
+60871
+GMT without changeover, in spite of DCF 
+\\signal
+R 113 T 30 text_attribute
+60875
+1033
+11
+60874
+own rule
+R 114 T 30 text_attribute
+60876
+1031
+11
+60874
+benutzerdefiniert
+R 115 T 30 text_attribute
+60878
+1033
+11
+60877
+like UK
+R 116 T 30 text_attribute
+60879
+1031
+11
+60877
+wie Großbritannien
+R 117 T 30 text_attribute
+60881
+1031
+11
+60880
+wie Nordamerika
+R 118 T 30 text_attribute
+60882
+1033
+11
+60880
+like USA
+R 119 T 30 text_attribute
+60884
+1031
+11
+60883
+wie Mitteleuropa
+R 120 T 30 text_attribute
+60885
+1033
+11
+60883
+like Europe
+R 121 T 30 text_attribute
+60887
+1031
+11
+60886
+keine Sommerzeitumschaltung trotz DCF-Si
+\\gnal
+R 122 T 30 text_attribute
+60888
+1033
+11
+60886
+no changeover in spite of DCF signal
+R 123 T 30 text_attribute
+60890
+1031
+11
+60889
+Griechenland, Finnland, Türkei
+R 124 T 30 text_attribute
+60891
+1033
+11
+60889
+like Greece, Finnland, Turkey
+R 125 T 30 text_attribute
+60893
+1033
+11
+60892
+none
+R 126 T 30 text_attribute
+60894
+1031
+11
+60892
+keine
+R 127 T 30 text_attribute
+60897
+1033
+11
+60896
+March
+R 128 T 30 text_attribute
+60898
+1031
+11
+60896
+März
+R 129 T 30 text_attribute
+60900
+1031
+11
+60899
+Dezember
+R 130 T 30 text_attribute
+60901
+1033
+11
+60899
+December
+R 131 T 30 text_attribute
+60903
+1031
+11
+60902
+Mai
+R 132 T 30 text_attribute
+60904
+1033
+11
+60902
+May
+R 133 T 30 text_attribute
+60906
+1031
+11
+60905
+Juli
+R 134 T 30 text_attribute
+60907
+1033
+11
+60905
+July
+R 135 T 30 text_attribute
+60909
+1033
+11
+60908
+January
+R 136 T 30 text_attribute
+60910
+1031
+11
+60908
+Januar
+R 137 T 30 text_attribute
+60912
+1031
+11
+60911
+Oktober
+R 138 T 30 text_attribute
+60913
+1033
+11
+60911
+October
+R 139 T 30 text_attribute
+60915
+1033
+11
+60914
+June
+R 140 T 30 text_attribute
+60916
+1031
+11
+60914
+Juni
+R 141 T 30 text_attribute
+60918
+1033
+11
+60917
+August
+R 142 T 30 text_attribute
+60919
+1031
+11
+60917
+August
+R 143 T 30 text_attribute
+60921
+1033
+11
+60920
+April
+R 144 T 30 text_attribute
+60922
+1031
+11
+60920
+April
+R 145 T 30 text_attribute
+60924
+1033
+11
+60923
+November
+R 146 T 30 text_attribute
+60925
+1031
+11
+60923
+November
+R 147 T 30 text_attribute
+60927
+1031
+11
+60926
+Februar
+R 148 T 30 text_attribute
+60928
+1033
+11
+60926
+Ferbuary
+R 149 T 30 text_attribute
+60930
+1033
+11
+60929
+September
+R 150 T 30 text_attribute
+60931
+1031
+11
+60929
+September
+R 151 T 30 text_attribute
+60934
+1033
+11
+60933
+last Sunday of
+R 152 T 30 text_attribute
+60935
+1031
+11
+60933
+letzter Sonntag im
+R 153 T 30 text_attribute
+60937
+1033
+11
+60936
+first Sunday of
+R 154 T 30 text_attribute
+60938
+1031
+11
+60936
+erster Sonntag im
+R 155 T 30 text_attribute
+60940
+1031
+11
+60939
+zweiter Sonntag im
+R 156 T 30 text_attribute
+60941
+1033
+11
+60939
+second Sunday of
+R 157 T 30 text_attribute
+60943
+1031
+11
+60942
+dritter Sonntag im
+R 158 T 30 text_attribute
+60944
+1033
+11
+60942
+third Sunday of
+R 159 T 30 text_attribute
+60946
+1033
+11
+60945
+fourth Sunday of
+R 160 T 30 text_attribute
+60947
+1031
+11
+60945
+vierter Sonntag im
+R 161 T 30 text_attribute
+60950
+1031
+11
+60949
+0:00 Uhr
+R 162 T 30 text_attribute
+60951
+1033
+11
+60949
+00:00
+R 163 T 30 text_attribute
+60953
+1031
+11
+60952
+1:00 Uhr
+R 164 T 30 text_attribute
+60954
+1033
+11
+60952
+01:00
+R 165 T 30 text_attribute
+60956
+1033
+11
+60955
+02:00
+R 166 T 30 text_attribute
+60957
+1031
+11
+60955
+2:00 Uhr
+R 167 T 30 text_attribute
+60959
+1031
+11
+60958
+3:00 Uhr
+R 168 T 30 text_attribute
+60960
+1033
+11
+60958
+03:00
+R 169 T 30 text_attribute
+60962
+1033
+11
+60961
+04:00
+R 170 T 30 text_attribute
+60963
+1031
+11
+60961
+4:00 Uhr
+R 171 T 30 text_attribute
+60965
+1031
+11
+60964
+6:00 Uhr
+R 172 T 30 text_attribute
+60966
+1033
+11
+60964
+06:00
+R 173 T 30 text_attribute
+60968
+1031
+11
+60967
+5:00 Uhr
+R 174 T 30 text_attribute
+60969
+1033
+11
+60967
+05:00
+R 175 T 30 text_attribute
+60972
+1033
+21
+60971
+
+R 176 T 30 text_attribute
+60973
+1031
+21
+60971
+
+R 177 T 30 text_attribute
+60974
+1031
+22
+60971
+Zeit ungültig
+R 178 T 30 text_attribute
+60975
+1033
+20
+60971
+Time invalid
+R 179 T 30 text_attribute
+60976
+1033
+22
+60971
+Time invalid
+R 180 T 30 text_attribute
+60977
+1031
+20
+60971
+Zeit ungültig
+R 181 T 30 text_attribute
+60978
+1031
+10
+60970
+Objekt "Zeit ungültig"
+R 182 T 30 text_attribute
+60979
+1033
+10
+60970
+Object "time invalid"
+R 183 T 30 text_attribute
+60982
+1031
+10
+60981
+Zeit und Datum senden
+R 184 T 30 text_attribute
+60983
+1033
+10
+60981
+Send time and date
+R 185 T 30 text_attribute
+60987
+1033
+10
+60986
+Wintertime from
+R 186 T 30 text_attribute
+60988
+1031
+10
+60986
+Winterzeit ab
+R 187 T 30 text_attribute
+60990
+1033
+10
+60989
+
+R 188 T 30 text_attribute
+60991
+1031
+10
+60989
+
+R 189 T 30 text_attribute
+60993
+1031
+10
+60992
+Sommerzeit ab
+R 190 T 30 text_attribute
+60994
+1033
+10
+60992
+Summertime from
+R 191 T 30 text_attribute
+60996
+1031
+10
+60995
+
+R 192 T 30 text_attribute
+60997
+1033
+10
+60995
+
+R 193 T 30 text_attribute
+60999
+1031
+10
+60998
+
+R 194 T 30 text_attribute
+61000
+1033
+10
+60998
+
+R 195 T 30 text_attribute
+61001
+1033
+10
+60985
+Changeover rule
+R 196 T 30 text_attribute
+61002
+1031
+10
+60985
+Sommerzeitregel
+R 197 T 30 text_attribute
+61003
+1033
+10
+60984
+Summer/winter changeover rule
+R 198 T 30 text_attribute
+61004
+1031
+10
+60984
+Sommer-/Winterzeit Umschaltung
+R 199 T 30 text_attribute
+61006
+1031
+10
+61005
+Zeitkorrektur für Quarzzeit \r\nin 1/10 
+\\sek pro Tag (-128..127) 
+R 200 T 30 text_attribute
+61007
+1033
+10
+61005
+Offset for quarz time\r\nin 1/10 sec. a 
+\\day (-128..127)
+R 201 T 30 text_attribute
+61008
+1033
+10
+60980
+General
+R 202 T 30 text_attribute
+61009
+1031
+10
+60980
+Allgemein
+R 203 T 30 text_attribute
+61011
+1033
+21
+61010
+
+R 204 T 30 text_attribute
+61012
+1031
+21
+61010
+
+R 205 T 30 text_attribute
+61013
+1033
+22
+61010
+Send/receive time
+R 206 T 30 text_attribute
+61014
+1033
+20
+61010
+Time
+R 207 T 30 text_attribute
+61015
+1031
+20
+61010
+Uhrzeit
+R 208 T 30 text_attribute
+61016
+1031
+22
+61010
+Uhrzeit senden/empfangen
+R 209 T 30 text_attribute
+61018
+1033
+21
+61017
+
+R 210 T 30 text_attribute
+61019
+1033
+20
+61017
+Date
+R 211 T 30 text_attribute
+61020
+1031
+20
+61017
+Datum
+R 212 T 30 text_attribute
+61021
+1031
+22
+61017
+Datum senden/empfangen
+R 213 T 30 text_attribute
+61022
+1031
+21
+61017
+
+R 214 T 30 text_attribute
+61023
+1033
+22
+61017
+Send/receive date
+R 215 T 30 text_attribute
+61025
+1033
+21
+61024
+
+R 216 T 30 text_attribute
+61026
+1031
+22
+61024
+Zeit und Datum senden
+R 217 T 30 text_attribute
+61027
+1031
+21
+61024
+
+R 218 T 30 text_attribute
+61028
+1031
+20
+61024
+Zeitanfrage
+R 219 T 30 text_attribute
+61029
+1033
+20
+61024
+Time request
+R 220 T 30 text_attribute
+61030
+1033
+22
+61024
+Send time and date
+R 221 T 30 text_attribute
+61031
+1031
+80
+60834
+Zeitgeber 2422/1.0
+R 222 T 30 text_attribute
+61032
+1033
+80
+60834
+Timer 2422/1.0
+R 223 T 30 text_attribute
+61045
+1031
+1
+61044
+KNX Zeitgeber
+R 224 T 30 text_attribute
+61046
+1031
+2
+61044
+
+R 225 T 30 text_attribute
+61047
+1031
+3
+61044
+
+R 226 T 30 text_attribute
+61048
+1031
+4
+61044
+
+R 227 T 30 text_attribute
+61049
+1031
+5
+61044
+
+R 228 T 30 text_attribute
+61063
+1031
+30
+61062
+3.3 Zeitfunktion
+R 229 T 30 text_attribute
+61064
+1031
+31
+61062
+
+R 230 T 30 text_attribute
+61091
+1031
+30
+61090
+3.3.03 Zeitgeber
+R 231 T 30 text_attribute
+61092
+1031
+31
+61090
+
+R 232 T 30 text_attribute
+22222
+1033
+90
+20420
+BCU 1
+R 233 T 30 text_attribute
+22223
+1031
+90
+20420
+BCU 1
+R 234 T 30 text_attribute
+96041
+1036
+30
+61090
+
+R 235 T 30 text_attribute
+96042
+1036
+31
+61090
+
+R 236 T 30 text_attribute
+96043
+1036
+40
+69409
+
+R 237 T 30 text_attribute
+96044
+1036
+41
+69409
+
+R 238 T 30 text_attribute
+96045
+1036
+1
+61044
+
+R 239 T 30 text_attribute
+96046
+1036
+2
+61044
+
+R 240 T 30 text_attribute
+96047
+1036
+3
+61044
+
+R 241 T 30 text_attribute
+96048
+1036
+4
+61044
+
+R 242 T 30 text_attribute
+69425
+1031
+40
+69409
+KNX Zeitgeber
+R 243 T 30 text_attribute
+96049
+1036
+5
+61044
+
+R 244 T 30 text_attribute
+69426
+1031
+41
+69409
+677290
+R 245 T 30 text_attribute
+96050
+1036
+80
+60834
+
+R 246 T 30 text_attribute
+96051
+1036
+20
+60971
+
+R 247 T 30 text_attribute
+96052
+1036
+21
+60971
+
+R 248 T 30 text_attribute
+96053
+1036
+22
+60971
+
+R 249 T 30 text_attribute
+96054
+1036
+20
+61010
+
+R 250 T 30 text_attribute
+96055
+1036
+21
+61010
+
+R 251 T 30 text_attribute
+96056
+1036
+22
+61010
+
+R 252 T 30 text_attribute
+96057
+1036
+20
+61017
+
+R 253 T 30 text_attribute
+96058
+1036
+21
+61017
+
+R 254 T 30 text_attribute
+96059
+1036
+22
+61017
+
+R 255 T 30 text_attribute
+96060
+1036
+20
+61024
+
+R 256 T 30 text_attribute
+96061
+1036
+21
+61024
+
+R 257 T 30 text_attribute
+96062
+1036
+22
+61024
+
+R 258 T 30 text_attribute
+96063
+1036
+11
+60836
+
+R 259 T 30 text_attribute
+96064
+1036
+11
+60839
+
+R 260 T 30 text_attribute
+96065
+1036
+11
+60844
+
+R 261 T 30 text_attribute
+96066
+1036
+11
+60847
+
+R 262 T 30 text_attribute
+96067
+1036
+11
+60850
+
+R 263 T 30 text_attribute
+96068
+1036
+11
+60853
+
+R 264 T 30 text_attribute
+96069
+1036
+11
+60856
+
+R 265 T 30 text_attribute
+96070
+1036
+11
+60861
+
+R 266 T 30 text_attribute
+96071
+1036
+11
+60864
+
+R 267 T 30 text_attribute
+96072
+1036
+11
+60867
+
+R 268 T 30 text_attribute
+96073
+1036
+11
+60871
+
+R 269 T 30 text_attribute
+96074
+1036
+11
+60874
+
+R 270 T 30 text_attribute
+96075
+1036
+11
+60877
+
+R 271 T 30 text_attribute
+96076
+1036
+11
+60880
+
+R 272 T 30 text_attribute
+96077
+1036
+11
+60883
+
+R 273 T 30 text_attribute
+96078
+1036
+11
+60886
+
+R 274 T 30 text_attribute
+96079
+1036
+11
+60889
+
+R 275 T 30 text_attribute
+96080
+1036
+11
+60892
+
+R 276 T 30 text_attribute
+96081
+1036
+11
+60896
+
+R 277 T 30 text_attribute
+96082
+1036
+11
+60899
+
+R 278 T 30 text_attribute
+96083
+1036
+11
+60902
+
+R 279 T 30 text_attribute
+96084
+1036
+11
+60905
+
+R 280 T 30 text_attribute
+96085
+1036
+11
+60908
+
+R 281 T 30 text_attribute
+96086
+1036
+11
+60911
+
+R 282 T 30 text_attribute
+96087
+1036
+11
+60914
+
+R 283 T 30 text_attribute
+81751
+1043
+30
+61090
+3.3.03 Timer
+R 284 T 30 text_attribute
+96088
+1036
+11
+60917
+
+R 285 T 30 text_attribute
+81752
+1043
+31
+61090
+
+R 286 T 30 text_attribute
+81753
+1043
+40
+69409
+
+R 287 T 30 text_attribute
+96089
+1036
+11
+60920
+
+R 288 T 30 text_attribute
+81754
+1043
+41
+69409
+
+R 289 T 30 text_attribute
+96090
+1036
+11
+60923
+
+R 290 T 30 text_attribute
+81755
+1043
+1
+61044
+
+R 291 T 30 text_attribute
+96091
+1036
+11
+60926
+
+R 292 T 30 text_attribute
+81756
+1043
+2
+61044
+
+R 293 T 30 text_attribute
+96092
+1036
+11
+60929
+
+R 294 T 30 text_attribute
+81757
+1043
+3
+61044
+
+R 295 T 30 text_attribute
+96093
+1036
+11
+60933
+
+R 296 T 30 text_attribute
+81758
+1043
+4
+61044
+
+R 297 T 30 text_attribute
+96094
+1036
+11
+60936
+
+R 298 T 30 text_attribute
+81759
+1043
+5
+61044
+
+R 299 T 30 text_attribute
+96095
+1036
+11
+60939
+
+R 300 T 30 text_attribute
+81760
+1043
+80
+60834
+
+R 301 T 30 text_attribute
+96096
+1036
+11
+60942
+
+R 302 T 30 text_attribute
+96097
+1036
+11
+60945
+
+R 303 T 30 text_attribute
+81761
+1043
+20
+60971
+
+R 304 T 30 text_attribute
+96098
+1036
+11
+60949
+
+R 305 T 30 text_attribute
+81762
+1043
+21
+60971
+
+R 306 T 30 text_attribute
+96099
+1036
+11
+60952
+
+R 307 T 30 text_attribute
+81763
+1043
+22
+60971
+
+R 308 T 30 text_attribute
+96100
+1036
+11
+60955
+
+R 309 T 30 text_attribute
+81764
+1043
+20
+61010
+
+R 310 T 30 text_attribute
+96101
+1036
+11
+60958
+
+R 311 T 30 text_attribute
+81765
+1043
+21
+61010
+
+R 312 T 30 text_attribute
+96102
+1036
+11
+60961
+
+R 313 T 30 text_attribute
+81766
+1043
+22
+61010
+
+R 314 T 30 text_attribute
+96103
+1036
+11
+60964
+
+R 315 T 30 text_attribute
+81767
+1043
+20
+61017
+
+R 316 T 30 text_attribute
+96104
+1036
+11
+60967
+
+R 317 T 30 text_attribute
+81768
+1043
+21
+61017
+
+R 318 T 30 text_attribute
+96105
+1036
+10
+60970
+
+R 319 T 30 text_attribute
+81769
+1043
+22
+61017
+
+R 320 T 30 text_attribute
+96106
+1036
+10
+60980
+
+R 321 T 30 text_attribute
+81770
+1043
+20
+61024
+
+R 322 T 30 text_attribute
+96107
+1036
+10
+60981
+
+R 323 T 30 text_attribute
+81771
+1043
+21
+61024
+
+R 324 T 30 text_attribute
+96108
+1036
+10
+60984
+
+R 325 T 30 text_attribute
+81772
+1043
+22
+61024
+
+R 326 T 30 text_attribute
+81773
+1043
+11
+60836
+
+R 327 T 30 text_attribute
+96109
+1036
+10
+60985
+
+R 328 T 30 text_attribute
+81774
+1043
+11
+60839
+
+R 329 T 30 text_attribute
+96110
+1036
+10
+60986
+
+R 330 T 30 text_attribute
+81775
+1043
+11
+60844
+
+R 331 T 30 text_attribute
+96111
+1036
+10
+60989
+
+R 332 T 30 text_attribute
+81776
+1043
+11
+60847
+
+R 333 T 30 text_attribute
+96112
+1036
+10
+60992
+
+R 334 T 30 text_attribute
+81777
+1043
+11
+60850
+
+R 335 T 30 text_attribute
+96113
+1036
+10
+60995
+
+R 336 T 30 text_attribute
+81778
+1043
+11
+60853
+
+R 337 T 30 text_attribute
+96114
+1036
+10
+60998
+
+R 338 T 30 text_attribute
+81779
+1043
+11
+60856
+
+R 339 T 30 text_attribute
+96115
+1036
+10
+61005
+
+R 340 T 30 text_attribute
+81780
+1043
+11
+60861
+
+R 341 T 30 text_attribute
+81781
+1043
+11
+60864
+
+R 342 T 30 text_attribute
+81782
+1043
+11
+60867
+
+R 343 T 30 text_attribute
+81783
+1043
+11
+60871
+
+R 344 T 30 text_attribute
+81784
+1043
+11
+60874
+
+R 345 T 30 text_attribute
+81785
+1043
+11
+60877
+
+R 346 T 30 text_attribute
+81786
+1043
+11
+60880
+
+R 347 T 30 text_attribute
+81787
+1043
+11
+60883
+
+R 348 T 30 text_attribute
+81788
+1043
+11
+60886
+
+R 349 T 30 text_attribute
+81789
+1043
+11
+60889
+
+R 350 T 30 text_attribute
+81790
+1043
+11
+60892
+
+R 351 T 30 text_attribute
+81791
+1043
+11
+60896
+
+R 352 T 30 text_attribute
+81792
+1043
+11
+60899
+
+R 353 T 30 text_attribute
+81793
+1043
+11
+60902
+
+R 354 T 30 text_attribute
+81794
+1043
+11
+60905
+
+R 355 T 30 text_attribute
+81795
+1043
+11
+60908
+
+R 356 T 30 text_attribute
+81796
+1043
+11
+60911
+
+R 357 T 30 text_attribute
+81797
+1043
+11
+60914
+
+R 358 T 30 text_attribute
+81798
+1043
+11
+60917
+
+R 359 T 30 text_attribute
+81799
+1043
+11
+60920
+
+R 360 T 30 text_attribute
+81800
+1043
+11
+60923
+
+R 361 T 30 text_attribute
+81801
+1043
+11
+60926
+
+R 362 T 30 text_attribute
+81802
+1043
+11
+60929
+
+R 363 T 30 text_attribute
+81803
+1043
+11
+60933
+
+R 364 T 30 text_attribute
+81804
+1043
+11
+60936
+
+R 365 T 30 text_attribute
+81805
+1043
+11
+60939
+
+R 366 T 30 text_attribute
+81806
+1043
+11
+60942
+
+R 367 T 30 text_attribute
+81807
+1043
+11
+60945
+
+R 368 T 30 text_attribute
+81808
+1043
+11
+60949
+
+R 369 T 30 text_attribute
+81809
+1043
+11
+60952
+
+R 370 T 30 text_attribute
+81810
+1043
+11
+60955
+
+R 371 T 30 text_attribute
+81811
+1043
+11
+60958
+
+R 372 T 30 text_attribute
+81812
+1043
+11
+60961
+
+R 373 T 30 text_attribute
+81813
+1043
+11
+60964
+
+R 374 T 30 text_attribute
+81814
+1043
+11
+60967
+
+R 375 T 30 text_attribute
+81815
+1043
+10
+60970
+
+R 376 T 30 text_attribute
+81816
+1043
+10
+60980
+
+R 377 T 30 text_attribute
+81817
+1043
+10
+60981
+
+R 378 T 30 text_attribute
+81818
+1043
+10
+60984
+
+R 379 T 30 text_attribute
+81819
+1043
+10
+60985
+
+R 380 T 30 text_attribute
+81820
+1043
+10
+60986
+
+R 381 T 30 text_attribute
+81821
+1043
+10
+60989
+
+R 382 T 30 text_attribute
+81822
+1043
+10
+60992
+
+R 383 T 30 text_attribute
+81823
+1043
+10
+60995
+
+R 384 T 30 text_attribute
+81824
+1043
+10
+60998
+
+R 385 T 30 text_attribute
+81825
+1043
+10
+61005
+
+R 386 T 30 text_attribute
+81838
+1034
+30
+61062
+3.3 Función de temporización
+R 387 T 30 text_attribute
+81839
+1034
+31
+61062
+
+-------------------------------------
+T 33 help_file
+C1 T33 1 4 N HELP_FILE_ID
+C2 T33 1 4 N LANGUAGE_ID
+C3 T33 1 4 N ENTITY_ID
+C4 T33 3 255 Y HELP_FILE_NAME
+R 1 T 33 help_file
+61033
+1031
+60834
+
+R 2 T 33 help_file
+61034
+1033
+60834
+
+R 3 T 33 help_file
+61050
+1031
+61044
+
+R 4 T 33 help_file
+61065
+1031
+61062
+
+R 5 T 33 help_file
+61093
+1031
+61090
+
+R 6 T 33 help_file
+69427
+1031
+69409
+
+R 7 T 33 help_file
+134944
+1033
+61062
+
+R 8 T 33 help_file
+134945
+1033
+61090
+
+R 9 T 33 help_file
+134949
+1033
+69409
+
+R 10 T 33 help_file
+134952
+1033
+61044
+
+R 11 T 33 help_file
+134966
+1043
+61062
+
+R 12 T 33 help_file
+134967
+1043
+61090
+
+R 13 T 33 help_file
+134977
+1034
+61062
+
+R 14 T 33 help_file
+134978
+1034
+61090
+
+-------------------------------------
+T 36 product_to_program
+C1 T36 1 4 N PROD2PROG_ID
+C2 T36 1 4 Y PRODUCT_ID
+C3 T36 1 4 Y PROGRAM_ID
+C4 T36 3 40 Y PROD2PROG_STATUS
+C5 T36 1 4 Y PEI_PROGRAM_ID
+C6 T36 2 2 Y PROD2PROG_STATUS_CODE
+C7 T36 1 4 Y REGISTRATION_NUMBER
+C8 T36 2 2 Y REGISTRATION_YEAR
+C9 T36 1 4 Y ORIGINAL_REGISTRATION_NUMBER
+C10 T36 2 2 Y ORIGINAL_REGISTRATION_YEAR
+C11 T36 3 42 Y EXPIRATION_DATE
+C12 T36 3 42 Y REGISTRATION_TS
+C13 T36 3 42 Y REGISTRATION_DATE
+C14 T36 3 50 Y REGISTRATION_COMMENT
+C15 T36 3 20 Y REGISTRATION_MEDIUM_TYPE
+C16 T36 5 8 Y DCY_F_INDIVIDUAL
+C17 T36 5 8 Y DCY_G_INDIVIDUAL
+C18 T36 5 8 Y DCY_F_GROUP
+C19 T36 5 8 Y DCY_G_GROUP
+R 1 T 36 product_to_program
+60832
+60831
+
+
+
+0
+
+
+
+
+
+2008-02-20 09:34:08.500
+
+
+
+
+
+
+
+R 2 T 36 product_to_program
+61035
+60831
+60834
+
+
+20
+8239
+108
+7110
+105
+
+2008-02-20 09:34:08.500
+
+
+
+
+
+
+
+-------------------------------------
+T 37 channel_list
+C1 T37 1 4 N CHANNEL_LIST_ID
+C2 T37 2 2 N MEDIUM_TYPE_NUMBER
+C3 T37 3 255 Y CHANNEL_LIST_NAME
+-------------------------------------
+T 38 product_to_program_to_mt
+C1 T38 1 4 N PROD2PROG2MT_ID
+C2 T38 1 4 N PROD2PROG_ID
+C3 T38 2 2 N MEDIUM_TYPE_NUMBER
+C4 T38 1 4 Y CHANNEL_LIST_ID
+R 1 T 38 product_to_program_to_mt
+60833
+60832
+0
+
+R 2 T 38 product_to_program_to_mt
+61036
+61035
+0
+
+-------------------------------------
+T 39 program_description
+C1 T39 1 4 N PROGRAM_DESCRIPTION_ID
+C2 T39 1 4 Y PROGRAM_ID
+C3 T39 3 1000 Y TEXT
+C4 T39 2 2 Y DISPLAY_ORDER
+C5 T39 1 4 Y LANGUAGE_ID
+R 1 T 39 program_description
+134957
+60834
+
+1
+1033
+R 2 T 39 program_description
+134959
+60834
+
+1
+1031
+-------------------------------------
+T 44 device_parameter
+C1 T44 1 4 N DEVICE_ID
+C2 T44 1 4 N DEVICE_PARAMETER_ID
+C3 T44 1 4 Y PARAMETER_ID
+C4 T44 2 2 Y DEVICE_PARAMETER_NUMBER
+C5 T44 2 2 Y DEVICE_PARAMETER_VISIBLE
+C6 T44 1 4 Y PARAMETER_VALUE_LONG
+C7 T44 3 255 Y PARAMETER_VALUE_STRING
+C8 T44 2 2 Y PROGRAM_TYPE
+C9 T44 5 8 Y PARAMETER_VALUE_DOUBLE
+R 1 T 44 device_parameter
+69409
+69413
+60970
+13
+1
+0
+
+0
+
+R 2 T 44 device_parameter
+69409
+69415
+60980
+1
+1
+
+
+0
+
+R 3 T 44 device_parameter
+69409
+69416
+60981
+2
+1
+2
+
+0
+
+R 4 T 44 device_parameter
+69409
+69417
+60984
+4
+1
+1
+
+0
+
+R 5 T 44 device_parameter
+69409
+69418
+60985
+9
+0
+
+
+0
+
+R 6 T 44 device_parameter
+69409
+69419
+60986
+8
+0
+5
+
+0
+
+R 7 T 44 device_parameter
+69409
+69420
+60989
+10
+0
+2
+
+0
+
+R 8 T 44 device_parameter
+69409
+69421
+60992
+5
+0
+5
+
+0
+
+R 9 T 44 device_parameter
+69409
+69422
+60995
+6
+0
+3
+
+0
+
+R 10 T 44 device_parameter
+69409
+69423
+60998
+7
+0
+10
+
+0
+
+R 11 T 44 device_parameter
+69409
+69424
+61005
+12
+1
+0
+
+0
+
+-------------------------------------
+T 45 device_object
+C1 T45 1 4 Y DEVICE_ID
+C2 T45 2 2 Y OBJECT_PRIO
+C3 T45 2 2 Y OBJECT_READ
+C4 T45 2 2 Y OBJECT_WRITE
+C5 T45 2 2 Y OBJECT_COMM
+C6 T45 2 2 Y OBJECT_TRANS
+C7 T45 3 255 Y OBJECT_SUBGROUPS_TEXT
+C8 T45 1 4 N DEVICE_OBJECT_ID
+C9 T45 1 4 Y OBJECT_ID
+C10 T45 2 2 Y DEVICE_OBJECT_NUMBER
+C11 T45 3 255 Y OBJECT_SUBGROUPS_TEXT2
+C12 T45 2 2 Y DEVICE_OBJECT_VISIBLE
+C13 T45 3 50 Y DEVICE_OBJECT_UNIQUE_NAME
+C14 T45 2 2 Y OBJECT_UPDATE
+C15 T45 2 2 Y DEVICE_OBJECT_UNIQUE_NUMBER
+C16 T45 2 2 Y DEVICE_OBJECT_TYPE
+C17 T45 2 2 Y EIB_DATA_TYPE_CODE
+C18 T45 2 2 Y EIB_DATA_SUBTYPE_CODE
+R 1 T 45 device_object
+69409
+3
+1
+1
+1
+1
+
+69410
+61010
+0
+
+1
+
+0
+1
+9
+
+
+R 2 T 45 device_object
+69409
+3
+1
+1
+1
+1
+
+69411
+61017
+1
+
+1
+
+0
+2
+9
+
+
+R 3 T 45 device_object
+69409
+3
+0
+1
+1
+0
+
+69412
+61024
+2
+
+1
+
+0
+3
+0
+
+
+R 4 T 45 device_object
+69409
+3
+1
+0
+1
+1
+
+69414
+60971
+3
+
+0
+
+0
+4
+0
+
+
+-------------------------------------
+T 48 mask_feature
+C1 T48 1 4 N MASK_FEATURE_ID
+C2 T48 3 20 N MASK_FEATURE_NAME
+R 1 T 48 mask_feature
+1
+BCU1
+-------------------------------------
+T 49 mask_to_mask_feature
+C1 T49 1 4 N MASK_TO_MASK_FEATURE_ID
+C2 T49 1 4 N MASK_ID
+C3 T49 1 4 N MASK_FEATURE_ID
+C4 T49 1 4 Y MASK_FEATURE_VALUE
+R 1 T 49 mask_to_mask_feature
+22783
+20006
+1
+
+XXX
