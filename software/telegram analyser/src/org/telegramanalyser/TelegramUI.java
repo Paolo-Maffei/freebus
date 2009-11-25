@@ -10,12 +10,45 @@
  */
 
 package org.telegramanalyser;
+import javax.swing.BorderFactory;
+import javax.swing.GroupLayout;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.LayoutStyle;
+import javax.swing.SwingConstants;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.SoftBevelBorder;
 
+/**
+* This code was edited or generated using CloudGarden's Jigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
 /**
  *
  * @author idefix
  */
 public class TelegramUI extends javax.swing.JFrame {
+
+	{
+		//Set Look & Feel
+		try {
+			javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 
     /** Creates new form TelegramUI */
     public TelegramUI() {
@@ -31,165 +64,189 @@ public class TelegramUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        bit5 = new javax.swing.JLabel();
-        bit1 = new javax.swing.JLabel();
-        bit2 = new javax.swing.JLabel();
-        bit3 = new javax.swing.JLabel();
-        bit7 = new javax.swing.JLabel();
-        bit6 = new javax.swing.JLabel();
+        labelTelegramString = new javax.swing.JLabel();
+        telegramString = new javax.swing.JTextField();
+        crc = new javax.swing.JLabel();
+        labelCrc = new javax.swing.JLabel();
+        jtab1 = new javax.swing.JTabbedPane();
+        octet0 = new javax.swing.JPanel();
+        octet0Bit5 = new javax.swing.JLabel();
+        octet0Bit1 = new javax.swing.JLabel();
+        octet0Bit2 = new javax.swing.JLabel();
+        octet0Bit3 = new javax.swing.JLabel();
+        octet0Bit7 = new javax.swing.JLabel();
+        octet0Bit6 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        labelBit6 = new javax.swing.JLabel();
+        labelOctet0Bit6 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        labelBit7 = new javax.swing.JLabel();
-        bit0 = new javax.swing.JLabel();
-        labelBit3 = new javax.swing.JLabel();
-        labelBit2 = new javax.swing.JLabel();
-        bit4 = new javax.swing.JLabel();
-        labelBit1 = new javax.swing.JLabel();
-        labelBit5 = new javax.swing.JLabel();
-        labelBit0 = new javax.swing.JLabel();
-        labelBit4 = new javax.swing.JLabel();
+        labelOctet0Bit7 = new javax.swing.JLabel();
+        octet0Bit0 = new javax.swing.JLabel();
+        labelOctet0Bit3 = new javax.swing.JLabel();
+        labelOctet0Bit2 = new javax.swing.JLabel();
+        octet0Bit4 = new javax.swing.JLabel();
+        labelOctet0Bit1 = new javax.swing.JLabel();
+        labelOctet0Bit5 = new javax.swing.JLabel();
+        labelOctet0Bit0 = new javax.swing.JLabel();
+        labelOctet0Bit4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jPanel2 = new javax.swing.JPanel();
+        octet1_2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        labelBit16 = new javax.swing.JLabel();
-        labelBit17 = new javax.swing.JLabel();
-        labelBit18 = new javax.swing.JLabel();
-        labelBit19 = new javax.swing.JLabel();
-        labelBit20 = new javax.swing.JLabel();
-        labelBit21 = new javax.swing.JLabel();
-        labelBit22 = new javax.swing.JLabel();
-        labelBit23 = new javax.swing.JLabel();
+        labelOctet2Bit7 = new javax.swing.JLabel();
+        labelOctet2Bit6 = new javax.swing.JLabel();
+        labelOctet2Bit5 = new javax.swing.JLabel();
+        labelOctet2Bit4 = new javax.swing.JLabel();
+        labelOctet2Bit3 = new javax.swing.JLabel();
+        labelOctet2Bit2 = new javax.swing.JLabel();
+        labelOctet2Bit1 = new javax.swing.JLabel();
+        labelOctet2Bit0 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        bit16 = new javax.swing.JLabel();
-        bit17 = new javax.swing.JLabel();
-        bit18 = new javax.swing.JLabel();
-        bit19 = new javax.swing.JLabel();
-        bit20 = new javax.swing.JLabel();
-        bit21 = new javax.swing.JLabel();
-        bit22 = new javax.swing.JLabel();
-        bit23 = new javax.swing.JLabel();
-        bit24 = new javax.swing.JLabel();
-        bit25 = new javax.swing.JLabel();
-        bit26 = new javax.swing.JLabel();
-        bit27 = new javax.swing.JLabel();
-        bit28 = new javax.swing.JLabel();
-        bit29 = new javax.swing.JLabel();
+        octet2Bit6 = new javax.swing.JLabel();
+        octet2Bit7 = new javax.swing.JLabel();
+        octet2Bit3 = new javax.swing.JLabel();
+        octet2Bit2 = new javax.swing.JLabel();
+        octet2Bit1 = new javax.swing.JLabel();
+        octet2Bit5 = new javax.swing.JLabel();
+        octet2Bit0 = new javax.swing.JLabel();
+        octet2Bit4 = new javax.swing.JLabel();
+        octet1Bit5 = new javax.swing.JLabel();
+        octet1Bit1 = new javax.swing.JLabel();
+        octet1Bit2 = new javax.swing.JLabel();
+        octet1Bit3 = new javax.swing.JLabel();
+        octet1Bit7 = new javax.swing.JLabel();
+        octet1Bit6 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        labelBit24 = new javax.swing.JLabel();
+        labelOctet1Bit6 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        labelBit25 = new javax.swing.JLabel();
-        bit30 = new javax.swing.JLabel();
-        labelBit26 = new javax.swing.JLabel();
-        labelBit27 = new javax.swing.JLabel();
-        bit31 = new javax.swing.JLabel();
-        labelBit28 = new javax.swing.JLabel();
-        labelBit29 = new javax.swing.JLabel();
-        labelBit30 = new javax.swing.JLabel();
-        labelBit31 = new javax.swing.JLabel();
+        labelOctet1Bit7 = new javax.swing.JLabel();
+        octet1Bit0 = new javax.swing.JLabel();
+        labelOctet1Bit3 = new javax.swing.JLabel();
+        labelOctet1Bit2 = new javax.swing.JLabel();
+        octet1Bit4 = new javax.swing.JLabel();
+        labelOctet1Bit1 = new javax.swing.JLabel();
+        labelOctet1Bit5 = new javax.swing.JLabel();
+        labelOctet1Bit0 = new javax.swing.JLabel();
+        labelOctet1Bit4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
-        jPanel3 = new javax.swing.JPanel();
+        octet3_4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        labelBit32 = new javax.swing.JLabel();
-        labelBit33 = new javax.swing.JLabel();
-        labelBit34 = new javax.swing.JLabel();
-        labelBit35 = new javax.swing.JLabel();
-        labelBit36 = new javax.swing.JLabel();
-        labelBit37 = new javax.swing.JLabel();
-        labelBit38 = new javax.swing.JLabel();
-        labelBit39 = new javax.swing.JLabel();
+        labelOctet4Bit7 = new javax.swing.JLabel();
+        labelOctet4Bit6 = new javax.swing.JLabel();
+        labelOctet4Bit5 = new javax.swing.JLabel();
+        labelOctet4Bit4 = new javax.swing.JLabel();
+        labelOctet4Bit3 = new javax.swing.JLabel();
+        labelOctet4Bit2 = new javax.swing.JLabel();
+        labelOctet4Bit1 = new javax.swing.JLabel();
+        labelOctet4Bit0 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        bit32 = new javax.swing.JLabel();
-        bit33 = new javax.swing.JLabel();
-        bit34 = new javax.swing.JLabel();
-        bit35 = new javax.swing.JLabel();
-        bit36 = new javax.swing.JLabel();
-        bit37 = new javax.swing.JLabel();
-        bit38 = new javax.swing.JLabel();
-        bit39 = new javax.swing.JLabel();
-        bit40 = new javax.swing.JLabel();
-        bit41 = new javax.swing.JLabel();
-        bit42 = new javax.swing.JLabel();
-        bit43 = new javax.swing.JLabel();
-        bit44 = new javax.swing.JLabel();
-        bit45 = new javax.swing.JLabel();
+        octet4Bit6 = new javax.swing.JLabel();
+        octet4Bit7 = new javax.swing.JLabel();
+        octet4Bit3 = new javax.swing.JLabel();
+        octet4Bit2 = new javax.swing.JLabel();
+        octet4Bit1 = new javax.swing.JLabel();
+        octet4Bit5 = new javax.swing.JLabel();
+        octet4Bit0 = new javax.swing.JLabel();
+        octet4Bit4 = new javax.swing.JLabel();
+        octet3Bit5 = new javax.swing.JLabel();
+        octet3Bit1 = new javax.swing.JLabel();
+        octet3Bit2 = new javax.swing.JLabel();
+        octet3Bit3 = new javax.swing.JLabel();
+        octet3Bit7 = new javax.swing.JLabel();
+        octet3Bit6 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        labelBit40 = new javax.swing.JLabel();
+        labelOctet3Bit6 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        labelBit41 = new javax.swing.JLabel();
-        bit46 = new javax.swing.JLabel();
-        labelBit42 = new javax.swing.JLabel();
-        labelBit43 = new javax.swing.JLabel();
-        bit47 = new javax.swing.JLabel();
-        labelBit44 = new javax.swing.JLabel();
-        labelBit45 = new javax.swing.JLabel();
-        labelBit46 = new javax.swing.JLabel();
-        labelBit47 = new javax.swing.JLabel();
+        labelOctet3Bit7 = new javax.swing.JLabel();
+        octet3Bit0 = new javax.swing.JLabel();
+        labelOctet3Bit3 = new javax.swing.JLabel();
+        labelOctet3Bit2 = new javax.swing.JLabel();
+        octet3Bit4 = new javax.swing.JLabel();
+        labelOctet3Bit1 = new javax.swing.JLabel();
+        labelOctet3Bit5 = new javax.swing.JLabel();
+        labelOctet3Bit0 = new javax.swing.JLabel();
+        labelOctet3Bit4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea6 = new javax.swing.JTextArea();
-        jPanel5 = new javax.swing.JPanel();
+        octet5 = new javax.swing.JPanel();
+        octet5Bit5 = new javax.swing.JLabel();
+        octet5Bit1 = new javax.swing.JLabel();
+        octet5Bit2 = new javax.swing.JLabel();
+        octet5Bit3 = new javax.swing.JLabel();
+        octet5Bit7 = new javax.swing.JLabel();
+        octet5Bit6 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        labelOctet5Bit6 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        labelOctet5Bit7 = new javax.swing.JLabel();
+        octet5Bit0 = new javax.swing.JLabel();
+        labelOctet5Bit3 = new javax.swing.JLabel();
+        labelOctet5Bit2 = new javax.swing.JLabel();
+        octet5Bit4 = new javax.swing.JLabel();
+        labelOctet5Bit1 = new javax.swing.JLabel();
+        labelOctet5Bit5 = new javax.swing.JLabel();
+        labelOctet5Bit0 = new javax.swing.JLabel();
+        labelOctet5Bit4 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextArea8 = new javax.swing.JTextArea();
+        octet6_7 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
-        labelBit64 = new javax.swing.JLabel();
-        labelBit65 = new javax.swing.JLabel();
-        labelBit66 = new javax.swing.JLabel();
-        labelBit67 = new javax.swing.JLabel();
-        labelBit68 = new javax.swing.JLabel();
-        labelBit69 = new javax.swing.JLabel();
-        labelBit70 = new javax.swing.JLabel();
-        labelBit71 = new javax.swing.JLabel();
+        labelOctet7Bit7 = new javax.swing.JLabel();
+        labelOctet7Bit6 = new javax.swing.JLabel();
+        labelOctet7Bit5 = new javax.swing.JLabel();
+        labelOctet7Bit4 = new javax.swing.JLabel();
+        labelOctet7Bit3 = new javax.swing.JLabel();
+        labelOctet7Bit2 = new javax.swing.JLabel();
+        labelOctet7Bit1 = new javax.swing.JLabel();
+        labelOctet7Bit0 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        bit64 = new javax.swing.JLabel();
-        bit65 = new javax.swing.JLabel();
-        bit66 = new javax.swing.JLabel();
-        bit67 = new javax.swing.JLabel();
-        bit68 = new javax.swing.JLabel();
-        bit69 = new javax.swing.JLabel();
-        bit70 = new javax.swing.JLabel();
-        bit71 = new javax.swing.JLabel();
-        bit72 = new javax.swing.JLabel();
-        bit73 = new javax.swing.JLabel();
-        bit74 = new javax.swing.JLabel();
-        bit75 = new javax.swing.JLabel();
-        bit76 = new javax.swing.JLabel();
-        bit77 = new javax.swing.JLabel();
+        octet7Bit6 = new javax.swing.JLabel();
+        octet7Bit7 = new javax.swing.JLabel();
+        octet7Bit3 = new javax.swing.JLabel();
+        octet7Bit2 = new javax.swing.JLabel();
+        octet7Bit1 = new javax.swing.JLabel();
+        octet7Bit5 = new javax.swing.JLabel();
+        octet7Bit0 = new javax.swing.JLabel();
+        octet7Bit4 = new javax.swing.JLabel();
+        octet6Bit5 = new javax.swing.JLabel();
+        octet6Bit1 = new javax.swing.JLabel();
+        octet6Bit2 = new javax.swing.JLabel();
+        octet6Bit3 = new javax.swing.JLabel();
+        octet6Bit7 = new javax.swing.JLabel();
+        octet6Bit6 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        labelBit72 = new javax.swing.JLabel();
+        labelOctet6Bit6 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        labelBit73 = new javax.swing.JLabel();
-        bit78 = new javax.swing.JLabel();
-        labelBit74 = new javax.swing.JLabel();
-        labelBit75 = new javax.swing.JLabel();
-        bit79 = new javax.swing.JLabel();
-        labelBit76 = new javax.swing.JLabel();
-        labelBit77 = new javax.swing.JLabel();
-        labelBit78 = new javax.swing.JLabel();
-        labelBit79 = new javax.swing.JLabel();
+        labelOctet6Bit7 = new javax.swing.JLabel();
+        octet6Bit0 = new javax.swing.JLabel();
+        labelOctet6Bit3 = new javax.swing.JLabel();
+        labelOctet6Bit2 = new javax.swing.JLabel();
+        octet6Bit4 = new javax.swing.JLabel();
+        labelOctet6Bit1 = new javax.swing.JLabel();
+        labelOctet6Bit5 = new javax.swing.JLabel();
+        labelOctet6Bit0 = new javax.swing.JLabel();
+        labelOctet6Bit4 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTextArea9 = new javax.swing.JTextArea();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextArea10 = new javax.swing.JTextArea();
-        jPanel6 = new javax.swing.JPanel();
+        octet8_n = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         labelBit80 = new javax.swing.JLabel();
         labelBit81 = new javax.swing.JLabel();
@@ -232,30 +289,6 @@ public class TelegramUI extends javax.swing.JFrame {
         jTextArea11 = new javax.swing.JTextArea();
         jScrollPane12 = new javax.swing.JScrollPane();
         jTextArea12 = new javax.swing.JTextArea();
-        jPanel4 = new javax.swing.JPanel();
-        bit8 = new javax.swing.JLabel();
-        bit9 = new javax.swing.JLabel();
-        bit10 = new javax.swing.JLabel();
-        bit11 = new javax.swing.JLabel();
-        bit12 = new javax.swing.JLabel();
-        bit13 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        labelBit8 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        labelBit9 = new javax.swing.JLabel();
-        bit14 = new javax.swing.JLabel();
-        labelBit10 = new javax.swing.JLabel();
-        labelBit11 = new javax.swing.JLabel();
-        bit15 = new javax.swing.JLabel();
-        labelBit12 = new javax.swing.JLabel();
-        labelBit13 = new javax.swing.JLabel();
-        labelBit14 = new javax.swing.JLabel();
-        labelBit15 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea7 = new javax.swing.JTextArea();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea8 = new javax.swing.JTextArea();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -273,131 +306,131 @@ public class TelegramUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Telegram:");
+        labelTelegramString.setText("Telegram:");
 
-        jTextField1.setText("jTextField1");
+        crc.setBackground(new java.awt.Color(102, 255, 102));
+        crc.setText("OK");
+        crc.setOpaque(true);
 
-        jLabel2.setText("OK");
+        labelCrc.setText("CRC:");
 
-        jLabel3.setText("CRC:");
+        octet0Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit5.setText("1");
+        octet0Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit5.setText("1");
-        bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit5.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit5.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit5.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit1.setText("1");
+        octet0Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit1.setText("1");
-        bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit1.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit1.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit1.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit2.setText("1");
+        octet0Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit2.setText("1");
-        bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit2.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit2.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit2.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit3.setText("1");
+        octet0Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit3.setText("1");
-        bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit3.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit3.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit3.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit7.setText("1");
+        octet0Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit7.setText("1");
-        bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit7.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit7.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit7.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit6.setText("1");
-        bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit6.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit6.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit6.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit6.setText("1");
+        octet0Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel29.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel29.setText("LSB");
 
-        labelBit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit6.setText("1");
-        labelBit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit6.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit6.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit6.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit6.setText("1");
+        labelOctet0Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel31.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel31.setText("MSB");
 
-        labelBit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit7.setText("1");
-        labelBit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit7.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit7.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit7.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit7.setText("1");
+        labelOctet0Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit0.setText("1");
-        bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit0.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit0.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit0.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit0.setText("1");
+        octet0Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit3.setText("1");
-        labelBit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit3.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit3.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit3.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit3.setText("1");
+        labelOctet0Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit2.setText("1");
-        labelBit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit2.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit2.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit2.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit2.setText("1");
+        labelOctet0Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit4.setText("1");
-        bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit4.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit4.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit4.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet0Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet0Bit4.setText("1");
+        octet0Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet0Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet0Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet0Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit1.setText("1");
-        labelBit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit1.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit1.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit1.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit1.setText("1");
+        labelOctet0Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit5.setText("1");
-        labelBit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit5.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit5.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit5.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit5.setText("1");
+        labelOctet0Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit0.setText("1");
-        labelBit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit0.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit0.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit0.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit0.setText("1");
+        labelOctet0Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit4.setText("1");
-        labelBit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit4.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit4.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit4.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet0Bit4.setText("1");
+        labelOctet0Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet0Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet0Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Bit 7-0");
@@ -412,330 +445,330 @@ public class TelegramUI extends javax.swing.JFrame {
         jTextArea2.setText("1");
         jScrollPane2.setViewportView(jTextArea2);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout octet0Layout = new javax.swing.GroupLayout(octet0);
+        octet0.setLayout(octet0Layout);
+        octet0Layout.setHorizontalGroup(
+            octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet0Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(octet0Layout.createSequentialGroup()
+                        .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet0Layout.createSequentialGroup()
+                                .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet0Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(labelBit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet0Layout.createSequentialGroup()
+                                        .addComponent(labelOctet0Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet0Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet0Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet0Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet0Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet0Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet0Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel29)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet0Layout.createSequentialGroup()
+                                .addComponent(octet0Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet0Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet0Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet0Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet0Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet0Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet0Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet0Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        octet0Layout.setVerticalGroup(
+            octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet0Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(octet0Layout.createSequentialGroup()
+                        .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel31)
                             .addComponent(jLabel29))
                         .addGap(0, 0, 0)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelBit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelOctet0Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet0Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(octet0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(octet0Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet0Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Octet 0: CTRL", jPanel1);
+        jtab1.addTab("Octet 0: CTRL", octet0);
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel8.setText("MSB");
 
-        labelBit16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit16.setText("1");
-        labelBit16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit16.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit16.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit16.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit7.setText("1");
+        labelOctet2Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit17.setText("1");
-        labelBit17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit17.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit17.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit17.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit6.setText("1");
+        labelOctet2Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit18.setText("1");
-        labelBit18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit18.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit18.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit18.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit5.setText("1");
+        labelOctet2Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit19.setText("1");
-        labelBit19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit19.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit19.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit19.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit4.setText("1");
+        labelOctet2Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit20.setText("1");
-        labelBit20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit20.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit20.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit20.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit3.setText("1");
+        labelOctet2Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit21.setText("1");
-        labelBit21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit21.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit21.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit21.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit2.setText("1");
+        labelOctet2Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit22.setText("1");
-        labelBit22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit22.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit22.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit22.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit1.setText("1");
+        labelOctet2Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit23.setText("1");
-        labelBit23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit23.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit23.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit23.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet2Bit0.setText("1");
+        labelOctet2Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet2Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet2Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel15.setText("LSB");
 
-        bit16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit16.setText("1");
-        bit16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit16.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit16.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit16.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit6.setText("1");
+        octet2Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit17.setText("1");
-        bit17.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit17.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit17.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit17.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit7.setText("1");
+        octet2Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit18.setText("1");
-        bit18.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit18.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit18.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit18.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit3.setText("1");
+        octet2Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit19.setText("1");
-        bit19.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit19.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit19.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit19.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit2.setText("1");
+        octet2Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit20.setText("1");
-        bit20.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit20.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit20.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit20.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit1.setText("1");
+        octet2Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit21.setText("1");
-        bit21.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit21.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit21.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit21.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit5.setText("1");
+        octet2Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit22.setText("1");
-        bit22.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit22.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit22.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit22.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit0.setText("1");
+        octet2Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit23.setText("1");
-        bit23.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit23.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit23.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit23.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet2Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet2Bit4.setText("1");
+        octet2Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet2Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet2Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet2Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit24.setText("1");
-        bit24.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit24.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit24.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit24.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit5.setText("1");
+        octet1Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit25.setText("1");
-        bit25.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit25.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit25.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit25.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit1.setText("1");
+        octet1Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit26.setText("1");
-        bit26.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit26.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit26.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit26.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit2.setText("1");
+        octet1Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit27.setText("1");
-        bit27.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit27.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit27.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit27.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit3.setText("1");
+        octet1Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit28.setText("1");
-        bit28.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit28.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit28.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit28.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit7.setText("1");
+        octet1Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit29.setText("1");
-        bit29.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit29.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit29.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit29.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit6.setText("1");
+        octet1Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel30.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel30.setText("LSB");
 
-        labelBit24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit24.setText("1");
-        labelBit24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit24.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit24.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit24.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit6.setText("1");
+        labelOctet1Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel32.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel32.setText("MSB");
 
-        labelBit25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit25.setText("1");
-        labelBit25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit25.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit25.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit25.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit7.setText("1");
+        labelOctet1Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit30.setText("1");
-        bit30.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit30.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit30.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit30.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit0.setText("1");
+        octet1Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit26.setText("1");
-        labelBit26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit26.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit26.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit26.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit3.setText("1");
+        labelOctet1Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit27.setText("1");
-        labelBit27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit27.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit27.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit27.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit2.setText("1");
+        labelOctet1Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit31.setText("1");
-        bit31.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit31.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit31.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit31.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet1Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet1Bit4.setText("1");
+        octet1Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet1Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet1Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet1Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit28.setText("1");
-        labelBit28.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit28.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit28.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit28.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit1.setText("1");
+        labelOctet1Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit29.setText("1");
-        labelBit29.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit29.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit29.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit29.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit5.setText("1");
+        labelOctet1Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit30.setText("1");
-        labelBit30.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit30.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit30.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit30.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit0.setText("1");
+        labelOctet1Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit31.setText("1");
-        labelBit31.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit31.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit31.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit31.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet1Bit4.setText("1");
+        labelOctet1Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet1Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet1Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Bit 15-8");
@@ -754,398 +787,398 @@ public class TelegramUI extends javax.swing.JFrame {
         jTextArea4.setText("2");
         jScrollPane4.setViewportView(jTextArea4);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout octet1_2Layout = new javax.swing.GroupLayout(octet1_2);
+        octet1_2.setLayout(octet1_2Layout);
+        octet1_2Layout.setHorizontalGroup(
+            octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet1_2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(octet1_2Layout.createSequentialGroup()
+                        .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet1_2Layout.createSequentialGroup()
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet2Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(labelBit17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet1_2Layout.createSequentialGroup()
+                                        .addComponent(labelOctet2Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet2Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet2Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet2Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet2Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet2Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet2Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel15)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bit17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet1_2Layout.createSequentialGroup()
+                                .addComponent(octet2Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet2Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet2Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet2Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet2Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet2Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet2Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet2Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet1_2Layout.createSequentialGroup()
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet1Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(labelBit24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet1_2Layout.createSequentialGroup()
+                                        .addComponent(labelOctet1Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet1Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet1Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet1Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet1Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet1Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet1Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel30)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bit28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet1_2Layout.createSequentialGroup()
+                                .addComponent(octet1Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet1Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet1Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet1Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet1Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet1Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet1Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet1Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        octet1_2Layout.setVerticalGroup(
+            octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet1_2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(octet1_2Layout.createSequentialGroup()
+                        .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(octet1_2Layout.createSequentialGroup()
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel32)
                                     .addComponent(jLabel30))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelBit25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelOctet1Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet1Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(bit28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(octet1Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet1Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(octet1_2Layout.createSequentialGroup()
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel15))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelBit16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelOctet2Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet2Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(bit17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(octet2Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet2Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(octet1_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(jLabel10))
                         .addGap(12, 12, 12))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(octet1_2Layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Octet 1-2: Src", jPanel2);
+        jtab1.addTab("Octet 1-2: Src", octet1_2);
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel11.setText("MSB");
 
-        labelBit32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit32.setText("1");
-        labelBit32.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit32.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit32.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit32.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit7.setText("1");
+        labelOctet4Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit33.setText("1");
-        labelBit33.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit33.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit33.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit33.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit6.setText("1");
+        labelOctet4Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit34.setText("1");
-        labelBit34.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit34.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit34.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit34.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit5.setText("1");
+        labelOctet4Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit35.setText("1");
-        labelBit35.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit35.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit35.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit35.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit4.setText("1");
+        labelOctet4Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit36.setText("1");
-        labelBit36.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit36.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit36.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit36.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit3.setText("1");
+        labelOctet4Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit37.setText("1");
-        labelBit37.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit37.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit37.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit37.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit2.setText("1");
+        labelOctet4Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit38.setText("1");
-        labelBit38.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit38.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit38.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit38.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit1.setText("1");
+        labelOctet4Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit39.setText("1");
-        labelBit39.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit39.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit39.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit39.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet4Bit0.setText("1");
+        labelOctet4Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet4Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet4Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel16.setText("LSB");
 
-        bit32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit32.setText("1");
-        bit32.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit32.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit32.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit32.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit6.setText("1");
+        octet4Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit33.setText("1");
-        bit33.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit33.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit33.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit33.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit7.setText("1");
+        octet4Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit34.setText("1");
-        bit34.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit34.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit34.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit34.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit3.setText("1");
+        octet4Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit35.setText("1");
-        bit35.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit35.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit35.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit35.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit2.setText("1");
+        octet4Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit36.setText("1");
-        bit36.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit36.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit36.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit36.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit1.setText("1");
+        octet4Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit37.setText("1");
-        bit37.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit37.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit37.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit37.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit5.setText("1");
+        octet4Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit38.setText("1");
-        bit38.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit38.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit38.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit38.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit0.setText("1");
+        octet4Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit39.setText("1");
-        bit39.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit39.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit39.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit39.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet4Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet4Bit4.setText("1");
+        octet4Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet4Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet4Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet4Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit40.setText("1");
-        bit40.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit40.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit40.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit40.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit5.setText("1");
+        octet3Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit41.setText("1");
-        bit41.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit41.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit41.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit41.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit1.setText("1");
+        octet3Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit42.setText("1");
-        bit42.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit42.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit42.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit42.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit2.setText("1");
+        octet3Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit43.setText("1");
-        bit43.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit43.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit43.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit43.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit3.setText("1");
+        octet3Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit44.setText("1");
-        bit44.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit44.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit44.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit44.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit7.setText("1");
+        octet3Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit45.setText("1");
-        bit45.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit45.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit45.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit45.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit6.setText("1");
+        octet3Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel33.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel33.setText("LSB");
 
-        labelBit40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit40.setText("1");
-        labelBit40.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit40.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit40.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit40.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit6.setText("1");
+        labelOctet3Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel34.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel34.setText("MSB");
 
-        labelBit41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit41.setText("1");
-        labelBit41.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit41.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit41.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit41.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit7.setText("1");
+        labelOctet3Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit46.setText("1");
-        bit46.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit46.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit46.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit46.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit0.setText("1");
+        octet3Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit42.setText("1");
-        labelBit42.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit42.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit42.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit42.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit3.setText("1");
+        labelOctet3Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit43.setText("1");
-        labelBit43.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit43.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit43.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit43.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit2.setText("1");
+        labelOctet3Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit47.setText("1");
-        bit47.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit47.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit47.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit47.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet3Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet3Bit4.setText("1");
+        octet3Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet3Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet3Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet3Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit44.setText("1");
-        labelBit44.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit44.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit44.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit44.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit1.setText("1");
+        labelOctet3Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit45.setText("1");
-        labelBit45.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit45.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit45.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit45.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit5.setText("1");
+        labelOctet3Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit46.setText("1");
-        labelBit46.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit46.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit46.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit46.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit0.setText("1");
+        labelOctet3Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit47.setText("1");
-        labelBit47.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit47.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit47.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit47.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet3Bit4.setText("1");
+        labelOctet3Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet3Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet3Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Bit 15-8");
@@ -1164,398 +1197,618 @@ public class TelegramUI extends javax.swing.JFrame {
         jTextArea6.setText("3");
         jScrollPane6.setViewportView(jTextArea6);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout octet3_4Layout = new javax.swing.GroupLayout(octet3_4);
+        octet3_4.setLayout(octet3_4Layout);
+        octet3_4Layout.setHorizontalGroup(
+            octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet3_4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(octet3_4Layout.createSequentialGroup()
+                        .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet3_4Layout.createSequentialGroup()
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet4Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(labelBit33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet3_4Layout.createSequentialGroup()
+                                        .addComponent(labelOctet4Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet4Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet4Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet4Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet4Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet4Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet4Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel16)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(bit33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet3_4Layout.createSequentialGroup()
+                                .addComponent(octet4Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet4Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet4Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet4Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet4Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet4Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet4Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet4Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit41, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet3_4Layout.createSequentialGroup()
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet3Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(labelBit40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet3_4Layout.createSequentialGroup()
+                                        .addComponent(labelOctet3Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet3Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet3Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet3Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet3Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet3Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet3Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel33)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(bit44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet3_4Layout.createSequentialGroup()
+                                .addComponent(octet3Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet3Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet3Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet3Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet3Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet3Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet3Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet3Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        octet3_4Layout.setVerticalGroup(
+            octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet3_4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(octet3_4Layout.createSequentialGroup()
+                        .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(octet3_4Layout.createSequentialGroup()
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel34)
                                     .addComponent(jLabel33))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelBit41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelOctet3Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet3Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(bit44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(octet3Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet3Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(octet3_4Layout.createSequentialGroup()
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel16))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelBit32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelOctet4Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet4Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(bit33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(octet4Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet4Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(octet3_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
                             .addComponent(jLabel13))
                         .addGap(12, 12, 12))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(octet3_4Layout.createSequentialGroup()
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Octet 3-4: Dst", jPanel3);
+        jtab1.addTab("Octet 3-4: Dst", octet3_4);
+
+        octet5Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit5.setText("1");
+        octet5Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit1.setText("1");
+        octet5Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit2.setText("1");
+        octet5Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit3.setText("1");
+        octet5Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit7.setText("1");
+        octet5Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit6.setText("1");
+        octet5Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        jLabel35.setFont(new java.awt.Font("Lucida Grande", 0, 8));
+        jLabel35.setText("LSB");
+
+        labelOctet5Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit6.setText("1");
+        labelOctet5Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        jLabel36.setFont(new java.awt.Font("Lucida Grande", 0, 8));
+        jLabel36.setText("MSB");
+
+        labelOctet5Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit7.setText("1");
+        labelOctet5Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit0.setText("1");
+        octet5Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        labelOctet5Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit3.setText("1");
+        labelOctet5Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        labelOctet5Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit2.setText("1");
+        labelOctet5Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        octet5Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet5Bit4.setText("1");
+        octet5Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet5Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet5Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet5Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        labelOctet5Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit1.setText("1");
+        labelOctet5Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        labelOctet5Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit5.setText("1");
+        labelOctet5Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        labelOctet5Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit0.setText("1");
+        labelOctet5Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        labelOctet5Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet5Bit4.setText("1");
+        labelOctet5Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet5Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet5Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
+
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Bit 7-0");
+        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
+
+        jTextArea7.setColumns(20);
+        jTextArea7.setRows(5);
+        jScrollPane7.setViewportView(jTextArea7);
+
+        jTextArea8.setColumns(20);
+        jTextArea8.setRows(5);
+        jTextArea8.setText("1");
+        jScrollPane8.setViewportView(jTextArea8);
+
+        javax.swing.GroupLayout octet5Layout = new javax.swing.GroupLayout(octet5);
+        octet5.setLayout(octet5Layout);
+        octet5Layout.setHorizontalGroup(
+            octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(octet5Layout.createSequentialGroup()
+                        .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet5Layout.createSequentialGroup()
+                                .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet5Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet5Layout.createSequentialGroup()
+                                        .addComponent(labelOctet5Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelOctet5Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelOctet5Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(labelOctet5Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelOctet5Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelOctet5Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(labelOctet5Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel35)))
+                            .addGroup(octet5Layout.createSequentialGroup()
+                                .addComponent(octet5Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet5Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(octet5Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(octet5Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(octet5Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(octet5Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(octet5Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(octet5Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        octet5Layout.setVerticalGroup(
+            octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(octet5Layout.createSequentialGroup()
+                        .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel35))
+                        .addGap(0, 0, 0)
+                        .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelOctet5Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelOctet5Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(octet5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(octet5Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(octet5Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel14))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jtab1.addTab("Octet 5: Length", octet5);
 
         jLabel21.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel21.setText("MSB");
 
-        labelBit64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit64.setText("1");
-        labelBit64.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit64.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit64.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit64.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit7.setText("1");
+        labelOctet7Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit65.setText("1");
-        labelBit65.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit65.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit65.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit65.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit6.setText("1");
+        labelOctet7Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit66.setText("1");
-        labelBit66.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit66.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit66.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit66.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit5.setText("1");
+        labelOctet7Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit67.setText("1");
-        labelBit67.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit67.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit67.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit67.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit4.setText("1");
+        labelOctet7Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit68.setText("1");
-        labelBit68.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit68.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit68.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit68.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit3.setText("1");
+        labelOctet7Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit69.setText("1");
-        labelBit69.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit69.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit69.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit69.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit2.setText("1");
+        labelOctet7Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit70.setText("1");
-        labelBit70.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit70.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit70.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit70.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit1.setText("1");
+        labelOctet7Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit71.setText("1");
-        labelBit71.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit71.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit71.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit71.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet7Bit0.setText("1");
+        labelOctet7Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet7Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet7Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel22.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel22.setText("LSB");
 
-        bit64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit64.setText("1");
-        bit64.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit64.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit64.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit64.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit6.setText("1");
+        octet7Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit65.setText("1");
-        bit65.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit65.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit65.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit65.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit7.setText("1");
+        octet7Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit66.setText("1");
-        bit66.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit66.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit66.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit66.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit3.setText("1");
+        octet7Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit67.setText("1");
-        bit67.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit67.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit67.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit67.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit2.setText("1");
+        octet7Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit68.setText("1");
-        bit68.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit68.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit68.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit68.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit1.setText("1");
+        octet7Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit69.setText("1");
-        bit69.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit69.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit69.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit69.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit5.setText("1");
+        octet7Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit70.setText("1");
-        bit70.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit70.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit70.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit70.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit0.setText("1");
+        octet7Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit71.setText("1");
-        bit71.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit71.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit71.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit71.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet7Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet7Bit4.setText("1");
+        octet7Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet7Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet7Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet7Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit72.setText("1");
-        bit72.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit72.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit72.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit72.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit5.setText("1");
+        octet6Bit5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit73.setText("1");
-        bit73.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit73.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit73.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit73.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit1.setText("1");
+        octet6Bit1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit74.setText("1");
-        bit74.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit74.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit74.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit74.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit2.setText("1");
+        octet6Bit2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit75.setText("1");
-        bit75.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit75.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit75.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit75.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit3.setText("1");
+        octet6Bit3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit76.setText("1");
-        bit76.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit76.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit76.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit76.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit7.setText("1");
+        octet6Bit7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit77.setText("1");
-        bit77.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit77.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit77.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit77.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit6.setText("1");
+        octet6Bit6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel37.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel37.setText("LSB");
 
-        labelBit72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit72.setText("1");
-        labelBit72.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit72.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit72.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit72.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit6.setText("1");
+        labelOctet6Bit6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit6.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel38.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel38.setText("MSB");
 
-        labelBit73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit73.setText("1");
-        labelBit73.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit73.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit73.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit73.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit7.setText("1");
+        labelOctet6Bit7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit7.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit7.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit7.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit78.setText("1");
-        bit78.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit78.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit78.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit78.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit0.setText("1");
+        octet6Bit0.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit74.setText("1");
-        labelBit74.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit74.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit74.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit74.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit3.setText("1");
+        labelOctet6Bit3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit3.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit3.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit3.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit75.setText("1");
-        labelBit75.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit75.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit75.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit75.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit2.setText("1");
+        labelOctet6Bit2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit2.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit2.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit2.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        bit79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit79.setText("1");
-        bit79.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit79.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit79.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit79.setPreferredSize(new java.awt.Dimension(17, 17));
+        octet6Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        octet6Bit4.setText("1");
+        octet6Bit4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        octet6Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        octet6Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        octet6Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit76.setText("1");
-        labelBit76.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit76.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit76.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit76.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit1.setText("1");
+        labelOctet6Bit1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit1.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit1.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit1.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit77.setText("1");
-        labelBit77.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit77.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit77.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit77.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit5.setText("1");
+        labelOctet6Bit5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit5.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit5.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit5.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit78.setText("1");
-        labelBit78.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit78.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit78.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit78.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit0.setText("1");
+        labelOctet6Bit0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit0.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit0.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit0.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        labelBit79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit79.setText("1");
-        labelBit79.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit79.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit79.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit79.setPreferredSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctet6Bit4.setText("1");
+        labelOctet6Bit4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        labelOctet6Bit4.setMaximumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit4.setMinimumSize(new java.awt.Dimension(17, 17));
+        labelOctet6Bit4.setPreferredSize(new java.awt.Dimension(17, 17));
 
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("Bit 15-8");
@@ -1574,162 +1827,162 @@ public class TelegramUI extends javax.swing.JFrame {
         jTextArea10.setText("5");
         jScrollPane10.setViewportView(jTextArea10);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout octet6_7Layout = new javax.swing.GroupLayout(octet6_7);
+        octet6_7.setLayout(octet6_7Layout);
+        octet6_7Layout.setHorizontalGroup(
+            octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet6_7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit64, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(octet6_7Layout.createSequentialGroup()
+                        .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet6_7Layout.createSequentialGroup()
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet7Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addComponent(labelBit65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet6_7Layout.createSequentialGroup()
+                                        .addComponent(labelOctet7Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet7Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet7Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet7Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet7Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet7Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet7Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel22)))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(bit65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet6_7Layout.createSequentialGroup()
+                                .addComponent(octet7Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet7Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet7Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet7Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet7Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet7Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet7Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet7Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit73, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet6_7Layout.createSequentialGroup()
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(labelOctet6Bit7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addComponent(labelBit72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet6_7Layout.createSequentialGroup()
+                                        .addComponent(labelOctet6Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet6Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet6Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet6Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet6Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelOctet6Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(labelBit78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(labelOctet6Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel37)))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(bit76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(octet6_7Layout.createSequentialGroup()
+                                .addComponent(octet6Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet6Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet6Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet6Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet6Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet6Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(octet6Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(bit78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(octet6Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        octet6_7Layout.setVerticalGroup(
+            octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet6_7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(octet6_7Layout.createSequentialGroup()
+                        .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(octet6_7Layout.createSequentialGroup()
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel38)
                                     .addComponent(jLabel37))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelBit73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelOctet6Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet6Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(bit76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(octet6Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet6Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(octet6_7Layout.createSequentialGroup()
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel21)
                                     .addComponent(jLabel22))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(labelBit64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBit71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelOctet7Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelOctet7Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(bit65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bit70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(octet7Bit7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(octet7Bit0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(octet6_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel23)
                             .addComponent(jLabel24))
                         .addGap(12, 12, 12))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addGroup(octet6_7Layout.createSequentialGroup()
                         .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Octet 6-7: TPDU/APCI", jPanel5);
+        jtab1.addTab("Octet 6-7: TPDU/APCI", octet6_7);
 
         jLabel25.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel25.setText("MSB");
@@ -1984,22 +2237,22 @@ public class TelegramUI extends javax.swing.JFrame {
         jTextArea12.setText("6");
         jScrollPane12.setViewportView(jTextArea12);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout octet8_nLayout = new javax.swing.GroupLayout(octet8_n);
+        octet8_n.setLayout(octet8_nLayout);
+        octet8_nLayout.setHorizontalGroup(
+            octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet8_nLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addGroup(octet8_nLayout.createSequentialGroup()
+                        .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet8_nLayout.createSequentialGroup()
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(labelBit80, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet8_nLayout.createSequentialGroup()
                                         .addComponent(labelBit81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
                                         .addComponent(labelBit82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2014,7 +2267,7 @@ public class TelegramUI extends javax.swing.JFrame {
                                         .addGap(0, 0, 0)
                                         .addComponent(labelBit87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel26)))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGroup(octet8_nLayout.createSequentialGroup()
                                 .addComponent(bit81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(bit80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -2031,13 +2284,13 @@ public class TelegramUI extends javax.swing.JFrame {
                                 .addComponent(bit86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(octet8_nLayout.createSequentialGroup()
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(labelBit89, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(octet8_nLayout.createSequentialGroup()
                                         .addComponent(labelBit88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
                                         .addComponent(labelBit93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2052,7 +2305,7 @@ public class TelegramUI extends javax.swing.JFrame {
                                         .addGap(0, 0, 0)
                                         .addComponent(labelBit94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel39)))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGroup(octet8_nLayout.createSequentialGroup()
                                 .addComponent(bit92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(bit93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -2069,22 +2322,22 @@ public class TelegramUI extends javax.swing.JFrame {
                                 .addComponent(bit94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        octet8_nLayout.setVerticalGroup(
+            octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(octet8_nLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(octet8_nLayout.createSequentialGroup()
+                        .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(octet8_nLayout.createSequentialGroup()
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel40)
                                     .addComponent(jLabel39))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(labelBit89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelBit88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelBit93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2094,7 +2347,7 @@ public class TelegramUI extends javax.swing.JFrame {
                                     .addComponent(labelBit92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelBit94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(bit92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2103,12 +2356,12 @@ public class TelegramUI extends javax.swing.JFrame {
                                     .addComponent(bit90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(octet8_nLayout.createSequentialGroup()
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel25)
                                     .addComponent(jLabel26))
                                 .addGap(0, 0, 0)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(labelBit80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelBit81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelBit82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2118,7 +2371,7 @@ public class TelegramUI extends javax.swing.JFrame {
                                     .addComponent(labelBit86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(labelBit87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(bit81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2128,238 +2381,18 @@ public class TelegramUI extends javax.swing.JFrame {
                                     .addComponent(bit84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bit86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(octet8_nLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
                             .addComponent(jLabel28))
                         .addGap(12, 12, 12))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addGroup(octet8_nLayout.createSequentialGroup()
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Octet 8-n: Data", jPanel6);
-
-        bit8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit8.setText("1");
-        bit8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit8.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit8.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit8.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit9.setText("1");
-        bit9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit9.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit9.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit9.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit10.setText("1");
-        bit10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit10.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit10.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit10.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit11.setText("1");
-        bit11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit11.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit11.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit11.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit12.setText("1");
-        bit12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit12.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit12.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit12.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit13.setText("1");
-        bit13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit13.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit13.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit13.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        jLabel35.setFont(new java.awt.Font("Lucida Grande", 0, 8));
-        jLabel35.setText("LSB");
-
-        labelBit8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit8.setText("1");
-        labelBit8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit8.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit8.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit8.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        jLabel36.setFont(new java.awt.Font("Lucida Grande", 0, 8));
-        jLabel36.setText("MSB");
-
-        labelBit9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit9.setText("1");
-        labelBit9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit9.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit9.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit9.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit14.setText("1");
-        bit14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit14.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit14.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit14.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        labelBit10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit10.setText("1");
-        labelBit10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit10.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit10.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit10.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        labelBit11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit11.setText("1");
-        labelBit11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit11.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit11.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit11.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        bit15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bit15.setText("1");
-        bit15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bit15.setMaximumSize(new java.awt.Dimension(17, 17));
-        bit15.setMinimumSize(new java.awt.Dimension(17, 17));
-        bit15.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        labelBit12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit12.setText("1");
-        labelBit12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit12.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit12.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit12.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        labelBit13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit13.setText("1");
-        labelBit13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit13.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit13.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit13.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        labelBit14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit14.setText("1");
-        labelBit14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit14.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit14.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit14.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        labelBit15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelBit15.setText("1");
-        labelBit15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        labelBit15.setMaximumSize(new java.awt.Dimension(17, 17));
-        labelBit15.setMinimumSize(new java.awt.Dimension(17, 17));
-        labelBit15.setPreferredSize(new java.awt.Dimension(17, 17));
-
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Bit 7-0");
-        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
-
-        jTextArea7.setColumns(20);
-        jTextArea7.setRows(5);
-        jScrollPane7.setViewportView(jTextArea7);
-
-        jTextArea8.setColumns(20);
-        jTextArea8.setRows(5);
-        jTextArea8.setText("1");
-        jScrollPane8.setViewportView(jTextArea8);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(labelBit9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(labelBit8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(labelBit13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(labelBit15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(labelBit10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(labelBit11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(labelBit12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(labelBit14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel35)))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(bit12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bit13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(bit8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(bit15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bit11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(bit10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(bit9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(bit14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel36)
-                            .addComponent(jLabel35))
-                        .addGap(0, 0, 0)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelBit9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelBit14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bit12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bit14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14))
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Octet 0: CTRL", jPanel4);
+        jtab1.addTab("Octet 8-n: Data", octet8_n);
 
         fileMenu.setText("File");
 
@@ -2418,14 +2451,14 @@ public class TelegramUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(labelTelegramString)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 738, Short.MAX_VALUE)
+                        .addComponent(telegramString, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
+                        .addComponent(labelCrc)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE))
+                        .addComponent(crc))
+                    .addComponent(jtab1, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -2433,12 +2466,12 @@ public class TelegramUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
+                    .addComponent(labelTelegramString)
+                    .addComponent(telegramString, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCrc)
+                    .addComponent(crc))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+                .addComponent(jtab1, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2462,69 +2495,6 @@ public class TelegramUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JLabel bit0;
-    private javax.swing.JLabel bit1;
-    private javax.swing.JLabel bit10;
-    private javax.swing.JLabel bit11;
-    private javax.swing.JLabel bit12;
-    private javax.swing.JLabel bit13;
-    private javax.swing.JLabel bit14;
-    private javax.swing.JLabel bit15;
-    private javax.swing.JLabel bit16;
-    private javax.swing.JLabel bit17;
-    private javax.swing.JLabel bit18;
-    private javax.swing.JLabel bit19;
-    private javax.swing.JLabel bit2;
-    private javax.swing.JLabel bit20;
-    private javax.swing.JLabel bit21;
-    private javax.swing.JLabel bit22;
-    private javax.swing.JLabel bit23;
-    private javax.swing.JLabel bit24;
-    private javax.swing.JLabel bit25;
-    private javax.swing.JLabel bit26;
-    private javax.swing.JLabel bit27;
-    private javax.swing.JLabel bit28;
-    private javax.swing.JLabel bit29;
-    private javax.swing.JLabel bit3;
-    private javax.swing.JLabel bit30;
-    private javax.swing.JLabel bit31;
-    private javax.swing.JLabel bit32;
-    private javax.swing.JLabel bit33;
-    private javax.swing.JLabel bit34;
-    private javax.swing.JLabel bit35;
-    private javax.swing.JLabel bit36;
-    private javax.swing.JLabel bit37;
-    private javax.swing.JLabel bit38;
-    private javax.swing.JLabel bit39;
-    private javax.swing.JLabel bit4;
-    private javax.swing.JLabel bit40;
-    private javax.swing.JLabel bit41;
-    private javax.swing.JLabel bit42;
-    private javax.swing.JLabel bit43;
-    private javax.swing.JLabel bit44;
-    private javax.swing.JLabel bit45;
-    private javax.swing.JLabel bit46;
-    private javax.swing.JLabel bit47;
-    private javax.swing.JLabel bit5;
-    private javax.swing.JLabel bit6;
-    private javax.swing.JLabel bit64;
-    private javax.swing.JLabel bit65;
-    private javax.swing.JLabel bit66;
-    private javax.swing.JLabel bit67;
-    private javax.swing.JLabel bit68;
-    private javax.swing.JLabel bit69;
-    private javax.swing.JLabel bit7;
-    private javax.swing.JLabel bit70;
-    private javax.swing.JLabel bit71;
-    private javax.swing.JLabel bit72;
-    private javax.swing.JLabel bit73;
-    private javax.swing.JLabel bit74;
-    private javax.swing.JLabel bit75;
-    private javax.swing.JLabel bit76;
-    private javax.swing.JLabel bit77;
-    private javax.swing.JLabel bit78;
-    private javax.swing.JLabel bit79;
-    private javax.swing.JLabel bit8;
     private javax.swing.JLabel bit80;
     private javax.swing.JLabel bit81;
     private javax.swing.JLabel bit82;
@@ -2535,7 +2505,6 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel bit87;
     private javax.swing.JLabel bit88;
     private javax.swing.JLabel bit89;
-    private javax.swing.JLabel bit9;
     private javax.swing.JLabel bit90;
     private javax.swing.JLabel bit91;
     private javax.swing.JLabel bit92;
@@ -2544,13 +2513,13 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel bit95;
     private javax.swing.JMenuItem contentsMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
+    private javax.swing.JLabel crc;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -2558,7 +2527,6 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2568,7 +2536,6 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2583,12 +2550,6 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -2601,7 +2562,6 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea10;
     private javax.swing.JTextArea jTextArea11;
@@ -2614,70 +2574,7 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea7;
     private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextArea jTextArea9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel labelBit0;
-    private javax.swing.JLabel labelBit1;
-    private javax.swing.JLabel labelBit10;
-    private javax.swing.JLabel labelBit11;
-    private javax.swing.JLabel labelBit12;
-    private javax.swing.JLabel labelBit13;
-    private javax.swing.JLabel labelBit14;
-    private javax.swing.JLabel labelBit15;
-    private javax.swing.JLabel labelBit16;
-    private javax.swing.JLabel labelBit17;
-    private javax.swing.JLabel labelBit18;
-    private javax.swing.JLabel labelBit19;
-    private javax.swing.JLabel labelBit2;
-    private javax.swing.JLabel labelBit20;
-    private javax.swing.JLabel labelBit21;
-    private javax.swing.JLabel labelBit22;
-    private javax.swing.JLabel labelBit23;
-    private javax.swing.JLabel labelBit24;
-    private javax.swing.JLabel labelBit25;
-    private javax.swing.JLabel labelBit26;
-    private javax.swing.JLabel labelBit27;
-    private javax.swing.JLabel labelBit28;
-    private javax.swing.JLabel labelBit29;
-    private javax.swing.JLabel labelBit3;
-    private javax.swing.JLabel labelBit30;
-    private javax.swing.JLabel labelBit31;
-    private javax.swing.JLabel labelBit32;
-    private javax.swing.JLabel labelBit33;
-    private javax.swing.JLabel labelBit34;
-    private javax.swing.JLabel labelBit35;
-    private javax.swing.JLabel labelBit36;
-    private javax.swing.JLabel labelBit37;
-    private javax.swing.JLabel labelBit38;
-    private javax.swing.JLabel labelBit39;
-    private javax.swing.JLabel labelBit4;
-    private javax.swing.JLabel labelBit40;
-    private javax.swing.JLabel labelBit41;
-    private javax.swing.JLabel labelBit42;
-    private javax.swing.JLabel labelBit43;
-    private javax.swing.JLabel labelBit44;
-    private javax.swing.JLabel labelBit45;
-    private javax.swing.JLabel labelBit46;
-    private javax.swing.JLabel labelBit47;
-    private javax.swing.JLabel labelBit5;
-    private javax.swing.JLabel labelBit6;
-    private javax.swing.JLabel labelBit64;
-    private javax.swing.JLabel labelBit65;
-    private javax.swing.JLabel labelBit66;
-    private javax.swing.JLabel labelBit67;
-    private javax.swing.JLabel labelBit68;
-    private javax.swing.JLabel labelBit69;
-    private javax.swing.JLabel labelBit7;
-    private javax.swing.JLabel labelBit70;
-    private javax.swing.JLabel labelBit71;
-    private javax.swing.JLabel labelBit72;
-    private javax.swing.JLabel labelBit73;
-    private javax.swing.JLabel labelBit74;
-    private javax.swing.JLabel labelBit75;
-    private javax.swing.JLabel labelBit76;
-    private javax.swing.JLabel labelBit77;
-    private javax.swing.JLabel labelBit78;
-    private javax.swing.JLabel labelBit79;
-    private javax.swing.JLabel labelBit8;
+    private javax.swing.JTabbedPane jtab1;
     private javax.swing.JLabel labelBit80;
     private javax.swing.JLabel labelBit81;
     private javax.swing.JLabel labelBit82;
@@ -2688,18 +2585,154 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel labelBit87;
     private javax.swing.JLabel labelBit88;
     private javax.swing.JLabel labelBit89;
-    private javax.swing.JLabel labelBit9;
     private javax.swing.JLabel labelBit90;
     private javax.swing.JLabel labelBit91;
     private javax.swing.JLabel labelBit92;
     private javax.swing.JLabel labelBit93;
     private javax.swing.JLabel labelBit94;
     private javax.swing.JLabel labelBit95;
+    private javax.swing.JLabel labelCrc;
+    private javax.swing.JLabel labelOctet0Bit0;
+    private javax.swing.JLabel labelOctet0Bit1;
+    private javax.swing.JLabel labelOctet0Bit2;
+    private javax.swing.JLabel labelOctet0Bit3;
+    private javax.swing.JLabel labelOctet0Bit4;
+    private javax.swing.JLabel labelOctet0Bit5;
+    private javax.swing.JLabel labelOctet0Bit6;
+    private javax.swing.JLabel labelOctet0Bit7;
+    private javax.swing.JLabel labelOctet1Bit0;
+    private javax.swing.JLabel labelOctet1Bit1;
+    private javax.swing.JLabel labelOctet1Bit2;
+    private javax.swing.JLabel labelOctet1Bit3;
+    private javax.swing.JLabel labelOctet1Bit4;
+    private javax.swing.JLabel labelOctet1Bit5;
+    private javax.swing.JLabel labelOctet1Bit6;
+    private javax.swing.JLabel labelOctet1Bit7;
+    private javax.swing.JLabel labelOctet2Bit0;
+    private javax.swing.JLabel labelOctet2Bit1;
+    private javax.swing.JLabel labelOctet2Bit2;
+    private javax.swing.JLabel labelOctet2Bit3;
+    private javax.swing.JLabel labelOctet2Bit4;
+    private javax.swing.JLabel labelOctet2Bit5;
+    private javax.swing.JLabel labelOctet2Bit6;
+    private javax.swing.JLabel labelOctet2Bit7;
+    private javax.swing.JLabel labelOctet3Bit0;
+    private javax.swing.JLabel labelOctet3Bit1;
+    private javax.swing.JLabel labelOctet3Bit2;
+    private javax.swing.JLabel labelOctet3Bit3;
+    private javax.swing.JLabel labelOctet3Bit4;
+    private javax.swing.JLabel labelOctet3Bit5;
+    private javax.swing.JLabel labelOctet3Bit6;
+    private javax.swing.JLabel labelOctet3Bit7;
+    private javax.swing.JLabel labelOctet4Bit0;
+    private javax.swing.JLabel labelOctet4Bit1;
+    private javax.swing.JLabel labelOctet4Bit2;
+    private javax.swing.JLabel labelOctet4Bit3;
+    private javax.swing.JLabel labelOctet4Bit4;
+    private javax.swing.JLabel labelOctet4Bit5;
+    private javax.swing.JLabel labelOctet4Bit6;
+    private javax.swing.JLabel labelOctet4Bit7;
+    private javax.swing.JLabel labelOctet5Bit0;
+    private javax.swing.JLabel labelOctet5Bit1;
+    private javax.swing.JLabel labelOctet5Bit2;
+    private javax.swing.JLabel labelOctet5Bit3;
+    private javax.swing.JLabel labelOctet5Bit4;
+    private javax.swing.JLabel labelOctet5Bit5;
+    private javax.swing.JLabel labelOctet5Bit6;
+    private javax.swing.JLabel labelOctet5Bit7;
+    private javax.swing.JLabel labelOctet6Bit0;
+    private javax.swing.JLabel labelOctet6Bit1;
+    private javax.swing.JLabel labelOctet6Bit2;
+    private javax.swing.JLabel labelOctet6Bit3;
+    private javax.swing.JLabel labelOctet6Bit4;
+    private javax.swing.JLabel labelOctet6Bit5;
+    private javax.swing.JLabel labelOctet6Bit6;
+    private javax.swing.JLabel labelOctet6Bit7;
+    private javax.swing.JLabel labelOctet7Bit0;
+    private javax.swing.JLabel labelOctet7Bit1;
+    private javax.swing.JLabel labelOctet7Bit2;
+    private javax.swing.JLabel labelOctet7Bit3;
+    private javax.swing.JLabel labelOctet7Bit4;
+    private javax.swing.JLabel labelOctet7Bit5;
+    private javax.swing.JLabel labelOctet7Bit6;
+    private javax.swing.JLabel labelOctet7Bit7;
+    private javax.swing.JLabel labelTelegramString;
     private javax.swing.JMenuBar menuBar;
+    private javax.swing.JPanel octet0;
+    private javax.swing.JLabel octet0Bit0;
+    private javax.swing.JLabel octet0Bit1;
+    private javax.swing.JLabel octet0Bit2;
+    private javax.swing.JLabel octet0Bit3;
+    private javax.swing.JLabel octet0Bit4;
+    private javax.swing.JLabel octet0Bit5;
+    private javax.swing.JLabel octet0Bit6;
+    private javax.swing.JLabel octet0Bit7;
+    private javax.swing.JLabel octet1Bit0;
+    private javax.swing.JLabel octet1Bit1;
+    private javax.swing.JLabel octet1Bit2;
+    private javax.swing.JLabel octet1Bit3;
+    private javax.swing.JLabel octet1Bit4;
+    private javax.swing.JLabel octet1Bit5;
+    private javax.swing.JLabel octet1Bit6;
+    private javax.swing.JLabel octet1Bit7;
+    private javax.swing.JPanel octet1_2;
+    private javax.swing.JLabel octet2Bit0;
+    private javax.swing.JLabel octet2Bit1;
+    private javax.swing.JLabel octet2Bit2;
+    private javax.swing.JLabel octet2Bit3;
+    private javax.swing.JLabel octet2Bit4;
+    private javax.swing.JLabel octet2Bit5;
+    private javax.swing.JLabel octet2Bit6;
+    private javax.swing.JLabel octet2Bit7;
+    private javax.swing.JLabel octet3Bit0;
+    private javax.swing.JLabel octet3Bit1;
+    private javax.swing.JLabel octet3Bit2;
+    private javax.swing.JLabel octet3Bit3;
+    private javax.swing.JLabel octet3Bit4;
+    private javax.swing.JLabel octet3Bit5;
+    private javax.swing.JLabel octet3Bit6;
+    private javax.swing.JLabel octet3Bit7;
+    private javax.swing.JPanel octet3_4;
+    private javax.swing.JLabel octet4Bit0;
+    private javax.swing.JLabel octet4Bit1;
+    private javax.swing.JLabel octet4Bit2;
+    private javax.swing.JLabel octet4Bit3;
+    private javax.swing.JLabel octet4Bit4;
+    private javax.swing.JLabel octet4Bit5;
+    private javax.swing.JLabel octet4Bit6;
+    private javax.swing.JLabel octet4Bit7;
+    private javax.swing.JPanel octet5;
+    private javax.swing.JLabel octet5Bit0;
+    private javax.swing.JLabel octet5Bit1;
+    private javax.swing.JLabel octet5Bit2;
+    private javax.swing.JLabel octet5Bit3;
+    private javax.swing.JLabel octet5Bit4;
+    private javax.swing.JLabel octet5Bit5;
+    private javax.swing.JLabel octet5Bit6;
+    private javax.swing.JLabel octet5Bit7;
+    private javax.swing.JLabel octet6Bit0;
+    private javax.swing.JLabel octet6Bit1;
+    private javax.swing.JLabel octet6Bit2;
+    private javax.swing.JLabel octet6Bit3;
+    private javax.swing.JLabel octet6Bit4;
+    private javax.swing.JLabel octet6Bit5;
+    private javax.swing.JLabel octet6Bit6;
+    private javax.swing.JLabel octet6Bit7;
+    private javax.swing.JPanel octet6_7;
+    private javax.swing.JLabel octet7Bit0;
+    private javax.swing.JLabel octet7Bit1;
+    private javax.swing.JLabel octet7Bit2;
+    private javax.swing.JLabel octet7Bit3;
+    private javax.swing.JLabel octet7Bit4;
+    private javax.swing.JLabel octet7Bit5;
+    private javax.swing.JLabel octet7Bit6;
+    private javax.swing.JLabel octet7Bit7;
+    private javax.swing.JPanel octet8_n;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
+    private javax.swing.JTextField telegramString;
     // End of variables declaration//GEN-END:variables
 
 }

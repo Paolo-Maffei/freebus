@@ -107,15 +107,15 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="labelTelegramString" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="telegramString" pref="765" max="32767" attributes="0"/>
+                      <Component id="jTextField1" pref="738" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelCrc" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="crc" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jtab1" pref="866" max="32767" attributes="0"/>
+                  <Component id="jTabbedPane1" pref="866" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -126,45 +126,44 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="labelTelegramString" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="telegramString" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelCrc" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="crc" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jtab1" pref="471" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" pref="471" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="labelTelegramString">
+    <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telegram:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="telegramString">
-    </Component>
-    <Component class="javax.swing.JLabel" name="crc">
+    <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="ff" red="66" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="OK"/>
-        <Property name="opaque" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="labelCrc">
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="OK"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="CRC:"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="jtab1">
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="octet0">
+        <Container class="javax.swing.JPanel" name="jPanel1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Octet 0: CTRL">
@@ -179,53 +178,53 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane1" alignment="1" pref="841" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="1" pref="833" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet0Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit7" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet0Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit6" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet0Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit5" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet0Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit4" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet0Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit3" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet0Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit2" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet0Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit1" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet0Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit0" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel29" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet0Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet0Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit7" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit6" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet0Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit5" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet0Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit4" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet0Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit3" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet0Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit2" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet0Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit1" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet0Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit0" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel7" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="695" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="685" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -244,25 +243,25 @@
                               </Group>
                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="labelOctet0Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet0Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit0" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="octet0Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet0Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit0" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
@@ -270,14 +269,14 @@
                           <Component id="jScrollPane2" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="335" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="327" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="octet0Bit5">
+            <Component class="javax.swing.JLabel" name="bit5">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -297,7 +296,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit1">
+            <Component class="javax.swing.JLabel" name="bit1">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -317,7 +316,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit2">
+            <Component class="javax.swing.JLabel" name="bit2">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -337,7 +336,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit3">
+            <Component class="javax.swing.JLabel" name="bit3">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -357,7 +356,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit7">
+            <Component class="javax.swing.JLabel" name="bit7">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -377,7 +376,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit6">
+            <Component class="javax.swing.JLabel" name="bit6">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -405,7 +404,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit6">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -433,7 +432,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit7">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -453,7 +452,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit0">
+            <Component class="javax.swing.JLabel" name="bit0">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -473,7 +472,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit3">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -493,7 +492,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit2">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -513,7 +512,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet0Bit4">
+            <Component class="javax.swing.JLabel" name="bit4">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -533,7 +532,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit1">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -553,7 +552,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit5">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -573,7 +572,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit0">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -593,7 +592,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet0Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit4">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -657,7 +656,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="octet1_2">
+        <Container class="javax.swing.JPanel" name="jPanel2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Octet 1-2: Src">
@@ -672,48 +671,48 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane3" alignment="1" pref="841" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" alignment="1" pref="833" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet2Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit16" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet2Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit17" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet2Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit18" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet2Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit19" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet2Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit20" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet2Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit21" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet2Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit22" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet2Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit23" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet2Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet2Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit17" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit16" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet2Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit21" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet2Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit23" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet2Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit18" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet2Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit19" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet2Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit20" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet2Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit22" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel9" alignment="0" max="32767" attributes="1"/>
                               </Group>
@@ -721,48 +720,48 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet1Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit25" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet1Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit24" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet1Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit29" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet1Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit31" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet1Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit26" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet1Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit27" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet1Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit28" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet1Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit30" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel30" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet1Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet1Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit28" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit29" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet1Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit24" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet1Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit31" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet1Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit27" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet1Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit26" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet1Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit25" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet1Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit30" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel10" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane4" pref="535" max="32767" attributes="0"/>
+                              <Component id="jScrollPane4" pref="525" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -783,25 +782,25 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelOctet1Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet1Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit30" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="octet1Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet1Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit30" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -811,25 +810,25 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelOctet2Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet2Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit22" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit23" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="octet2Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet2Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit23" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit22" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -845,7 +844,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane3" pref="335" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" pref="327" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -860,7 +859,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit16">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -880,7 +879,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit17">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -900,7 +899,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit18">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -920,7 +919,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit19">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -940,7 +939,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit20">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -960,7 +959,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit21">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -980,7 +979,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit22">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1000,7 +999,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet2Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit23">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1028,7 +1027,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit6">
+            <Component class="javax.swing.JLabel" name="bit16">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1048,7 +1047,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit7">
+            <Component class="javax.swing.JLabel" name="bit17">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1068,7 +1067,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit3">
+            <Component class="javax.swing.JLabel" name="bit18">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1088,7 +1087,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit2">
+            <Component class="javax.swing.JLabel" name="bit19">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1108,7 +1107,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit1">
+            <Component class="javax.swing.JLabel" name="bit20">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1128,7 +1127,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit5">
+            <Component class="javax.swing.JLabel" name="bit21">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1148,7 +1147,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit0">
+            <Component class="javax.swing.JLabel" name="bit22">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1168,7 +1167,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet2Bit4">
+            <Component class="javax.swing.JLabel" name="bit23">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1188,7 +1187,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit5">
+            <Component class="javax.swing.JLabel" name="bit24">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1208,7 +1207,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit1">
+            <Component class="javax.swing.JLabel" name="bit25">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1228,7 +1227,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit2">
+            <Component class="javax.swing.JLabel" name="bit26">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1248,7 +1247,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit3">
+            <Component class="javax.swing.JLabel" name="bit27">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1268,7 +1267,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit7">
+            <Component class="javax.swing.JLabel" name="bit28">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1288,7 +1287,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit6">
+            <Component class="javax.swing.JLabel" name="bit29">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1316,7 +1315,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit24">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1344,7 +1343,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit25">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1364,7 +1363,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit0">
+            <Component class="javax.swing.JLabel" name="bit30">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1384,7 +1383,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit26">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1404,7 +1403,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit27">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1424,7 +1423,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet1Bit4">
+            <Component class="javax.swing.JLabel" name="bit31">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1444,7 +1443,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit28">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1464,7 +1463,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit29">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1484,7 +1483,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit30">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1504,7 +1503,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet1Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit31">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1579,7 +1578,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="octet3_4">
+        <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Octet 3-4: Dst">
@@ -1594,48 +1593,48 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane5" alignment="1" pref="841" max="32767" attributes="0"/>
+                          <Component id="jScrollPane5" alignment="1" pref="833" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet4Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit32" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet4Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit33" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet4Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit34" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet4Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit35" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet4Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit36" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet4Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit37" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet4Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit38" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet4Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit39" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet4Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet4Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit33" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit32" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet4Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit37" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet4Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit39" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet4Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit34" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet4Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit35" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet4Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit36" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet4Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit38" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel12" alignment="0" max="32767" attributes="1"/>
                               </Group>
@@ -1643,48 +1642,48 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet3Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit41" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet3Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit40" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet3Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit45" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet3Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit47" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet3Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit42" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet3Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit43" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet3Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit44" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet3Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit46" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet3Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet3Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit44" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit45" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet3Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit40" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet3Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit47" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet3Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit43" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet3Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit42" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet3Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit41" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet3Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit46" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel13" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane6" pref="535" max="32767" attributes="0"/>
+                              <Component id="jScrollPane6" pref="525" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1705,25 +1704,25 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelOctet3Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet3Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit47" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit46" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="octet3Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet3Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit47" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit46" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -1733,25 +1732,25 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelOctet4Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet4Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit32" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit34" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit35" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit39" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="octet4Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet4Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit32" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit34" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit35" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit38" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1767,7 +1766,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane5" pref="335" max="32767" attributes="0"/>
+                      <Component id="jScrollPane5" pref="327" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1782,7 +1781,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit32">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1802,7 +1801,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit33">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1822,7 +1821,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit34">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1842,7 +1841,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit35">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1862,7 +1861,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit36">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1882,7 +1881,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit37">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1902,7 +1901,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit38">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1922,7 +1921,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet4Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit39">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1950,7 +1949,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit6">
+            <Component class="javax.swing.JLabel" name="bit32">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1970,7 +1969,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit7">
+            <Component class="javax.swing.JLabel" name="bit33">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1990,7 +1989,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit3">
+            <Component class="javax.swing.JLabel" name="bit34">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2010,7 +2009,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit2">
+            <Component class="javax.swing.JLabel" name="bit35">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2030,7 +2029,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit1">
+            <Component class="javax.swing.JLabel" name="bit36">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2050,7 +2049,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit5">
+            <Component class="javax.swing.JLabel" name="bit37">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2070,7 +2069,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit0">
+            <Component class="javax.swing.JLabel" name="bit38">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2090,7 +2089,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet4Bit4">
+            <Component class="javax.swing.JLabel" name="bit39">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2110,7 +2109,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit5">
+            <Component class="javax.swing.JLabel" name="bit40">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2130,7 +2129,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit1">
+            <Component class="javax.swing.JLabel" name="bit41">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2150,7 +2149,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit2">
+            <Component class="javax.swing.JLabel" name="bit42">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2170,7 +2169,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit3">
+            <Component class="javax.swing.JLabel" name="bit43">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2190,7 +2189,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit7">
+            <Component class="javax.swing.JLabel" name="bit44">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2210,7 +2209,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit6">
+            <Component class="javax.swing.JLabel" name="bit45">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2238,7 +2237,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit40">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2266,7 +2265,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit41">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2286,7 +2285,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit0">
+            <Component class="javax.swing.JLabel" name="bit46">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2306,7 +2305,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit42">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2326,7 +2325,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit43">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2346,7 +2345,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet3Bit4">
+            <Component class="javax.swing.JLabel" name="bit47">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2366,7 +2365,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit44">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2386,7 +2385,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit45">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2406,7 +2405,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit46">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2426,7 +2425,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet3Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit47">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -2501,500 +2500,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="octet5">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Octet 5: Length">
-                <Property name="tabTitle" type="java.lang.String" value="Octet 5: Length"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane7" alignment="1" pref="841" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet5Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
-                                          <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="1"/>
-                                      </Group>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet5Bit6" min="-2" max="-2" attributes="1"/>
-                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet5Bit5" min="-2" max="-2" attributes="1"/>
-                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet5Bit4" min="-2" max="-2" attributes="1"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet5Bit3" min="-2" max="-2" attributes="1"/>
-                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet5Bit2" min="-2" max="-2" attributes="1"/>
-                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet5Bit1" min="-2" max="-2" attributes="1"/>
-                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet5Bit0" min="-2" max="-2" attributes="1"/>
-                                          </Group>
-                                          <Component id="jLabel35" alignment="1" min="-2" max="-2" attributes="1"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet5Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet5Bit6" min="-2" max="-2" attributes="1"/>
-                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet5Bit5" min="-2" max="-2" attributes="1"/>
-                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet5Bit4" min="-2" max="-2" attributes="1"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet5Bit3" min="-2" max="-2" attributes="1"/>
-                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet5Bit2" min="-2" max="-2" attributes="1"/>
-                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet5Bit1" min="-2" max="-2" attributes="1"/>
-                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet5Bit0" min="-2" max="-2" attributes="1"/>
-                                  </Group>
-                                  <Component id="jLabel14" alignment="0" max="32767" attributes="1"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane8" pref="695" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="labelOctet5Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelOctet5Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="octet5Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="octet5Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jScrollPane8" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane7" pref="335" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="octet5Bit5">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit1">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit2">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit3">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit7">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit6">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel35">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="8" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="LSB"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit6">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel36">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="8" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="MSB"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit7">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit0">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit3">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit2">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="octet5Bit4">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit1">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit5">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit0">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet5Bit4">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[17, 17]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Bit 7-0"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder bottom="0" left="0" right="0" top="2"/>
-                  </Border>
-                </Property>
-              </Properties>
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane7">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea7">
-                  <Properties>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="rows" type="int" value="5"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane8">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea8">
-                  <Properties>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="1"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="octet6_7">
+        <Container class="javax.swing.JPanel" name="jPanel5">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Octet 6-7: TPDU/APCI">
@@ -3009,48 +2515,48 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane9" alignment="1" pref="841" max="32767" attributes="0"/>
+                          <Component id="jScrollPane9" alignment="1" pref="833" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet7Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit64" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet7Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit65" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet7Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit66" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet7Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit67" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet7Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit68" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet7Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit69" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet7Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit70" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet7Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit71" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel22" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet7Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet7Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit65" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit64" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet7Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit69" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet7Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit71" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet7Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit66" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet7Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit67" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet7Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit68" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet7Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit70" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel23" alignment="0" max="32767" attributes="1"/>
                               </Group>
@@ -3058,48 +2564,48 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="labelOctet6Bit7" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="labelBit73" alignment="0" min="-2" max="-2" attributes="1"/>
                                           <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="labelOctet6Bit6" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit72" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet6Bit5" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit77" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet6Bit4" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit79" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="labelOctet6Bit3" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit74" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet6Bit2" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit75" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet6Bit1" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit76" min="-2" max="-2" attributes="1"/>
                                               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                              <Component id="labelOctet6Bit0" min="-2" max="-2" attributes="1"/>
+                                              <Component id="labelBit78" min="-2" max="-2" attributes="1"/>
                                           </Group>
                                           <Component id="jLabel37" alignment="1" min="-2" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="octet6Bit7" min="-2" max="-2" attributes="1"/>
-                                      <Component id="octet6Bit6" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit76" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit77" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet6Bit5" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit72" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet6Bit4" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit79" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="octet6Bit3" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit75" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet6Bit2" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit74" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet6Bit1" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit73" min="-2" max="-2" attributes="1"/>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                      <Component id="octet6Bit0" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit78" min="-2" max="-2" attributes="1"/>
                                   </Group>
                                   <Component id="jLabel24" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane10" pref="535" max="32767" attributes="0"/>
+                              <Component id="jScrollPane10" pref="525" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -3120,25 +2626,25 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelOctet6Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet6Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit73" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit72" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit77" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit79" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit74" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit75" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit76" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit78" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="octet6Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet6Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit76" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit77" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit72" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit79" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit75" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit74" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit73" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit78" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -3148,25 +2654,25 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelOctet7Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelOctet7Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit64" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit65" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit66" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit67" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit68" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit69" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit70" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelBit71" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="octet7Bit7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="octet7Bit0" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit65" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit64" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit69" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit71" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit66" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit67" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit68" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bit70" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -3182,7 +2688,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane9" pref="335" max="32767" attributes="0"/>
+                      <Component id="jScrollPane9" pref="327" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -3197,7 +2703,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit64">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3217,7 +2723,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit65">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3237,7 +2743,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit66">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3257,7 +2763,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit67">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3277,7 +2783,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit68">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3297,7 +2803,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit69">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3317,7 +2823,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit70">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3337,7 +2843,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet7Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit71">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3365,7 +2871,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit6">
+            <Component class="javax.swing.JLabel" name="bit64">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3385,7 +2891,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit7">
+            <Component class="javax.swing.JLabel" name="bit65">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3405,7 +2911,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit3">
+            <Component class="javax.swing.JLabel" name="bit66">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3425,7 +2931,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit2">
+            <Component class="javax.swing.JLabel" name="bit67">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3445,7 +2951,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit1">
+            <Component class="javax.swing.JLabel" name="bit68">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3465,7 +2971,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit5">
+            <Component class="javax.swing.JLabel" name="bit69">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3485,7 +2991,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit0">
+            <Component class="javax.swing.JLabel" name="bit70">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3505,7 +3011,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet7Bit4">
+            <Component class="javax.swing.JLabel" name="bit71">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3525,7 +3031,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit5">
+            <Component class="javax.swing.JLabel" name="bit72">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3545,7 +3051,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit1">
+            <Component class="javax.swing.JLabel" name="bit73">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3565,7 +3071,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit2">
+            <Component class="javax.swing.JLabel" name="bit74">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3585,7 +3091,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit3">
+            <Component class="javax.swing.JLabel" name="bit75">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3605,7 +3111,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit7">
+            <Component class="javax.swing.JLabel" name="bit76">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3625,7 +3131,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit6">
+            <Component class="javax.swing.JLabel" name="bit77">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3653,7 +3159,7 @@
                 <Property name="text" type="java.lang.String" value="LSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit6">
+            <Component class="javax.swing.JLabel" name="labelBit72">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3681,7 +3187,7 @@
                 <Property name="text" type="java.lang.String" value="MSB"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit7">
+            <Component class="javax.swing.JLabel" name="labelBit73">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3701,7 +3207,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit0">
+            <Component class="javax.swing.JLabel" name="bit78">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3721,7 +3227,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit3">
+            <Component class="javax.swing.JLabel" name="labelBit74">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3741,7 +3247,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit2">
+            <Component class="javax.swing.JLabel" name="labelBit75">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3761,7 +3267,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="octet6Bit4">
+            <Component class="javax.swing.JLabel" name="bit79">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3781,7 +3287,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit1">
+            <Component class="javax.swing.JLabel" name="labelBit76">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3801,7 +3307,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit5">
+            <Component class="javax.swing.JLabel" name="labelBit77">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3821,7 +3327,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit0">
+            <Component class="javax.swing.JLabel" name="labelBit78">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3841,7 +3347,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelOctet6Bit4">
+            <Component class="javax.swing.JLabel" name="labelBit79">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -3916,7 +3422,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="octet8_n">
+        <Container class="javax.swing.JPanel" name="jPanel6">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Octet 8-n: Data">
@@ -3931,7 +3437,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane11" alignment="1" pref="841" max="32767" attributes="0"/>
+                          <Component id="jScrollPane11" alignment="1" pref="833" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -4021,7 +3527,7 @@
                                   <Component id="jLabel28" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane12" pref="535" max="32767" attributes="0"/>
+                              <Component id="jScrollPane12" pref="525" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -4104,7 +3610,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane11" pref="335" max="32767" attributes="0"/>
+                      <Component id="jScrollPane11" pref="327" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -4832,6 +4338,499 @@
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
                     <Property name="text" type="java.lang.String" value="6"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Octet 0: CTRL">
+                <Property name="tabTitle" type="java.lang.String" value="Octet 0: CTRL"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane7" alignment="1" pref="833" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="labelBit9" alignment="0" min="-2" max="-2" attributes="1"/>
+                                          <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="1"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="labelBit8" min="-2" max="-2" attributes="1"/>
+                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                              <Component id="labelBit13" min="-2" max="-2" attributes="1"/>
+                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                              <Component id="labelBit15" min="-2" max="-2" attributes="1"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="labelBit10" min="-2" max="-2" attributes="1"/>
+                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                              <Component id="labelBit11" min="-2" max="-2" attributes="1"/>
+                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                              <Component id="labelBit12" min="-2" max="-2" attributes="1"/>
+                                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                              <Component id="labelBit14" min="-2" max="-2" attributes="1"/>
+                                          </Group>
+                                          <Component id="jLabel35" alignment="1" min="-2" max="-2" attributes="1"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="bit12" min="-2" max="-2" attributes="1"/>
+                                      <Component id="bit13" min="-2" max="-2" attributes="1"/>
+                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                      <Component id="bit8" min="-2" max="-2" attributes="1"/>
+                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                      <Component id="bit15" min="-2" max="-2" attributes="1"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="bit11" min="-2" max="-2" attributes="1"/>
+                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                      <Component id="bit10" min="-2" max="-2" attributes="1"/>
+                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                      <Component id="bit9" min="-2" max="-2" attributes="1"/>
+                                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                      <Component id="bit14" min="-2" max="-2" attributes="1"/>
+                                  </Group>
+                                  <Component id="jLabel14" alignment="0" max="32767" attributes="1"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane8" pref="685" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="labelBit9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelBit14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="bit12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bit14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane8" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane7" pref="327" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="bit8">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit9">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit10">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit11">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit12">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit13">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel35">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="8" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="LSB"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit8">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel36">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="8" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="MSB"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit9">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit14">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit10">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit11">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bit15">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit12">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit13">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit14">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelBit15">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                    <EtchetBorder/>
+                  </Border>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[17, 17]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel14">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Bit 7-0"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder bottom="0" left="0" right="0" top="2"/>
+                  </Border>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea7">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea8">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="1"/>
                   </Properties>
                 </Component>
               </SubComponents>
