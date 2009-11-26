@@ -90,9 +90,9 @@ public class TelegramUI extends javax.swing.JFrame {
         labelOctet0Bit4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        octet0Description = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        octet0BitDescription = new javax.swing.JTextArea();
         octet1_2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         labelOctet2Bit7 = new javax.swing.JLabel();
@@ -133,9 +133,9 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        octet1_2Description = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        octet1_2BitDescription = new javax.swing.JTextArea();
         octet3_4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         labelOctet4Bit7 = new javax.swing.JLabel();
@@ -176,9 +176,9 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        octet3_4Description = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
+        octet3_4BitDescription = new javax.swing.JTextArea();
         octet5 = new javax.swing.JPanel();
         octet5Bit5 = new javax.swing.JLabel();
         octet5Bit1 = new javax.swing.JLabel();
@@ -200,9 +200,9 @@ public class TelegramUI extends javax.swing.JFrame {
         labelOctet5Bit4 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea7 = new javax.swing.JTextArea();
+        octet5Description = new javax.swing.JTextArea();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea8 = new javax.swing.JTextArea();
+        octet5BitDescription = new javax.swing.JTextArea();
         octet6_7 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         labelOctet7Bit7 = new javax.swing.JLabel();
@@ -243,9 +243,9 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextArea9 = new javax.swing.JTextArea();
+        octet6_7Description = new javax.swing.JTextArea();
         jScrollPane10 = new javax.swing.JScrollPane();
-        jTextArea10 = new javax.swing.JTextArea();
+        octet6_7BitDescription = new javax.swing.JTextArea();
         octet8_n = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         labelBit80 = new javax.swing.JLabel();
@@ -286,9 +286,9 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
-        jTextArea11 = new javax.swing.JTextArea();
+        octet8_nDescription = new javax.swing.JTextArea();
         jScrollPane12 = new javax.swing.JScrollPane();
-        jTextArea12 = new javax.swing.JTextArea();
+        octet8_nBitDescription = new javax.swing.JTextArea();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -307,6 +307,12 @@ public class TelegramUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         labelTelegramString.setText("Telegram:");
+
+        telegramString.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                updateTelegramInfo(evt);
+            }
+        });
 
         crc.setBackground(new java.awt.Color(102, 255, 102));
         crc.setText("OK");
@@ -356,7 +362,7 @@ public class TelegramUI extends javax.swing.JFrame {
         octet0Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
         octet0Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        jLabel29.setFont(new java.awt.Font("Lucida Grande", 0, 8));
+        jLabel29.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jLabel29.setText("LSB");
 
         labelOctet0Bit6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -366,7 +372,7 @@ public class TelegramUI extends javax.swing.JFrame {
         labelOctet0Bit6.setMinimumSize(new java.awt.Dimension(17, 17));
         labelOctet0Bit6.setPreferredSize(new java.awt.Dimension(17, 17));
 
-        jLabel31.setFont(new java.awt.Font("Lucida Grande", 0, 8));
+        jLabel31.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jLabel31.setText("MSB");
 
         labelOctet0Bit7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -436,14 +442,14 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel7.setText("Bit 7-0");
         jLabel7.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        octet0Description.setColumns(20);
+        octet0Description.setRows(5);
+        jScrollPane1.setViewportView(octet0Description);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("1");
-        jScrollPane2.setViewportView(jTextArea2);
+        octet0BitDescription.setColumns(20);
+        octet0BitDescription.setRows(5);
+        octet0BitDescription.setText("1");
+        jScrollPane2.setViewportView(octet0BitDescription);
 
         javax.swing.GroupLayout octet0Layout = new javax.swing.GroupLayout(octet0);
         octet0.setLayout(octet0Layout);
@@ -778,14 +784,14 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel10.setText("Bit 7-0");
         jLabel10.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        octet1_2Description.setColumns(20);
+        octet1_2Description.setRows(5);
+        jScrollPane3.setViewportView(octet1_2Description);
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jTextArea4.setText("2");
-        jScrollPane4.setViewportView(jTextArea4);
+        octet1_2BitDescription.setColumns(20);
+        octet1_2BitDescription.setRows(5);
+        octet1_2BitDescription.setText("2");
+        jScrollPane4.setViewportView(octet1_2BitDescription);
 
         javax.swing.GroupLayout octet1_2Layout = new javax.swing.GroupLayout(octet1_2);
         octet1_2.setLayout(octet1_2Layout);
@@ -1188,14 +1194,14 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel13.setText("Bit 7-0");
         jLabel13.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jScrollPane5.setViewportView(jTextArea5);
+        octet3_4Description.setColumns(20);
+        octet3_4Description.setRows(5);
+        jScrollPane5.setViewportView(octet3_4Description);
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setRows(5);
-        jTextArea6.setText("3");
-        jScrollPane6.setViewportView(jTextArea6);
+        octet3_4BitDescription.setColumns(20);
+        octet3_4BitDescription.setRows(5);
+        octet3_4BitDescription.setText("3");
+        jScrollPane6.setViewportView(octet3_4BitDescription);
 
         javax.swing.GroupLayout octet3_4Layout = new javax.swing.GroupLayout(octet3_4);
         octet3_4.setLayout(octet3_4Layout);
@@ -1476,14 +1482,14 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel14.setText("Bit 7-0");
         jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
-        jTextArea7.setColumns(20);
-        jTextArea7.setRows(5);
-        jScrollPane7.setViewportView(jTextArea7);
+        octet5Description.setColumns(20);
+        octet5Description.setRows(5);
+        jScrollPane7.setViewportView(octet5Description);
 
-        jTextArea8.setColumns(20);
-        jTextArea8.setRows(5);
-        jTextArea8.setText("1");
-        jScrollPane8.setViewportView(jTextArea8);
+        octet5BitDescription.setColumns(20);
+        octet5BitDescription.setRows(5);
+        octet5BitDescription.setText("1");
+        jScrollPane8.setViewportView(octet5BitDescription);
 
         javax.swing.GroupLayout octet5Layout = new javax.swing.GroupLayout(octet5);
         octet5.setLayout(octet5Layout);
@@ -1818,14 +1824,14 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel24.setText("Bit 7-0");
         jLabel24.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
-        jTextArea9.setColumns(20);
-        jTextArea9.setRows(5);
-        jScrollPane9.setViewportView(jTextArea9);
+        octet6_7Description.setColumns(20);
+        octet6_7Description.setRows(5);
+        jScrollPane9.setViewportView(octet6_7Description);
 
-        jTextArea10.setColumns(20);
-        jTextArea10.setRows(5);
-        jTextArea10.setText("5");
-        jScrollPane10.setViewportView(jTextArea10);
+        octet6_7BitDescription.setColumns(20);
+        octet6_7BitDescription.setRows(5);
+        octet6_7BitDescription.setText("5");
+        jScrollPane10.setViewportView(octet6_7BitDescription);
 
         javax.swing.GroupLayout octet6_7Layout = new javax.swing.GroupLayout(octet6_7);
         octet6_7.setLayout(octet6_7Layout);
@@ -2228,14 +2234,14 @@ public class TelegramUI extends javax.swing.JFrame {
         jLabel28.setText("Bit 7-0");
         jLabel28.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
-        jTextArea11.setColumns(20);
-        jTextArea11.setRows(5);
-        jScrollPane11.setViewportView(jTextArea11);
+        octet8_nDescription.setColumns(20);
+        octet8_nDescription.setRows(5);
+        jScrollPane11.setViewportView(octet8_nDescription);
 
-        jTextArea12.setColumns(20);
-        jTextArea12.setRows(5);
-        jTextArea12.setText("6");
-        jScrollPane12.setViewportView(jTextArea12);
+        octet8_nBitDescription.setColumns(20);
+        octet8_nBitDescription.setRows(5);
+        octet8_nBitDescription.setText("6");
+        jScrollPane12.setViewportView(octet8_nBitDescription);
 
         javax.swing.GroupLayout octet8_nLayout = new javax.swing.GroupLayout(octet8_n);
         octet8_n.setLayout(octet8_nLayout);
@@ -2482,6 +2488,10 @@ public class TelegramUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
+    private void updateTelegramInfo(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_updateTelegramInfo
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateTelegramInfo
+
     /**
     * @param args the command line arguments
     */
@@ -2562,18 +2572,6 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea10;
-    private javax.swing.JTextArea jTextArea11;
-    private javax.swing.JTextArea jTextArea12;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextArea jTextArea7;
-    private javax.swing.JTextArea jTextArea8;
-    private javax.swing.JTextArea jTextArea9;
     private javax.swing.JTabbedPane jtab1;
     private javax.swing.JLabel labelBit80;
     private javax.swing.JLabel labelBit81;
@@ -2667,6 +2665,8 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel octet0Bit5;
     private javax.swing.JLabel octet0Bit6;
     private javax.swing.JLabel octet0Bit7;
+    private javax.swing.JTextArea octet0BitDescription;
+    private javax.swing.JTextArea octet0Description;
     private javax.swing.JLabel octet1Bit0;
     private javax.swing.JLabel octet1Bit1;
     private javax.swing.JLabel octet1Bit2;
@@ -2676,6 +2676,8 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel octet1Bit6;
     private javax.swing.JLabel octet1Bit7;
     private javax.swing.JPanel octet1_2;
+    private javax.swing.JTextArea octet1_2BitDescription;
+    private javax.swing.JTextArea octet1_2Description;
     private javax.swing.JLabel octet2Bit0;
     private javax.swing.JLabel octet2Bit1;
     private javax.swing.JLabel octet2Bit2;
@@ -2693,6 +2695,8 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel octet3Bit6;
     private javax.swing.JLabel octet3Bit7;
     private javax.swing.JPanel octet3_4;
+    private javax.swing.JTextArea octet3_4BitDescription;
+    private javax.swing.JTextArea octet3_4Description;
     private javax.swing.JLabel octet4Bit0;
     private javax.swing.JLabel octet4Bit1;
     private javax.swing.JLabel octet4Bit2;
@@ -2710,6 +2714,8 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel octet5Bit5;
     private javax.swing.JLabel octet5Bit6;
     private javax.swing.JLabel octet5Bit7;
+    private javax.swing.JTextArea octet5BitDescription;
+    private javax.swing.JTextArea octet5Description;
     private javax.swing.JLabel octet6Bit0;
     private javax.swing.JLabel octet6Bit1;
     private javax.swing.JLabel octet6Bit2;
@@ -2719,6 +2725,8 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel octet6Bit6;
     private javax.swing.JLabel octet6Bit7;
     private javax.swing.JPanel octet6_7;
+    private javax.swing.JTextArea octet6_7BitDescription;
+    private javax.swing.JTextArea octet6_7Description;
     private javax.swing.JLabel octet7Bit0;
     private javax.swing.JLabel octet7Bit1;
     private javax.swing.JLabel octet7Bit2;
@@ -2728,6 +2736,8 @@ public class TelegramUI extends javax.swing.JFrame {
     private javax.swing.JLabel octet7Bit6;
     private javax.swing.JLabel octet7Bit7;
     private javax.swing.JPanel octet8_n;
+    private javax.swing.JTextArea octet8_nBitDescription;
+    private javax.swing.JTextArea octet8_nDescription;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
