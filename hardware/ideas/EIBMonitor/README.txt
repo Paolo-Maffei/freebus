@@ -35,12 +35,19 @@ Embedded oder Standaloneversion für den Mobilen Einsatz
 Variation mit LCD ode LED Display
 
 Status:
+TODO
+- stabilisierug der RS232 Übertragungspegel
+- Batterieart und Batteriehaltuerung auswählen (wahrscheinlich 9V Block)
+- Stromverbrauch messen und ggf. minimieren
+- Prüfen ob der LPC genug Rechneleistung hat
+- EIB Parser und Syntaktische aufbereitung
+- Umsetzung EIB in ESC Sequenzen für die Displayansteuerung
+- Gehäusesuche
+- Layout und Routing der ersten Version (abh. vom Gehäuse)
+
+26.12.2009
+v 0.02 Schaltung komplettiert, Spannungsversorgung fertig
+
 19.12.2009
 v 0.01	Prototypenlayout Grundschaltung
-					TODO
-					- stabilisierug der RS232 Übertragungspegel
-					- Autonome Spannungsversorgung
-					- Prüfen ob der LPC genug Rechneleistung hat
-					- Umsetzung EIB in ESC Sequenzen für die Displayansteuerung
-					- Gehäusesuche
 					
