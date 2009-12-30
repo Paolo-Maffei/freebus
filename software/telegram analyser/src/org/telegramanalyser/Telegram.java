@@ -63,6 +63,27 @@ public class Telegram {
 		public int get() {
 			return ctrl & 0xff;
 		}
+		public String getDefaultBit(int i) {
+			switch (i) {
+			case 7:
+				return "l";
+			case 6:
+				return "0";
+			case 5:
+				return "r";
+			case 4:
+				return "1";
+			case 3:
+				return "p";
+			case 2:
+				return "p";
+			case 1:
+				return "0";
+			case 0:
+				return "0";
+			}
+			return null;
+		}
 	}
 	
 	class SrcAdr {
