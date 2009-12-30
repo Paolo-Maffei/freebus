@@ -84,6 +84,16 @@ public class Telegram {
 			}
 			return null;
 		}
+
+		public String getBit(int i) {
+			return Integer.toString((ctrl >> i) & 0x1);
+		}
+
+		public String getBitDescription() {
+			String description = new String();
+			description="l=length (0=short frame, 1=long frame with more then 15 octets\nr=repeat flag\npp=priority";
+			return description;
+		}
 	}
 	
 	class SrcAdr {
@@ -97,6 +107,54 @@ public class Telegram {
 		}
 		public void set(int adr) {
 			src = adr & 0xFFFF;
+		}
+
+		public String getDefaultBit(int i) {
+			switch (i) {
+			case 15:
+				return "h";
+			case 14:
+				return "h";
+			case 13:
+				return "h";
+			case 12:
+				return "h";
+			case 11:
+				return "m";
+			case 10:
+				return "m";
+			case 9:
+				return "m";
+			case 8:
+				return "m";
+			case 7:
+				return "l";
+			case 6:
+				return "l";
+			case 5:
+				return "l";
+			case 4:
+				return "l";
+			case 3:
+				return "l";
+			case 2:
+				return "l";
+			case 1:
+				return "l";
+			case 0:
+				return "l";
+			}
+			return null;
+		}
+
+		public String getBit(int i) {
+			return Integer.toString((src >> i) & 0x1);
+		}
+
+		public String getBitDescription() {
+			String description = new String();
+			description="h=Area Address (first part of Subnetwork Address)\nm=Line Adress (second part of Subnetwork Address)\nl=Device Adress";
+			return description;
 		}
 
 	}
@@ -113,6 +171,59 @@ public class Telegram {
 		public void set(int adr) {
 			dst = adr & 0xFFFF;
 		}
+
+		public String getDefaultBit(int i) {
+			switch (i) {
+			case 15:
+				if(npciByte.getBit(7).equals("1")){
+					return "0";
+				}else if(npciByte.getBit(7).equals("0")){
+					return "h";
+				}
+				return "e";
+			case 14:
+				return "h";
+			case 13:
+				return "h";
+			case 12:
+				return "h";
+			case 11:
+				return "m";
+			case 10:
+				return "m";
+			case 9:
+				return "m";
+			case 8:
+				return "m";
+			case 7:
+				return "l";
+			case 6:
+				return "l";
+			case 5:
+				return "l";
+			case 4:
+				return "l";
+			case 3:
+				return "l";
+			case 2:
+				return "l";
+			case 1:
+				return "l";
+			case 0:
+				return "l";
+			}
+			return null;
+		}
+
+		public String getBit(int i) {
+			return Integer.toString((dst >> i) & 0x1);
+		}
+
+		public String getBitDescription() {
+			String description = new String();
+			description="h=Area Address (first part of Subnetwork Address)\nm=Line Adress (second part of Subnetwork Address)\nl=Device Adress";
+			return description;
+		}
 	
 	}
 	
@@ -124,22 +235,50 @@ public class Telegram {
 		public void set(int i) {
 			npci = i & 0xFF;
 		}
+		public String getDefaultBit(int i) {
+			switch (i) {
+			case 7:
+				return "d";
+			case 6:
+				return "n";
+			case 5:
+				return "n";
+			case 4:
+				return "n";
+			case 3:
+				return "l";
+			case 2:
+				return "l";
+			case 1:
+				return "l";
+			case 0:
+				return "l";
+			}
+			return null;
+		}
+		public String getBit(int i) {
+			return Integer.toString((npci >> i) & 0x1);
+		}
+		public String getBitDescription() {
+			String description = new String();
+			description="d=destination address flag (DAF, 0=unicast, 1=multicast)\nn=Network Control Field\nl=Length";
+			return description;
+		}
 	}
 	
 	class TpciApci {
-		protected int tpci;
-		protected int apci;
+		protected int tpciApci;
 
 		public int getTpci() {
-			return tpci & 0xFF;
+			return (tpciApci >> 8) & 0xFC;
 		}
 		public void setTpci(int i) {
-			tpci = tpci & (~0xFC);
-			tpci = tpci | (i & 0xFC);
+			tpciApci &= (~0xFC00);
+			tpciApci |= ((i & 0xFC) << 8);
 		}
 
 		public int getApci() {
-			return ((tpci & 0x3) << 8) | (apci & 0xFF);
+			return tpciApci & 0x3FF;
 		}
 
 		/**
@@ -147,9 +286,55 @@ public class Telegram {
 		 * @param i 16-bit value of the APCI (combination of TPCI and APCI)
 		 */
 		public void setApci(int i) {
-			tpci = tpci & (~0x3);
-			tpci = tpci | ((i >> 8) & 0x3);
-			apci = i & 0xFF;
+			tpciApci &= (~0x3FF);
+			tpciApci |= (i & 0x3FF);
+		}
+		
+		public String getDefaultBit(int i) {
+			switch (i) {
+			case 15:
+				return "t";
+			case 14:
+				return "t";
+			case 13:
+				return "t";
+			case 12:
+				return "t";
+			case 11:
+				return "t";
+			case 10:
+				return "t";
+			case 9:
+				return "a";
+			case 8:
+				return "a";
+			case 7:
+				return "d";
+			case 6:
+				return "d";
+			case 5:
+				return "d";
+			case 4:
+				return "d";
+			case 3:
+				return "d";
+			case 2:
+				return "d";
+			case 1:
+				return "d";
+			case 0:
+				return "d";
+			}
+			return null;
+		}
+		
+		public String getBit(int i) {
+			return Integer.toString((tpciApci >> i) & 0x1);
+		}
+		public String getBitDescription() {
+			String description = new String();
+			description="t=TPCI Bit\na=APCI Bit\nd=APCI/Data Bit";
+			return description;
 		}
 	}
 	

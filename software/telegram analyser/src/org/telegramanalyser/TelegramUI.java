@@ -10,6 +10,8 @@
  */
 
 package org.telegramanalyser;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.JComponent;
@@ -192,10 +194,10 @@ public class TelegramUI extends javax.swing.JFrame {
 
         labelTelegramString.setText("Telegram:");
 
-        telegramString.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                updateTelegramInfo(evt);
-            }
+        telegramString.addKeyListener(new KeyAdapter() {
+        	public void keyReleased(KeyEvent evt) {
+        		telegramStringKeyReleased(evt);
+        	}
         });
 
         crc.setBackground(new java.awt.Color(102, 255, 102));
@@ -1081,6 +1083,7 @@ public class TelegramUI extends javax.swing.JFrame {
         octet3_4Description.setColumns(20);
         octet3_4Description.setRows(5);
         jScrollPane5.setViewportView(octet3_4Description);
+        octet3_4Description.setPreferredSize(new java.awt.Dimension(839, 333));
 
         octet3_4BitDescription.setColumns(20);
         octet3_4BitDescription.setRows(5);
@@ -2372,18 +2375,53 @@ public class TelegramUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
-    private void initDefaultGUI() {
-		// TODO Auto-generated method stub
-		Telegram telegram = new Telegram();
-		for (int i = 0; i <= 7; i++) {
-			labelOctet0[i].setText(telegram.ctrlByte.getDefaultBit(i));
+	private void telegramStringKeyReleased(KeyEvent evt) {
+		//System.out.println("telegramString.keyReleased, event="+evt);
+		if(evt.getKeyChar() == KeyEvent.VK_ENTER) {
+			telegram = new Telegram(telegramString.getText());
+			updateDescriptionFields();
+			updateBitFields();
 		}
 		
+		//TODO add your code for telegramString.keyReleased
 	}
 
-    private void updateTelegramInfo(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_updateTelegramInfo
-        // TODO add your handling code here:
-    }//GEN-LAST:event_updateTelegramInfo
+	private void updateBitFields() {
+		for (int i = 0; i <= 7; i++) {
+			bitOctet0[i].setText(telegram.ctrlByte.getBit(i));
+			bitOctet1[i].setText(telegram.sourceAdress.getBit(i));
+			bitOctet2[i].setText(telegram.sourceAdress.getBit(i));
+			bitOctet3[i].setText(telegram.destAdress.getBit(i));
+			bitOctet4[i].setText(telegram.destAdress.getBit(i));
+			bitOctet5[i].setText(telegram.npciByte.getBit(i));
+			bitOctet6[i].setText(telegram.tpciApciByte.getBit(i));
+			bitOctet7[i].setText(telegram.tpciApciByte.getBit(i));
+			
+		}
+	}
+	private void updateDescriptionFields() {
+		for (int i = 0; i <= 7; i++) {
+			labelOctet0[i].setText(telegram.ctrlByte.getDefaultBit(i));
+			labelOctet1[i].setText(telegram.sourceAdress.getDefaultBit(i));
+			labelOctet2[i].setText(telegram.sourceAdress.getDefaultBit(i+8));
+			labelOctet3[i].setText(telegram.destAdress.getDefaultBit(i));
+			labelOctet4[i].setText(telegram.destAdress.getDefaultBit(i+8));
+			labelOctet5[i].setText(telegram.npciByte.getDefaultBit(i));
+			labelOctet6[i].setText(telegram.tpciApciByte.getDefaultBit(i));
+			labelOctet7[i].setText(telegram.tpciApciByte.getDefaultBit(i+8));
+		}
+		octet0BitDescription.setText(telegram.ctrlByte.getBitDescription());
+		octet1_2BitDescription.setText(telegram.sourceAdress.getBitDescription());
+		octet3_4BitDescription.setText(telegram.destAdress.getBitDescription());
+		octet5BitDescription.setText(telegram.npciByte.getBitDescription());
+		octet6_7BitDescription.setText(telegram.tpciApciByte.getBitDescription());
+	}
+
+    private void initDefaultGUI() {
+		// TODO Auto-generated method stub
+		telegram = new Telegram();
+		updateDescriptionFields();
+	}
 
     /**
     * @param args the command line arguments
@@ -2395,7 +2433,7 @@ public class TelegramUI extends javax.swing.JFrame {
             }
         });
     }
-
+    	
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JLabel[] bitOctet9;
