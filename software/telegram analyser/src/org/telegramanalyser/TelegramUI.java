@@ -10,6 +10,8 @@
  */
 
 package org.telegramanalyser;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -2322,6 +2324,11 @@ public class TelegramUI extends javax.swing.JFrame {
 
         aboutMenuItem.setText("About");
         helpMenu.add(aboutMenuItem);
+        aboutMenuItem.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent evt) {
+        		aboutMenuItemActionPerformed(evt);
+        	}
+        });
 
         menuBar.add(helpMenu);
 
@@ -2360,7 +2367,8 @@ public class TelegramUI extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>                        
 
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
         System.exit(0);
@@ -2373,8 +2381,6 @@ public class TelegramUI extends javax.swing.JFrame {
 			updateDescriptionFields();
 			updateBitFields();
 		}
-		
-		//TODO add your code for telegramString.keyReleased
 	}
 
 	private void updateBitFields() {
@@ -2416,7 +2422,6 @@ public class TelegramUI extends javax.swing.JFrame {
 	}
 
     private void initDefaultGUI() {
-		// TODO Auto-generated method stub
 		telegram = new Telegram();
 		updateDescriptionFields();
 	}
@@ -2431,7 +2436,12 @@ public class TelegramUI extends javax.swing.JFrame {
             }
         });
     }
-    	
+    
+    private void aboutMenuItemActionPerformed(ActionEvent evt) {
+        AboutDialog dialog = new AboutDialog(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JLabel[] bitOctet9;
