@@ -68,7 +68,8 @@ public class AboutDialog extends javax.swing.JDialog {
         jLabelAuthor.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelDate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelDate.setText("Date: $LastChangedDate$");
+        final String dateString = new String("$LastChangedDate$");
+        jLabelDate.setText(dateString.replace("$", ""));
         jLabelDate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jButtonClose.setText("Close");
@@ -80,11 +81,12 @@ public class AboutDialog extends javax.swing.JDialog {
         });
 
         jLabelVersion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelVersion.setText("Revision: $Rev$");
+        final String revString = new String("$Rev$");
+        jLabelVersion.setText(revString.replace("$", ""));
         jLabelVersion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabelExtra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelExtra.setText("Extra");
+        jLabelExtra.setText("");
         jLabelExtra.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,23 +140,7 @@ public class AboutDialog extends javax.swing.JDialog {
         this.setVisible(false);
     }//GEN-LAST:event_jButtonCloseActionPerformed
 
-    /**
-    * @param args the command line arguments
-    */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                AboutDialog dialog = new AboutDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
-
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonClose;
     private javax.swing.JLabel jLabelAuthor;
