@@ -14,7 +14,6 @@ import javax.swing.SwingConstants;
 
 import javax.swing.WindowConstants;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.LineBorder;
 import javax.swing.SwingUtilities;
 
 
@@ -31,6 +30,10 @@ import javax.swing.SwingUtilities;
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
 public class mainFrame extends javax.swing.JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4188163317137143564L;
 	private JLabel hexStringLabel;
 	private JTextField hexStringTextField;
 	private JLabel jLabel53;

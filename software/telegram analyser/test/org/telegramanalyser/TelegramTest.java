@@ -2,10 +2,9 @@ package org.telegramanalyser;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assume;
 import org.junit.Test;
 
-
+// BC 11 1C 08 08 E1 00 80
 public class TelegramTest {
 	@Test public void testEmptyTelegram() {
 		Telegram t = new Telegram();
@@ -107,7 +106,7 @@ public class TelegramTest {
 		assertEquals("h", t.destAdress.getDefaultBit(14));
 		assertEquals("h", t.destAdress.getDefaultBit(13));
 		assertEquals("h", t.destAdress.getDefaultBit(12));
-		assertEquals("m", t.destAdress.getDefaultBit(11));
+		assertEquals("h", t.destAdress.getDefaultBit(11));
 		assertEquals("m", t.destAdress.getDefaultBit(10));
 		assertEquals("m", t.destAdress.getDefaultBit(9));
 		assertEquals("m", t.destAdress.getDefaultBit(8));
@@ -195,22 +194,22 @@ public class TelegramTest {
 	
 	@Test public void testTpciApciBits() {
 		Telegram t = new Telegram("2E 11 1C 09 01 E1 00 80 27");
-		assertEquals("t", t.tpciApciByte.getDefaultBit(15));
-		assertEquals("t", t.tpciApciByte.getDefaultBit(14));
-		assertEquals("t", t.tpciApciByte.getDefaultBit(13));
-		assertEquals("t", t.tpciApciByte.getDefaultBit(12));
-		assertEquals("t", t.tpciApciByte.getDefaultBit(11));
-		assertEquals("t", t.tpciApciByte.getDefaultBit(10));
-		assertEquals("a", t.tpciApciByte.getDefaultBit(9));
-		assertEquals("a", t.tpciApciByte.getDefaultBit(8));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(7));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(6));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(5));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(4));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(3));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(2));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(2));
-		assertEquals("d", t.tpciApciByte.getDefaultBit(0));
+		assertEquals("0", t.tpciApciByte.getDefaultBit(15));
+		assertEquals("0", t.tpciApciByte.getDefaultBit(14));
+		assertEquals("X", t.tpciApciByte.getDefaultBit(13));
+		assertEquals("X", t.tpciApciByte.getDefaultBit(12));
+		assertEquals("X", t.tpciApciByte.getDefaultBit(11));
+		assertEquals("X", t.tpciApciByte.getDefaultBit(10));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(9));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(8));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(7));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(6));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(5));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(4));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(3));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(2));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(2));
+		assertEquals("A", t.tpciApciByte.getDefaultBit(0));
 		assertEquals("0", t.tpciApciByte.getBit(15));
 		assertEquals("0", t.tpciApciByte.getBit(14));
 		assertEquals("0", t.tpciApciByte.getBit(13));
@@ -230,16 +229,16 @@ public class TelegramTest {
 	}
 	
 	@Test public void testBitDescriptions() {
-		Telegram t = new Telegram("2E 11 1C 09 01 E1 00 80 27");
-		assertEquals("l=length (0=short frame, 1=long frame with more then 15 octets\nr=repeat flag\npp=priority", 
+		Telegram t = new Telegram("BC 11 1C 08 08 E1 00 80");
+		assertEquals("l=Length\nr=Repeat Flag\np=Priority", 
 				t.ctrlByte.getBitDescription());
 		assertEquals("h=Area Address (first part of Subnetwork Address)\nm=Line Adress (second part of Subnetwork Address)\nl=Device Adress", 
 				t.sourceAdress.getBitDescription());
 		assertEquals("h=Area Address (first part of Subnetwork Address)\nm=Line Adress (second part of Subnetwork Address)\nl=Device Adress",
 				t.destAdress.getBitDescription());
-		assertEquals("d=destination address flag (DAF, 0=unicast, 1=multicast)\nn=Network Control Field\nl=Length",
+		assertEquals("d=destination address flag (DAF)\nn=Network Control Field\nl=Length",
 				t.npciByte.getBitDescription());
-		assertEquals("t=TPCI Bit\na=APCI Bit\nd=APCI/Data Bit", 
+		assertEquals("X=don't Care\nA=APCI\n", 
 				t.tpciApciByte.getBitDescription());
 	}
 	
