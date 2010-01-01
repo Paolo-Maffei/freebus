@@ -13,6 +13,7 @@ public class Telegram {
 	protected Npci npciByte;
 	protected TpciApci tpciApciByte;
 	protected Crc crcByte;
+	protected Data dataBytes;
 	
 	public enum FrameType {
 		L_DATA_FRAME,
@@ -118,12 +119,17 @@ public class Telegram {
 				return false;
 		}
 		
-		public String getApciValue(int apci) {
+		public String getApciValueString(int apci) {
 			if(apci != 0)
 				return Integer.toString(apci & valueMask);
 			return "";
 		}
-		
+
+		public int getApciValue(int apci) {
+			if(apci != 0)
+				return (apci & valueMask);
+			return 0;
+		}
 	}
 
 	public Telegram() {
@@ -132,6 +138,7 @@ public class Telegram {
 		destAdress = this.new DestAdr();
 		npciByte = this.new Npci();
 		tpciApciByte = this.new TpciApci();
+		dataBytes = this.new Data();
 		crcByte = this.new Crc();
 	}
 
@@ -156,7 +163,9 @@ public class Telegram {
 		if(length > 0){
 			tpciApciByte.setApci(telegram[7]);
 			
-			// @TODO handle Length bigger then 1
+			if(length > 1) {
+				dataBytes.set(telegram);
+			}
 		}
 		crcByte.set(telegram[7+length]);
 		crcByte.checkCRC(telegram);
@@ -638,7 +647,8 @@ public class Telegram {
 		protected int tpciApci;
 		protected DataType dataType;
 		protected APCIType apciType;
-		protected String value;
+		protected int value;
+		protected String valueString;
 		
 		public int getTpci() {
 			return (tpciApci >> 8) & 0xFC;
@@ -677,6 +687,7 @@ public class Telegram {
 				
 				if(a.searchAPCI(tpciApci)) {
 					apciType=a;
+					valueString = a.getApciValueString(tpciApci);
 					value = a.getApciValue(tpciApci);
 					//System.out.println("Found");
 					break;
@@ -773,12 +784,20 @@ public class Telegram {
 			case 4:
 				return "A";
 			case 3:
+				if(npciByte.getOctetLength()>1)
+					return "X";
 				return "A";
 			case 2:
+				if(npciByte.getOctetLength()>1)
+					return "X";
 				return "A";
 			case 1:
+				if(npciByte.getOctetLength()>1)
+					return "X";
 				return "A";
 			case 0:
+				if(npciByte.getOctetLength()>1)
+					return "X";
 				return "A";
 			}
 			return null;
@@ -844,10 +863,64 @@ public class Telegram {
 			description += "APCI Type\t\t=\t";
 			description += apciType + "\n";
 			
-			description += "Value\t\t\t=\t";
-			description += value + "\n";
+			if(npciByte.getOctetLength()<=1) {
+				description += "Value\t\t\t=\t";
+				description += valueString + " (0x" + Integer.toHexString(value).toUpperCase() + ")\n";
+			}
 
 			return description;
+		}
+	}
+	
+	class Data {
+		protected int data[];
+		
+		public Data() {
+			data = new int[0];
+		}
+		public void set(int[] telegram) {
+			int length=npciByte.getOctetLength()-1;
+			data = new int[length];
+			for (int i = 0; i < length; i++) {
+				data[i] = telegram[7+length-i];
+			}
+		}
+
+		public int[] get() {
+			return data;
+		}
+		
+		public String getBitDescription() {
+			if(data.length > 0)
+				return "D=Data\n";
+			return null;
+		}
+		
+		public String getBit(int position) {
+			if(data.length > 0 && (position/8) < data.length)
+				return Integer.toString((data[position/8] >> (position%8)) & 0x1);
+			else
+				return "";
+		}
+		
+		public String getDescription() {
+			String description = new String();
+			String hexString = new String("");
+			
+			description = "Value \t=\t";
+			for (int i = data.length-1; i >= 0; i--) {
+				description += Integer.toString(data[i]) + " ";
+				hexString += (Integer.toHexString(data[i]).toUpperCase().length()==1?"0"+Integer.toHexString(data[i]).toUpperCase():Integer.toHexString(data[i]).toUpperCase()) + " ";
+			}
+			description += "(0x" + hexString +")\n";
+			return description;
+		}
+
+		public String getDefaultBit(int position) {
+			if(data.length > 0 && (position/8) < data.length)
+				return "D";
+			else
+				return null;
 		}
 	}
 	

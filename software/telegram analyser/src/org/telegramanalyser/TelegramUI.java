@@ -1458,7 +1458,7 @@ public class TelegramUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jtab1.addTab("Octet 5: Length", octet5);
+        jtab1.addTab("Octet 5: NPCI", octet5);
 
         jLabel21.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel21.setText("MSB");
@@ -1868,7 +1868,7 @@ public class TelegramUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jtab1.addTab("Octet 6-7: TPDU/APCI", octet6_7);
+        jtab1.addTab("Octet 6-7: TPCI/APCI", octet6_7);
 
         jLabel25.setFont(new java.awt.Font("Lucida Grande", 0, 8));
         jLabel25.setText("MSB");
@@ -2394,6 +2394,8 @@ public class TelegramUI extends javax.swing.JFrame {
 			bitOctet5[i].setText(telegram.npciByte.getBit(i));
 			bitOctet6[i].setText(telegram.tpciApciByte.getBit(i));
 			bitOctet7[i].setText(telegram.tpciApciByte.getBit(i+8));
+			bitOctet8[i].setText(telegram.dataBytes.getBit(i));
+			bitOctet9[i].setText(telegram.dataBytes.getBit(i+8));
 			
 		}
 	}
@@ -2407,18 +2409,23 @@ public class TelegramUI extends javax.swing.JFrame {
 			labelOctet5[i].setText(telegram.npciByte.getDefaultBit(i));
 			labelOctet6[i].setText(telegram.tpciApciByte.getDefaultBit(i));
 			labelOctet7[i].setText(telegram.tpciApciByte.getDefaultBit(i+8));
+			labelOctet8[i].setText(telegram.dataBytes.getDefaultBit(i));
+			labelOctet9[i].setText(telegram.dataBytes.getDefaultBit(i+8));
 		}
 		octet0BitDescription.setText(telegram.ctrlByte.getBitDescription());
 		octet1_2BitDescription.setText(telegram.sourceAdress.getBitDescription());
 		octet3_4BitDescription.setText(telegram.destAdress.getBitDescription());
 		octet5BitDescription.setText(telegram.npciByte.getBitDescription());
 		octet6_7BitDescription.setText(telegram.tpciApciByte.getBitDescription());
+		octet8_nBitDescription.setText(telegram.dataBytes.getBitDescription());
 		
 		octet0Description.setText(telegram.ctrlByte.getDescription());
 		octet1_2Description.setText(telegram.sourceAdress.getDescription());
 		octet3_4Description.setText(telegram.destAdress.getDescription());
 		octet5Description.setText(telegram.npciByte.getDescription());
 		octet6_7Description.setText(telegram.tpciApciByte.getDescription());
+		octet8_nDescription.setText(telegram.dataBytes.getDescription());
+		
 		if(telegram.crcByte.checksumStatus) {
 			crc.setText("OK");
 	        crc.setBackground(new java.awt.Color(102, 255, 102));
