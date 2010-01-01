@@ -2419,7 +2419,14 @@ public class TelegramUI extends javax.swing.JFrame {
 		octet3_4Description.setText(telegram.destAdress.getDescription());
 		octet5Description.setText(telegram.npciByte.getDescription());
 		octet6_7Description.setText(telegram.tpciApciByte.getDescription());
-		
+		if(telegram.crcByte.checksumStatus) {
+			crc.setText("OK");
+	        crc.setBackground(new java.awt.Color(102, 255, 102));
+		} else {
+			crc.setText("NOK");
+	        crc.setBackground(new java.awt.Color(255, 0, 0));
+		}
+			
 	}
 
     private void initDefaultGUI() {

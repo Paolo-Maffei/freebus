@@ -151,8 +151,15 @@ public class Telegram {
 		destAdress.set(telegram[3], telegram[4]);
 		npciByte.set(telegram[5]);
 		tpciApciByte.setTpci(telegram[6]);
-		tpciApciByte.setApci(telegram[7]);
-		crcByte.set(telegram[8]);
+		// new we check how many octets we receive
+		int length=npciByte.getOctetLength();
+		if(length > 0){
+			tpciApciByte.setApci(telegram[7]);
+			
+			// @TODO handle Length bigger then 1
+		}
+		crcByte.set(telegram[7+length]);
+		crcByte.checkCRC(telegram);
 	}
 
 	class Ctrl {
@@ -559,64 +566,71 @@ public class Telegram {
 			description += "\n";
 			
 			description += "Length Field\t\t\t=\t";
+			description += Integer.toString(getOctetLength());
+			
+			description += " Octet(s) after the Npci octet\n";
+			return description;
+		}
+
+		public int getOctetLength() {
+			int length=0;
 			if(ctrlByte.getBit(7).equals("1")) {
 				// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
-				description += (npci & 0x0F);
+				length = (npci & 0x0F);
 			} else if(ctrlByte.getBit(7).equals("0")) {
 				// 16, 17, 18, 19, 20, 22, 25, 29, 34, 40, 52, 64, 128, 192, 255, ESC
 				switch (npci & 0x0F) {
 				case 0:
-					description += "16";
+					length = 16;
 					break;
 				case 1:
-					description += "17";
+					length = 17;
 					break;
 				case 2:
-					description += "18";
+					length = 18;
 					break;
 				case 3:
-					description += "19";
+					length = 19;
 					break;
 				case 4:
-					description += "20";
+					length = 20;
 					break;
 				case 5:
-					description += "22";
+					length = 22;
 					break;
 				case 6:
-					description += "25";
+					length = 25;
 					break;
 				case 7:
-					description += "29";
+					length = 29;
 					break;
 				case 8:
-					description += "34";
+					length = 34;
 					break;
 				case 9:
-					description += "40";
+					length = 40;
 					break;
 				case 10:
-					description += "52";
+					length = 52;
 					break;
 				case 11:
-					description += "64";
+					length = 64;
 					break;
 				case 12:
-					description += "128";
+					length = 128;
 					break;
 				case 13:
-					description += "192";
+					length = 192;
 					break;
 				case 14:
-					description += "255";
+					length = 255;
 					break;
 				case 15:
-					description += "ESC";
+					//reserved for future use: length += "ESC";
 					break;
 				}
 			}
-			description += " Octet(s) after the Npci octet\n";
-			return description;
+			return length;
 		}
 	}
 	
@@ -839,8 +853,23 @@ public class Telegram {
 	
 	class Crc {
 		protected int crc;
+		protected boolean checksumStatus;
+		
 		public void set(int i) {
 			crc = i & 0xFF;
+		}
+		public void checkCRC(int[] telegram) {
+			int checksum=telegram[0];
+			int length = npciByte.getOctetLength();
+			for (int i = 1; i < 7+length; i++) {
+				checksum = checksum ^ telegram[i];
+				
+			}
+			if(((~checksum) & 0xFF) == crc) {
+				checksumStatus = true;
+			} else {
+				checksumStatus = false;
+			}
 		}
 		public int get() {
 			return crc & 0xFF;
