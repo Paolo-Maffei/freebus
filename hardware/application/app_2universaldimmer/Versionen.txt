@@ -119,8 +119,40 @@ V1.0         9.11.2009
 	+ 1,4 Sicherungen
 	+ 1,3 R1, R101   (geändert)
 	+ 1,0 SV1 (geändert)
-	
 
+aus V1.0 gewonnene Erkenntnisse:
+- I-Signal ist unbrauchbar da nicht jeder Nulldurchgang detektiert werden kann,
+  nur wenn Dimmer auf voller Helligkeit ist
+
+
+V1.1         4.1.2010
+----         
+- Die Widerstände  R6,R12,R15, R106,R112,R115 auf 20k erhöht
+- Netzteil um -12V erweitert
+- Operationverstärker an -12 angeschlossen
+  --> U-Signal ist jetzt symmetrisch
+- Neue Erzeugung des I-Signals: liefert jetzt Pulse bei Stromnulldurchgang (100Hz)
+  Der Verstärkungsfaktor des OPV wurde mit 1500 festgelegt, damit sind die Impulsbreiten bei
+  15Watt => 2700us      50Watt => 680us     200Watt => 120us  (gemessen)
+  ist die Verstärkung größer, so werden bei großen Leistungen keine Pulse mehr erzeugt
+  ist die Verstärkung kleiner, so werden bei kleinen Leistungen die Pulse zu lang, so
+  dass der Stromnulldurchgang nicht mehr sauber erkannt werden kann.
+  Wünschenswert wäre eine nichtlineare Verstärkung, die kleine Signale mehr verstärkt als große
+
+! Routing ist noch nicht abgeschlossen, es wird sehr eng!
+  Folgende Alternativen sind möglich:
+	1. Top-Layer einführen
+	2. Sicherungen weglassen
+	3. Gehäuse eine Stufe größer wählen
+
+
+ToDo
+----
+o evtl. Überstromsensor muss so geändert werden, dass im Normalbetrieb die LED des Optokopplers
+  nicht angesteuert ist --> Stromersparnis
+o evtl. die Ansteuerung so verändern, dass nicht 22k auf Masse geleitet wird, da sonst
+  0.5mA Verlust
+o Wünschenswert wäre eine nichtlineare Verstärkung, die kleine Signale mehr verstärkt als große
 
 
 ToDo
