@@ -64,7 +64,15 @@ installPackages()
         exit 1
     fi
     echo -n Install uclibc++...
-    if $INSTALL -V0 install uclibcxx; then
+    if $INSTALL list | grep uclibcxx 2>&1 /dev/null; then
+        UCLIBCXX=uclibcxx
+    elif $INSTALL list | grep uclibc++ 2>&1 /dev/null; then
+        UCLIBCXX=uclibc++
+    else
+        echo " failed, uclibc++ not found in package list."
+        exit 1
+    fi
+    if $INSTALL -V0 install $UCLIBCXX; then
         echo " done."
     else
         echo " failed, cancel installation."
