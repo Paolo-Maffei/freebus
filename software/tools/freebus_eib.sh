@@ -32,6 +32,9 @@ searchInstaller()
     if test -f /bin/ipkg; then
         echo " found ipkg."
         INSTALL=/bin/ipkg
+    elif test -f /usr/bin/ipkg; then
+        echo " found ipkg."
+        INSTALL=/usr/bin/ipkg
     elif test -f /bin/opkg; then
         echo " found opkg."
         INSTALL=/bin/opkg
