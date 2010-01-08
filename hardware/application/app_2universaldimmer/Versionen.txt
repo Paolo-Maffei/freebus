@@ -138,12 +138,8 @@ V1.1         4.1.2010
   ist die Verstärkung kleiner, so werden bei kleinen Leistungen die Pulse zu lang, so
   dass der Stromnulldurchgang nicht mehr sauber erkannt werden kann.
   Wünschenswert wäre eine nichtlineare Verstärkung, die kleine Signale mehr verstärkt als große
-
-! Routing ist noch nicht abgeschlossen, es wird sehr eng!
-  Folgende Alternativen sind möglich:
-	1. Top-Layer einführen
-	2. Sicherungen weglassen
-	3. Gehäuse eine Stufe größer wählen
+  Theorie: Pulsbreite T = 6200 / R22 / P        T in s,  P in Watt,  R22 in Ohm
+- Layout angepasst, Leiterbahnen zwischen den Optokopplern entfernt
 
 
 ToDo
