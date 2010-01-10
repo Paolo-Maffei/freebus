@@ -6,11 +6,16 @@
 #  /_/   /_/ |_/_____/_____/_____/\____//____/  
 #
 # Copyright (c) 2009 Matthias Fechner <matthias@fechner.net>
-#
+# $Id$
 
 checkOS()
 {
-    echo bla
+    if test -f /usr/bin/ipkg; then
+        if test -f /etc/ipkg.conf; then
+            echo "Found Edimax Router"
+            EDIMAX=1
+        fi
+    fi
 }
 
 checkJffs()
@@ -19,6 +24,11 @@ checkJffs()
     echo -n Checking for JFFS2 filesystem...
     if grep jffs /etc/mtab >/dev/null; then
         echo " found."
+        return 0
+    fi
+    # if we install on edimax skip this test
+    if [ "$EDIMAX" = "1" ]; then
+        echo " skipped (seems to be Edimax router)"
         return 0
     fi
     echo " failed, cancel installation"
@@ -44,6 +54,22 @@ searchInstaller()
     fi
 }
 
+setEdimaxSource()
+{
+    if [ "$EDMIAX" = "1" ]; then
+        echo "Update /etc/ipkg.conf"
+        echo "# that exists on the target system." >/etc/ipkg.conf
+        echo "src picprojects http://www.picinternetprojects.247n.com/packages" >>/etc/ipkg.conf
+        echo "src picprojectsSDK http://www.picinternetprojects.247n.com/packages/sdk" >>/etc/ipkg.conf
+        echo "src openwrt-kamikaze http://downloads.openwrt.org/kamikaze/8.09/adm5120/packages" >>/etc/ipkg.conf
+        echo "#src a" >>/etc/ipkg.conf
+        echo "dest root /" >>/etc/ipkg.conf
+        echo "dest local /usr/local" >>/etc/ipkg.conf
+        echo "dest ram /ram" >>/etc/ipkg.conf
+        echo "dest usb /mnt/usb" >>/etc/ipkg.conf
+    fi
+}
+
 installPackages()
 {
     echo
@@ -64,15 +90,7 @@ installPackages()
         exit 1
     fi
     echo -n Install uclibc++...
-    if $INSTALL list | grep uclibcxx 2>&1 /dev/null; then
-        UCLIBCXX=uclibcxx
-    elif $INSTALL list | grep uclibc++ 2>&1 /dev/null; then
-        UCLIBCXX=uclibc++
-    else
-        echo " failed, uclibc++ not found in package list."
-        exit 1
-    fi
-    if $INSTALL -V0 install $UCLIBCXX; then
+    if $INSTALL -V0 install uclibcxx; then
         echo " done."
     else
         echo " failed, cancel installation."
@@ -112,7 +130,6 @@ installPackages()
 #/home/idefix/edimax/linknx_0.0.1.23-1_mipsel.ipk
 #/home/idefix/edimax/lua_5.1.4-2_mipsel.ipk
 #/home/idefix/edimax/luac_5.1.4-2_mipsel.ipk
-
 }
 
 setupSerial()
@@ -138,7 +155,11 @@ createStartup()
     echo "" >>/etc/init.d/eibd
     echo "START=99" >>/etc/init.d/eibd
     echo "start() {" >>/etc/init.d/eibd
-    echo "	eibd -d -i -D -T -S ft12:/dev/ttyS1" >>/etc/init.d/eibd
+    if [ "$EDIMAX" = "1" ]; then
+        echo "	eibd -d -i -D -T -S ft12:/dev/ttyS0" >>/etc/init.d/eibd
+    else
+        echo "	eibd -d -i -D -T -S ft12:/dev/ttyS1" >>/etc/init.d/eibd
+    fi
     echo "}" >>/etc/init.d/eibd
     echo "" >>/etc/init.d/eibd
     echo "stop() {" >>/etc/init.d/eibd
@@ -152,11 +173,23 @@ createStartup()
         exit 1
     fi
     echo -n Enable startup script...
-    if /etc/init.d/eibd enable; then
-        echo " done."
+    if [ "$EDMIAX" = "1" ]; then
+        mv /etc/init.d/eibd /etc/init.d/S70eibd
+        if test -f /etc/init.d/S70eibd; then
+            echo " done."
+        else
+            echo " failed."
+        fi
     else
-        echo " failed."
+        cd /etc/rc.d
+        ln -s ../init.d/eibd /etc/rc.d/S70eibd 
+        if test -f /etc/rc.d/S70eibd; then
+            echo " done."
+        else
+            echo " failed."
+        fi
     fi
+
 }
 
 doReboot()
@@ -167,6 +200,9 @@ doReboot()
     reboot
 }
 
+# Try to figure out which router we have here
+checkOS
+
 # Check if jffs filesystem is mounted, if not cancel installation
 checkJffs
 
@@ -174,6 +210,7 @@ checkJffs
 searchInstaller
 
 # Install necessary packages
+setEdimaxSource
 installPackages
 
 # setup serial interface
