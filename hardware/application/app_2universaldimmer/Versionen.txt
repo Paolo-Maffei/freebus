@@ -140,6 +140,19 @@ V1.1         4.1.2010
   Wünschenswert wäre eine nichtlineare Verstärkung, die kleine Signale mehr verstärkt als große
   Theorie: Pulsbreite T = 6200 / R22 / P        T in s,  P in Watt,  R22 in Ohm
 - Layout angepasst, Leiterbahnen zwischen den Optokopplern entfernt
+- Bestückungsdruck optimiert
+  Achtung: für den Bestückungsdruck muessen die folgenden Layer verwendet werden:
+	  21 tplace
+	  25 tnames
+	  27 tvalues
+	  51 tdocu
+- Diese Version wurde am 14.1.2010 bei Q-Print in Auftrag gegeben
+  http://q-pcb.com
+
+
+
+
+
 
 
 ToDo
@@ -148,7 +161,8 @@ o evtl. Überstromsensor muss so geändert werden, dass im Normalbetrieb die LED d
   nicht angesteuert ist --> Stromersparnis
 o evtl. die Ansteuerung so verändern, dass nicht 22k auf Masse geleitet wird, da sonst
   0.5mA Verlust
-o Wünschenswert wäre eine nichtlineare Verstärkung, die kleine Signale mehr verstärkt als große
+o Wünschenswert wäre eine nichtlineare Verstärkung bei der Erzeugung des I-Signals, 
+  die kleine Signale mehr verstärkt als große
 
 
 ToDo
