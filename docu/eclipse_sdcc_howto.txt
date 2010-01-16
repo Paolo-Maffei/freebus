@@ -23,9 +23,4 @@ http://sourceforge.net/project/showfiles.php?group_id=599
     Then click on help and about and plugin-infos. In that list should appear the sdcc compiler plugin.
 
 
-ATTENTION: the include for the P89LPC922 ist still buggy! In program_files\sdcc\incude\msc51 open the file P89LPC922.h
-and correct the following line: __sfr __at (0x8B) TH0  
-the correct value must be 0X0C and don't forget to save.
-
-
 ready !
