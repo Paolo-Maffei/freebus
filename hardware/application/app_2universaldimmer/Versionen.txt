@@ -149,24 +149,47 @@ V1.1         4.1.2010
 - Diese Version wurde am 14.1.2010 bei Q-Print in Auftrag gegeben
   http://q-pcb.com
 
+aus V1.1 gewonnene Erkenntnisse:
+- Abmessungen: die Länge der Platine von 87,4mm íst zu groß, sie darf maximal 87,2 mm sein damit
+  sie noch ins Gehäuse passt.
+- die Löcher für die Befestigungsschrauben müssen um 0.5mm nach links (230V Teil) verschoben werden
+- der von Bauteilen freie Platzum die Löcher muss etwas größer werden
+- Durchmesser der Befestigungsschrauben muss 2.3mm sein (statt 2.8)
+- die Aussparungen für die Eckschrauben müssen etwas größer sein.
+- die Klemmen müssen jeweils 0.5mm weiter zur Mitte
+- C2, C102 sind im Schaltplan mit falscher Polarität eingezeichnet
+- Q2 muss um 0.5mm nach unten verschoben werden (von Si weg) [Q1,Q3,Q4 stimmen]
+- R1, R101 geringerer Pinabstand neu:   mm
+  Pin am Trafo bleibt, Pin an Si wandert weiter zur Mitte, Bestückungsdruck auf V-Variante ändern
+- R12, R112 müssen 15kOhm sein (statt 20kOhm)
+- evtl. Widerstandswerte konsolidieren (d.h. möglichst gleiche Werte verwenden)
+- bei der Beschaffung auf Bauform 204 achten, dann müssen nicht so viele horizontal montiert werden.
 
 
+V1.2         5.2.2010
+----         
+- C2, C102 im Schaltplan gedreht (war falsche Polarität)
+- R12, R112 jetzt 15kOhm (statt 20kOhm)
+- Die Länge der Platine auf 87,2mm verkleinert. -0.2mm auf EIB-Seite
+- die Aussparungen für die Eckschrauben um 0.2mm vergrößert.
+- die Klemmen jeweils 0.5mm weiter zur Mitte gesetzt
+- Durchmesser der Befestigungslöcher 2.3mm (statt 2.8)
+- die Löcher für die Befestigungsschrauben müssen um 0.5mm nach links (230V Teil) verschoben werden
+- der von Bauteilen freie Platzum die Löcher muss etwas größer werden
+- Q2 um 0.5mm nach unten verschoben (von Si weg) [Q1,Q3,Q4 stimmten]
 
 
 
 
 ToDo
 ----
-o evtl. Überstromsensor muss so geändert werden, dass im Normalbetrieb die LED des Optokopplers
-  nicht angesteuert ist --> Stromersparnis
-o evtl. die Ansteuerung so verändern, dass nicht 22k auf Masse geleitet wird, da sonst
-  0.5mA Verlust
-o Wünschenswert wäre eine nichtlineare Verstärkung bei der Erzeugung des I-Signals, 
+HW:
+- evtl. Widerstandswerte konsolidieren (d.h. möglichst gleiche Werte verwenden)
+- Wünschenswert wäre eine nichtlineare Verstärkung bei der Erzeugung des I-Signals, 
   die kleine Signale mehr verstärkt als große
+- bei der Beschaffung auf Bauform 204 achten, dann müssen nicht so viele horizontal montiert werden.
 
 
-ToDo
-----
 SW:
 - Erstellung des Applikationsprogramms
 - Erkennung Lastausfall (kein I-Signal trotz U-Signal und Eingeschaltet)
