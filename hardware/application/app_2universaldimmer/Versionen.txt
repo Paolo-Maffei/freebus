@@ -184,6 +184,11 @@ V1.2         5.2.2010
 ToDo
 ----
 HW:
+- Entstörglied einfügen:
+     + L in serie direkt vor Ausgang  
+     + C parallel zu den FETs
+     + Varistor parallel zu den FETs, z.B. S10K250
+  analog zu Herstellerdimmern
 - evtl. Widerstandswerte konsolidieren (d.h. möglichst gleiche Werte verwenden)
 - Wünschenswert wäre eine nichtlineare Verstärkung bei der Erzeugung des I-Signals, 
   die kleine Signale mehr verstärkt als große
