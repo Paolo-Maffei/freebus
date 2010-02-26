@@ -184,6 +184,7 @@ V1.2         5.2.2010
 ToDo
 ----
 HW:
+- Ansteuerung der FETs invertieren, so dass die Lampen ohne Controller aus sind
 - Entstörglied einfügen:
      + L in serie direkt vor Ausgang  
      + C parallel zu den FETs
