@@ -180,6 +180,13 @@ V1.2         5.2.2010
 
 
 
+V1.3         9.3.2010
+----         
+- Hysterese im Überlastmodul passte nicht mehr: R20 / R120 auf 220kOhm geändert
+
+
+
+
 
 ToDo
 ----
@@ -194,10 +201,3 @@ HW:
 - Wünschenswert wäre eine nichtlineare Verstärkung bei der Erzeugung des I-Signals, 
   die kleine Signale mehr verstärkt als große
 - bei der Beschaffung auf Bauform 204 achten, dann müssen nicht so viele horizontal montiert werden.
-
-
-SW:
-- Erstellung des Applikationsprogramms
-- Erkennung Lastausfall (kein I-Signal trotz U-Signal und Eingeschaltet)
-- Erkennung Spannungsausfall (kein U-Signal)
-- Helligkeitswert immer 0-255 unabaengig von der Grundhelligkeit (wie beim GIRA-Dimmer)
