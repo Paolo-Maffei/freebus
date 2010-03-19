@@ -185,13 +185,15 @@ V1.3         9.3.2010
 - Hysterese im Überlastmodul passte nicht mehr: R20 / R120 auf 220kOhm geändert
 
 
+V1.4         14.3.2010
+----         
+- Ansteuerung der FETs invertiert !!!
 
 
 
 ToDo
 ----
 HW:
-- Ansteuerung der FETs invertieren, so dass die Lampen ohne Controller aus sind
 - Entstörglied einfügen:
      + L in serie direkt vor Ausgang  
      + C parallel zu den FETs
