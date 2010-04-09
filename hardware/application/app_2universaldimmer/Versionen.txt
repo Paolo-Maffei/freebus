@@ -190,6 +190,11 @@ V1.4         14.3.2010
 - Ansteuerung der FETs invertiert !!!
 
 
+V1.5         9.4.2010
+----         
+- Leiterbahnen auf 45 Grad geaendert
+- Schutzdiode ergänzt
+
 
 ToDo
 ----
