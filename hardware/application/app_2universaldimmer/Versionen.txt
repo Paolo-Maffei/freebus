@@ -196,6 +196,14 @@ V1.5         9.4.2010
 - Schutzdiode ergänzt
 
 
+V1.6         6.5.2010
+----         
+- I-Signal Kanal1 zusätzlich auf Pin11 P1.3 IRQ0 gelegt
+
+
+
+
+
 ToDo
 ----
 HW:
