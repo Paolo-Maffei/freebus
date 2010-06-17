@@ -8,6 +8,31 @@
 # Copyright (c) 2009 Matthias Fechner <matthias@fechner.net>
 # $Id$
 
+getKernelVersion()
+{
+    KERNELVERSION=`uname -r | head -c 3`
+}
+
+getSerialDevice()
+{
+    if [ "$KERNELVERSION" = "2.4" ]; then
+       echo "Found kernel version 2.4"
+       if [ "$EDIMAX" = "1" ]; then
+          SERIALDEVICE="/dev/ttyS0"
+       else
+          SERIALDEVICE="/dev/tts/1"
+       fi
+    elif [ "$KERNELVERSION" = "2.6" ]; then
+       echo "Found kernel version 2.6"
+       if [ "$EDIMAX" = "1" ]; then
+          SERIALDEVICE="/dev/ttyS0"
+       else
+          SERIALDEVICE="/dev/ttyS1"
+       fi
+    fi
+    echo "Use serial device: $SERIALDEVICE"
+}
+
 checkOS()
 {
     if test -f /usr/bin/ipkg; then
@@ -16,6 +41,8 @@ checkOS()
             EDIMAX=1
         fi
     fi
+    getKernelVersion
+    getSerialDevice
 }
 
 checkJffs()
@@ -135,10 +162,10 @@ installPackages()
 setupSerial()
 {
     echo -n Setup serial...
-    if setserial /dev/ttyS1 irq 3 autoconfig; then
+    if setserial $SERIALDEVICE irq 3 autoconfig; then
         echo " done."
     else
-        echo " failed."
+        echo " failed, ignore it."
     fi
 }
 
@@ -155,11 +182,7 @@ createStartup()
     echo "" >>/etc/init.d/eibd
     echo "START=99" >>/etc/init.d/eibd
     echo "start() {" >>/etc/init.d/eibd
-    if [ "$EDIMAX" = "1" ]; then
-        echo "	eibd -d -i -D -T -S ft12:/dev/ttyS0" >>/etc/init.d/eibd
-    else
-        echo "	eibd -d -i -D -T -S ft12:/dev/ttyS1" >>/etc/init.d/eibd
-    fi
+    echo "	eibd -d -i -D -T -S ft12:$SERIALDEVICE" >>/etc/init.d/eibd
     echo "}" >>/etc/init.d/eibd
     echo "" >>/etc/init.d/eibd
     echo "stop() {" >>/etc/init.d/eibd
@@ -182,7 +205,7 @@ createStartup()
         fi
     else
         cd /etc/rc.d
-        ln -s ../init.d/eibd /etc/rc.d/S70eibd 
+        ln -fs ../init.d/eibd /etc/rc.d/S70eibd 
         if test -f /etc/rc.d/S70eibd; then
             echo " done."
         else
