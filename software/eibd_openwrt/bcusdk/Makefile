@@ -24,6 +24,7 @@ define Package/eibd
  TITLE:=Eib KNX deamon
  URL:=http://www.auto.tuwien.ac.at/~mkoegler/index.php/eibd
  DEPENDS:=pthsem uclibcxx libusb
+ MAINTAINER:=Matthias Fechner <idefix@fechner.net>
 endef
 
 define Package/bcusdk/description

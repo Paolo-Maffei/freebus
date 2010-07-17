@@ -21,6 +21,7 @@ define Package/pthsem
   CATEGORY:=Libraries
   TITLE:=Pth threads with semaphore support
   URL:=http://sourceforge.net/projects/bcusdk/
+  MAINTAINER:=Matthias Fechner <idefix@fechner.net>
 endef
 
 define Build/Compile
