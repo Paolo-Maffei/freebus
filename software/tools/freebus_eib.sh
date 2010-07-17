@@ -81,7 +81,7 @@ searchInstaller()
     fi
 }
 
-setEdimaxSource()
+setupSource()
 {
     if [ "$EDMIAX" = "1" ]; then
         echo "Update /etc/ipkg.conf"
@@ -94,6 +94,9 @@ setEdimaxSource()
         echo "dest local /usr/local" >>/etc/ipkg.conf
         echo "dest ram /ram" >>/etc/ipkg.conf
         echo "dest usb /mnt/usb" >>/etc/ipkg.conf
+	echo "src freebus http://server.idefix.lan/eibd/packages" >> >>/etc/ipkg.conf
+    else
+	echo "src freebus http://server.idefix.lan/eibd/packages" >> >>/etc/opkg.conf
     fi
 }
 
@@ -109,20 +112,6 @@ installPackages()
         echo " failed, cancel installation."
         exit 1
     fi
-    echo -n Install setserial...
-    if $INSTALL -V0 install setserial; then
-        echo " done."
-    else
-        echo " failed, cancel installation."
-        exit 1
-    fi
-    echo -n Install uclibc++...
-    if $INSTALL -V0 install uclibcxx; then
-        echo " done."
-    else
-        echo " failed, cancel installation."
-        exit 1
-    fi
     echo -n Install pthsem...
     if $INSTALL -V0 install pthsem; then
         echo " done."
@@ -131,41 +120,11 @@ installPackages()
         exit 1
     fi
     echo -n Install eibd...
-    if ! wget -q http://www.ouaye.net/linknx/OpenWRT-Kamikaze-r7908/eibd_0.0.2.1-10_mipsel.ipk; then
-        rm eibd_0.0.2.1-10_mipsel.ipk
-        echo " wget failed, cancel installation."
-        exit 1
-    fi
-    if $INSTALL -V0 install eibd_0.0.2.1-10_mipsel.ipk; then
+    if $INSTALL -V0 install eibd; then
         echo " done."
     else
-        rm eibd_0.0.2.1-10_mipsel.ipk
         echo " failed, cancel installation."
         exit 1
-    fi
-    rm eibd_0.0.2.1-10_mipsel.ipk
-#wget "http://downloads.sourceforge.net/project/linknx/linknx-bin/linknx-0.0.1.26/linknx-0.0.1.26-OpenWRT-WhiteRussian-RC6.tgz?use_mirror=surfnet"
-#tar xzvf linknx*
-#rm readme.txt
-#ipkg install linknx_0.0.1.26-2_mipsel.ipk
-#rm linknx*
-
-#/home/idefix/edimax/libcurl_7.14.0-1_mipsel.ipk
-#/home/idefix/edimax/libesmtp_1.0.4-2_mipsel.ipk
-#/home/idefix/edimax/liblua_5.1.4-2_mipsel.ipk
-#/home/idefix/edimax/libreadline_5.0-1_mipsel.ipk
-#/home/idefix/edimax/linknx_0.0.1.23-1_mipsel.ipk
-#/home/idefix/edimax/lua_5.1.4-2_mipsel.ipk
-#/home/idefix/edimax/luac_5.1.4-2_mipsel.ipk
-}
-
-setupSerial()
-{
-    echo -n Setup serial...
-    if setserial $SERIALDEVICE irq 3 autoconfig; then
-        echo " done."
-    else
-        echo " failed, ignore it."
     fi
 }
 
@@ -233,11 +192,8 @@ checkJffs
 searchInstaller
 
 # Install necessary packages
-setEdimaxSource
+setupSource
 installPackages
-
-# setup serial interface
-setupSerial
 
 # Create startup file
 createStartup
