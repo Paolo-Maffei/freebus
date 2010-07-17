@@ -10,19 +10,19 @@
 
 getKernelVersion()
 {
-    KERNELVERSION=`uname -r | head -c 3`
+    KERNELVERSION=`uname -r | cut -c3`
 }
 
 getSerialDevice()
 {
-    if [ "$KERNELVERSION" = "2.4" ]; then
+    if [ "$KERNELVERSION" = "4" ]; then
        echo "Found kernel version 2.4"
        if [ "$EDIMAX" = "1" ]; then
           SERIALDEVICE="/dev/ttyS0"
        else
           SERIALDEVICE="/dev/tts/1"
        fi
-    elif [ "$KERNELVERSION" = "2.6" ]; then
+    elif [ "$KERNELVERSION" = "6" ]; then
        echo "Found kernel version 2.6"
        if [ "$EDIMAX" = "1" ]; then
           SERIALDEVICE="/dev/ttyS0"
@@ -49,7 +49,7 @@ checkJffs()
 {
     echo
     echo -n Checking for JFFS2 filesystem...
-    if grep jffs /etc/mtab >/dev/null; then
+    if `mount | grep jffs >/dev/null`; then
         echo " found."
         return 0
     fi
@@ -68,12 +68,15 @@ searchInstaller()
     # check for ipkg or opkg
     if test -f /bin/ipkg; then
         echo " found ipkg."
+        INSTALLER=ipkg
         INSTALL=/bin/ipkg
     elif test -f /usr/bin/ipkg; then
         echo " found ipkg."
+        INSTALLER=ipkg
         INSTALL=/usr/bin/ipkg
     elif test -f /bin/opkg; then
         echo " found opkg."
+        INSTALLER=opkg
         INSTALL=/bin/opkg
     else
         echo " failed, no ipkg or opkg found, installation canceled"
@@ -94,9 +97,25 @@ setupSource()
         echo "dest local /usr/local" >>/etc/ipkg.conf
         echo "dest ram /ram" >>/etc/ipkg.conf
         echo "dest usb /mnt/usb" >>/etc/ipkg.conf
-	echo "src freebus http://server.idefix.lan/eibd/packages" >> >>/etc/ipkg.conf
+    fi
+    if [ $INSTALLER = "ipkg" ]; then
+        echo -n "Write /etc/ipkg.conf... "
+        echo "src/gz packages http://downloads.openwrt.org/backfire/10.03/brcm47xx/packages" >/etc/ipkg.conf
+        echo "dest root /" >>/etc/ipkg.conf
+        echo "dest ram /tmp" >>/etc/ipkg.conf
+        echo "lists_dir ext /var/ipkg-lists" >>/etc/ipkg.conf
+        echo "option overlay_root /overlay" >>/etc/ipkg.conf
+    	echo "src freebus http://server.idefix.lan/eibd/packages" >>/etc/ipkg.conf
+        echo "done."
     else
-	echo "src freebus http://server.idefix.lan/eibd/packages" >> >>/etc/opkg.conf
+        echo -n "Write /etc/opkg.conf... "
+        echo "src/gz packages http://downloads.openwrt.org/backfire/10.03/brcm47xx/packages" >/etc/opkg.conf
+        echo "dest root /" >>/etc/opkg.conf
+        echo "dest ram /tmp" >>/etc/opkg.conf
+        echo "lists_dir ext /var/opkg-lists" >>/etc/opkg.conf
+        echo "option overlay_root /overlay" >>/etc/opkg.conf
+    	echo "src freebus http://server.idefix.lan/eibd/packages" >>/etc/opkg.conf
+        echo "done."
     fi
 }
 
