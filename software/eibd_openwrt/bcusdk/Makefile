@@ -6,7 +6,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=bcusdk
 PKG_REV:=7aea617b337ea8ba788e400c4202ee6969645afa
 PKG_VERSION:=20100304
-PKG_RELEASE:=1
+#PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
@@ -62,8 +62,9 @@ endef
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
-		CC=$(TARGET_CC)
-
+		CC=$(TARGET_CC) \
+		LIBS="-L$(STAGING_DIR)/lib -L$(BUILD_DIR)/libusb-0.1.12/.lib -fno-builtin -nostdinc++ -nodefaultlibs -luClibc++ -lc -lm -lgcc -largp -lpthsem -lusb" \
+		CPPFLAGS="-I$(STAGING_DIR)/include -I$(STAGING_DIR)/usr/include -I$(LINUX_DIR)/include"
 endef
 
 define Package/eibd/install

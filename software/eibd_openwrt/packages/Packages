@@ -1,0 +1,30 @@
+Package: eibd
+Version: 20100304
+Depends: pthsem, uclibcxx, libusb
+Provides: 
+Source: package/bcusdk
+Section: net
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 283200
+Filename: eibd_20100304_brcm47xx.ipk
+Size: 95434
+MD5Sum: adce4ecef339fb8bc0042379a33a8723
+Description:  Eib KNX deamon
+
+Package: pthsem
+Version: 2.0.8-2
+Depends: 
+Provides: 
+Source: package/pthsem
+Section: libs
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 74919
+Filename: pthsem_2.0.8-2_brcm47xx.ipk
+Size: 30905
+MD5Sum: 3b94e898c1ebaa7605145c516f41e7c1
+Description:  Pth threads with semaphore support
+
