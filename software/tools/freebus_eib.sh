@@ -91,6 +91,7 @@ setupSource()
         echo "# that exists on the target system." >/etc/ipkg.conf
         echo "src picprojects http://www.picinternetprojects.247n.com/packages" >>/etc/ipkg.conf
         echo "src picprojectsSDK http://www.picinternetprojects.247n.com/packages/sdk" >>/etc/ipkg.conf
+    	echo "src freebus http://download.freebus.org/eibd/packages" >>/etc/ipkg.conf
         echo "src openwrt-kamikaze http://downloads.openwrt.org/kamikaze/8.09/adm5120/packages" >>/etc/ipkg.conf
         echo "#src a" >>/etc/ipkg.conf
         echo "dest root /" >>/etc/ipkg.conf
@@ -105,7 +106,7 @@ setupSource()
         echo "dest ram /tmp" >>/etc/ipkg.conf
         echo "lists_dir ext /var/ipkg-lists" >>/etc/ipkg.conf
         echo "option overlay_root /overlay" >>/etc/ipkg.conf
-    	echo "src freebus http://server.idefix.lan/eibd/packages" >>/etc/ipkg.conf
+    	echo "src freebus http://download.freebus.org/eibd/packages" >>/etc/ipkg.conf
         echo "done."
     else
         echo -n "Write /etc/opkg.conf... "
@@ -114,7 +115,7 @@ setupSource()
         echo "dest ram /tmp" >>/etc/opkg.conf
         echo "lists_dir ext /var/opkg-lists" >>/etc/opkg.conf
         echo "option overlay_root /overlay" >>/etc/opkg.conf
-    	echo "src freebus http://server.idefix.lan/eibd/packages" >>/etc/opkg.conf
+    	echo "src freebus http://download.freebus.org/eibd/packages" >>/etc/opkg.conf
         echo "done."
     fi
 }
