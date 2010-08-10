@@ -1,0 +1,29 @@
+A small Freebus Test:
+
+The basis for that questions are basic knowledge of EIB.
+
+
+1. What are group addresses?
+
+2. What are physical addresses?
+
+3. What are parameters?
+
+4. What is a EEPROM and why you use it?
+
+5. What is a telegram?
+
+6. What is a octet?
+
+7. Had you read our documentation on the homepage?
+
+8. What is the BCU and what is the task of it?
+
+9. How much wires you need for the EIB bus?
+
+10. How are the devices supplied with power?
+
+11. How much wires are used to transmit and receive data?
+
+12. What is the EIB choke and explain the task of it?
+

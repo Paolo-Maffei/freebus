@@ -1,0 +1,65 @@
+Kleiner C Test:
+
+Tu dir selber einen Gefallen und beantworte es ohne einen C-Compiler zu Hilfe
+zu nehmen. Dieser Test dient nicht die Leute rauszusuchen wer geeignet ist
+sondern das du selber siehst wo du noch nacharbeiten solltest.
+Für die ein oder andere Zeile könnt ihr auch den Taschenrechner verwenden.
+
+
+1. Was steht in Variable var und test?
+int test=5;
+int var;
+
+var=test++;
+
+2. Warum sollte man dieses Konstrukt vermeiden?
+
+3. Was macht er hier?
+timerRunning &= ~(1<<i);
+
+4. Was macht er hier?
+portValue |= (1<<i);
+
+5. Was bedeutet das, genaue Beschreibung wann if Zweig ausgeführt wird?
+if(timerRunning & (1<<i))
+    DEBUG_PUTC('B');
+
+6. Was wird ausgegeben (fiktive print Anweisung):
+if(1>5)
+print("Ziffer eins\n");
+print("Ziffer zwei\n");
+
+7. Was steht in temp drin?
+initialPortValue=0xEF;
+i=2;
+temp=(initialPortValue>>(i*2))&0x03;
+
+8. Was wird bei diesen Funktionsaufruf übergeben?
+write_eeprom_block(0x0000,1,&portValue);
+
+9. Was ist hier falsch und was würde er machen wenn es richtig wäre?
+#define RELOAD_APPLICATION_TIMER() {
+          TCCR1A=0;                                                     \
+          TCCR1B=(1<<WGM12)|(1<<CS11)|(1<<CS10);                        \
+          OCR1A=16249;                                                  \
+          currentTime=0;                                                \
+          TCNT1=0;                                                      \
+     }
+
+10. Warum nutze ich solche defines und wann macht es keinen Sinn mehr?
+
+11. Was wird übergeben?
+i=1;
+portValue=0xF1;
+sendRespondTelegram(i,(portValue & (1<<i))?1:0);
+
+12. Wie gross ist das Array und von welchem index bis zu welchem Index
+    kann man was reinschreiben (uint8_t sind 8 Bit)?
+static uint8_t eeprom_cache[299];
+
+13. Was bedeuted das static bei einer Variabledeklaration (global und lokal)?
+static uint8_t test;
+
+14. Was ist ein Prototype?
+
+15. Wann setzte ich einen Protoype in eine .h und wann in eine .c Datei?

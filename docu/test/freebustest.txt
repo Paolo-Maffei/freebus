@@ -1,0 +1,29 @@
+Kleiner Freebus Test:
+
+Diese Fragen beziehen sich auf ein Grundlagenwissen bzgl. EIB.
+
+
+1. Was sind Gruppenadressen?
+
+2. Was sind physikalische Adressen?
+
+3. Was sind Parameter?
+
+4. Was ist ein EEPROM und wieso braucht man es?
+
+5. Was ist ein Telegramm?
+
+6. Was ist ein Octet?
+
+7. Hast du unsere Doku auf der Homepage schon gelesen?
+
+8. Was ist eine BCU und was macht die?
+
+9. Wieviel Drähte braucht der EIB Bus?
+
+10. Woher bekommen die Geräte ihre Spannungsversorgung?
+
+11. Auf welchen Leitungen werde die Daten übertragen?
+
+12. Was ist eine Drossel und wieso brauche ich die?
+

@@ -1,0 +1,41 @@
+Kleiner Freebus Test:
+
+Diese Fragen beziehen sich auf ein Grundlagenwissen bzgl. EIB.
+
+
+1. Was sind Gruppenadressen?
+Gruppenadressen werden benutzt um Geräte Aktionen auf Geräte auszuführen, es können auch mehrere Geräte gleichzeitig angesprochen werden, wenn die alle die gleiche Gruppenadresse haben. (Multicast)
+
+2. Was sind physikalische Adressen?
+Die physikalische Adresse ist einzigartig und kann nur einmal vergeben sein. Sie wird benutzt um ein einziges Gerät anzusprechen (z.b. zum Parameter und Gruppenadressen programmieren) (point-to-point).
+
+3. Was sind Parameter, bezogen auf EIB?
+Parameter sind Werte die festlegen wie sich die Software verhält und werden im EEPROM des Geräts abgespeichert.
+
+4. Was ist ein EEPROM und wieso braucht man es?
+Ein EEPROM ist ein Speicher der seine Daten behält auch wenn ein Stromausfall stattgefunden hat. Er kann byte-weise beschrieben und gelesen werden.
+Braucht man um Daten permanent zu speichern.
+
+5. Was ist ein Telegramm?
+Unter einem Telegramm versteht man eine Anweisung die über den EIB-Bus geschickt wird. In diesem Telegramm sind alles Daten enthalten um eine Aktion auszuführen, z.B. Port 1 anschalten oder Port 1 hat Status an.
+Steueranweisungen, Quelladresse, Zieladresse, Daten, Checksumme.
+
+6. Was ist ein Octet?
+Ein Octect ist ein Datenpaket, das im EIB aus 11 Bits besteht, ein Startbit, 8 Datenbits, 1 Paritybit und ein Stopbit.
+
+7. Hast du unsere Doku auf der Homepage schon gelesen?
+
+8. Was ist eine BCU und was macht die?
+BCU=Busankoppler, kümmert sich darum, das die EIB Telegramme richtig empfangen und gesendet werden, unsere Kontroller machen das.
+
+9. Wieviel Drähte braucht der EIB Bus?
+Zwei, das EIB-Kabel besteht allerdings aus vier Drähten, die zwei weiteren Drähte können für andere Sachen, wie z.B. eine weitere Spannungversorgung genutzt werden.
+
+10. Woher bekommen die Geräte ihre Spannungsversorgung?
+Von den 2 Drähten, Daten und Spannungsversorgung laufen auf diesen beiden Drähten.
+
+11. Auf welchen Leitungen werde die Daten übertragen?
+Auf den zwei Bus-Leitungen (rot-schwarz). Die Daten werden hierbei auf die Spannung aufmoduliert.
+
+12. Was ist eine Drossel und wieso brauche ich die?
+Die Drossel macht das Netzteil träge, damit Daten auf den Leitungen übertragen werden können, ohne Drossel würde das Spannungsstabilisierte Netzteil die Daten sofort wieder auf eins hochdrücken.

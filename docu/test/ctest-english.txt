@@ -1,0 +1,64 @@
+Small C Test:
+
+Be fair and don't use a compiler for this test. This test was not created to give svn
+access only to advanced people it more the try to make you clear were you have some
+weaknesses and were you should improve yourself.
+It is allowed to use a calculator to help with hex calculation but it shouldn't be
+necessary.
+
+1. What is the value of variable var and test?
+int test=5;
+int var;
+
+var=test++;
+
+2. Why should the syntax of question 1 be avoided?
+
+3. What does that line?
+timerRunning &= ~(1<<i);
+
+4. What does that line?
+portValue |= (1<<i);
+
+5. Explain when DEBUG_PUTC is executed.
+if(timerRunning & (1<<i))
+    DEBUG_PUTC('B');
+
+6. What is displayed (function print displays argument on screen):
+if(1<5)
+print("Ziffer eins\n");
+print("Ziffer zwei\n");
+
+7. What is the value of temp?
+initialPortValue=0xEF;
+i=2;
+temp=(initialPortValue>>(i*2))&0x03;
+
+8. With what types/values is the function called?
+write_eeprom_block(0x0000,1,&portValue);
+
+9. What is wrong here and what would the function do if it where right?
+#define RELOAD_APPLICATION_TIMER() {
+          TCCR1A=0;                                                     \
+          TCCR1B=(1<<WGM12)|(1<<CS11)|(1<<CS10);                        \
+          OCR1A=16249;                                                  \
+          currentTime=0;                                                \
+          TCNT1=0;                                                      \
+     }
+
+10. Why we use such defines and when you should not use them?
+
+11. What are the call values of the function?
+i=1;
+portValue=0xF1;
+sendRespondTelegram(i,(portValue & (1<<i))?1:0);
+
+12. What is the size of the array and give the boundary of it (uint8_t is 8 Bit)?
+static uint8_t eeprom_cache[299];
+
+13. When you use the variable declaration suffix static?
+static uint8_t test;
+
+14. What is a prototype in C?
+
+15. When you set the prototype in a .h and when in a .c file?
