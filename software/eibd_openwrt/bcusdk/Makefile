@@ -62,10 +62,7 @@ define Build/Configure
 endef
 
 define Build/Compile
-	$(MAKE) -C $(PKG_BUILD_DIR) \
-		CC=$(TARGET_CC) \
-		LIBS="-L$(STAGING_DIR)/lib -L$(BUILD_DIR)/libusb-0.1.12/.lib -fno-builtin -nostdinc++ -nodefaultlibs -luClibc++ -lc -lm -lgcc -largp -lpthsem -lusb" \
-		CPPFLAGS="-I$(STAGING_DIR)/include -I$(STAGING_DIR)/usr/include -I$(LINUX_DIR)/include"
+	$(MAKE) -C $(PKG_BUILD_DIR)
 endef
 
 define Package/eibd/install
