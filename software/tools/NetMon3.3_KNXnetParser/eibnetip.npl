@@ -238,7 +238,7 @@ struct KNXConnectionHeaderAck = FormatString("ChannelId=%u, Seq=%u, %s",ChannelI
 	UINT8       Status = EIBnetStatusTable(this);	
 }
 
-[RegisterAfter( UDP.Dns, EIBnetIP, 3671 ).
+[RegisterAfter( UDPPayload.Dns, EIBnetIP, 3671 ).
  BuildConversationWithParent( Property.EIBnetChannel)] 
 Protocol EIBnetIP = Header.Service.ToString + FormatString(" Channel=%u",Property.EIBnetChannel)
 {
@@ -380,12 +380,12 @@ Table cEMITServiceCodeTable(tcpi,ncpi,destaddr)
 {
 	switch 
 	{
-		case (((ncpi&0x80) != 0) && ((tcpi & 0xfc) == 0) && destaddr == 0): "T_DATA_BROADCAST_REQ";
-		case (((ncpi&0x80) != 0) && ((tcpi & 0xfc) == 0) && destaddr != 0): "T_DATA_GROUP_REQ";
-		case (((ncpi&0x80) == 0) && ((tcpi & 0xfc) == 0) ): "T_DATA_INDIVIDUAL_REQ";
-		case (((ncpi&0x80) == 0) && ((tcpi & 0xc0) == 0x40) ): "T_DATA_CONNECTED_REQ";
-		case (((ncpi&0x80) == 0) && (tcpi == 0x80) ): "T_CONNECT_REQ";
-		case (((ncpi&0x80) == 0) && (tcpi == 0x81) ): "T_DISCONNECT_REQ";
+		case (((ncpi&0x80) != 0) && ((tcpi & 0xfc) == 0) && destaddr == 0): "T_DATA_BROADCAST";
+		case (((ncpi&0x80) != 0) && ((tcpi & 0xfc) == 0) && destaddr != 0): "T_DATA_GROUP";
+		case (((ncpi&0x80) == 0) && ((tcpi & 0xfc) == 0) ): "T_DATA_INDIVIDUAL";
+		case (((ncpi&0x80) == 0) && ((tcpi & 0xc0) == 0x40) ): "T_DATA_CONNECTED";
+		case (((ncpi&0x80) == 0) && (tcpi == 0x80) ): "T_CONNECT";
+		case (((ncpi&0x80) == 0) && (tcpi == 0x81) ): "T_DISCONNECT";
 		case (((ncpi&0x80) == 0) && ((tcpi & 0xc3) == 0xc2) ): "T_ACK";
 		case (((ncpi&0x80) == 0) && ((tcpi & 0xc3) == 0xc3) ): "T_NAK";
 		default: "";
@@ -518,6 +518,12 @@ const PID_ENABLE                      = 20;
 const PID_DESCRIPTION                 = 21;
 const PID_FILE                        = 22;
 const PID_GROUP_ADDRESS_LIST          = 23;
+const PID_ENROL					   = 24;
+const PID_VERSION					 = 25;
+const PID_GROUP_OBJECT_LINK       	= 26;
+const PID_MCB_TABLE				   = 27;
+const PID_ERROR_CODE				  = 28;
+
 // specific for EIBnet 
 const PID_PROJECT_INSTALLATION_ID					= 51;
 const PID_KNX_INDIVIDUAL_ADDRESSES				=	52;
@@ -573,7 +579,12 @@ Table cEMIPropertyIDTable(pid)
 		case PID_ENABLE                          : "PID_ENABLE";		
 		case PID_DESCRIPTION                     : "PID_DESCRIPTION";		
 		case PID_FILE                            : "PID_FILE";		
-		case PID_GROUP_ADDRESS_LIST              : "PID_GROUP_ADDRESS_LIST";		
+		case PID_GROUP_ADDRESS_LIST              : "PID_GROUP_ADDRESS_LIST";	
+		case PID_ENROL					 : "PID_ENROL";
+		case PID_VERSION					 : "PID_VERSION";
+		case PID_GROUP_OBJECT_LINK       : "PID_GROUP_OBJECT_LINK";
+		case PID_MCB_TABLE				  : "PID_MCB_TABLE";
+		case PID_ERROR_CODE				: "PID_ERROR_CODE";
 		case PID_PROJECT_INSTALLATION_ID					: "PID_PROJECT_INSTALLATION_ID";
 		case PID_KNX_INDIVIDUAL_ADDRESSES					:	"PID_KNX_INDIVIDUAL_ADDRESSES";
 		case PID_ADDITIONAL_INDIVIDUAL_ADDRESSES	: "PID_ADDITIONAL_INDIVIDUAL_ADDRESSES";
@@ -602,6 +613,26 @@ Table cEMIPropertyIDTable(pid)
 		case PID_FRIENDLY_NAME										: "PID_FRIENDLY_NAME"; 
 		default: FormatString("%u (%#x)",pid,pid);
 	}		
+}
+
+// system object ids             
+const OID_DEVICE 					 = 0x00;
+const OID_ADDRESS_TABLE 			  = 0x01;
+const OID_ASSOCIATION_TABLE 		  = 0x02;
+const OID_APPLICATION_PGM 			= 0x03;
+
+
+
+Table cEMIObjectIDTable(type)
+{
+	switch (type)
+	{
+		case OID_DEVICE :            		"OID_DEVICE";    
+		case OID_ADDRESS_TABLE :   			"OID_ADDRESS_TABLE";    
+		case OID_ASSOCIATION_TABLE :    "OID_ASSOCIATION_TABLE";    
+		case OID_APPLICATION_PGM :    	"OID_APPLICATION_PGM";    
+		default: FormatString("%u",type);
+	}	
 }
 
 // property data types             
@@ -787,7 +818,9 @@ struct cEMIAddI = FormatString("len=%u%s",AdditionalInfoLength,AddInfoValueStrin
 */
 
 protocol cEMI = (IsIACK) ? (MessageCode.ToString + " " + IACK.ToString) :
-						("Src=" + SrcAddress.ToString + " Dst=" + DstAddress.ToString + DstGrpAddress.ToString + " " + MessageCode.ToString + " / " + TCPI.ToString + " len=" + NCPI.len + " / " + ACPI.ToString)
+						("Src=" + SrcAddress.ToString + " Dst=" + DstAddress.ToString + DstGrpAddress.ToString + " " + MessageCode.ToString + " / " + TCPI.ToString + " len=" + NCPI.len + " / " +
+						 ACPI.ToString + ((AServiceCode == A_PropertyValue_Read || AServiceCode == A_PropertyValue_Write || AServiceCode == A_PropertyValue_Response) ? 
+							(" / " + ObjectIndex.ToString +  " / " + PID.ToString) : "")  )
 						
 {
 	// carry over the previous timestamp as a default
@@ -824,7 +857,7 @@ protocol cEMI = (IsIACK) ? (MessageCode.ToString + " " + IACK.ToString) :
 							EIBnetKNXAddress		SrcAddress;
 							switch
 			        		{
-							  case ( Ctrl2.at != 1 && (UINT8(FrameData, FrameOffset + 4) & 0x80) != 0x80 ) :  EIBnetKNXAddress		DstAddress;
+							  case ( Ctrl2.at != 1 ) :  EIBnetKNXAddress		DstAddress;
 							  default: EIBnetKNXGroup 		DstGrpAddress;
 							}
 							cEMINCPI	          NCPI;
@@ -880,7 +913,7 @@ protocol cEMI = (IsIACK) ? (MessageCode.ToString + " " + IACK.ToString) :
 											case A_PropertyValue_Response      :																																																												
 											case A_PropertyValue_Write         :	
 												_struct {
-													UINT8  			ObjectIndex;
+													UINT8  			ObjectIndex = cEMIObjectIDTable(this);
 													UINT8  			PID = cEMIPropertyIDTable(this);
 													UINT16			NrElements:4;
 													UINT16      StartIndex:12;
