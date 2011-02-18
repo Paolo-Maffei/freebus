@@ -201,18 +201,42 @@ V1.6         6.5.2010
 - I-Signal Kanal1 zusätzlich auf Pin11 P1.3 IRQ0 gelegt
 
 
+V1.7         30.12.2010
+----         
+- Spannungssensor statt zwischen N und L nun zwischen Ausgang und L
+- Stromsensor entfernt
+- negative Versorgungsspannung entfernt, OPV zwischen GND und +12V
+- R9, R109 auf 5k6 geändert
+- R2,R102,R4,R104 auf 100k geändert
+- R3,R103,R5,R105 durch Zenerdioden ersetzt
+
+Anmerkungen:
+-OPV ist noch etwas zu langsam, deshalb wird bei Anschnitt um 600us zu spät abgeschaltet
 
 
 
-ToDo
-----
-HW:
-- Entstörglied einfügen:
-     + L in serie direkt vor Ausgang  
-     + C parallel zu den FETs
-     + Varistor parallel zu den FETs, z.B. S10K250
-  analog zu Herstellerdimmern
-- evtl. Widerstandswerte konsolidieren (d.h. möglichst gleiche Werte verwenden)
-- Wünschenswert wäre eine nichtlineare Verstärkung bei der Erzeugung des I-Signals, 
-  die kleine Signale mehr verstärkt als große
-- bei der Beschaffung auf Bauform 204 achten, dann müssen nicht so viele horizontal montiert werden.
+V1.8         29.1.2011
+----         
+- Stromsensor wieder wie in V1.6 eingebaut
+- Klemmen geändert, eigene für Trafo, N entfernt, d.h. eine Klemme weniger
+
+
+V1.9         29.1.2011
+----         
+-Trafo durch neues Netzteil ersetzt (Transistorschaltung)
+
+
+V2.0       8.2.2011
+-----
+- C parallel zu FETS
+- L in Reihe
+- Varistor eingefügt
+- Strombegrenzung nun temperaturabhängig durch NTC
+- R9, R109, R12, R112, R5, R105 auf 20k geändert
+
+- Diese Version wurde am 19.2.2011 bei freebus als Prototyp in Auftrag gegeben
+
+
+
+
+
