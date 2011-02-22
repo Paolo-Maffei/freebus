@@ -202,6 +202,18 @@ doReboot()
     reboot
 }
 
+fixWiFi()
+{
+    echo -n "Fix WiFi..."
+    if [ "$EDMIAX" = "1" ]; then
+       echo " done."
+    else
+       rm -f /etc/config/wireless
+       wifi detect >/etc/config/wireless
+       echo " done."
+    fi
+}
+
 # Try to figure out which router we have here
 checkOS
 
@@ -217,6 +229,9 @@ installPackages
 
 # Create startup file
 createStartup
+
+# Fix WiFi
+fixWiFi
 
 #reboot
 doReboot
