@@ -228,15 +228,28 @@ V1.9         29.1.2011
 
 V2.0       8.2.2011
 -----
+Achtung: Q4 und Q104 haben falsche Pinbelegung !!!  in V2.1 korrigiert
+               der MPSA44 hat in der Eagle-Bibliothek die falsche Pinbelegung !!!
+---------
 - C parallel zu FETS
 - L in Reihe
 - Varistor eingefügt
 - Strombegrenzung nun temperaturabhängig durch NTC
 - R9, R109, R12, R112, R5, R105 auf 20k geändert
 
-- Diese Version wurde am 19.2.2011 bei freebus als Prototyp in Auftrag gegeben
+
+Platine am 9.3.2011 geätzt.
 
 
+V2.1       13.3.2011
+-----
+- Q4 und Q104 hatten falsche Pinbelegung, hier korrigiert
+- R6,R12, R15, R106, R112, R115 von 20k auf 12k geändert
+- R5, R105 von 20k auf 22k geändert
+- D5, D105 ZF15 statt ZF18
+- IC1, IC101 entfällt ersatzlos
+- C101 imLayout etwas versetzt (ist zu nah an C104)
+- C2 und C102 direkt unter IC-Fassung versetzen
 
 
 
