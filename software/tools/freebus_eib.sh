@@ -161,7 +161,7 @@ createStartup()
     echo "" >>/etc/init.d/eibd
     echo "START=99" >>/etc/init.d/eibd
     echo "start() {" >>/etc/init.d/eibd
-    echo "	eibd -d -i -D -T -S ft12:$SERIALDEVICE" >>/etc/init.d/eibd
+    echo "	eibd -d -i -D -T --no-tunnel-client-queuing -S ft12:$SERIALDEVICE" >>/etc/init.d/eibd
     echo "}" >>/etc/init.d/eibd
     echo "" >>/etc/init.d/eibd
     echo "stop() {" >>/etc/init.d/eibd
