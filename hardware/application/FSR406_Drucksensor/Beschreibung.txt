@@ -1,0 +1,8 @@
+Mit diesem Board ist es möglich die Werte eines Drucksensors (Interlinks FSR406) zyklisch auf den Bus zu senden.
+
+Die Schaltung funktioniert, Software funktioniert auch, müsste aber noch verbessert werden indem, zum Beispiel Grenzwert Funktionen umgesetzt werden. Momentan ist es nur möglich die Werte des Drucksensors FSR406 von Interlinks zyklisch zu senden. 
+Die ausgegebenen Spannungswerte des Drucksensors werden schon im Mikrocontroller in das passende (auf dem Sensor wirkende) Gewicht umgerechnet.
+
+Die Werte werden allerdings als DPT9 gesendet. Dieser ist eigentlich nicht für Druck vorgesehen, jedoch wird der Wert schon 
+fertig berechnet in Gramm übertragen, so das es ohne Probleme möglich ist in einer seperaten Software die Druckwerte auszuwerten.
+Als Produktdatenbank in der ETS kommt die Gira 4-fach Sensorschnittstelle zum Einsatz. (http://download.gira.de/data2/09609110.vd1)
