@@ -1,1 +1,0 @@
-Dummydatei zumTest warum GIT mit -sch dateien probleme hat
