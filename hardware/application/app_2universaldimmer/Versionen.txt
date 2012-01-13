@@ -240,6 +240,12 @@ Achtung: Q4 und Q104 haben falsche Pinbelegung !!!  in V2.1 korrigiert
 
 Platine am 9.3.2011 geätzt.
 
+Für die Selbstherstellung von Platinen sind folgende Bohrdurchmesser zu verwenden:
+	0.6 mm	Vias
+	0.9 mm	SV1, D8, D108, R1, R101, R23, R123, L1, L101
+	1,2 mm	Klemmen: KL1, KL101, KL2
+	1,3 mm 	Q1, Q2, Q101, Q102
+
 
 V2.1       13.3.2011
 -----
@@ -248,8 +254,19 @@ V2.1       13.3.2011
 - R5, R105 von 20k auf 22k geändert
 - D5, D105 ZF15 statt ZF18
 - IC1, IC101 entfällt ersatzlos
-- C101 imLayout etwas versetzt (ist zu nah an C104)
+- C101 im Layout etwas versetzt (ist zu nah an C104)
 - C2 und C102 direkt unter IC-Fassung versetzen
 
 
+V2.2   4.1.2012
+---------------
+- R6,R106 von 12k auf 5.6k geändert
+- R12, R112 auf 100k erhöht, damit haben sie keine Funktion (da I-Sensor nicht benötigt, stromsparen)
+                 das Routing bleibt aber erhalten für evtl. später zu implementiertende Funktionen
+				kann auch unbestückt bleiben
+- R20, R120 verkleinert auf 22k, damit ist die Hysterese größerund tut auch wenn die Spannung auf 9V einbricht
+- R16,R116 NTC durch Widerstand 3.9k ersetzt und neu plaziert. Die Temperatur ist doch so hoch, dass der NTC die 
+                      Überlastgrenze auf bis zu 40W gesent hat.
 
+todo:
+- R23, R123 wird sehr heiss, bis zu 70° C bei 2W Typ, besser 5 oder 7W verwenden oder Netzteil nochmals überarbeiten
