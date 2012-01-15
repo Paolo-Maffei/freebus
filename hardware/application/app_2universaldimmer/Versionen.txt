@@ -270,3 +270,9 @@ V2.2   4.1.2012
 
 todo:
 - R23, R123 wird sehr heiss, bis zu 70° C bei 2W Typ, besser 5 oder 7W verwenden oder Netzteil nochmals überarbeiten
+- KL101 sitzt nicht vor den Anschlußlöchern im Gehäuse ) in V2.3 behoben
+
+
+V2.3   15.1.2012
+----------------
+- KL 101 2.5mm nach unten versetzt
