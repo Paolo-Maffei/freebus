@@ -1,4 +1,0 @@
-DAS GIT hat leider ein Problem damit einen großen SCH File im 6.0 Format zu handeln.
-Wer also den sch Filebenötigt wendet sich bitte an R.Petzoldt@web.de
-
-Danke
