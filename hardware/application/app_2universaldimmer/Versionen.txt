@@ -260,6 +260,9 @@ V2.1       13.3.2011
 
 V2.2   4.1.2012
 ---------------
+ACHTUNG: Ab dieser Version liegt der Schaltplanund das Board in der Eagle Version 6.1 vor!
+Diese kann mit einer älteren Eagle-Version nicht geöffnet werden!
+
 - R6,R106 von 12k auf 5.6k geändert
 - R12, R112 auf 100k erhöht, damit haben sie keine Funktion (da I-Sensor nicht benötigt, stromsparen)
                  das Routing bleibt aber erhalten für evtl. später zu implementiertende Funktionen
@@ -276,3 +279,7 @@ todo:
 V2.3   15.1.2012
 ----------------
 - KL 101 2.5mm nach unten versetzt
+
+V2.3.1   21.1.2012
+----------------
+- R23, R123 auf 5W geändert, Layout angepasst
