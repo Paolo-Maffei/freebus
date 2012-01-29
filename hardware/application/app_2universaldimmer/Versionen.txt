@@ -280,6 +280,11 @@ V2.3   15.1.2012
 ----------------
 - KL 101 2.5mm nach unten versetzt
 
-V2.3.1   21.1.2012
+V2.4   29.1.2012
 ----------------
 - R23, R123 auf 5W geändert, Layout angepasst
+		die Widerstände werden nun auch im ungünstigsten Fall (Ausgeschaltet) max. 55° heiß.
+		Das Gehäuse erwärmt sch dabei nicht merklich.
+- R9, R109 von 20k auf 22k geändert um einheitliche Werte zu haben
+- BOM aktualisiert
+- Reichelt Warenkorb angelegt (ohne Sicherung und C3,C103)
