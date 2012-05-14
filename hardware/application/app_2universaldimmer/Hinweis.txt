@@ -1,0 +1,2 @@
+ACHTUNG: Bei dieser Version liegt der Schaltplan und das Board in der Eagle Version 6.1 vor!
+Diese kann mit einer älteren Eagle-Version nicht geöffnet werden!

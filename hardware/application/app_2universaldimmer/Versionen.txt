@@ -260,6 +260,9 @@ V2.1       13.3.2011
 
 V2.2   4.1.2012
 ---------------
+ACHTUNG: Ab dieser Version liegt der Schaltplanund das Board in der Eagle Version 6.1 vor!
+Diese kann mit einer älteren Eagle-Version nicht geöffnet werden!
+
 - R6,R106 von 12k auf 5.6k geändert
 - R12, R112 auf 100k erhöht, damit haben sie keine Funktion (da I-Sensor nicht benötigt, stromsparen)
                  das Routing bleibt aber erhalten für evtl. später zu implementiertende Funktionen
@@ -270,3 +273,18 @@ V2.2   4.1.2012
 
 todo:
 - R23, R123 wird sehr heiss, bis zu 70° C bei 2W Typ, besser 5 oder 7W verwenden oder Netzteil nochmals überarbeiten
+- KL101 sitzt nicht vor den Anschlußlöchern im Gehäuse ) in V2.3 behoben
+
+
+V2.3   15.1.2012
+----------------
+- KL 101 2.5mm nach unten versetzt
+
+V2.4   29.1.2012
+----------------
+- R23, R123 auf 5W geändert, Layout angepasst
+		die Widerstände werden nun auch im ungünstigsten Fall (Ausgeschaltet) max. 55° heiß.
+		Das Gehäuse erwärmt sch dabei nicht merklich.
+- R9, R109 von 20k auf 22k geändert um einheitliche Werte zu haben
+- BOM aktualisiert
+- Reichelt Warenkorb angelegt (ohne Sicherung und C3,C103)
