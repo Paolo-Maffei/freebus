@@ -1,0 +1,31 @@
+<Qucs Schematic 0.0.15>
+<Properties>
+  <View=-1,10,1070,1019,0.88746,0,0>
+  <Grid=10,10,0>
+  <DataSet=8in_230V.dat>
+  <DataDisplay=8in_230V.sch>
+  <OpenDisplay=1>
+  <showFrame=0>
+  <FrameText0=Titel>
+  <FrameText1=Gezeichnet von:>
+  <FrameText2=Datum:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 120 457 826 407 3 #c0c0c0 1 00 1 0 0.02 0.4 1 -15 1 1.35702 1 -0.002 0.0002 0.0002 315 0 225 "Zeit (s)" "" "">
+	<"U_C.Vt" #aa0000 0 3 0 0 0>
+	<"U_diode.Vt" #00ff00 0 3 0 0 0>
+	<"I_diode.It" #ff00ff 0 3 0 0 1>
+  </Rect>
+  <Rect 120 917 826 407 3 #c0c0c0 1 00 1 0 0.02 0.4 1 -14.9272 2 1.35702 1 -0.002 0.0005 0.000177664 315 0 225 "Zeit (s)" "" "">
+	<"Pr1.Vt" #0000ff 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
