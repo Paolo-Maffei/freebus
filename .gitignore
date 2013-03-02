@@ -20,3 +20,4 @@ software/avr/app-8-out/freebus-avr-8-out.out.map
 *.s##
 *.b#*
 *.s#*
+software/telegram analyser/bin/org/telegramanalyser/*.class
