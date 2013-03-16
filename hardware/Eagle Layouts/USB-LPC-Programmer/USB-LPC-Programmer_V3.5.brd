@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -94,8 +94,8 @@ USB-LPC-Programmer 3.5</text>
 <wire x1="71.882" y1="25.908" x2="5.588" y2="25.908" width="0" layer="20"/>
 <wire x1="5.588" y1="25.908" x2="0" y2="20.32" width="0" layer="20"/>
 <wire x1="0" y1="20.32" x2="0" y2="0" width="0" layer="20"/>
-<text x="40.386" y="1.524" size="0.8128" layer="21">U_int.</text>
-<text x="40.386" y="4.572" size="0.8128" layer="21">U_ext.</text>
+<text x="41.021" y="2.794" size="0.8128" layer="21">U_int.</text>
+<text x="41.021" y="5.207" size="0.8128" layer="21">U_ext.</text>
 <text x="38.862" y="7.112" size="0.8128" layer="21" rot="R180">V_out</text>
 <text x="38.862" y="9.652" size="0.8128" layer="21" rot="R180">V_in</text>
 <text x="38.862" y="12.192" size="0.8128" layer="21" rot="R180">Reset</text>
@@ -107,6 +107,10 @@ USB-LPC-Programmer 3.5</text>
 <wire x1="46.736" y1="4.318" x2="47.244" y2="4.318" width="0.4064" layer="21"/>
 <wire x1="47.244" y1="4.318" x2="47.244" y2="1.778" width="0.4064" layer="21"/>
 <wire x1="47.244" y1="1.778" x2="46.736" y2="1.778" width="0.4064" layer="21"/>
+<text x="42.926" y="1.016" size="0.8128" layer="21" rot="R90">1</text>
+<text x="46.101" y="9.144" size="0.8128" layer="21">1</text>
+<text x="26.416" y="23.114" size="0.8128" layer="21">1</text>
+<text x="20.701" y="18.669" size="0.8128" layer="21" rot="MR0">1</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -653,56 +657,48 @@ Source: http://www.abracon.com/Oscillators/asf1-L-L1.pdf</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="HAKA Zwillingsangebot">
-<description language="de">&lt;b&gt;HAKA  Design-Regeln für Zwillingsleiterplatten (Stand 12.12.2008):&lt;/b&gt;&lt;br&gt;
+<designrules name="Eagle-DRU - 1203 - LeitOn - 01 and 02 layers">
+<description language="de">&lt;b&gt;LeitOn Design-Regeln&lt;/b&gt;
+&lt;p&gt;
+Diese DRU-Datei enthält viele erforderliche Design Einstellungen, damit Ihre Standardleiterplatte bei uns fehlerfrei und ohne Zusatzkosten produziert werden kann. Die Optionen Shapes und Misc sind nicht relevant und der minimale und maximale Wert für Roundness Shapes kann frei gewählt werden. Nach unten abweichende Design-Regeln sind möglich, können jedoch Aufpreise erfordern. Hinweis: Freistellungen und Streichstärken von Bestückungsdruck werden nicht im Eagle-DRC geprüft!
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Übersicht der LeitOn Regeln:&lt;/b&lt;&lt;br&gt;&lt;br&gt;
+&lt;u&gt;allgemein:&lt;/u&gt;&lt;br&gt;
+minimale Leiterbahnbreite/-abstand: &lt;b&gt;0.15 mm&lt;/b&gt;&lt;br&gt;
+(Strichstärke für Kupferschrift sollte mind. 0.2 mm sein um gut lesbar zu bleiben)&lt;br&gt;
+kleinster Bohrdurchmesser: &lt;b&gt;0.3 mm&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+&lt;u&gt;Kupferrestringe um DK-Bohrungen:&lt;/u&gt;&lt;br&gt;
+Aussenlagen: &lt;b&gt;0.15 mm&lt;/b&gt;&lt;br&gt;
+Innenlagen:  &lt;b&gt;0.2 mm&lt;/b&gt;&lt;br&gt;
 &lt;br&gt;
-Diese DRU-Datei enthält alle erforderlichen Design Einstellungen, damit Ihre Zwillingsleiterplatten bei uns fehlerfrei und kostengünstig produziert werden können. Die Optionen Shapes und Misc sind nicht relevant und der minimale Wert für Roundness Shapes sollte auf 0 gesetzt werden. &lt;br&gt;
+&lt;u&gt;Masselagen-Freimachungen:&lt;/u&gt;&lt;br&gt;
+Innenlagen: &lt;b&gt;0.35 mm&lt;/b&gt;&lt;br&gt;
 &lt;br&gt;
-Übersicht der &lt;b&gt; HAKA &lt;/b&gt; Regeln:&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;allgemein:&lt;/b&gt;
-&lt;P&gt;
-minimale Leiterbahnbreite/-abstand: 0.2 mm&lt;br&gt;
-Strichstärke für Kupferschrift sollte mind. 0.2 mm sein um gut lesbar zu bleiben&lt;br&gt;
-kleinster Bohrdurchmesser: 0.5 mm --&gt; kleinstes Lötauge 0.9mm&lt;br&gt;
-&lt;font color=&quot;red&quot;&gt;&lt;b&gt;Achtung:Maximale Größe über Alles: 100mm  x 160mm (bei Einzelplatten incl. 5mm Fräsabstand!!)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+&lt;u&gt;Bestückungsdruck (wird nicht im DRU überprüft!)&lt;/u&gt;&lt;br&gt;
+minimale Strichstärke: &lt;b&gt;0.2 mm&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+&lt;b&gt;&lt;u&gt;&lt;font color= &quot;blue&quot;&gt;Wichtig:&lt;/font&gt;&lt;/b&gt;&lt;/u&gt; Verwenden Sie als Strichstärke für Masseflächen keine Strichstärken kleiner 0.1mm. Es entstehen sonst extrem große Datenmengen, weil Eagle die Massefläche stets mit Polygonen der gleichen Strichstärke füllt.
 
-&lt;br&gt;
-&lt;b&gt;Restringe um DK-Bohrungen:&lt;/b&gt;&lt;br&gt;
-Aussenlagen: 0.2 mm&lt;br&gt;
-&lt;br&gt;
-Polygon-Isolierungen: 0.3 mm&lt;br&gt;
-&lt;br&gt;
-&lt;font color=&quot;red&quot;&gt;&lt;b&gt;Achtung:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
-Verwenden Sie bitte nur den Vektor-Font, da nur dieser bei der Gerber-Ausgabe generiert werden kann, andere Schriftarten können zu Fehlern führen!&lt;br&gt;
-Die Linienstärke  für Polygone  sollte größer sein als 0.2mm. Es entstehen ansonsten extrem große Datenmengen, weil Eagle die  Polygone mit der angegebenen Strichstärke füllt. &lt;br&gt;
-&lt;br&gt;
-&lt;b&gt; Fräskonturen:&lt;/b&gt;&lt;br&gt;
- werden im Dimension-Layer die Fräswege mit einem 2mm Werkzeug gezeichnet, so können diese Daten direkt als Fräsprogramm übernommen, und so die Leiterplatten kostenfrei mit jeder Kontur gefräst werden!&lt;br&gt;
-Der Abstand vom Kupfer zur Kontur muß mindestens 0.2mm betragen!&lt;br&gt;
-&lt;br&gt;
-weitere Informationen finden Sie unter  &lt;b&gt; &lt;font color=&quot;blue&quot;&gt; www.haka-lp.de &lt;/b&gt;&lt;/font&gt; oder bei: &lt;br&gt;&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;HAKA Elektronik-Leiterplatten GmbH -  Am Zankwald 12 -  66583 Spiesen-Elversberg - Tel.: 06821/730893&lt;/b&gt;&lt;/font&gt;
-</description>
+&lt;/p&gt;</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm 1.5mm"/>
-<param name="mdWireWire" value="0.2mm"/>
-<param name="mdWirePad" value="0.2mm"/>
-<param name="mdWireVia" value="0.2mm"/>
-<param name="mdPadPad" value="0.15mm"/>
-<param name="mdPadVia" value="0.2mm"/>
-<param name="mdViaVia" value="0.2mm"/>
-<param name="mdSmdPad" value="0mil"/>
-<param name="mdSmdVia" value="0mil"/>
-<param name="mdSmdSmd" value="0mil"/>
+<param name="mtIsolate" value="1.5mm 0.71mm 0.36mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.36mm"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="6mil"/>
+<param name="mdSmdVia" value="6mil"/>
+<param name="mdSmdSmd" value="6mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="0.2mm"/>
-<param name="mdDrill" value="0.2mm"/>
+<param name="mdCopperDimension" value="20mil"/>
+<param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="0.2mm"/>
-<param name="msDrill" value="0.5mm"/>
-<param name="msMicroVia" value="9.99mm"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="0.3mm"/>
+<param name="msMicroVia" value="999mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0"/>
 <param name="rvPadInner" value="0"/>
@@ -711,36 +707,36 @@ weitere Informationen finden Sie unter  &lt;b&gt; &lt;font color=&quot;blue&quot
 <param name="rvViaInner" value="0"/>
 <param name="rvMicroViaOuter" value="0"/>
 <param name="rvMicroViaInner" value="0"/>
-<param name="rlMinPadTop" value="0.2mm"/>
-<param name="rlMaxPadTop" value="20mm"/>
-<param name="rlMinPadInner" value="0.4mm"/>
-<param name="rlMaxPadInner" value="20mm"/>
-<param name="rlMinPadBottom" value="0.2mm"/>
-<param name="rlMaxPadBottom" value="20mm"/>
-<param name="rlMinViaOuter" value="0.2mm"/>
-<param name="rlMaxViaOuter" value="20mm"/>
-<param name="rlMinViaInner" value="0.4mm"/>
-<param name="rlMaxViaInner" value="20mm"/>
-<param name="rlMinMicroViaOuter" value="9.99mm"/>
-<param name="rlMaxMicroViaOuter" value="20mm"/>
-<param name="rlMinMicroViaInner" value="9.99mm"/>
-<param name="rlMaxMicroViaInner" value="20mm"/>
+<param name="rlMinPadTop" value="8mil"/>
+<param name="rlMaxPadTop" value="100mil"/>
+<param name="rlMinPadInner" value="8mil"/>
+<param name="rlMaxPadInner" value="100mil"/>
+<param name="rlMinPadBottom" value="8mil"/>
+<param name="rlMaxPadBottom" value="100mil"/>
+<param name="rlMinViaOuter" value="6mil"/>
+<param name="rlMaxViaOuter" value="100mil"/>
+<param name="rlMinViaInner" value="8mil"/>
+<param name="rlMaxViaInner" value="100mil"/>
+<param name="rlMinMicroViaOuter" value="99mil"/>
+<param name="rlMaxMicroViaOuter" value="999mil"/>
+<param name="rlMinMicroViaInner" value="99mil"/>
+<param name="rlMaxMicroViaInner" value="999mil"/>
 <param name="psTop" value="-1"/>
 <param name="psBottom" value="-1"/>
-<param name="psFirst" value="-1"/>
+<param name="psFirst" value="0"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="0"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="0.1mm"/>
-<param name="mlMaxStopFrame" value="0.1mm"/>
+<param name="mlMinStopFrame" value="3mil"/>
+<param name="mlMaxStopFrame" value="3mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
 <param name="mlViaStopLimit" value="0mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
-<param name="slThermalIsolate" value="10mil"/>
+<param name="slThermalIsolate" value="8mil"/>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
@@ -749,7 +745,7 @@ weitere Informationen finden Sie unter  &lt;b&gt; &lt;font color=&quot;blue&quot
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="useDiameter" value="13"/>
-<param name="maxErrors" value="5000"/>
+<param name="maxErrors" value="50"/>
 </designrules>
 <autorouter>
 <pass name="Default">
@@ -896,7 +892,7 @@ weitere Informationen finden Sie unter  &lt;b&gt; &lt;font color=&quot;blue&quot
 </element>
 <element name="T1" library="transistor-pnp" package="TO92" value="BC557" x="49.53" y="4.318" smashed="yes" rot="R270">
 <attribute name="NAME" x="50.927" y="6.985" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="47.879" y="0.508" size="0.8128" layer="27" ratio="10"/>
+<attribute name="VALUE" x="48.514" y="0.508" size="0.8128" layer="27" ratio="10"/>
 </element>
 <element name="X1" library="con-berg" package="PN61729-S" value="USB BW" x="2.413" y="13.2715" smashed="yes" rot="R270">
 <attribute name="NAME" x="5.0165" y="19.685" size="0.8128" layer="25"/>
