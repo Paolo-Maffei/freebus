@@ -1,0 +1,51 @@
+USB-LPC-Programmer V3.5
+
+
+WARNUNG!!!
+
+Laut VDE darf ein SELV Stromkreis(EIB) nicht galvanisch mit einem PLV (PC)Stromkreis verbunden werden. Die Trennung muss so ausgestaltet sein, als würde sie zwischen BUS und 230V trennen.
+Der hier vorgestellte Programmer trennt diesen nicht galvanisch,stellt aber eine
+eigene Versorgung zum Programmieren bereit.
+Heisst: Man darf ihn zum Programmieren hernehmen solange der BUS nicht angeschlossen ist.
+Als gateway scheidet er allerdings nach VDE aus.
+
+
+
+
+Einleitung
+
+Um die LPC-Controller mit der entsprechenden Firmware zu versehen wird ein Programmieradapter benötigt. Hier ist eine Version für den USB-Anschluss. Die USB-Variante bietet folgende Features:
+
+    Die Schaltung findet auf einer kleinen doppelseitigen Platine (72x26 mm) Platz.
+    Einziges SMD Bauteil ist der FT232, den es nicht in einer DIL Version gibt(optional kann noch ein SMD Quarzoszillator bestückt werden).
+    Die Schaltung und der zu programmierende Controller werden vom USB mit Spannung versorgt.
+    Programmiert werden kann der LPC direkt im Sockel oder auf dem Controllerboard über die 6pol. Stiftleiste.
+
+Der Vorteil einer USB-Lösung ist, dass kein extra Netzteil benötigt wird. Die zum Flashen und Programmieren benötigte Spannung liefert der USB-Anschluß schon von Haus aus. Darüberhinaus wird kein USB zu RS232 Adapter benötigt, falls der heimische Computer nicht mehr über eine serielle Schnittstelle verfügt.
+
+
+
+
+ 
+Tipps zum Nachbau
+
+ -  am Besten zuerst mit dem FT232 beginnen, danach alle Kondensatoren und die USB-Buchse
+ -  jetzt kann ein erster Test am USB-Anschluss erfolgen, über C1 sollten ca. 5V und an den Pins 7 und 14 von IC2 ca. 3,3V messbar sein
+ -  der Chip sollte sich als virtueller COM-Port am Rechner anmelden. Den evtl. erforderlichen passenden Treiber gibt es hier: http://www.ftdichip.com/Drivers/VCP.htm
+ -  nun die restlichen Bauelemente bestücken
+ -  soll die Platine in das Reichelt „Strapubox“ Gehäuse eingebaut werden,  sind die Abstände LED-Oberkante - Platine 17mm und Stiftleiste – Platine 23mm
+ -  für den LPC-Sockel  4 Standard IC-Fassungen ineinanderstecken und mit etwas Sekundenkleber fixieren
+ -  aus der oberen Fassung können alle nicht benötigten Kontakte entfernt werden, dann lässt sich der LPC leichter stecken und ziehen
+ -  der Programmer kann mit einem Quarz oder einem Quarzoszillator versehen werden
+ -  zum Quarz gehören die Kondensatoren C6 und C7
+ -  der Oszillator wird so aufgelötet, das Pin 1 (abgeschrägte Kante) auf das unbeschaltete Pad bei Pin 14 des LPC-Sockel zeigt
+
+ -  JP1 1-2: Programmierspannung vom USB (Standardeinstellung)
+        2-3:Programmierspannung aus der Zielschaltung
+
+Die Durchbrüche sind nicht mit eingezeichnet, das geht besser wenn man das Eagle .brd nochmal mit allen Layern ausdruckt und die Aussparungen damit anbringt. Die Ränder des Gehäuses sind auf dem Board mit eingezeichnet(Layer48 Document), sodass man das gut ausrichten kann.
+
+
+Hier der Reichelt Warenkorb mit Quarzoption:
+https://secure.reichelt.de/index.html?;ACTION=20;AWKID=712564;PROVID=2084
+

@@ -42,7 +42,8 @@ LM_SNT_update_kit		Schaltregler MC34063 Ersatz für den LM317 (Nachrüstsatz)
 LPC 2TE
 LPC 4TE
 LPC_4TE_3.21a
-LPC-Programmer			Programmieradapter zum flashen der LPC Familie
+LPC-Programmer			Programmieradapter zum flashen der LPC Familie (mit RS232 Schnittstelle)
+USB-LPC-Programmer		Programmieradapter zum flashen der LPC Familie (mit USB Schnittstelle)
 RS232 Interface			Freebus EIB- RS232 Anbindung
 Starterpaket			
 Tastsensor_by_kubi

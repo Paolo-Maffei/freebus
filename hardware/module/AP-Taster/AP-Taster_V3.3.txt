@@ -1,0 +1,26 @@
+Hier ein Modul auf Basis des 89LPC922 zum Einbau in einen
+Busch-Jäger Aufputz Feuchtraum Taster der "ocean" Serie.
+
+Wipptaster Schließer	grau/blaugrün	2621 W-53
+			alpinweiß	2621 W-54
+
+Doppeltaster Schließer	grau/blaugrün	2621 WN-53-205-101
+			alpinweiß	2621 WN-54-205-101
+
+Beschriftungsträger			1763-53
+
+Beleuchtungseinsatz			2152 NLI-53
+
+Das Modul besteht aus einer einseitigen Platine welche in das Unterteil des Tasters passt.
+Es können bis zu 4 Taster (2 Doppeltaster Neben- Untereinander)angeschlossen werden.
+
+Optional kann der Beschriftungsträger eingebaut und je eine Status-LED angebracht werden (siehe Bild3).
+
+Für die Prog.LED kann eine hellweiße LED über einen Stecker angeschlossen und in den Beleuchtungseinsatz eingebaut werden(nicht getestet, Vorwiderstand anpassen, max. Strom des LPC beachten).
+Die LED kann dann als Orientierungslicht Parametriert werden.
+
+Software und .vd siehe UP-Tasterschnittstelle (tasterschittstelle_wd_4fach.hex, Jung 2092nabs.vd1)
+
+Hier der Reichelt Warenkorb:
+
+http://www.reichelt.de/?ACTION=20;AWKID=714819;PROVID=2084 
