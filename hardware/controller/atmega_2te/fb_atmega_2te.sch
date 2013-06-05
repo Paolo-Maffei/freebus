@@ -13157,6 +13157,50 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <rectangle x1="7.239" y1="-2.921" x2="8.001" y2="-1.905" layer="21"/>
 <rectangle x1="9.779" y1="-2.921" x2="10.541" y2="-1.905" layer="21"/>
 </package>
+<package name="1X02">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+</package>
+<package name="1X02/90">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-2.54" y1="-1.905" x2="0" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="6.985" x2="-1.27" y2="1.27" width="0.762" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-1.905" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="6.985" x2="1.27" y2="1.27" width="0.762" layer="21"/>
+<pad name="1" x="-1.27" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.27" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<text x="-3.175" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="4.445" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.651" y1="0.635" x2="-0.889" y2="1.143" layer="21"/>
+<rectangle x1="0.889" y1="0.635" x2="1.651" y2="1.143" layer="21"/>
+<rectangle x1="-1.651" y1="-2.921" x2="-0.889" y2="-1.905" layer="21"/>
+<rectangle x1="0.889" y1="-2.921" x2="1.651" y2="-1.905" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PINHD6">
@@ -13189,6 +13233,16 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <pin name="7" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="8" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="9" x="-2.54" y="-10.16" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+<symbol name="PINHD2">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -13259,6 +13313,32 @@ Source: www.bourns.com .. 6000_series.pdf</description>
 <connect gate="A" pin="7" pad="7"/>
 <connect gate="A" pin="8" pad="8"/>
 <connect gate="A" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PINHD-1X2" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="PINHD2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X02">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/90" package="1X02/90">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -18097,8 +18177,8 @@ nominal inductance, magnetically screened</description>
 <part name="L3" library="Uwe" deviceset="BS" device="11" value="150mH"/>
 <part name="L4" library="rcl" deviceset="L-EU" device="0207/2V" value="220µ"/>
 <part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49U-V" value="8 MHz"/>
-<part name="C13" library="rcl" deviceset="C-EU" device="025-024X044" value="33pF"/>
-<part name="C12" library="rcl" deviceset="C-EU" device="025-024X044" value="33pF"/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C0805" value="33pF"/>
+<part name="C12" library="rcl" deviceset="C-EU" device="C0805" value="33pF"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="0207/2V" value="100k"/>
 <part name="IC1" library="avr" deviceset="ATMEGA168*P" device="" technology="-20" value="ATMEGA 328P/168P"/>
 <part name="T1" library="transistor-small-signal" deviceset="BC557" device=""/>
@@ -18116,6 +18196,7 @@ nominal inductance, magnetically screened</description>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="JP4" library="pinhead" deviceset="PINHD-1X2" device="" value="für 2 Kanal PWM"/>
 </parts>
 <sheets>
 <sheet>
@@ -18124,7 +18205,7 @@ nominal inductance, magnetically screened</description>
 <text x="88.9" y="137.16" size="1.778" layer="97">MC33063   -40° to +85°C</text>
 <text x="167.64" y="27.94" size="3.81" layer="97">freebus AVR-Controller 2TE</text>
 <text x="167.64" y="23.876" size="2.54" layer="97">Achtung Layout ist noch nicht getestet!</text>
-<text x="253.238" y="6.096" size="3.81" layer="97">1.0</text>
+<text x="253.238" y="6.096" size="3.81" layer="97">1.1</text>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="180.34" y="137.16" smashed="yes" rot="R180">
@@ -18135,11 +18216,11 @@ nominal inductance, magnetically screened</description>
 <attribute name="NAME" x="182.88" y="156.21" size="1.778" layer="95"/>
 <attribute name="VALUE" x="182.88" y="153.797" size="1.778" layer="96"/>
 </instance>
-<instance part="R16" gate="G$1" x="180.34" y="165.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="181.864" y="165.8366" size="1.778" layer="95"/>
-<attribute name="VALUE" x="181.864" y="163.068" size="1.778" layer="96"/>
+<instance part="R16" gate="G$1" x="180.34" y="165.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="181.864" y="163.2966" size="1.778" layer="95"/>
+<attribute name="VALUE" x="181.864" y="165.608" size="1.778" layer="96"/>
 </instance>
-<instance part="JP1" gate="A" x="243.84" y="104.14"/>
+<instance part="JP1" gate="A" x="236.22" y="111.76"/>
 <instance part="JP2" gate="A" x="238.76" y="149.86" smashed="yes">
 <attribute name="NAME" x="232.41" y="160.655" size="1.778" layer="95"/>
 <attribute name="VALUE" x="232.41" y="137.16" size="1.778" layer="96"/>
@@ -18153,9 +18234,9 @@ nominal inductance, magnetically screened</description>
 <attribute name="VALUE" x="85.09" y="24.638" size="1.778" layer="96"/>
 </instance>
 <instance part="GND23" gate="1" x="76.2" y="5.08"/>
-<instance part="R10" gate="G$1" x="76.2" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="77.47" y="21.8186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="77.47" y="18.288" size="1.778" layer="96"/>
+<instance part="R10" gate="G$1" x="76.2" y="20.32" smashed="yes" rot="R270">
+<attribute name="NAME" x="74.93" y="18.8214" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="74.93" y="22.352" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="IC2" gate="G$1" x="99.06" y="157.48" smashed="yes" rot="MR0">
 <attribute name="NAME" x="109.22" y="160.02" size="1.778" layer="95" rot="MR0"/>
@@ -18280,10 +18361,10 @@ nominal inductance, magnetically screened</description>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94" font="vector"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94" font="vector"/>
 </instance>
-<instance part="P+4" gate="1" x="218.44" y="99.06" smashed="yes">
-<attribute name="VALUE" x="215.392" y="100.838" size="1.778" layer="96"/>
+<instance part="P+4" gate="1" x="210.82" y="106.68" smashed="yes">
+<attribute name="VALUE" x="207.772" y="108.458" size="1.778" layer="96"/>
 </instance>
-<instance part="GND4" gate="1" x="233.68" y="86.36"/>
+<instance part="GND4" gate="1" x="226.06" y="93.98"/>
 <instance part="GND11" gate="1" x="228.6" y="134.62"/>
 <instance part="LSP1" gate="1" x="246.38" y="154.94" rot="R180"/>
 <instance part="LSP2" gate="1" x="246.38" y="144.78" rot="R180"/>
@@ -18314,9 +18395,9 @@ nominal inductance, magnetically screened</description>
 <attribute name="NAME" x="23.622" y="87.249" size="1.778" layer="95"/>
 <attribute name="VALUE" x="23.622" y="84.963" size="1.778" layer="96"/>
 </instance>
-<instance part="R7" gate="G$1" x="45.72" y="91.44" smashed="yes" rot="R90">
-<attribute name="NAME" x="46.99" y="92.1766" size="1.778" layer="95"/>
-<attribute name="VALUE" x="46.99" y="88.9" size="1.778" layer="96"/>
+<instance part="R7" gate="G$1" x="45.72" y="91.44" smashed="yes" rot="R270">
+<attribute name="NAME" x="44.45" y="90.7034" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="44.45" y="93.98" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R8" gate="G$1" x="38.1" y="83.82" smashed="yes">
 <attribute name="NAME" x="38.1" y="85.0646" size="1.778" layer="95"/>
@@ -18349,9 +18430,9 @@ nominal inductance, magnetically screened</description>
 <attribute name="NAME" x="48.26" y="104.14" size="1.778" layer="95"/>
 <attribute name="VALUE" x="48.26" y="101.6" size="1.778" layer="96"/>
 </instance>
-<instance part="D7" gate="G$1" x="210.82" y="104.14" smashed="yes" rot="R90">
-<attribute name="NAME" x="208.788" y="105.41" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="208.788" y="102.997" size="1.778" layer="96" rot="R180"/>
+<instance part="D7" gate="G$1" x="203.2" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="201.168" y="113.03" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="201.168" y="110.617" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C5" gate="G$1" x="30.48" y="104.14" smashed="yes" rot="R90">
 <attribute name="NAME" x="30.48" y="106.807" size="1.778" layer="95" rot="R180"/>
@@ -18370,8 +18451,8 @@ nominal inductance, magnetically screened</description>
 <instance part="+3V4" gate="G$1" x="104.14" y="116.84" smashed="yes">
 <attribute name="VALUE" x="100.838" y="117.602" size="1.778" layer="96"/>
 </instance>
-<instance part="+3V6" gate="G$1" x="218.44" y="119.38" smashed="yes">
-<attribute name="VALUE" x="215.138" y="119.888" size="1.778" layer="96"/>
+<instance part="+3V6" gate="G$1" x="210.82" y="127" smashed="yes">
+<attribute name="VALUE" x="207.518" y="127.508" size="1.778" layer="96"/>
 </instance>
 <instance part="GND22" gate="1" x="22.86" y="78.74"/>
 <instance part="JP3" gate="G$1" x="233.68" y="55.88" rot="R180"/>
@@ -18381,7 +18462,8 @@ nominal inductance, magnetically screened</description>
 <instance part="GND24" gate="1" x="246.38" y="40.64" smashed="yes">
 <attribute name="VALUE" x="243.84" y="38.1" size="1.778" layer="96"/>
 </instance>
-<instance part="GND1" gate="1" x="210.82" y="86.36"/>
+<instance part="GND1" gate="1" x="203.2" y="93.98"/>
+<instance part="JP4" gate="G$1" x="236.22" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -18414,7 +18496,7 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <wire x1="76.2" y1="7.62" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R10" gate="G$1" pin="2"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -18446,8 +18528,8 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="2"/>
-<wire x1="241.3" y1="111.76" x2="233.68" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="111.76" x2="233.68" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="119.38" x2="226.06" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="119.38" x2="226.06" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -18511,14 +18593,14 @@ nominal inductance, magnetically screened</description>
 <segment>
 <pinref part="D7" gate="G$1" pin="A"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="210.82" y1="88.9" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="96.52" x2="203.2" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <wire x1="180.34" y1="157.48" x2="180.34" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<pinref part="R16" gate="G$1" pin="2"/>
+<pinref part="R16" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="EIB+" class="0">
@@ -18534,13 +18616,12 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
-<wire x1="241.3" y1="114.3" x2="231.14" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="D7" gate="G$1" pin="C"/>
-<wire x1="210.82" y1="106.68" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="114.3" x2="208.28" y2="114.3" width="0.1524" layer="91"/>
-<label x="208.28" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="231.14" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
-<junction x="210.82" y="114.3"/>
+<wire x1="203.2" y1="114.3" x2="203.2" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="121.92" x2="200.66" y2="121.92" width="0.1524" layer="91"/>
+<label x="200.66" y="121.92" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="121.92" x2="203.2" y2="121.92" width="0.1524" layer="91"/>
+<junction x="203.2" y="121.92"/>
 </segment>
 <segment>
 <pinref part="T1" gate="1" pin="E"/>
@@ -18581,7 +18662,7 @@ nominal inductance, magnetically screened</description>
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="83.82" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="83.82" x2="48.26" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="86.36" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
 <junction x="45.72" y="83.82"/>
@@ -18674,7 +18755,7 @@ nominal inductance, magnetically screened</description>
 <wire x1="73.66" y1="30.48" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="T2" gate="G$1" pin="B"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="30.48" x2="81.28" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="25.4" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
 <junction x="76.2" y="30.48"/>
@@ -18730,8 +18811,8 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="9"/>
-<wire x1="241.3" y1="93.98" x2="218.44" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="93.98" x2="218.44" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="101.6" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="101.6" x2="210.82" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+24V"/>
 </segment>
 </net>
@@ -18763,7 +18844,7 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
-<pinref part="R16" gate="G$1" pin="1"/>
+<pinref part="R16" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="LSP2" gate="1" pin="MP"/>
@@ -18801,8 +18882,8 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="3"/>
-<wire x1="218.44" y1="109.22" x2="241.3" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="109.22" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="116.84" x2="233.68" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="116.84" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
@@ -18858,8 +18939,8 @@ nominal inductance, magnetically screened</description>
 <net name="IO_1" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="8"/>
-<wire x1="241.3" y1="96.52" x2="231.14" y2="96.52" width="0.1524" layer="91"/>
-<label x="231.14" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="104.14" x2="223.52" y2="104.14" width="0.1524" layer="91"/>
+<label x="223.52" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="1"/>
@@ -18875,8 +18956,8 @@ nominal inductance, magnetically screened</description>
 <net name="IO_2" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="7"/>
-<wire x1="241.3" y1="99.06" x2="231.14" y2="99.06" width="0.1524" layer="91"/>
-<label x="231.14" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="106.68" x2="223.52" y2="106.68" width="0.1524" layer="91"/>
+<label x="223.52" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="2"/>
@@ -18892,8 +18973,8 @@ nominal inductance, magnetically screened</description>
 <net name="IO_3" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="6"/>
-<wire x1="241.3" y1="101.6" x2="231.14" y2="101.6" width="0.1524" layer="91"/>
-<label x="231.14" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="109.22" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
+<label x="223.52" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="3"/>
@@ -18909,8 +18990,8 @@ nominal inductance, magnetically screened</description>
 <net name="IO_4" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="5"/>
-<wire x1="241.3" y1="104.14" x2="231.14" y2="104.14" width="0.1524" layer="91"/>
-<label x="231.14" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="111.76" x2="223.52" y2="111.76" width="0.1524" layer="91"/>
+<label x="223.52" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="4"/>
@@ -18951,14 +19032,19 @@ nominal inductance, magnetically screened</description>
 <pinref part="IC1" gate="G$1" pin="(PCI23/AIN1)PD7"/>
 </segment>
 </net>
-<net name="SS" class="0">
+<net name="OC1B" class="0">
 <segment>
 <wire x1="165.1" y1="55.88" x2="162.56" y2="55.88" width="0.1524" layer="91"/>
-<label x="162.56" y="55.88" size="1.27" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="(PCI2/SS/OC1B)PB2"/>
+<label x="165.1" y="55.88" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="G$1" pin="1"/>
+<wire x1="233.68" y1="83.82" x2="226.06" y2="83.82" width="0.1524" layer="91"/>
+<label x="226.06" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MOSI" class="0">
+<net name="MOSI/OC2A" class="0">
 <segment>
 <wire x1="165.1" y1="53.34" x2="162.56" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="(PCI3/MOSI/OC2A)PB3"/>
@@ -18968,6 +19054,11 @@ nominal inductance, magnetically screened</description>
 <pinref part="JP3" gate="G$1" pin="4"/>
 <wire x1="241.3" y1="55.88" x2="246.38" y2="55.88" width="0.1524" layer="91"/>
 <label x="246.38" y="55.88" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="G$1" pin="2"/>
+<wire x1="233.68" y1="81.28" x2="226.06" y2="81.28" width="0.1524" layer="91"/>
+<label x="226.06" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -19084,7 +19175,7 @@ nominal inductance, magnetically screened</description>
 <net name="N$14" class="0">
 <segment>
 <pinref part="T1" gate="1" pin="C"/>
-<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="99.06" x2="45.72" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -19103,8 +19194,8 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="4"/>
-<wire x1="241.3" y1="106.68" x2="231.14" y2="106.68" width="0.1524" layer="91"/>
-<label x="231.14" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="114.3" x2="223.52" y2="114.3" width="0.1524" layer="91"/>
+<label x="223.52" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

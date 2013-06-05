@@ -1,0 +1,13 @@
+fb_atmega_2te
+
+freebus Controllerplatine für ATmega
+passend für 2TE Hutschienengehäuse
+
+
+V1.0
+-erste Version
+
+V1.1
+-zwei zusätzliche Pins (JP4) für PWM Ausgang hinzugefügt
+-Anschwingkondensatoren aus Platzgründen als SMD ausgeführt
+
