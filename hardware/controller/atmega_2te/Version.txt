@@ -11,3 +11,6 @@ V1.1
 -zwei zusätzliche Pins (JP4) für PWM Ausgang hinzugefügt
 -Anschwingkondensatoren aus Platzgründen als SMD ausgeführt
 
+V1.2
+-nach Aufbau zweier Boards (V1.1) L4 gedreht und Bestückungsdruck angepasst
+

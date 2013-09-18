@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -34,8 +34,8 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -97,8 +97,7 @@
 <hole x="26.6698" y="5.0801" drill="2.8"/>
 <hole x="8.8898" y="53.3401" drill="2.8"/>
 <hole x="19.685" y="3.4925" drill="0.8"/>
-<text x="27.432" y="40.894" size="1.016" layer="21">Bus+</text>
-<text x="27.432" y="38.354" size="1.016" layer="21">Bus-</text>
+<text x="28.194" y="41.148" size="1.016" layer="21">+</text>
 <text x="21.082" y="8.636" size="1.016" layer="21" rot="R180">1</text>
 <text x="13.97" y="1.27" size="1.016" layer="21">+</text>
 <text x="28.448" y="43.053" size="1.016" layer="21" rot="R180">1</text>
@@ -116,6 +115,8 @@
 <wire x1="0.762" y1="33.782" x2="0.762" y2="24.13" width="0.0254" layer="20"/>
 <wire x1="0.762" y1="24.13" x2="0" y2="24.13" width="0.0254" layer="20"/>
 <wire x1="0" y1="24.13" x2="0" y2="0" width="0.0254" layer="20"/>
+<text x="28.448" y="37.846" size="1.016" layer="21">-</text>
+<text x="28.956" y="38.608" size="1.016" layer="21" rot="R90">Bus</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -961,7 +962,7 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="S1" library="switch-omron" package="B3F-10XX" value="Programmier Taster" x="19.6849" y="3.4926" locked="yes" smashed="yes" rot="R180">
-<attribute name="NAME" x="16.2558" y="3.8737" size="0.8128" layer="25" ratio="10" rot="R180"/>
+<attribute name="NAME" x="24.6378" y="3.8737" size="0.8128" layer="25" ratio="10" rot="R180"/>
 <attribute name="OC_NEWARK" value="36M3542" x="19.6849" y="3.4926" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="B3F-1000" x="19.6849" y="3.4926" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="19.6849" y="3.4926" size="1.778" layer="27" rot="R180" display="off"/>
@@ -978,13 +979,13 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="1.9048" y="26.9241" size="0.8128" layer="28" rot="MR90"/>
 </element>
 <element name="C6" library="rcl" package="C025-024X044" value="10nF" x="19.431" y="20.574" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.526" y="19.177" size="0.8128" layer="25" ratio="10" rot="R180"/>
+<attribute name="NAME" x="20.066" y="19.177" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
 <element name="R9" library="rcl" package="0207/2V" value="5k6" x="19.558" y="23.495" smashed="yes">
-<attribute name="NAME" x="15.5702" y="23.749" size="0.8128" layer="25" ratio="10"/>
+<attribute name="NAME" x="19.6342" y="21.971" size="0.8128" layer="25" ratio="10"/>
 </element>
 <element name="R10" library="rcl" package="0207/2V" value="100k" x="23.114" y="20.32" smashed="yes" rot="R270">
-<attribute name="NAME" x="24.1808" y="23.876" size="0.8128" layer="25" ratio="10" rot="R180"/>
+<attribute name="NAME" x="23.9268" y="18.034" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
 <element name="IC2" library="mc34063" package="DIL08" value="MC34063AP" x="15.621" y="52.832" smashed="yes" rot="R270">
 <attribute name="NAME" x="15.875" y="48.133" size="0.8128" layer="25" ratio="10"/>
@@ -1019,7 +1020,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="24.0538" y="37.465" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
 <element name="R15" library="rcl" package="0207/2V" value="10k" x="6.731" y="44.196" smashed="yes" rot="R90">
-<attribute name="NAME" x="5.7912" y="46.482" size="0.8128" layer="25" ratio="10"/>
+<attribute name="NAME" x="6.2992" y="46.482" size="0.8128" layer="25" ratio="10"/>
 </element>
 <element name="C11" library="rcl" package="C025-024X044" value="100nF" x="4.191" y="38.989" smashed="yes">
 <attribute name="NAME" x="2.667" y="37.465" size="0.8128" layer="25" ratio="10" rot="R180"/>
@@ -1041,7 +1042,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="22.86" y="26.797" size="0.8128" layer="25" ratio="10"/>
 </element>
 <element name="D4" library="diode" package="D-2.5" value="BAT46" x="7.874" y="57.15" smashed="yes" rot="R180">
-<attribute name="NAME" x="7.112" y="55.245" size="0.8128" layer="25" ratio="10"/>
+<attribute name="NAME" x="6.604" y="55.245" size="0.8128" layer="25" ratio="10"/>
 </element>
 <element name="D1" library="diode" package="D-2.5" value="1N4148" x="23.114" y="40.005" smashed="yes" rot="R90">
 <attribute name="NAME" x="22.86" y="42.672" size="0.8128" layer="25" ratio="10" rot="R180"/>
@@ -1086,9 +1087,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="30.055" y="52.356" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="28.269" y="50.752" size="0.8128" layer="27" rot="R180"/>
 </element>
-<element name="L4" library="rcl" package="0207/2V" value="220µ" x="3.048" y="55.626" smashed="yes" rot="R180">
-<attribute name="NAME" x="6.9088" y="54.864" size="0.8128" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="3.3528" y="57.6072" size="0.8128" layer="27" ratio="10" rot="R180"/>
+<element name="L4" library="rcl" package="0207/2V" value="220µ" x="3.048" y="55.626" smashed="yes">
+<attribute name="NAME" x="2.7432" y="56.896" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="2.7432" y="53.6448" size="0.8128" layer="27" ratio="10"/>
 </element>
 <element name="Q1" library="crystal" package="HC49U-V" value="8 MHz" x="3.429" y="11.176" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="3.429" y="11.176" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1420,7 +1421,7 @@ design rules under a new name.</description>
 <signal name="N$26">
 <contactref element="IC2" pad="2"/>
 <contactref element="D4" pad="C"/>
-<contactref element="L4" pad="1"/>
+<contactref element="L4" pad="2"/>
 <wire x1="4.318" y1="55.626" x2="9.144" y2="55.626" width="0.8128" layer="1"/>
 <wire x1="9.144" y1="55.626" x2="9.652" y2="55.626" width="0.8128" layer="1"/>
 <wire x1="9.652" y1="55.626" x2="11.176" y2="54.102" width="0.8128" layer="1"/>
@@ -1440,7 +1441,7 @@ design rules under a new name.</description>
 <contactref element="LSP1" pad="MP"/>
 <contactref element="C2" pad="+"/>
 <contactref element="R2" pad="1"/>
-<contactref element="L4" pad="2"/>
+<contactref element="L4" pad="1"/>
 <contactref element="IC1" pad="7"/>
 <contactref element="C8" pad="1"/>
 <contactref element="IC1" pad="20"/>

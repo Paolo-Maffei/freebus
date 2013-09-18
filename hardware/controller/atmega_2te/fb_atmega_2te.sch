@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -18204,8 +18204,7 @@ nominal inductance, magnetically screened</description>
 <text x="88.9" y="139.7" size="1.778" layer="97">MC34063     0° to +70°C</text>
 <text x="88.9" y="137.16" size="1.778" layer="97">MC33063   -40° to +85°C</text>
 <text x="167.64" y="27.94" size="3.81" layer="97">freebus AVR-Controller 2TE</text>
-<text x="167.64" y="23.876" size="2.54" layer="97">Achtung Layout ist noch nicht getestet!</text>
-<text x="253.238" y="6.096" size="3.81" layer="97">1.1</text>
+<text x="253.238" y="6.096" size="3.81" layer="97">1.2</text>
 </plain>
 <instances>
 <instance part="S1" gate="1" x="180.34" y="137.16" smashed="yes" rot="R180">
@@ -18405,7 +18404,7 @@ nominal inductance, magnetically screened</description>
 </instance>
 <instance part="GND9" gate="1" x="30.48" y="78.74"/>
 <instance part="L3" gate="G$1" x="38.1" y="149.86"/>
-<instance part="L4" gate="G$1" x="99.06" y="167.64" rot="R90"/>
+<instance part="L4" gate="G$1" x="99.06" y="167.64" rot="R270"/>
 <instance part="Q1" gate="G$1" x="86.36" y="86.36" smashed="yes">
 <attribute name="NAME" x="84.836" y="88.9" size="1.778" layer="95"/>
 <attribute name="VALUE" x="82.55" y="82.296" size="1.778" layer="96"/>
@@ -18825,7 +18824,7 @@ nominal inductance, magnetically screened</description>
 <wire x1="66.04" y1="154.94" x2="66.04" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="167.64" x2="93.98" y2="167.64" width="0.1524" layer="91"/>
 <junction x="66.04" y="154.94"/>
-<pinref part="L4" gate="G$1" pin="1"/>
+<pinref part="L4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -18864,7 +18863,7 @@ nominal inductance, magnetically screened</description>
 <wire x1="139.7" y1="162.56" x2="139.7" y2="167.64" width="0.1524" layer="91"/>
 <junction x="139.7" y="167.64"/>
 <junction x="147.32" y="167.64"/>
-<pinref part="L4" gate="G$1" pin="2"/>
+<pinref part="L4" gate="G$1" pin="1"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
