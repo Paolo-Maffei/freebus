@@ -1,0 +1,12 @@
+4current_2te
+
+freebus Applikationsplatine für einen 4 Kanal Stromsensor
+passend für 2TE Hutschienengehäuse
+
+
+V1.1
+-erste Version
+
+V1.2
+-R14, R24, R34, R44 etwas nach innen versetzt
+

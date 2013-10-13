@@ -1,0 +1,15 @@
+Eine 2te Applikationsplatine zum Aufbau eines 4-fach Wechselstromsensors.
+
+In der Schaltung befindet sich nur ein einfacher Mittelwertgleichrichter, sie ist also nicht zur exakten Stromverbrauchsmessung geeignet.
+Ziel war ein preiswerter Sensor um den Stromfluss in einem Stromkreis festzustellen (z.B. TV ist eingeschaltet --> Lichtszene "Fernsehen" einschalten).
+
+An die Platine können 4 Stromwandler "talema  AC1020" angeschlossen werden. Diese sind z.B. bei tme.eu erhältlich.
+
+Für den Betrieb mit 2 Kanälen kann die kleine Adapterplatine mit 2 Stromwandlern senkrecht an die untere Kante der Applikationsplatine gelötet werden.
+Die entspr. Klemmen, IC2 und alle Bauelemente mit den Nummern 1x,3x können dann weggelassen werden.
+
+Mit den Präzisionspotis R14-R44 kann der Messbereich eingestellt (z.B. 0-1A oder 0-10A) und Abgeglichen Werden.
+
+Die Software für AVR befindet sich im GIT, als Applikation für die ETS dient der "Gira Analogeingang 4-fach 096000".
+
+Reichelt Warenkorb (außer Stromwandler, auch V1.2): https://secure.reichelt.de/index.html?&ACTION=20&AWKID=800507&PROVID=2084
