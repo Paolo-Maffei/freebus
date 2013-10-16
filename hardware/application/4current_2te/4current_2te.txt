@@ -6,10 +6,23 @@ Ziel war ein preiswerter Sensor um den Stromfluss in einem Stromkreis festzustel
 An die Platine können 4 Stromwandler "talema  AC1020" angeschlossen werden. Diese sind z.B. bei tme.eu erhältlich.
 
 Für den Betrieb mit 2 Kanälen kann die kleine Adapterplatine mit 2 Stromwandlern senkrecht an die untere Kante der Applikationsplatine gelötet werden.
-Die entspr. Klemmen, IC2 und alle Bauelemente mit den Nummern 1x,3x können dann weggelassen werden.
+Die entspr. Klemmen, IC2 und alle Bauelemente mit den Nummern 1x, 3x können dann weggelassen werden.
 
 Mit den Präzisionspotis R14-R44 kann der Messbereich eingestellt (z.B. 0-1A oder 0-10A) und Abgeglichen Werden.
 
 Die Software für AVR befindet sich im GIT, als Applikation für die ETS dient der "Gira Analogeingang 4-fach 096000".
 
 Reichelt Warenkorb (außer Stromwandler, auch V1.2): https://secure.reichelt.de/index.html?&ACTION=20&AWKID=800507&PROVID=2084
+
+
+
+Funktion(Bauelementebezeichnung für Kanal1):
+Der talema AC1020 ist ein Stromwandler mit Imax.=20A und einem Übersetzungsverhältnis 1000:1, d.h. 10A primär
+erzeugen 10mA sekundär. Dieser Strom wird gleichgerichtet und erzeugt über dem Widerstand R11
+(bei 100Ohm) einen Spannungsfall von 1V. Mit R12, C11, R13, C12 wird die Spannung geglättet und gelangt auf den 
+Eingang des OPV. Die verstärkte Spannung wird dann im AVR mit 10bit digitalisiert. Dabei wird die interne Referenzspannung von 1,1V verwendet.
+Die Verstärkung ist durch R14 in einem weiten Bereich einstellbar.
+Bei Linksanschlag beträgt sie 1 (Op-Amp arbeitet als Spannungsfolger) d.h. der Messbereich ist 0-11A.
+Mit R14 kann die Verstärkung erhöht und der Messbereich z.B. auf 0-1A eingestellt und dadurch die Auflösung vergrößert werden.
+Für einen Messbereich bis 20A ist für R11 ein 50Ohm Widerstand einzusetzen.
+Bedingt durch die Verluste der Shottky-Dioden liegt die kleinste messbare Stromstärke bei ca. 10-20mA.
