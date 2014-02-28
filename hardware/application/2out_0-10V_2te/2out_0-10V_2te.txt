@@ -1,0 +1,18 @@
+Funktionsbeschreibung 2out_0-10V_2te V1.0
+
+Die Schaltung erhält vom Controllerboard je ein PWM-Signal und erzeugt daraus auf 2 Kanälen eine galvanisch vom Bus getrennte Steuerspannung von 0-10V.
+Sie eignet sich auch als 1-10V Aktor zum ansteuern von LED-Netzteilen oder Leuchtstoff-Vorschaltgeräten.
+Obwohl bei der 1-10V Schnittstelle der Aktor eigentlich nur einen veränderlichen Widerstand darstellt, funktioniert die Ausgabe einer Spannung ebenso gut.
+
+Das PWM-Signal mit dem Tastverhältnis 0-100% gelangt über den Optokoppler zum Eingang von IC1. Dieser Rail to Rail Opamp wird mit 10V versorgt,
+sodass sich am Ausgang des nachgeschalteten Tiefpasses eine Spannung von 0-10V mit recht guter Linearität einstellt.
+Die Spannung wird mittels IC2 gepuffert und gelangt über den Schutzwiderstand R14 zum Ausgang.
+
+Mit R1 kann die Ausgangsspannung bei einer Helligkeit von 100% auf genau 10,0V eingestellt werden.
+
+Die Spannungsversorgung kann über den galvanisch trennenden DC-DC Wandler direkt vom Bus, oder über eine externe Gleichspannung 15-24V erfolgen.
+
+
+Die Software für AVR befindet sich im GIT, als Applikation für die ETS dient der "Gira Universal-Dimmaktor 2fach 1032 00".
+
+Reichelt Warenkorb: http://www.reichelt.de/?ACTION=20;AWKID=878212;PROVID=2084
