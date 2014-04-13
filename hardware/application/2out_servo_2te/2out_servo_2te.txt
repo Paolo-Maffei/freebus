@@ -1,0 +1,6 @@
+Schaltungsbeispiel zur galvanisch getrennten Ansteuerung zweier Modellbau-Servos
+Zur Verwendung mit dem AVR-Controllerboard-2te mit der Firmware des 2-fach Dimmers kompiliert mit der Option -DSERVO
+Applikation für die ETS: "Gira Universal-Dimmaktor 2fach 1032 00"
+Funktionen siehe Software Funktionsübersicht im GIT
+
+-Platine ungetestet, Schaltung ist nur auf dem Steckbrett erprobt
