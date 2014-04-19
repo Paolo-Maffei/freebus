@@ -1,0 +1,3 @@
+Modul auf AVR-Basis zum Ansteuern von WS2812 RGB LEDs
+
+Beschreibung siehe Bugtracker Projekt "RGB-Controller für WS2812 LEDs"
